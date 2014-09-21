@@ -9379,6 +9379,23 @@ Stack trace:
 #22 {main}
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php
 ---
+<<<<<<< HEAD
+2014/09/18 22:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Gii".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('Gii')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/site/index?r=Gii
+---
+2014/09/18 22:57:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Ggii".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('Ggii')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/site/index?r=Ggii
+=======
 2014/09/15 05:08:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
 ' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php:382
 Stack trace:
@@ -9462,4 +9479,5 @@ Stack trace:
 #21 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
 #22 {main}
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php
+>>>>>>> eb7f5cc55451610ae71effb5a838cb0098ae7491
 ---

@@ -78,7 +78,9 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=web-db.cs.fiu.edu;dbname=curriculum',
+            //choose between next two lines to work with local db or csi db
+			//'connectionString' => 'mysql:host=web-db.cs.fiu.edu;dbname=curriculum',
+            'connectionString' => 'mysql:host=localhost;dbname=curriculum',
 			'emulatePrepare' => true,
 			'username' => 'curriculum',
 			'password' => 'Tur99tleMuta33nt',

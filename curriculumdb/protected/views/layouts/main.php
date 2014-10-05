@@ -43,6 +43,9 @@
         			'visible'=>Yii::app()->getModule('user')->isAdmin()),			
         		array('url'=>array('/catalog/manage'), 'label'=>'Catalog', 			
         			'visible'=>Yii::app()->getModule('user')->isAdmin()),
+                //Jose...provide the capability of accessing prospective catalogs if the user is not a guest
+                array('label'=>'Prospective','url'=>array('/catalog/prospective'), 
+                    'visible'=>Yii::app()->user->isGuest == false),
 				/* array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest), */
 				/* array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest), */
 
@@ -68,7 +71,9 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; by Oscar&Tiffany Productions.<br/>
+		Copyright &copy; by Tim Downey as Project Mentor.<br/>
+                         by Oscar&Tiffany Project Development in v1.0.<br/>
+                         by Jose&Christopher Project Development in v2.0.<br/>
 		All Rights Reserved.<br/>
 		<?php echo 'FIU - School of Computer Science!';?>
 	</div><!-- footer -->

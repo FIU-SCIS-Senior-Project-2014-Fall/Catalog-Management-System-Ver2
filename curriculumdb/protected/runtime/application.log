@@ -9564,3 +9564,75 @@ Stack trace:
 #22 {main}
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php
 ---
+2014/10/03 04:56:13 [error] [exception.CException] exception 'CException' with message 'UserModule and its behaviors do not have a method or closure named "isGuest".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\layouts\main.php(47): CComponent->__call('isGuest', Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\layouts\main.php(47): UserModule->isGuest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(785): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(60): CController->render('index', Array)
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#19 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#20 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php
+---
+2014/10/03 04:56:40 [error] [exception.CException] exception 'CException' with message 'RWebUser and its behaviors do not have a method or closure named "isGuest".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\layouts\main.php(47): CComponent->__call('isGuest', Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\layouts\main.php(47): RWebUser->isGuest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(785): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(60): CController->render('index', Array)
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#19 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#20 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php
+---
+2014/10/03 05:14:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/prospective".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php
+---
+2014/10/03 05:14:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/prospective".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php
+---

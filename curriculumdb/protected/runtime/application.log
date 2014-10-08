@@ -10132,3 +10132,12 @@ REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
 HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/
 >>>>>>> a1980379b2e069da896fe9c4a74979e2b4396513
 ---
+2014/10/08 04:08:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/prospective".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---

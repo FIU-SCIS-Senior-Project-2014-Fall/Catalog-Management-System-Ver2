@@ -10643,3 +10643,244 @@ REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prosp
 in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\menu.php (9)
 in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\index.php (11)
 in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (17)
+2014/10/11 05:05:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('create')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('create')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('manage/create')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/manage/create
+---
+2014/10/11 05:06:43 [warning] [application] Failed to set unsafe attribute "dgu" of "EditorSelectionForm".
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\ManageController.php (24)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/10/11 05:43:23 [error] [php] include(CActiveform.php): failed to open stream: No such file or directory (C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWidgetFactory.php(147): import()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(147): CWidgetFactory->createWidget()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(190): ProspectiveController->createWidget()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php(19): ProspectiveController->beginWidget()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): ProspectiveController->renderInternal()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(7): ProspectiveController->render()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionCreate()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php (19)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (7)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/10/11 05:43:57 [error] [exception.CException] exception 'CException' with message 'ProspectiveController contains improperly nested widget tags in its view "C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php". A CActiveForm widget does not have an endWidget() call.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php:102
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('create', NULL, true)
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(7): CController->render('create')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionCreate()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('create')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/11 05:47:23 [error] [exception.CException] exception 'CException' with message 'ProspectiveController contains improperly nested widget tags in its view "C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php". A CActiveForm widget does not have an endWidget() call.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php:102
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('create', NULL, true)
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(7): CController->render('create')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionCreate()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('create')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/11 05:50:04 [error] [php] include(CActiveform.php): failed to open stream: No such file or directory (C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWidgetFactory.php(147): import()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(147): CWidgetFactory->createWidget()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(190): ProspectiveController->createWidget()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php(19): ProspectiveController->beginWidget()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): ProspectiveController->renderInternal()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(7): ProspectiveController->render()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionCreate()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php (19)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (7)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/10/12 04:32:16 [error] [php] Use of undefined constant DB_HOST - assumed 'DB_HOST' (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php:4)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(7): ProspectiveController->render()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionCreate()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php (4)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (7)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/10/12 04:33:17 [error] [php] Undefined variable: gID (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(7): ProspectiveController->render()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionCreate()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php (11)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (7)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/10/12 04:37:45 [error] [php] Undefined variable: db (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(7): ProspectiveController->render()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionCreate()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\create.php (12)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (7)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/10/12 04:50:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createStep2.php".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('createStep2.php')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('createStep2.php')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/createStep2.php
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/12 04:51:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createStep2.php".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('createStep2.php')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('createStep2.php')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/createStep2.php
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/12 05:12:38 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.Catalog" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\YiiBase.php:318
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\gii\generators\form\FormCode.php(58): YiiBase::import('application.mod...', true)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\validators\CInlineValidator.php(43): FormCode->validateModel('model', Array)
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(FormCode), 'model')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CModel.php(158): CValidator->validate(Object(FormCode), NULL)
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\gii\CCodeGenerator.php(160): CModel->validate()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\gii\CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/form')
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/gii/form
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/gii/form
+---
+2014/10/12 05:16:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createStep2.php".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('createStep2.php')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('createStep2.php')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/createStep2.php
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/12 05:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createStep2.php".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('createStep2.php')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('createStep2.php')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/createStep2.php
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/12 05:21:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createStep2.php".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('createStep2.php')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('createStep2.php')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/createStep2.php
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/12 05:21:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createStep2.php".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('createStep2.php')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('createStep2.php')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/createStep2.php
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/12 18:05:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createStep2.php".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('createStep2.php')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('createStep2.php')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/createStep2.php
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---

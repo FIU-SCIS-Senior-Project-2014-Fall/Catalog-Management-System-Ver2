@@ -21,3 +21,10 @@ where username = 'oscara';
 update acl_users 
 set superuser = 4
 where username = 'demo'
+
+/*Jose Changes 10/11/2014
+changes to catalog table so that now it can tell where a catalog is prospective or not, and who was the creator
+*/
+ALTER TABLE `curriculum`.`catalog` 
+ADD COLUMN `isProspective` INT(1) NULL AFTER `description`,
+ADD COLUMN `creatorId` VARCHAR(45) NULL AFTER `isProspective`;

@@ -7,6 +7,31 @@ class ProspectiveController extends Controller
 		$this->render('create');
 	}
 
+    public function actionCreateStep2()
+    {
+        $model=new Catalog;
+
+        // uncomment the following code to enable ajax-based validation
+        /*
+        if(isset($_POST['ajax']) && $_POST['ajax']==='catalog-createStep2-form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+        */
+
+        if(isset($_POST['Catalog']))
+        {
+            $model->attributes=$_POST['Catalog'];
+            if($model->validate())
+            {
+                // form inputs are valid, do something here
+                return;
+            }
+        }
+        $this->render('createStep2',array('model'=>$model));
+    }
+
 	public function actionDelete()
 	{
 		$this->render('delete');

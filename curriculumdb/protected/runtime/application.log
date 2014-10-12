@@ -10132,6 +10132,9 @@ REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
 HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/
 >>>>>>> a1980379b2e069da896fe9c4a74979e2b4396513
 ---
+<<<<<<< HEAD
+2014/10/08 04:08:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/prospective".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+=======
 2014/10/07 00:45:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
 ' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php:382
 Stack trace:
@@ -10161,12 +10164,16 @@ Stack trace:
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php
 ---
 2014/10/08 03:55:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/prospective".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+>>>>>>> 690a211dab896aeafcf32d01382ba4b295be10ae
 Stack trace:
 #0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
 #1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+<<<<<<< HEAD
+HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+=======
 HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user
 ---
 2014/10/08 03:58:06 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'superuser' in 'field list'. The SQL statement executed was: SELECT id, username, email, createtime, lastvisit, superuser, status, password, activkey FROM `acl_users` `t` WHERE `t`.`username`=:yp0 LIMIT 1.
@@ -10195,6 +10202,24 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
 HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
+>>>>>>> 690a211dab896aeafcf32d01382ba4b295be10ae
+---
+2014/10/08 05:00:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/prospective".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/08 05:00:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/prospective".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/curriculumdb/
 ---
 2014/10/09 03:55:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
 Stack trace:

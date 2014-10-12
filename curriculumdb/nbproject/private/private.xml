@@ -4,23 +4,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/dgu/_form.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/dgu/_view.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/dgu/_search.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/controllers/DguController.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/commands/doc/views/index.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/dgu/create.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/commands/doc/views/methodDetails.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/dgu/index.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/config/main.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/models/forms/LoginForm.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/group/create.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/models/forms/MajorSelectionForm.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/controllers/CoursePrefixController.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/dgu/delete.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/components/concreteClasses/Course.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/controllers/ManageController.php</file>
-            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/controllers/CourseController.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/user/views/profile/profile.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/catalog/views/prospective/index.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/user/views/user/index.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/catalog/views/prospective/menu.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/catalog/CatalogModule.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/user/controllers/ProfileController.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/user/models/User.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/catalog/controllers/ProspectiveController.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/user/UserModule.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/user/views/profile/menu.php</file>
         </group>
     </open-files>
 </project-private>

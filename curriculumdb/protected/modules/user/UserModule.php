@@ -171,18 +171,46 @@ class UserModule extends CWebModule
 	 * @return boolean
 	 */
 	public static function isAdmin() {
-		if(Yii::app()->user->isGuest)
-			return false;
-		else {
-			if (!isset(self::$_admin)) {
-				if(self::user()->superuser)
-					self::$_admin = true;
-				else
-					self::$_admin = false;	
-			}
-			return self::$_admin;
-		}
-	}
+		if (Yii::app()->user->isGuest)
+            return false;
+        else {
+            if (!isset(self::$_admin)) {
+                if (self::user()->superuser)
+                    self::$_admin = true;
+                else
+                    self::$_admin = false;
+            }
+            return self::$_admin;
+        }
+    }
+
+    public static function isAdvisor(){
+        if ( self::user()->superuser == 3 )
+            return true;
+        else
+            return false;
+    }
+    
+    public static function isStudent(){
+        if ( self::user()->superuser == 4 )
+            return true;
+        else
+            return false;
+    }
+    
+    
+    public static function isSuperAdmin(){
+        if ( self::user()->superuser == 1 )
+            return true;
+        else
+            return false;
+        
+    }
+    /*
+    public static function isAdmin(){
+        
+    }*/
+    
 
 	/**
 	 * Return admins.
@@ -237,4 +265,8 @@ class UserModule extends CWebModule
 	public function users() {
 		return User;
 	}
+    
+    
+    
+    
 }

@@ -28,3 +28,23 @@ changes to catalog table so that now it can tell where a catalog is prospective 
 ALTER TABLE `curriculum`.`catalog` 
 ADD COLUMN `isProspective` INT(1) NULL AFTER `description`,
 ADD COLUMN `creatorId` VARCHAR(45) NULL AFTER `isProspective`;
+
+
+/*Jose Changes 10/12/2014
+
+changes to create tables for minors and certificates*/
+CREATE TABLE `curriculum`.`curr_minor` (
+  `id` INT(10) NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `lastActivated_catalogId` INT(10) NOT NULL,
+  `catalog_id` INT(10) NOT NULL,
+  PRIMARY KEY (`id`));
+ 
+
+CREATE TABLE `curriculum`.`curr_certificate` (
+  `id` INT(10) NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `lastActivated_catalogId` INT(10) NOT NULL,
+  `catalog_id` INT(10) NOT NULL,
+  PRIMARY KEY (`id`)); 
+ 

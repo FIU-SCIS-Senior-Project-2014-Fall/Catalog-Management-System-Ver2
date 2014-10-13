@@ -45,4 +45,9 @@ class CatalogModule extends CWebModule
 	public static function t($str='',$params=array(),$dic='user') {
 		return Yii::t("CatalogModule.".$dic, $str, $params);
 	}
+    
+    public static function test()
+    {
+        return true;
+    }
 }

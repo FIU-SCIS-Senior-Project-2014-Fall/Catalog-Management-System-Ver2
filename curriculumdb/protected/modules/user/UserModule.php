@@ -8,7 +8,7 @@
  * @version $Id: UserModule.php 105 2011-02-16 13:05:56Z mishamx $
  */
 
-class UserModule extends CWebModule
+class   UserModule extends CWebModule
 {
 	/**
 	 * @var int
@@ -171,6 +171,7 @@ class UserModule extends CWebModule
 	 * @return boolean
 	 */
 	public static function isAdmin() {
+                
 		if (Yii::app()->user->isGuest)
             return false;
         else {
@@ -184,14 +185,14 @@ class UserModule extends CWebModule
         }
     }
 
-    public static function isAdvisor(){
+    public static function isUserAdvisor(){
         if ( self::user()->superuser == 3 )
             return true;
         else
             return false;
     }
     
-    public static function isStudent(){
+    public static function isUserStudent(){
         if ( self::user()->superuser == 4 )
             return true;
         else
@@ -199,17 +200,21 @@ class UserModule extends CWebModule
     }
     
     
-    public static function isSuperAdmin(){
+    public static function isUserSuperAdmin(){
         if ( self::user()->superuser == 1 )
             return true;
         else
             return false;
         
     }
-    /*
-    public static function isAdmin(){
+    
+    public static function isUserAdmin(){
+        if ( self::user()->superuser == 2 )
+            return true;
+        else
+            return false;
         
-    }*/
+    }
     
 
 	/**

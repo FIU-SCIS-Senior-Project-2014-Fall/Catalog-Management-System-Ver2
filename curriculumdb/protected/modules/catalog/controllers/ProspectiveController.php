@@ -1,19 +1,41 @@
 <?php
-
+/**
+ * short class description.
+ * Extended class description
+ * 
+ * @author curriculum
+ * @package modules.catalog.controllers
+ */
 class ProspectiveController extends Controller
 {
 	public function actionCreate()
 	{
-		$this->render('create');
+        $dgu = new CurrDgu;
+        $major = new CurrMajor;
+        $course = new CurrCourse;
+        $set = new CurrSet;
+        $group = new CurrGroup;
+        $minor = new CurrMinor;
+        $certificate = new CurrCertificate;
+        $model = new Catalog;       
+        
+        
+		$this->render('create',array( 'model'=>$model ,
+                                        'dgu'=>$dgu, 
+                                        'major'=>$major, 
+                                        'course'=>$course, 
+                                        'set'=>$set, 
+                                        'group'=>$group,
+                                        'minor'=>$minor, 
+                                        'certificate'=>$certificate));
 	}
-
-    public function actionCreateStep2()
+    public function actionAcceptReject()
     {
         $model=new Catalog;
 
         // uncomment the following code to enable ajax-based validation
         /*
-        if(isset($_POST['ajax']) && $_POST['ajax']==='catalog-createStep2-form')
+        if(isset($_POST['ajax']) && $_POST['ajax']==='catalog-acceptReject-form')
         {
             echo CActiveForm::validate($model);
             Yii::app()->end();
@@ -29,9 +51,8 @@ class ProspectiveController extends Controller
                 return;
             }
         }
-        $this->render('createStep2',array('model'=>$model));
+        $this->render('acceptReject',array('model'=>$model));
     }
-
 	public function actionDelete()
 	{
 		$this->render('delete');
@@ -44,9 +65,50 @@ class ProspectiveController extends Controller
 
 	public function actionUpdate()
 	{
-		$this->render('update');
+        $dgu = new CurrDgu;
+        $major = new CurrMajor;
+        $course = new CurrCourse;
+        $set = new CurrSet;
+        $group = new CurrGroup;
+        $minor = new CurrMinor;
+        $certificate = new CurrCertificate;
+        $model = new Catalog;       
+        
+		$this->render('update',array( 'model'=>$model ,
+                                        'dgu'=>$dgu, 
+                                        'major'=>$major, 
+                                        'course'=>$course, 
+                                        'set'=>$set, 
+                                        'group'=>$group,
+                                        'minor'=>$minor, 
+                                        'certificate'=>$certificate));
 	}
 
+    public function actionPropose()
+    {
+        $model=new Catalog;
+
+        // uncomment the following code to enable ajax-based validation
+        /*
+        if(isset($_POST['ajax']) && $_POST['ajax']==='catalog-propose-form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+        */
+
+        if(isset($_POST['Catalog']))
+        {
+            $model->attributes=$_POST['Catalog'];
+            if($model->validate())
+            {
+                // form inputs are valid, do something here
+                return;
+            }
+        }
+        $this->render('propose',array('model'=>$model));
+    }
+    
 	public function actionView()
 	{
 		$this->render('view');

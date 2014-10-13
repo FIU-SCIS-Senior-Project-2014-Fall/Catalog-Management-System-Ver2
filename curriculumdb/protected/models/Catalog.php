@@ -13,7 +13,9 @@
  * @property integer $activated
  * @property string $startingDate
  * @property integer $activation_userId
- * @property integer $parent_catalogId
+ * @property integer $parent_catalogId * 
+ * @property integer $isProspective
+ * @property integer $creatorId 
  *
  * The followings are the available model relations:
  * @property CurrCourse[] $currCourses
@@ -62,13 +64,13 @@ class Catalog extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, creationDate, year, term', 'required'),
-			array('year, activated, activation_userId, parent_catalogId', 'numerical', 'integerOnly'=>true),
+			array('year, activated, activation_userId, parent_catalogId, isProspective, creatorId', 'numerical', 'integerOnly'=>true),
 			array('name, description', 'length', 'max'=>255),
 			array('term', 'length', 'max'=>6),
 			array('startingDate', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, description, creationDate, year, term, activated, startingDate, activation_userId, parent_catalogId', 'safe', 'on'=>'search'),
+			array('id, name, description, creationDate, year, term, activated, startingDate, activation_userId, parent_catalogId, isProspective, creatorId', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -115,6 +117,8 @@ class Catalog extends CActiveRecord
 			'startingDate' => 'Starting Date',
 			'activation_userId' => 'Activation User',
 			'parent_catalogId' => 'Parent Catalog',
+            'isProspective' => 'Is Prospective ?',
+            'creatorId' => 'Creator',
 		);
 	}
 
@@ -139,6 +143,8 @@ class Catalog extends CActiveRecord
 		$criteria->compare('startingDate',$this->startingDate,true);
 		$criteria->compare('activation_userId',$this->activation_userId);
 		$criteria->compare('parent_catalogId',$this->parent_catalogId);
+        $criteria->compare('isProspective', $this->isProspective);
+        $criteria->compare('creatorId', $this->creatorId);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

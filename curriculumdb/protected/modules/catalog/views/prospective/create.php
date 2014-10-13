@@ -1,35 +1,78 @@
 <?php
 /* @var $this ProspectiveController */
+/* @var $model Catalog */
+/* @var $form CActiveForm*/
+
+    
 
     $this->breadcrumbs=array(
 	'Prospective'=>array('/catalog/prospective'),
 	'Create',
-);
-     
-    $dbc = mysqli_connect( "localhost:3306", "curriculum", "Tur99tleMuta33nt", "curriculum" ) or die( "Could not connect to database" );
+    );
     
-    $query = "SELECT * FROM curr_dgu";
-    $result = mysqli_query($dbc, $query);
-            
+    $users = $dgu->findAllBySql("select name from curr_dgu");
+$data = array();
+
+foreach($users as $u){
+    $data[$u->name] = $u->name;
+}
 ?>
-<h2><?php echo 'Create Prospective Catalog ( Step 1 ): Select DGU'; ?></h2>
-
-<div class = "form" >
-
-    <form action="../prospective/createStep2.php" method="post" id="selectdgu"> 
-    <h3>Please select your DGU below</h3>
+<div class="form">
+    <?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'prospective-catalog-form',
+	'enableAjaxValidation'=>false,
+)); ?>
     
-    <select name="dgu">
-        <?php while( $row = mysqli_fetch_row($result)) 
-                {?>
-        <option value = " <?php echo $row[1]; ?> "> <?php echo $row[1]; ?> </option>
-        <?php } ?>
-    </select>
-    <label for="catalogName"> Catalog Name </label>
-    <input type="text" name="catalogName" id="catalogname" required ></br>
-    </br>
-    <input type="submit" value="Start Creating Prospetive Catalog "/>
+    <?php //echo $form->errorSummary($model); ?>
     
-    </form>
-
-</div><!--form end-->
+    <div class="contentContainer">
+            <div class="row">
+                    <?php echo 'Select Your DGU'; ?></br>
+                    <?php echo $form->dropDownList($dgu, 'name', $data, array('prompt'=>'')); ?>
+            </div>
+        
+            <div class="row">
+                    <?php echo 'Catalog Name'; ?></br>
+                    <?php echo $form->textArea($model, 'name',array('size'=>60,'maxlength'=>255));;?>
+            </div>
+        
+            <div class="row">
+                    <?php echo 'Add Majors' ?></br>
+                    <?php echo $form->textArea($major, 'name',array('size'=>60,'maxlength'=>255)); ?>
+            </div>
+        
+            <div class="row">
+                    <?php echo 'Add Minors'; ?></br>
+                    <?php echo $form->textArea($minor, 'name',array('size'=>60,'maxlength'=>255)); ?>
+            </div>
+        
+            <div class="row">
+                    <?php echo 'Add Certificates'; ?></br>
+                    <?php echo $form->textArea($minor, 'name',array('size'=>60,'maxlength'=>255)); ?>
+            </div>
+            
+            <div class="row">
+                    <?php echo 'Add Groups' ;?></br>
+                    <?php echo $form->textArea($group, 'name',array('size'=>60,'maxlength'=>255)) ;?>
+            </div>
+        
+            <div class="row">
+                    <?php echo 'Add Sets' ;?></br>
+                    <?php echo $form->textArea($set, 'name',array('size'=>60,'maxlength'=>255)); ?>
+        
+            <div class="row">
+                    <?php echo 'Add Courses'; ?></br>
+                    <?php echo $form->textArea($course, 'name',array('size'=>60,'maxlength'=>255)); ?>
+            </div>
+                    
+            <div class="row buttons">
+                    <?php echo CHtml::submitButton('Create'); ?>
+            </div>
+    </div> 
+    <?php $this->endWidget(); ?>
+  </div><!-- form -->   
+        
+            
+        
+            
+        

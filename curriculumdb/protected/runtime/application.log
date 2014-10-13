@@ -10909,3 +10909,14 @@ Stack trace:
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/createStep2.php
 HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
 ---
+2014/10/12 18:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createStep2.php".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('createStep2.php')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('createStep2.php')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/createStep2.php
+HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---

@@ -23,6 +23,26 @@ if (empty($setByCourse)) {
     }
     echo '</ul>';
 }
+    echo '<table>';
+    echo '<th>Course ID</th><th>Course Name</th><th>Description</th><th>Credits</th><th>Pre-Requisites</th><th>Co-Requisites</th>';
+    foreach ($setByCourse AS $course)
+    {
+        echo '<tr>';
+        echo '<td>';
+             $entity = new Course($course->course_id, $this->catalogId); //$entity has current and history
+             $data = $entity->getHistoryEntity();    //extract history into $data, it has the course prefix id
+             $prefix = new CoursePrefix($data->coursePrefix_id, $this->catalogId); //prefix his and curr
+             echo $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
+             echo ' '.$data->number; 
+        echo '</td>';
+        echo '<td>';
+        echo $course->course->name;
+        echo '</td>';
+        echo '<td>';
+        echo '</td>';
+        echo '</tr>';
+    }
+    echo '</table>';
 ?>
 <br/>
 

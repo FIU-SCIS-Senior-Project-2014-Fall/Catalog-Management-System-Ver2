@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This is the model class for table "Curr_certificate".
+ * This is the model class for table "curr_certificate".
  *
  * The followings are the available columns in table 'Curr_certificate':
  * @property integer $id
@@ -26,7 +26,7 @@ class CurrCertificate extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Curr_certificate';
+		return 'curr_certificate';
 	}
 
 	/**

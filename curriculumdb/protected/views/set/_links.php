@@ -27,6 +27,7 @@ if (empty($setByCourse)) {
     echo '<th>Course ID</th><th>Course Name</th><th>Description</th><th>Credits</th><th>Pre-Requisites</th><th>Co-Requisites</th>';
     foreach ($setByCourse AS $course)
     {
+        $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->course_id));
         echo '<tr>';
         echo '<td>';
              $entity = new Course($course->course_id, $this->catalogId); //$entity has current and history
@@ -39,6 +40,14 @@ if (empty($setByCourse)) {
         echo $course->course->name;
         echo '</td>';
         echo '<td>';
+            foreach($setByReq AS $req)
+            {
+                $entity1 = new Course($req->requisite_id, $this->catalogId);
+                $data1 = $entity1->getHistoryEntity();    //extract history into $data, it has the course prefix id
+                $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
+                echo $prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                echo ' '.$data1->number; 
+            }
         echo '</td>';
         echo '</tr>';
     }

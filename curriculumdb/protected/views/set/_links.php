@@ -136,16 +136,17 @@ if (empty($setByCourse)) {
 
     $row = 0;
     echo '<div class=\'outer\'>';
+    $string = array();
     foreach ($setByCourse AS $course)
     {      
-        $string;
+        global $string;
         $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->course_id));
         $entity = new Course($course->course_id, $this->catalogId); //$entity has current and history
         $data = $entity->getHistoryEntity();    //extract history into $data, it has the course prefix id
         $prefix = new CoursePrefix($data->coursePrefix_id, $this->catalogId); //prefix his and curr
-        $string = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
-        $string.= ' '.$data->number.'<br>';
-        $string.= $course->course->name.'<br>';
+        $string[$row] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
+        $string[$row].= ' '.$data->number.'<br>';
+        $string[$row].= $course->course->name.'<br>';
         foreach($setByReq AS $req)
         {
             $entity1 = new Course($req->requisite_id, $this->catalogId);
@@ -153,8 +154,8 @@ if (empty($setByCourse)) {
             $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
             if($req->level == 0)
             {
-                $string.= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                $string.= ' '.$data1->number.' <br>'; 
+                $string[$row].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                $string[$row].= ' '.$data1->number.' <br>'; 
                 break; //Flow chart to display only a single course as pre-req
             }
         }
@@ -165,28 +166,49 @@ if (empty($setByCourse)) {
             $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
             if($req->level == 1)
             {
-                $string.= 'Co: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                $string.= ' '.$data1->number.' <br>';
+                $string[$row].= 'Co: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                $string[$row].= ' '.$data1->number.' <br>';
                 break; //Flow chart to display only a single course as co-req
             }
         }
+        $row+=1;
+    }    
+       
         
-        
-        
-        echo "<div id = row".$row ."class = row>'";
-        echo "<div id = boxLeft".$row ." class=\"box box-left\"";
-        echo $string;
-        
+        //echo "<div id = row".$row ."class = row>";
+        //echo "<div id = boxLeft".$row ." class=\"box box-left\">";
     
-            
-        echo '<br></div>'; //Close Left
-        echo "<div id = boxRight".$row ." class=\"box box-right\">";
-            echo "Test";
-        echo '</div>';
-        echo '</div>'; //Close Row
-        $row = $row + 1;
+    foreach($string AS $line)
+    {
+        echo "<script>
+            arrBox[\"boxRight\"+row] = new BoxRight(row);
+            arrBox[\"boxLeft\"+row] = new BoxLeft(row);
+            document.write(\"<div class='row'>\");
+                    document.write(\"<div id ='boxLeftA\" + row + \"' class='box box-left' \");
+                            document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
+                            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");
+                            document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$line' + '</div>');
+                    document.write(\"</div>\");
+                    document.write(\"<div id = 'boxRight\" + row + \"' class='box box-right' \");
+                            document.write(\"ondragstart=dragStart(this) ondragend=dragEnd(this) \");
+                            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'\");
+                    document.write(\"></div>\");
+                    document.write(\"<input type='hidden' id='hidden\" + 
+                                row + \"' name=hidden\" + row + \"' value=''\");
+            document.write(\"</div>\");
+
+            row++;
+        </script>";
     }
-    echo '</div>';    
+    echo '</div>';        
+        //echo '<br></div>'; //Close Left
+        //echo "<div id = boxRight".$row ." class=\"box box-right\">";
+            //echo "Test";
+        //echo '</div>';
+        //echo '</div>'; //Close Row
+        //$row = $row + 1;
+    //}
+    //echo '</div>';    
 ?>
 <br/>
 

@@ -97,8 +97,8 @@
                             var index = parseInt(sourceId.substring(8));
                         }
                         
+                    arrBox[obj.id].canDrop = !arrBox[obj.id].canDrop;  
 		}
-		arrBox[obj.id].canDrop = !arrBox[obj.id].canDrop;
 	}
 	
 	function dragStart(obj) {
@@ -188,13 +188,13 @@ if (empty($setByCourse)) {
     foreach($string AS $line)
     {
         echo "<script>
-            arrBox[\"boxRight\"+(row*3+0+row)] = new BoxRight(row);
+            arrBox[\"boxLeft\"+(row*3+0+row)] = new BoxLeft(row);
             arrBox[\"boxRight\"+(row*3+1+row)] = new BoxRight(row);
             arrBox[\"boxRight\"+(row*3+2+row)] = new BoxRight(row);
             arrBox[\"boxRight\"+(row*3+3+row)] = new BoxRight(row);
 
             document.write(\"<div class='row'>\");
-                    document.write(\"<div class = 'box-container'><div id ='boxRight\" + (row*3+0+row) + \"' class='box box-left' \");
+                    document.write(\"<div class = 'box-container'><div id ='boxLeft\" + (row*3+0+row) + \"' class='box box-left' \");
                             document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
                             document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");
                             document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$line' + '</div>');

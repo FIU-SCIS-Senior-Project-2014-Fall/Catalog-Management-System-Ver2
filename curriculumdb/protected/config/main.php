@@ -9,7 +9,7 @@ return array(
 	'name'=>'My FIU Curriculum',
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array('log', 'bootstrap'),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -58,6 +58,7 @@ return array(
                         'allowAutoLogin'=>true,
                         'loginUrl'=>array('/user/login'),                      
 		),
+
                 'authManager'=>array(
                     'class'=>'RDbAuthManager', // Provides support authorization item sorting.
                     'connectionID'=>'db', // use db connection to authenticate to database
@@ -106,6 +107,10 @@ return array(
 				*/
 			),
 		),
+        'bootstrap'=>array(
+            'class'=>'ext.bootstrap.components.Bootstrap',
+        ),
+
 	),
 
 	// application-level parameters that can be accessed

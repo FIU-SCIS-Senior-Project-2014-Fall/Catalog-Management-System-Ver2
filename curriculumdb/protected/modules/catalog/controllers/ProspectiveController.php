@@ -27,8 +27,20 @@ class ProspectiveController extends Controller
                                         'set'=>$set, 
                                         'group'=>$group,
                                         'minor'=>$minor, 
-                                        'certificate'=>$certificate));
+                                        'certificate'=>$certificate),false, true);
+
+        //$this->renderPartial('create')
 	}
+
+    public function actionCourseProspectiveForm()
+    {
+        $data = array();
+        $data["myValue"] = "Content updated in AJAX";
+
+        $this->renderPartial('courseProspectiveForm', $data, false, true);
+
+    }
+
     public function actionAcceptReject()
     {
         $model=new Catalog;
@@ -81,7 +93,7 @@ class ProspectiveController extends Controller
                                         'set'=>$set, 
                                         'group'=>$group,
                                         'minor'=>$minor, 
-                                        'certificate'=>$certificate));
+                                        'certificate'=>$certificate,));
 	}
 
     public function actionPropose()

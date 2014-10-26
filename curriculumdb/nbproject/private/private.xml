@@ -4,6 +4,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/set/_links.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/config/main.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/layouts/main.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/prospective.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/views/set/_addLinks.php</file>
+            <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/user/UserModule.php</file>
+=======
             <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/catalog/views/prospective/update.php</file>
             <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/catalog/views/prospective/index.php</file>
             <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/catalog/views/manage/_form.php</file>
@@ -20,6 +28,7 @@
             <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/modules/catalog/CatalogModule.php</file>
             <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/models/CurrMinor.php</file>
             <file>file:/C:/xampp/htdocs/Catalog-Management-System-Ver2/curriculumdb/protected/models/Catalog.php</file>
+>>>>>>> 2f963b50b184416832916d1e11bb020beab8550f
         </group>
     </open-files>
 </project-private>

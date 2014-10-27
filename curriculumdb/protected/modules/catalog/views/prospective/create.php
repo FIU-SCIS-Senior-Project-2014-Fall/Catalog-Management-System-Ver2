@@ -560,6 +560,10 @@
                 <button id="add-major">Add</button>
                 <button id="edit-major">Edit</button>
                 <button id="remove-major">Remove</button>
+                <!--<div class="major-inputs">
+                    <button class="ädd-major-field-rows">+</button>
+                    <div><input type="text" name="mymajors[]"></div>
+                </div>-->
             </div>
         
             <div class="row" id="minors">

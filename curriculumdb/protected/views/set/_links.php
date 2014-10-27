@@ -197,8 +197,12 @@ if (empty($setByCourse)) {
                     document.write(\"<div class = 'box-container'><div id ='boxLeft\" + (row*3+0+row) + \"' class='box box-left' \");
                             document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
                             document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");
-                            document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$line' + '</div>');
-                    document.write(\"</div></div>\");
+                           
+                            document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$line');
+                             document.write(\"<input type='hidden' id='hidden\" + 
+                    (row*3+0+row) + \"' name='hidden\" + (row*3+0+row) + \"' row='\" + (row) + \"'>\");    
+                            
+                    document.write(\"</div></div></div>\");
                     
                     document.write(\"<div class = 'box-container'><div id = 'boxRight\" + (row*3+1+row) + \"' class='box box-right' \");
                             document.write(\"ondragstart=dragStart(this) ondragend=dragEnd(this) \");

@@ -1,120 +1,91 @@
-  <style>
-      .spacer {
+   <style>
+      .float-left {
           position:relative;
           float:left;
-          width:100%;
       }
-	.box {
-	    position:relative;
-            width: 100%;
-            height: 60px;
-	    text-align: center;
-            border: solid black thin;
-            overflow: hidden;
-            padding: 0;
-            margin: 0;
-	}
-        .box-left {
-	    float:left;
-        }
-	.box-right {
-            float:right;
-	}
-	.row {
-            position:relative;
-            float:left;
-		width:100%;
-		height:auto;
-	}
-        .outer {
-          position: relative;
-          float: left;
-          width: 750px;
+      .outer {
+          position:relative;
+          float:left;
+          width:600px;
           border: thin solid red;
       }
-      
+
       .box-container {
-          position: relative;
           width: 25%;
-          float: left;
       }
+
+    .box {
+            width: 100%;
+            height: 60px;
+        text-align: center;
+            border: solid black thin;
+            margin: 0;
+            padding: 0;
+    }
+
+        #result {
+            clear: left;
+        }
+
   </style>
-  <script>
+   <script>
     var isDragging = false;
     var objSource = "";
     var row = 0;
-  
+
     function Box (id, dropState) {
       this.id = id;
       this.canDrop = dropState;
+      this.value="empty";
     }
-    
-    function BoxRight (id) {
-      Box.call(this, id, true);
-    }
-    BoxRight.prototype = Object.create(Box.prototype);
-    BoxRight.prototype.constructor = BoxRight;
-    
-    function BoxLeft (id) {
-      Box.call(this, id, false);
-    }
-    BoxLeft.prototype = Object.create(Box.prototype);
-    BoxLeft.prototype.constructor = BoxLeft;
-    
+
 
     var arrBox = new Array();
-    var arrBoxLeft = new Array();
 
-    
-	function allowDrop(obj, ev)
-	{
-		if (arrBox[obj.id].canDrop) {
-			ev.preventDefault();
-		}
-	}
 
-	function drag(parent, ev)
-	{
-		ev.dataTransfer.setData("Text",parent.id + ":" + ev.target.id);
-	}
+    function allowDrop(obj, ev)
+    {
+        if (arrBox[obj.id].canDrop) {
+                    ev.preventDefault(); //allow drop
+        }
+    }
 
-	function drop(obj, ev)
-	{   
-		if (arrBox[obj.id].canDrop) {
-			ev.preventDefault();
-			var dragData=ev.dataTransfer.getData("Text");
+    function drag(parent, ev)
+    {
+        ev.dataTransfer.setData("Text",parent.id + ":" + ev.target.id);
+    }
+
+    function drop(dropTarget, ev)
+    {
+        if (arrBox[dropTarget.id].canDrop) {
+            ev.preventDefault(); //do not try to open link
+            var dragData=ev.dataTransfer.getData("Text");
                         var indexColon = dragData.indexOf(":");
-                        var sourceId = dragData.substring(0,indexColon);
+                        var parentId = dragData.substring(0,indexColon);
                         var dragId = dragData.substring(indexColon+1);
-			ev.target.appendChild(document.getElementById(dragId));
-                        var value = document.getElementById(dragId).innerHTML;
-                        
-                        if (obj.id.indexOf("boxRight") == 0) {
-                            var index = parseInt(obj.id.substring(8));
-                        }       
-                  
-                        if (sourceId.indexOf("boxRight") == 0) {
-                            var index = parseInt(sourceId.substring(8));
-                        }
-                        
-                    arrBox[obj.id].canDrop = !arrBox[obj.id].canDrop;  
-		}
-	}
-	
-	function dragStart(obj) {
-	    isDragging = true;
-	    objSource = obj;
-		objSource.style.border = "thin solid black";
-	}
-	
-	function dragEnd(obj) {
-	    if (isDragging) {
-			objSource.style.border = "thin solid red";
-			arrBox[objSource.id].canDrop = !arrBox[objSource.id].canDrop;
-		}
-		isDragging = false;
-	}
-</script>';
+                        alert(dropTarget.id + ":" + parentId);
+            ev.target.appendChild(document.getElementById(dragId));
+                        arrBox[dropTarget.id].canDrop = false;
+                        arrBox[dropTarget.id].value = dragId;
+                        arrBox[parentId].value = "";
+        }
+    }
+
+    function dragStart(obj) {
+        isDragging = true;
+        objSource = obj;
+        objSource.style.border = 'thin solid black';
+    }
+
+    function dragEnd(obj) {
+        if (isDragging) {
+                    objSource.style.border = 'thin solid red';
+                    arrBox[objSource.id].canDrop = true;
+            }
+            isDragging = false;
+    }
+    
+   </script>
 <?php
 
 /**
@@ -180,58 +151,35 @@ if (empty($setByCourse)) {
         }
         $row+=1;
     }    
-       
-        
-        //echo "<div id = row".$row ."class = row>";
-        //echo "<div id = boxLeft".$row ." class=\"box box-left\">";
-    
-    foreach($string AS $line)
-    {
-        echo "<script>
-            arrBox[\"boxLeft\"+(row*3+0+row)] = new BoxLeft(row);
-            arrBox[\"boxRight\"+(row*3+1+row)] = new BoxRight(row);
-            arrBox[\"boxRight\"+(row*3+2+row)] = new BoxRight(row);
-            arrBox[\"boxRight\"+(row*3+3+row)] = new BoxRight(row);
+          
+        foreach($string AS $line)
+        {
+            echo "<script>
+                arrBox[row] = new Box(row, true);
 
-            document.write(\"<div class='row'>\");
-                    document.write(\"<div class = 'box-container'><div id ='boxLeft\" + (row*3+0+row) + \"' class='box box-left' \");
-                            document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
-                            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");
-                           
-                            document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$line');
-                             document.write(\"<input type='hidden' id='hidden\" + 
-                    (row*3+0+row) + \"' name='hidden\" + (row*3+0+row) + \"' row='\" + (row) + \"'>\");    
-                            
-                    document.write(\"</div></div></div>\");
-                    
-                    document.write(\"<div class = 'box-container'><div id = 'boxRight\" + (row*3+1+row) + \"' class='box box-right' \");
-                            document.write(\"ondragstart=dragStart(this) ondragend=dragEnd(this) \");
-                            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'\");
-                    document.write(\"></div></div>\");
-                    
-                    document.write(\"<div class = 'box-container'><div id = 'boxRight\" + (row*3+2+row) + \"' class='box box-right' \");
-                            document.write(\"ondragstart=dragStart(this) ondragend=dragEnd(this) \");
-                            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'\");
-                    document.write(\"></div></div>\");
-                   
-                    document.write(\"<div class = 'box-container'><div id = 'boxRight\" + (row*3+3+row) + \"' class='box box-right' \");
-                            document.write(\"ondragstart=dragStart(this) ondragend=dragEnd(this) \");
-                            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'\");
-                    document.write(\"></div></div>\");
-            document.write(\"</div>\");
+                document.write(\"<div class='box-container float-left'><div id ='\" + row + \"' class='box' \");
+                    document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
+                    document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");
+                document.write(\"</div></div>\");
+
+
+                row++;
+            </script>";
+        }
+        foreach($string AS $line)
+        {
+            echo "<script>
+            arrBox[row] = new Box(row, true);
+                document.write(\"<div class='box-container float-left'><div id ='\" + row + \"' class='box' \");
+                    document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
+                    document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");
+                    document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '${line}' + '</div>');
+                document.write(\"</div></div>\");
             row++;
-        </script>";
-    }
-    echo '</div>';
-    
-        //echo '<br></div>'; //Close Left
-        //echo "<div id = boxRight".$row ." class=\"box box-right\">";
-            //echo "Test";
-        //echo '</div>';
-        //echo '</div>'; //Close Row
-        //$row = $row + 1;
-    //}
-    //echo '</div>';    
+            </script>";
+        }
+        
+    echo "</div>";
 ?>
 <br/>
 

@@ -4947,3 +4947,52 @@ Stack trace:
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/set/2
 >>>>>>> 1b2bad35d54d4c9e23000f7e58f43678e63a0acf
 ---
+2014/10/24 21:56:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
+---
+2014/10/24 21:56:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/10/24 21:56:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/24 21:56:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/24 21:57:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://cms-dev.cis.fiu.edu/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create?
+---

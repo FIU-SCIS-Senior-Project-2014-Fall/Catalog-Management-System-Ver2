@@ -32,6 +32,7 @@
     var isDragging = false;
     var objSource = "";
     var row = 0;
+    var row1 = 0;
 
     function Box (id, dropState) {
       this.id = id;
@@ -151,8 +152,7 @@ if (empty($setByCourse)) {
         }
         $row+=1;
     }    
-          
-        foreach($string AS $line)
+        for($x = 0; $x<sizeof($string)+2; $x++)  
         {
             echo "<script>
                 arrBox[row] = new Box(row, true);
@@ -169,13 +169,10 @@ if (empty($setByCourse)) {
         foreach($string AS $line)
         {
             echo "<script>
-            arrBox[row] = new Box(row, true);
-                document.write(\"<div class='box-container float-left'><div id ='\" + row + \"' class='box' \");
-                    document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
-                    document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");
-                    document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '${line}' + '</div>');
-                document.write(\"</div></div>\");
-            row++;
+                var div = document.getElementById(row1);
+                var content = document.createTextNode(document.write('<div id=\"drag' + row1 + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '${line}' + '</div>'));
+                div.appendChild(content);
+                row1++;
             </script>";
         }
         

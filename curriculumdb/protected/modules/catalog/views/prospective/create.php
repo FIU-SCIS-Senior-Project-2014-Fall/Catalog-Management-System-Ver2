@@ -6,7 +6,7 @@
         text-shadow:1px 0px 3px gray;
     }
 
-    #remove-course, #remove-major, #remove-set, #remove-minor, #remove-certificate, #remove-group, #remove-track
+    #remove-course, #remove-set, #remove-minor, #remove-certificate, #remove-group, #remove-track
     {
         display :none;
     }
@@ -53,7 +53,7 @@
         resize:none;
     }
 
-    #CourseDiv, #MajorDiv, #MinorDiv, #TrackDiv, #CertificateDiv, #GroupDiv, #SetDiv {
+    #CourseDiv, #MajorDiv-0, #MinorDiv, #TrackDiv, #CertificateDiv, #GroupDiv, #SetDiv {
         opacity:0.92;
         position: absolute;
         top: 0px;
@@ -141,27 +141,91 @@
     $(document).ready(function() {
         /*Major functions*/
         {
-            $('#add-major').click(function () {
-                var field = $.trim($('#prospective-major-name').val());
-                if (field.length === 0) {
-                    alert('Prospective major name cannot be empty!!!');
-                    return
-                }
-                $('#add-major').hide();
-                $('#remove-major').show();
-                $('#MajorDiv').css("display", "block");
-                $('#major-name').val($('#prospective-major-name').val());
+            var no_majors = 0;
+
+            /*closes current major form*/
+            var close_major_form = function(){
+                $("#MajorDiv-"+no_majors).on("click", "#close-major-form", function(e){
+                    $(this).parent('form').parent('div').css("display", "none");
+                });
+            }
+
+            /*pops up a new form for the major on the row*/
+            var addMajor = function(){
+                $(".major-inputs .add-major").click(function(e){
+                   if (e.target !== this)
+                   {
+                       return;
+                   }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var input = $(btn).attr('inputId');
+                    var value = $('#'+input).val();
+
+                    if ( value.length === 0)
+                    {
+                        return;
+                    }
+
+                    $("#MajorDiv-"+no_majors).css("display", "block");
+
+                    //$('#minor-name').val($('#prospective-minor-name').val());
+                });
+            }
+
+            addMajor();
+            close_major_form();
+
+            /*add row for major with its corresponding major*/
+            $(".add-major-field-rows").click(function(e){
+                e.preventDefault();
+                ++no_majors;
+                var stringMajorForm = '<div id="MajorDiv-'+(no_majors)+'">'+
+                                        '<form class="prospectiveForm" action="#" id="MajorForm">' +
+                                            '<h3>Major Form</h3>'+
+                                            '<label>Major Name </label>'+
+                                            '<input type="text" id="major-name-'+no_majors+'" placeholder="Major Name" required /></br>'+
+                                            '<label>Number of Pre-requisite Courses: <span>*</span></label>'+
+                                            '<input type="number" id="number-of-prereq-in-major-'+no_majors+'" placeholder="Number of courses" required/></br>'+
+                                            '<label>Prerequisites <span>*</span></label>'+
+                                            '<div id="major-prereq-courses"></div>'+
+
+                                            '<label>Number of Core Courses: <span>*</span></label>'+
+                                            '<input type="number" id="number-of-core-in-major-'+no_majors+'" placeholder="Number of courses" required/></br>'+
+                                            '<label>Core Courses <span>*</span></label>'+
+                                            '<div id="major-core-courses"></div>'+
+
+                                            '<label>Number of Elective Courses: <span>*</span></label>'+
+                                            '<input type="number" id="number-of-elective-in-major-'+no_majors+'" placeholder="Number of courses" required/></br>'+
+                                            '<label>Electives <span>*</span></label>'+
+                                            '<div id="major-elective-courses"></div>'+
+
+                                            '<button class="prospective-save-btn" id="save-major-form">Save</button>'+
+                                            '<button class="prospective-close-btn" id="close-major-form">Close</button>'+
+                                            '<br/>'+
+                                        '</form>'+
+                                    '</div>';
+
+                $(".major-inputs").append('<div>' +
+                                                '<input type="text" name="my-prospective-majors[]" id="my-prospective-major-'+ (no_majors) +'">'  +
+                                                '<button class="add-major" inputId="my-prospective-major-'+ (no_majors) +'" >Add</button>' +
+                                                '<button id="edit-major">Edit</button>' +
+                                                '<button class="remove-major">Remove</button>' +
+                                        '</div>');
+
+                $(".major-inputs").append(stringMajorForm);
+                $("#MajorDiv-"+no_majors).css("display", "none");
+
+                /*registers pop up function for dynamically created major forms*/
+                addMajor();
+                close_major_form();
             });
 
-            $('#remove-major').click(function () {
-                $('#add-major').show();
-                $('#remove-major').hide();
-            });
-
-            $("#close-major-form").click(function () {
-                $("#MajorDiv").css("display", "none");
-                $("#add-major").show();
-                $("#remove-major").hide();
+            /*removes row along with major*/
+            $(".major-inputs").on("click", ".remove-major", function(e){
+                e.preventDefault();
+                $(this).parent('div').remove();
+                no_majors--;
             });
 
             $('#number-of-prereq-in-major').change(function () {
@@ -555,15 +619,22 @@
             </div>
         
             <div class="row">
-                <label>Add Majors</label>
-                <input type="text" name="prospective-major-name" id="prospective-major-name"/>
+                <div>
+                    <label>Add Majors</label>
+                    <button class="add-major-field-rows">+</button>
+                </div>
+                <!--<input type="text" name="prospective-major-name" id="prospective-major-name"/>
                 <button id="add-major">Add</button>
                 <button id="edit-major">Edit</button>
-                <button id="remove-major">Remove</button>
-                <!--<div class="major-inputs">
-                    <button class="ädd-major-field-rows">+</button>
-                    <div><input type="text" name="mymajors[]"></div>
-                </div>-->
+                <button id="remove-major">Remove</button>-->
+                <div class="major-inputs">
+                    <div>
+                        <input type="text" name="my-prospective-majors[]"id="my-prospective-major-0">
+                        <button class="add-major" inputId="my-prospective-major-0">Add</button>
+                        <button id="edit-major">Edit</button>
+                        <button id="remove-major">Remove</button>
+                    </div>
+                </div>
             </div>
         
             <div class="row" id="minors">
@@ -637,23 +708,23 @@
   </div><!-- form -->
 
     <!-- Major Form -->
-    <div id="MajorDiv">
+    <div id="MajorDiv-0">
         <form class="prospectiveForm" action="#" id="MajorForm">
             <h3>Major Form</h3>
             <label>Major Name </label>
-            <input type="text" id="major-name" placeholder="Major Name" required readonly/></br>
+            <input type="text" id="major-name-0" placeholder="Major Name" required /></br>
             <label>Number of Pre-requisite Courses: <span>*</span></label>
-            <input type="number" id="number-of-prereq-in-major" placeholder="Number of courses" required/></br>
+            <input type="number" id="number-of-prereq-in-major-0" placeholder="Number of courses" required/></br>
             <label>Prerequisites <span>*</span></label>
             <div id="major-prereq-courses"></div>
 
             <label>Number of Core Courses: <span>*</span></label>
-            <input type="number" id="number-of-core-in-major" placeholder="Number of courses" required/></br>
+            <input type="number" id="number-of-core-in-major-0" placeholder="Number of courses" required/></br>
             <label>Core Courses <span>*</span></label>
             <div id="major-core-courses"></div>
 
             <label>Number of Elective Courses: <span>*</span></label>
-            <input type="number" id="number-of-elective-in-major" placeholder="Number of courses" required/></br>
+            <input type="number" id="number-of-elective-in-major-0" placeholder="Number of courses" required/></br>
             <label>Electives <span>*</span></label>
             <div id="major-elective-courses"></div>
 
@@ -662,7 +733,6 @@
             <br/>
         </form>
     </div>
-
 
     <!-- Minor Form -->
     <div id="MinorDiv">

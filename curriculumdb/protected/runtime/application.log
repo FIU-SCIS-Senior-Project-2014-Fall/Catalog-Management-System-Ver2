@@ -7090,3 +7090,577 @@ Stack trace:
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
 HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
 ---
+2014/10/31 03:11:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 03:14:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 03:14:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 03:15:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
+---
+2014/10/31 03:15:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/10/31 03:15:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 03:15:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 03:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
+---
+2014/10/31 03:20:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/10/31 03:21:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 03:21:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 03:21:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 03:21:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 03:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:01:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
+---
+2014/10/31 04:01:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/10/31 04:01:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:03:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:03:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:05:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
+---
+2014/10/31 04:05:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/10/31 04:05:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:05:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:06:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:08:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
+---
+2014/10/31 04:08:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/10/31 04:08:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:08:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:09:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create?
+---
+2014/10/31 04:10:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
+---
+2014/10/31 04:10:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/10/31 04:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:10:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:10:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:21:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:21:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:22:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:26:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:26:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
+---
+2014/10/31 04:27:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/10/31 04:27:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:27:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/login
+---
+2014/10/31 04:27:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/jquery.bpo...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/10/31 04:27:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:27:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:28:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create?
+---
+2014/10/31 04:29:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:29:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:29:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create?
+---
+2014/10/31 04:31:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalog/jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/jquery....')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/10/31 04:31:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/10/31 04:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create?
+---
+2014/10/31 04:31:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.bpopup-x.x.x.min.js".' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('jquery.bpopup-x...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('jquery.bpopup-x...')
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/jquery.bpopup-x.x.x.min.js
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create?
+---

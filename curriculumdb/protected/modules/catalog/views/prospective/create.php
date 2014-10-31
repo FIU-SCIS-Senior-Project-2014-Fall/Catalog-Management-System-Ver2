@@ -53,7 +53,7 @@
         resize:none;
     }
 
-    #CourseDiv, #MajorDiv-0, #MinorDiv, #TrackDiv, #CertificateDiv, #GroupDiv, #SetDiv {
+    #CourseDiv-0, #MajorDiv-0, #MinorDiv-0, #TrackDiv-0, #CertificateDiv-0, #GroupDiv-0, #SetDiv-0 {
         opacity:0.92;
         position: absolute;
         top: 0px;
@@ -64,7 +64,7 @@
         display: none;
     }
 
-    #MajorForm, #MinorForm, #TrackForm, #CertificateDiv, #GroupForm, #SetForm, #CourseForm    {
+    #MajorForm, #MinorForm, #TrackForm, #CertificateForm, #GroupForm, #SetForm, #CourseForm    {
         margin:0px;
         background-color:white;
         font-family: 'Fauna One', serif;
@@ -162,21 +162,22 @@
                     var input = $(btn).attr('inputId');
                     var value = $('#'+input).val();
 
+                    var currentMajorForm = input.substring(input.length - 1, input.length);
                     if ( value.length === 0)
                     {
+                        alert("Please fill out major field name first. It cannot be empty.");
                         return;
                     }
 
-                    $("#MajorDiv-"+no_majors).css("display", "block");
-
-                    //$('#minor-name').val($('#prospective-minor-name').val());
+                    $("#MajorDiv-"+currentMajorForm).css("display", "block");
+                    $("#MajorDiv-"+currentMajorForm +" #major-name-"+currentMajorForm).val(value);
                 });
             }
 
             addMajor();
             close_major_form();
 
-            /*add row for major with its corresponding major*/
+            /*add row for major with its corresponding major pop up form*/
             $(".add-major-field-rows").click(function(e){
                 e.preventDefault();
                 ++no_majors;
@@ -184,7 +185,7 @@
                                         '<form class="prospectiveForm" action="#" id="MajorForm">' +
                                             '<h3>Major Form</h3>'+
                                             '<label>Major Name </label>'+
-                                            '<input type="text" id="major-name-'+no_majors+'" placeholder="Major Name" required /></br>'+
+                                            '<input type="text" id="major-name-'+no_majors+'" placeholder="Major Name" required readonly/></br>'+
                                             '<label>Number of Pre-requisite Courses: <span>*</span></label>'+
                                             '<input type="number" id="number-of-prereq-in-major-'+no_majors+'" placeholder="Number of courses" required/></br>'+
                                             '<label>Prerequisites <span>*</span></label>'+
@@ -206,13 +207,14 @@
                                         '</form>'+
                                     '</div>';
 
-                $(".major-inputs").append('<div>' +
-                                                '<input type="text" name="my-prospective-majors[]" id="my-prospective-major-'+ (no_majors) +'">'  +
-                                                '<button class="add-major" inputId="my-prospective-major-'+ (no_majors) +'" >Add</button>' +
-                                                '<button id="edit-major">Edit</button>' +
-                                                '<button class="remove-major">Remove</button>' +
-                                        '</div>');
+                var stringMajorRow = '<div>' +
+                                        '<input type="text" name="my-prospective-majors[]" id="my-prospective-major-'+ (no_majors) +'">'  +
+                                        '<button class="add-major" inputId="my-prospective-major-'+ (no_majors) +'" >Add</button>' +
+                                        '<button id="edit-major">Edit</button>' +
+                                        '<button class="remove-major">Remove</button>' +
+                                    '</div>';
 
+                $(".major-inputs").append(stringMajorRow);
                 $(".major-inputs").append(stringMajorForm);
                 $("#MajorDiv-"+no_majors).css("display", "none");
 
@@ -271,41 +273,84 @@
 
         /*Minor functions*/
         {
-            $('#add-minor').click(function () {
-                var field = $.trim($('#prospective-minor-name').val());
-                if (field.length === 0) {
-                    alert('Prospective minor name cannot be empty!!!');
-                    return
-                }
-                $('#add-minor').hide();
-                $('#remove-minor').show();
-                $('#MinorDiv').css("display", "block");
-                $('#minor-name').val($('#prospective-minor-name').val());
+            var no_minors = 0;
+
+            /*closes current minor form*/
+            var close_minor_form = function(){
+                $("#MinorDiv-"+no_minors).on("click", "#close-minor-form", function(e){
+                    $(this).parent('form').parent('div').css("display", "none");
+                });
+            }
+
+            /*pops up a new form for the minor on the row*/
+            var addMinor = function(){
+                $(".minor-inputs .add-minor").click(function(e){
+                    if (e.target !== this)
+                    {
+                        return;
+                    }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var input = $(btn).attr('inputId');
+                    var value = $('#'+input).val();
+
+                    var currentMinorForm = input.substring(input.length - 1, input.length);
+                    if ( value.length === 0)
+                    {
+                        alert("Please fill out minor field name first. It cannot be empty.");
+                        return;
+                    }
+
+                    $("#MinorDiv-"+currentMinorForm).css("display", "block");
+                    $("#MinorDiv-"+currentMinorForm +" #minor-name-"+currentMinorForm).val(value);
+                });
+            }
+
+            addMinor();
+            close_minor_form();
+
+            /*add row for minor with its corresponding minor pop up form*/
+            $(".add-minor-field-rows").click(function(e){
+                e.preventDefault();
+                ++no_minors;
+
+                var stringMinorForm = '<div id="MinorDiv-'+(no_minors)+'">' +
+                                        '<form class="prospectiveForm" action="#" id="MinorForm">'+
+                                            '<h3>Minor Form</h3>'+
+                                            '<label>Minor Name </label>'+
+                                            '<input type="text" id="minor-name-'+no_minors+'" required readonly/></br>'+
+                                            '<label>Number of Courses: <span>*</span></label>'+
+                                            '<input type="number" id="number-of-courses-in-minor-'+no_minors+'" placeholder="Number of courses" required/></br>'+
+                                            '<label>Courses in the Minor </label>'+
+                                            '<div id="minor-courses"></div>'+
+                                            '<button class="prospective-save-btn" id="save-minor-form">Save</button>'+
+                                            '<button class="prospective-close-btn" id="close-minor-form">Close</button>'+
+                                            '<br/>'+
+                                        '</form>'+
+                                    '</div>';
+
+                var stringMinorRow = '<div>'+
+                                        '<input type="text" name="my-prospective-minors[]" id="my-prospective-minor-'+no_minors+'"/>'+
+                                        '<button class="add-minor" inputId="my-prospective-minor-'+no_minors+'">Add</button>'+
+                                        '<button id="edit-minor">Edit</button>'+
+                                        '<button id="remove-minor">Remove</button>'+
+                                    '</div>';
+
+                $(".minor-inputs").append(stringMinorRow);
+
+                $(".minor-inputs").append(stringMinorForm);
+                $("#MinorDiv-"+no_minors).css("display", "none");
+
+                /*registers pop up function for dynamically created minor forms*/
+                addMinor();
+                close_minor_form();
             });
 
-            $('#remove-minor').click(function () {
-                $('#add-minor').show();
-                $('#remove-minor').hide();
-            });
-
-            $('#save-minor-form').click(function () {
-                var htmlString = "<div id=\"minor-row\">";
-                htmlString = htmlString + "<input type=\"text\" name=\"prospective-minor-name\" id=\"prospective-minor-name\"/>";
-                htmlString = htmlString + "<button id=\"add-minor\">Add</button>";
-                htmlString = htmlString + "<button id=\"edit-minor\">Edit</button>";
-                htmlString = htmlString + "<button id=\"remove-minor\">Remove</button>";
-                htmlString = htmlString + "</div>";
-                $('#minors').append(htmlString);
-                $('#MinorDiv').css("display", "none");
-                $("#add-minor").hide();
-                $("#remove-minor").show();
-
-            });
-
-            $("#close-minor-form").click(function () {
-                $("#MinorDiv").css("display", "none");
-                $("#add-minor").show();
-                $("#remove-minor").hide();
+            /*removes row along with minor*/
+            $(".minor-inputs").on("click", ".remove-minor", function(e){
+                e.preventDefault();
+                $(this).parent('div').remove();
+                no_minors--;
             });
 
             $('#number-of-courses-in-minor').change(function () {
@@ -324,27 +369,80 @@
 
         /*Track functions*/
         {
-            $('#add-track').click(function () {
-                var field = $.trim($('#prospective-track-name').val());
-                if (field.length === 0) {
-                    alert('Prospective track name cannot be empty!!!');
-                    return
-                }
-                $('#add-track').hide();
-                $('#remove-track').show();
-                $('#TrackDiv').css("display", "block");
-                $('#track-name').val($('#prospective-track-name').val());
+            var no_tracks = 0;
+
+            /*closes track minor form*/
+            var close_track_form = function(){
+                $("#TrackDiv-"+no_tracks).on("click", "#close-track-form", function(e){
+                    $(this).parent('form').parent('div').css("display", "none");
+                });
+            }
+
+            /*pops up a new form for the track on the row*/
+            var addTrack = function(){
+                $(".track-inputs .add-track").click(function(e){
+                    if (e.target !== this)
+                    {
+                        return;
+                    }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var input = $(btn).attr('inputId');
+                    var value = $('#'+input).val();
+
+                    var currentTrackForm = input.substring(input.length - 1, input.length);
+                    if ( value.length === 0)
+                    {
+                        alert("Please fill out track field name first. It cannot be empty.");
+                        return;
+                    }
+
+                    $("#TrackDiv-"+currentTrackForm).css("display", "block");
+                    $("#TrackDiv-"+currentTrackForm +" #track-name-"+currentTrackForm).val(value);
+                });
+            }
+
+            addTrack();
+            close_track_form();
+
+            /*add row for minor with its corresponding minor pop up form*/
+            $(".add-track-field-rows").click(function(e){
+                e.preventDefault();
+                ++no_tracks;
+
+                var stringTrackForm = '<div id="TrackDiv-'+no_tracks+'">'+
+                                            '<form class="prospectiveForm" action="#" id="TrackForm">'+
+                                            '<h3>Track Form</h3>'+
+                                            '<label>Track Name </label>'+
+                                            '<input type="text" id="track-name-'+no_tracks+'" placeholder="Track Name" required readonly/></br>'+
+                                            '<button class="prospective-save-btn" id="save-track-form">Save</button>'+
+                                            '<button class="prospective-close-btn" id="close-track-form">Close</button>'+
+                                            '<br/>'+
+                                            '</form>'+
+                                        '</div>';
+
+                var stringTrackRow = '<div>'+
+                                        '<input type="text" name="my-prospective-tracks[]" id="my-prospective-track-'+no_tracks+'"/>'+
+                                        '<button class="add-track" inputId="my-prospective-track-'+no_tracks+'">Add</button>'+
+                                        '<button id="edit-track">Edit</button>'+
+                                        '<button id="remove-track">Remove</button>'+
+                                    '</div>';
+
+                $(".track-inputs").append(stringTrackRow);
+
+                $(".track-inputs").append(stringTrackForm);
+                $("#TrackDiv-"+no_tracks).css("display", "none");
+
+                /*registers pop up function for dynamically created minor forms*/
+                addTrack();
+                close_track_form();
             });
 
-            $('#remove-track').click(function () {
-                $('#add-track').show();
-                $('#remove-track').hide();
-            });
-
-            $("#close-track-form").click(function () {
-                $("#TrackDiv").css("display", "none");
-                $("#add-track").show();
-                $("#remove-track").hide();
+            /*removes row along with minor*/
+            $(".track-inputs").on("click", ".remove-track", function(e){
+                e.preventDefault();
+                $(this).parent('div').remove();
+                no_tracks--;
             });
         }
 
@@ -623,13 +721,9 @@
                     <label>Add Majors</label>
                     <button class="add-major-field-rows">+</button>
                 </div>
-                <!--<input type="text" name="prospective-major-name" id="prospective-major-name"/>
-                <button id="add-major">Add</button>
-                <button id="edit-major">Edit</button>
-                <button id="remove-major">Remove</button>-->
                 <div class="major-inputs">
                     <div>
-                        <input type="text" name="my-prospective-majors[]"id="my-prospective-major-0">
+                        <input type="text" name="my-prospective-majors[]" id="my-prospective-major-0">
                         <button class="add-major" inputId="my-prospective-major-0">Add</button>
                         <button id="edit-major">Edit</button>
                         <button id="remove-major">Remove</button>
@@ -637,57 +731,82 @@
                 </div>
             </div>
         
-            <div class="row" id="minors">
+            <div class="row">
                 <label>Add Minors</label>
-                <div id="minor-row">
-                    <input type="text" name="prospective-minor-name" id="prospective-minor-name"/>
-                    <button id="add-minor">Add</button>
-                    <button id="edit-minor">Edit</button>
-                    <button id="remove-minor">Remove</button>
+                <button class="add-minor-field-rows">+</button>
+                <div class="minor-inputs">
+                    <div>
+                        <input type="text" name="my-prospective-minors[]" id="my-prospective-minor-0"/>
+                        <button class="add-minor" inputId="my-prospective-minor-0">Add</button>
+                        <button id="edit-minor">Edit</button>
+                        <button id="remove-minor">Remove</button>
+                    </div>
                 </div>
             </div>
 
             <div class="row">
                 <label>Add Tracks</label>
-                <input type="text" name="prospective-track-name" id="prospective-track-name"/>
-                <button id="add-track">Add</button>
-                <button id="edit-track">Edit</button>
-                <button id="remove-track">Remove</button>
+                <button class="add-track-field-rows">+</button>
+                <div class="track-inputs">
+                    <div>
+                        <input type="text" name="my-prospective-tracks[]" id="my-prospective-track-0"/>
+                        <button class="add-track" inputId="my-prospective-track-0">Add</button>
+                        <button id="edit-track">Edit</button>
+                        <button id="remove-track">Remove</button>
+                    </div>
+                </div>
             </div>
 
             <div class="row">
                 <label>Add Certificates</label>
-                <input type="text" name="prospective-certificate-name" id="prospective-certificate-name"/>
-                <button id="add-certificate">Add</button>
-                <button id="edit-certificate">Edit</button>
-                <button id="remove-certificate">Remove</button>
+                <button class="add-certificate-field-rows">+</button>
+                <div class="certificate-inputs">
+                    <div>
+                        <input type="text" name="my-prospective-certificates[]" id="my-prospective-certificate-0"/>
+                        <button class="add-certificate" inputId="my-prospective-certificate-0">Add</button>
+                        <button id="edit-certificate">Edit</button>
+                        <button id="remove-certificate">Remove</button>
+                    </div>
+                </div>
             </div>
             
             <div class="row">
                 <label>Add Groups</label>
-                <input type="text" name="prospective-group-name" id="prospective-group-name"/>
-                <button id="add-group">Add</button>
-                <button id="edit-group">Edit</button>
-                <button id="remove-group">Remove</button>
+                <button class="add-group-field-rows">+</button>
+                <div class="group-inputs">
+                    <div>
+                        <input type="text" name="my-prospective-groups[]" id="prospective-group-name"/>
+                        <button class="add-group" inputId="my-prospective-group-0">Add</button>
+                        <button id="edit-group">Edit</button>
+                        <button id="remove-group">Remove</button>
+                    </div>
+                </div>
             </div>
         
             <div class="row">
                 <label>Add Sets</label>
-                <input type="text" name="prospective-set-name" id="prospective-set-name"/>
-                <button id="add-set">Add</button>
-                <button id="edit-set">Edit</button>
-                <button id="remove-set">Remove</button>
-             </div>
+                <button class="add-set-field-rows">+</button>
+                <div class="set-inputs">
+                    <div>
+                        <input type="text" name="my-prospective-sets[]" id="prospective-set-name"/>
+                        <button class="add-set" inputId="my-prospective-set-0">Add</button>
+                        <button id="edit-set">Edit</button>
+                        <button id="remove-set">Remove</button>
+                    </div>
+                </div>
+            </div>
         
             <div class="row">
                 <label>Add Courses</label>
-                <div id="course-table"></div>
-                <!--<div class="scroll"id="course-row"></div>
-                <div class="scroll" id="prospective-course-pager"></div>-->
-                <input type="text" name="prospective-course-name" id="prospective-course-name"/>
-                <button id="add-course">Add</button>
-                <button id="edit-course">Edit</button>
-                <button id="remove-course">Remove</button>
+                <button class="add-course-field-rows">+</button>
+                <div class="course-inputs">
+                    <div>
+                        <input type="text" name="my-prospective-courses[]" id="prospective-course-name"/>
+                        <button class="add-course" inputId="my-prospective-course-0">Add</button>
+                        <button id="edit-course">Edit</button>
+                        <button id="remove-course">Remove</button>
+                    </div>
+                </div>
             </div>
 
             <div>
@@ -712,7 +831,7 @@
         <form class="prospectiveForm" action="#" id="MajorForm">
             <h3>Major Form</h3>
             <label>Major Name </label>
-            <input type="text" id="major-name-0" placeholder="Major Name" required /></br>
+            <input type="text" id="major-name-0" placeholder="Major Name" required readonly/></br>
             <label>Number of Pre-requisite Courses: <span>*</span></label>
             <input type="number" id="number-of-prereq-in-major-0" placeholder="Number of courses" required/></br>
             <label>Prerequisites <span>*</span></label>
@@ -735,13 +854,13 @@
     </div>
 
     <!-- Minor Form -->
-    <div id="MinorDiv">
-        <form class="prospectiveForm" id="MinorForm">
+    <div id="MinorDiv-0">
+        <form class="prospectiveForm" action="#" id="MinorForm">
             <h3>Minor Form</h3>
             <label>Minor Name </label>
-            <input type="text" id="minor-name" required readonly/></br>
+            <input type="text" id="minor-name-0" required readonly/></br>
             <label>Number of Courses: <span>*</span></label>
-            <input type="number" id="number-of-courses-in-minor" placeholder="Number of courses" required/></br>
+            <input type="number" id="number-of-courses-in-minor-0" placeholder="Number of courses" required/></br>
             <label>Courses in the Minor </label>
             <div id="minor-courses"></div>
             <button class="prospective-save-btn" id="save-minor-form">Save</button>
@@ -751,11 +870,11 @@
     </div>
 
     <!-- Track Form -->
-    <div id="TrackDiv">
+    <div id="TrackDiv-0">
         <form class="prospectiveForm" action="#" id="TrackForm">
             <h3>Track Form</h3>
             <label>Track name </label>
-            <input type="text" id="track-name" placeholder="track Name" required readonly/></br>
+            <input type="text" id="track-name-0" placeholder="track Name" required readonly/></br>
             <button class="prospective-save-btn" id="save-track-form">Save</button>
             <button class="prospective-close-btn" id="close-track-form">Close</button>
             <br/>
@@ -764,11 +883,11 @@
 
 
     <!-- Certificate Form -->
-    <div id="CertificateDiv">
+    <div id="CertificateDiv-0">
         <form class="prospectiveForm" action="#" id="CertificateForm">
             <h3>Certificate Form</h3>
             <label>Certificate Name </label>
-            <input type="text" id="certificate-name" placeholder="Certificate Name" required readonly/></br>
+            <input type="text" id="certificate-name-0" placeholder="Certificate Name" required readonly/></br>
             <button class="prospective-save-btn" id="save-certificate-form">Save</button>
             <button class="prospective-close-btn" id="close-certificate-form">Close</button>
             <br/>
@@ -776,13 +895,13 @@
     </div>
 
     <!-- Group Form -->
-    <div id="GroupDiv">
+    <div id="GroupDiv-0">
         <form class="prospectiveForm" action="#" id="GroupForm">
             <h3>Group Form</h3>
             <label>Group Name: </label>
-            <input type="text" id="group-name" placeholder="Group Name" required readonly/></br>
+            <input type="text" id="group-name-0" placeholder="Group Name" required readonly/></br>
             <label>Number of Courses: <span>*</span></label>
-            <input type="number" id="number-of-courses-in-group" placeholder="Number of courses" required/></br>
+            <input type="number" id="number-of-courses-in-group-0" placeholder="Number of courses" required/></br>
             <label>Courses in the Group </label>
             <div id="group-courses"></div>
             <button class="prospective-save-btn" id="save-group-form">Save</button>
@@ -792,12 +911,12 @@
     </div>
 
     <!-- Set Form -->
-    <div id="SetDiv">
+    <div id="SetDiv-0">
         <form class="prospectiveForm" action="#" id="SetForm">
             <h3>Set Form</h3>
             <label>Set Name: </label>
-            <input type="text" id="set-name" placeholder="Set Name" required readonly/></br>
-            <label>Select Your DGU</label>
+            <input type="text" id="set-name-0" placeholder="Set Name" required readonly/></br>
+            <label>Select your Group</label>
             <select id="group-selected">
                 <?php
                 $groups = $group->findAllBySql("select name from curr_group");
@@ -811,7 +930,7 @@
                 ?>
             </select>
             <label>Number of Courses: <span>*</span></label>
-            <input type="number" id="number-of-courses-in-set" placeholder="Number of courses" required/></br>
+            <input type="number" id="number-of-courses-in-set-0" placeholder="Number of courses" required/></br>
             <label>Courses in the Set </label>
             <div id="set-courses"></div>
             <button class="prospective-save-btn" id="save-set-form">Save</button>
@@ -821,17 +940,17 @@
     </div>
 
     <!-- Course Form -->
-    <div id="CourseDiv">
+    <div id="CourseDiv-0">
         <form class="prospectiveForm" action="#" id="CourseForm">
             <h3>Course Form</h3>
             <label>Prefix: <span>*</span></label>
-            <input type="text" id="course-prefix" placeholder="Course Prefix" required/></br>
+            <input type="text" id="course-prefix-0" placeholder="Course Prefix" required/></br>
             <label>Code: <span>*</span></label>
-            <input type="text" id="course-code" placeholder="Course Code" required/></br>
+            <input type="text" id="course-code-0" placeholder="Course Code" required/></br>
             <label>Name: </label>
-            <input type="text" id="course-name" placeholder="Course Name" required readonly/></br>
+            <input type="text" id="course-name-0" placeholder="Course Name" required readonly/></br>
             <label>Description: <span>*</span></label>
-            <input type="text" id="course-description" placeholder="Course Description" required readonly/></br>
+            <input type="text" id="course-description-0" placeholder="Course Description" required readonly/></br>
             <button class="prospective-save-btn" id="save-course-form">Save</button>
             <button class="prospective-close-btn" id="close-course-form">Close</button>
             <br/>

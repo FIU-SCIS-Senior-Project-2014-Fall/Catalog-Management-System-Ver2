@@ -33,7 +33,7 @@
       <file leaf-file-name="ProspectiveController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.653847" vertical-offset="867" max-vertical-offset="2720">
+            <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="2720">
               <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
               <folding />
             </state>
@@ -43,23 +43,16 @@
       <file leaf-file-name="create.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="6.7132783" vertical-offset="203" max-vertical-offset="8126">
-              <caret line="714" column="83" selection-start-line="714" selection-start-column="83" selection-end-line="714" selection-end-column="83" />
+            <state vertical-scroll-proportion="8.188014" vertical-offset="2790" max-vertical-offset="11492">
+              <caret line="872" column="0" selection-start-line="872" selection-start-column="0" selection-end-line="872" selection-end-column="0" />
               <folding>
-                <element signature="tag#style#0" expanded="false" />
-                <element signature="e#12649#13529#0#HTML" expanded="false" />
-                <element signature="e#13573#14543#0#HTML" expanded="false" />
-                <element signature="e#14581#16276#0#HTML" expanded="false" />
-                <element signature="e#14629#15088#0#HTML" expanded="false" />
-                <element signature="e#16313#17968#0#HTML" expanded="false" />
-                <element signature="e#18007#19029#0#HTML" expanded="false" />
-                <element signature="e#19065#21949#0#HTML" expanded="false" />
-                <element signature="e#22353#22510#0#PHP" expanded="true" />
-                <element signature="tag#div#9;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="e#26662#26835#0#PHP" expanded="true" />
-                <element signature="tag#select#0;tag#form#0;tag#div#6;tag#div#0" expanded="false" />
-                <marker date="1414640849186" expanded="true" signature="22204:22229" placeholder="select name ..curr_dgu..." />
-                <marker date="1414640849186" expanded="true" signature="31391:31418" placeholder="select name ..curr_group..." />
+                <element signature="e#2993#10382#0#HTML" expanded="false" />
+                <element signature="e#10420#15198#0#HTML" expanded="false" />
+                <element signature="e#15236#18811#0#HTML" expanded="false" />
+                <element signature="e#27635#27792#0#PHP" expanded="true" />
+                <element signature="e#32933#33106#0#PHP" expanded="true" />
+                <marker date="1414726257894" expanded="true" signature="27486:27511" placeholder="select name ..curr_dgu..." />
+                <marker date="1414726257894" expanded="true" signature="37707:37734" placeholder="select name ..curr_group..." />
               </folding>
             </state>
           </provider>
@@ -68,7 +61,7 @@
       <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.538462" vertical-offset="102" max-vertical-offset="1836">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1836">
               <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
@@ -78,7 +71,7 @@
       <file leaf-file-name="courseProspectiveForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/courseProspectiveForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="680">
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="680">
               <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding />
             </state>
@@ -493,15 +486,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="e531322c-b95e-48d1-941a-505c493717c1" server_name="curriculum">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="e531322c-b95e-48d1-941a-505c493717c1" server_name="curriculum">
       <method />
     </configuration>
     <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/index.php">
@@ -557,7 +550,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -567,19 +560,19 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494612" sideWeight="0.60045403" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12992546" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2521645" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13099042" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21390086" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2521645" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -605,6 +598,54 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16558">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2993#10382#0#HTML" expanded="false" />
+            <element signature="e#10420#15198#0#HTML" expanded="false" />
+            <element signature="e#15236#18811#0#HTML" expanded="false" />
+            <element signature="e#27635#27792#0#PHP" expanded="true" />
+            <element signature="e#32933#33106#0#PHP" expanded="true" />
+            <marker date="1414726257894" expanded="true" signature="27486:27511" placeholder="select name ..curr_dgu..." />
+            <marker date="1414726257894" expanded="true" signature="37707:37734" placeholder="select name ..curr_group..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1836">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/courseProspectiveForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="680">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/api/js/prospective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/prospective.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="2720">
@@ -618,20 +659,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9673">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="tag#style#0" expanded="false" />
-            <element signature="e#12649#13529#0#HTML" expanded="false" />
-            <element signature="e#13573#14543#0#HTML" expanded="false" />
-            <element signature="e#14581#16276#0#HTML" expanded="false" />
-            <element signature="e#14629#15088#0#HTML" expanded="false" />
-            <element signature="e#16313#17968#0#HTML" expanded="false" />
-            <element signature="e#18007#19029#0#HTML" expanded="false" />
-            <element signature="e#19065#21949#0#HTML" expanded="false" />
-            <element signature="e#22353#22510#0#PHP" expanded="true" />
-            <element signature="tag#div#9;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#26662#26835#0#PHP" expanded="true" />
-            <element signature="tag#select#0;tag#form#0;tag#div#6;tag#div#0" expanded="false" />
-            <marker date="1414640849186" expanded="true" signature="22204:22229" placeholder="select name ..curr_dgu..." />
-            <marker date="1414640849186" expanded="true" signature="31391:31418" placeholder="select name ..curr_group..." />
+            <element signature="e#2993#10382#0#HTML" expanded="false" />
+            <element signature="e#10420#15198#0#HTML" expanded="false" />
+            <element signature="e#15236#18811#0#HTML" expanded="false" />
+            <element signature="e#27635#27792#0#PHP" expanded="true" />
+            <element signature="e#32933#33106#0#PHP" expanded="true" />
+            <marker date="1414726257894" expanded="true" signature="27486:27511" placeholder="select name ..curr_dgu..." />
+            <marker date="1414726257894" expanded="true" signature="37707:37734" placeholder="select name ..curr_group..." />
           </folding>
         </state>
       </provider>
@@ -681,20 +715,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4165">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="tag#style#0" expanded="false" />
-            <element signature="e#12649#13529#0#HTML" expanded="false" />
-            <element signature="e#13573#14543#0#HTML" expanded="false" />
-            <element signature="e#14581#16276#0#HTML" expanded="false" />
-            <element signature="e#14629#15088#0#HTML" expanded="false" />
-            <element signature="e#16313#17968#0#HTML" expanded="false" />
-            <element signature="e#18007#19029#0#HTML" expanded="false" />
-            <element signature="e#19065#21949#0#HTML" expanded="false" />
-            <element signature="e#22353#22510#0#PHP" expanded="true" />
-            <element signature="tag#div#9;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#26662#26835#0#PHP" expanded="true" />
-            <element signature="tag#select#0;tag#form#0;tag#div#6;tag#div#0" expanded="false" />
-            <marker date="1414640849186" expanded="true" signature="22204:22229" placeholder="select name ..curr_dgu..." />
-            <marker date="1414640849186" expanded="true" signature="31391:31418" placeholder="select name ..curr_group..." />
+            <element signature="e#2993#10382#0#HTML" expanded="false" />
+            <element signature="e#10420#15198#0#HTML" expanded="false" />
+            <element signature="e#15236#18811#0#HTML" expanded="false" />
+            <element signature="e#27635#27792#0#PHP" expanded="true" />
+            <element signature="e#32933#33106#0#PHP" expanded="true" />
+            <marker date="1414726257894" expanded="true" signature="27486:27511" placeholder="select name ..curr_dgu..." />
+            <marker date="1414726257894" expanded="true" signature="37707:37734" placeholder="select name ..curr_group..." />
           </folding>
         </state>
       </provider>
@@ -744,20 +771,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="2125">
           <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
           <folding>
-            <element signature="tag#style#0" expanded="false" />
-            <element signature="e#12649#13529#0#HTML" expanded="false" />
-            <element signature="e#13573#14543#0#HTML" expanded="false" />
-            <element signature="e#14581#16276#0#HTML" expanded="false" />
-            <element signature="e#14629#15088#0#HTML" expanded="false" />
-            <element signature="e#16313#17968#0#HTML" expanded="false" />
-            <element signature="e#18007#19029#0#HTML" expanded="false" />
-            <element signature="e#19065#21949#0#HTML" expanded="false" />
-            <element signature="e#22353#22510#0#PHP" expanded="true" />
-            <element signature="tag#div#9;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#26662#26835#0#PHP" expanded="true" />
-            <element signature="tag#select#0;tag#form#0;tag#div#6;tag#div#0" expanded="false" />
-            <marker date="1414640849186" expanded="true" signature="22204:22229" placeholder="select name ..curr_dgu..." />
-            <marker date="1414640849186" expanded="true" signature="31391:31418" placeholder="select name ..curr_group..." />
+            <element signature="e#2993#10382#0#HTML" expanded="false" />
+            <element signature="e#10420#15198#0#HTML" expanded="false" />
+            <element signature="e#15236#18811#0#HTML" expanded="false" />
+            <element signature="e#27635#27792#0#PHP" expanded="true" />
+            <element signature="e#32933#33106#0#PHP" expanded="true" />
+            <marker date="1414726257894" expanded="true" signature="27486:27511" placeholder="select name ..curr_dgu..." />
+            <marker date="1414726257894" expanded="true" signature="37707:37734" placeholder="select name ..curr_group..." />
           </folding>
         </state>
       </provider>
@@ -928,7 +948,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.538462" vertical-offset="102" max-vertical-offset="1836">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1836">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
@@ -938,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44858757" vertical-offset="40199" max-vertical-offset="60435">
           <caret line="2388" column="0" selection-start-line="2388" selection-start-column="0" selection-end-line="2388" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,9 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2305046" vertical-offset="2943" max-vertical-offset="4675">
           <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding>
-            <marker date="1414381979006" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -972,13 +988,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/courseProspectiveForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="680">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="680">
           <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding />
         </state>
@@ -986,7 +1001,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.653847" vertical-offset="867" max-vertical-offset="2720">
+        <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="2720">
           <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
           <folding />
         </state>
@@ -994,23 +1009,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.7132783" vertical-offset="203" max-vertical-offset="8126">
-          <caret line="714" column="83" selection-start-line="714" selection-start-column="83" selection-end-line="714" selection-end-column="83" />
+        <state vertical-scroll-proportion="8.188014" vertical-offset="2790" max-vertical-offset="11492">
+          <caret line="872" column="0" selection-start-line="872" selection-start-column="0" selection-end-line="872" selection-end-column="0" />
           <folding>
-            <element signature="tag#style#0" expanded="false" />
-            <element signature="e#12649#13529#0#HTML" expanded="false" />
-            <element signature="e#13573#14543#0#HTML" expanded="false" />
-            <element signature="e#14581#16276#0#HTML" expanded="false" />
-            <element signature="e#14629#15088#0#HTML" expanded="false" />
-            <element signature="e#16313#17968#0#HTML" expanded="false" />
-            <element signature="e#18007#19029#0#HTML" expanded="false" />
-            <element signature="e#19065#21949#0#HTML" expanded="false" />
-            <element signature="e#22353#22510#0#PHP" expanded="true" />
-            <element signature="tag#div#9;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#26662#26835#0#PHP" expanded="true" />
-            <element signature="tag#select#0;tag#form#0;tag#div#6;tag#div#0" expanded="false" />
-            <marker date="1414640849186" expanded="true" signature="22204:22229" placeholder="select name ..curr_dgu..." />
-            <marker date="1414640849186" expanded="true" signature="31391:31418" placeholder="select name ..curr_group..." />
+            <element signature="e#2993#10382#0#HTML" expanded="false" />
+            <element signature="e#10420#15198#0#HTML" expanded="false" />
+            <element signature="e#15236#18811#0#HTML" expanded="false" />
+            <element signature="e#27635#27792#0#PHP" expanded="true" />
+            <element signature="e#32933#33106#0#PHP" expanded="true" />
+            <marker date="1414726257894" expanded="true" signature="27486:27511" placeholder="select name ..curr_dgu..." />
+            <marker date="1414726257894" expanded="true" signature="37707:37734" placeholder="select name ..curr_group..." />
           </folding>
         </state>
       </provider>

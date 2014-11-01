@@ -6,11 +6,6 @@
         text-shadow:1px 0px 3px gray;
     }
 
-    #remove-course, #remove-set, #remove-minor, #remove-certificate, #remove-group, #remove-track
-    {
-        display :none;
-    }
-
     .prospectiveForm{
         display: inline-block;
         border-radius:2px;
@@ -216,7 +211,14 @@
 
                 $(".major-inputs").append(stringMajorRow);
                 $(".major-inputs").append(stringMajorForm);
-                $("#MajorDiv-"+no_majors).css("display", "none");
+                $("#MajorDiv-"+no_majors).css({"opacity":"0.92",
+                                                "position": "absolute",
+                                                "top": "0px",
+                                                "left": "0px",
+                                                "height": "100%",
+                                                "width": "100%",
+                                                "background": "#ffffff",
+                                                "display": "none"});
 
                 /*registers pop up function for dynamically created major forms*/
                 addMajor();
@@ -333,13 +335,20 @@
                                         '<input type="text" name="my-prospective-minors[]" id="my-prospective-minor-'+no_minors+'"/>'+
                                         '<button class="add-minor" inputId="my-prospective-minor-'+no_minors+'">Add</button>'+
                                         '<button id="edit-minor">Edit</button>'+
-                                        '<button id="remove-minor">Remove</button>'+
+                                        '<button class="remove-minor">Remove</button>'+
                                     '</div>';
 
                 $(".minor-inputs").append(stringMinorRow);
 
                 $(".minor-inputs").append(stringMinorForm);
-                $("#MinorDiv-"+no_minors).css("display", "none");
+                $("#MinorDiv-"+no_minors).css({"opacity":"0.92",
+                                                "position": "absolute",
+                                                "top": "0px",
+                                                "left": "0px",
+                                                "height": "100%",
+                                                "width": "100%",
+                                                "background": "#ffffff",
+                                                "display": "none"});
 
                 /*registers pop up function for dynamically created minor forms*/
                 addMinor();
@@ -425,20 +434,27 @@
                                         '<input type="text" name="my-prospective-tracks[]" id="my-prospective-track-'+no_tracks+'"/>'+
                                         '<button class="add-track" inputId="my-prospective-track-'+no_tracks+'">Add</button>'+
                                         '<button id="edit-track">Edit</button>'+
-                                        '<button id="remove-track">Remove</button>'+
+                                        '<button class="remove-track">Remove</button>'+
                                     '</div>';
 
                 $(".track-inputs").append(stringTrackRow);
 
                 $(".track-inputs").append(stringTrackForm);
-                $("#TrackDiv-"+no_tracks).css("display", "none");
+                $("#TrackDiv-"+no_tracks).css({"opacity":"0.92",
+                                                "position": "absolute",
+                                                "top": "0px",
+                                                "left": "0px",
+                                                "height": "100%",
+                                                "width": "100%",
+                                                "background": "#ffffff",
+                                                "display": "none"});
 
-                /*registers pop up function for dynamically created minor forms*/
+                /*registers pop up function for dynamically created track forms*/
                 addTrack();
                 close_track_form();
             });
 
-            /*removes row along with minor*/
+            /*removes row along with track*/
             $(".track-inputs").on("click", ".remove-track", function(e){
                 e.preventDefault();
                 $(this).parent('div').remove();
@@ -448,53 +464,177 @@
 
         /*Certificate functions*/
         {
-            $('#add-certificate').click(function () {
-                var field = $.trim($('#prospective-certificate-name').val());
-                if (field.length === 0) {
-                    alert('Prospective certificate name cannot be empty!!!');
-                    return
-                }
-                $('#add-certificate').hide();
-                $('#remove-certificate').show();
-                $('#CertificateDiv').css("display", "block");
-                $('#certificate-name').val($('#prospective-certificate-name').val());
+            var no_certificates = 0;
+
+            /*closes certificate form*/
+            var close_certificate_form = function(){
+                $("#CertificateDiv-"+no_certificates).on("click", "#close-certificate-form", function(e){
+                    $(this).parent('form').parent('div').css("display", "none");
+                });
+            }
+
+            /*pops up a new form for the certificate on the row*/
+            var addCertificate = function(){
+                $(".certificate-inputs .add-certificate").click(function(e){
+                    if (e.target !== this)
+                    {
+                        return;
+                    }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var input = $(btn).attr('inputId');
+                    var value = $('#'+input).val();
+
+                    var currentCertificateForm = input.substring(input.length - 1, input.length);
+                    if ( value.length === 0)
+                    {
+                        alert("Please fill out certificate field name first. It cannot be empty.");
+                        return;
+                    }
+
+                    $("#CertificateDiv-"+currentCertificateForm).css("display", "block");
+                    $("#CertificateDiv-"+currentCertificateForm +" #certificate-name-"+currentCertificateForm).val(value);
+                });
+            }
+
+            addCertificate();
+            close_certificate_form();
+
+            /*add row for certficate with its corresponding certificate pop up form*/
+            $(".add-certificate-field-rows").click(function(e){
+                e.preventDefault();
+                ++no_certificates;
+
+                var stringCertificateForm = '<div id="CertificateDiv-'+no_certificates+'">'+
+                                                '<form class="prospectiveForm" action="#" id="CertificateForm">'+
+                                                '<h3>Certificate Form</h3>'+
+                                                '<label>Certificate Name </label>'+
+                                                '<input type="text" id="certificate-name-'+no_certificates+'" placeholder="Certificate Name" required readonly/></br>'+
+                                                '<button class="prospective-save-btn" id="save-certificate-form">Save</button>'+
+                                                '<button class="prospective-close-btn" id="close-certificate-form">Close</button>'+
+                                                '<br/>'+
+                                                '</form>'+
+                                            '</div>';
+
+                var stringCertificateRow = '<div>'+
+                                                '<input type="text" name="my-prospective-certificates[]" id="my-prospective-certificate-'+no_certificates+'"/>'+
+                                                ' <button class="add-certificate" inputId="my-prospective-certificate-'+no_certificates+'">Add</button>'+
+                                                ' <button id="edit-certificate">Edit</button>'+
+                                                ' <button class="remove-certificate">Remove</button>'+
+                                            '</div>';
+
+                $(".certificate-inputs").append(stringCertificateRow);
+
+                $(".certificate-inputs").append(stringCertificateForm);
+                $("#CertificateDiv-"+no_certificates).css({"opacity":"0.92",
+                                                            "position": "absolute",
+                                                            "top": "0px",
+                                                            "left": "0px",
+                                                            "height": "100%",
+                                                            "width": "100%",
+                                                            "background": "#ffffff",
+                                                            "display": "none"});
+
+                /*registers pop up function for dynamically created certificate forms*/
+                addCertificate();
+                close_certificate_form();
             });
 
-            $('#remove-certificate').click(function () {
-                $('#add-certificate').show();
-                $('#remove-certificate').hide();
-            });
-
-            $("#close-certificate-form").click(function () {
-                $("#CertificateDiv").css("display", "none");
-                $("#add-certificate").show();
-                $("#remove-certificate").hide();
+            /*removes row along with certificate*/
+            $(".certificate-inputs").on("click", ".remove-certificate", function(e){
+                e.preventDefault();
+                $(this).parent('div').remove();
+                no_certificates--;
             });
         }
 
         /*Group functions*/
         {
-            $('#add-group').click(function () {
-                var field = $.trim($('#prospective-group-name').val());
-                if (field.length === 0) {
-                    alert('Prospective group name cannot be empty!!!');
-                    return
-                }
-                $('#add-group').hide();
-                $('#remove-group').show();
-                $('#GroupDiv').css("display", "block");
-                $('#group-name').val($('#prospective-group-name').val());
+            var no_groups = 0;
+
+            /*closes group form*/
+            var close_group_form = function(){
+                $("#GroupDiv-"+no_groups).on("click", "#close-group-form", function(e){
+                    $(this).parent('form').parent('div').css("display", "none");
+                });
+            }
+
+            /*pops up a new form for the group on the row*/
+            var addGroup = function(){
+                $(".group-inputs .add-group").click(function(e){
+                    if (e.target !== this)
+                    {
+                        return;
+                    }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var input = $(btn).attr('inputId');
+                    var value = $('#'+input).val();
+
+                    var currentGroupForm = input.substring(input.length - 1, input.length);
+                    if ( value.length === 0)
+                    {
+                        alert("Please fill out group field name first. It cannot be empty.");
+                        return;
+                    }
+
+                    $("#GroupDiv-"+currentGroupForm).css("display", "block");
+                    $("#GroupDiv-"+currentGroupForm +" #group-name-"+currentGroupForm).val(value);
+                });
+            }
+
+            addGroup();
+            close_group_form();
+
+            /*add row for group with its corresponding group pop up form*/
+            $(".add-group-field-rows").click(function(e){
+                e.preventDefault();
+                ++no_groups;
+
+                var stringGroupForm = '<div id="GroupDiv-'+no_groups+'">'+
+                                        '<form class="prospectiveForm" action="#" id="GroupForm">'+
+                                        '<h3>Group Form</h3>'+
+                                        '<label>Group Name: </label>'+
+                                        '<input type="text" id="group-name-'+no_groups+'" placeholder="Group Name" required readonly/></br>'+
+                                        '<label>Number of Courses: <span>*</span></label>'+
+                                        '<input type="number" id="number-of-courses-in-group-'+no_groups+'" placeholder="Number of courses" required/></br>'+
+                                        '<label>Courses in the Group </label>'+
+                                        '<div id="group-courses"></div>'+
+                                        '<button class="prospective-save-btn" id="save-group-form">Save</button>'+
+                                        '<button class="prospective-close-btn" id="close-group-form">Close</button>'+
+                                        '<br/>'+
+                                        '</form>'+
+                                    '</div>';
+
+                var stringGroupRow = '<div>'+
+                                        '<input type="text" name="my-prospective-groups[]" id="my-prospective-group-'+no_groups+'"/>'+
+                                        '<button class="add-group" inputId="my-prospective-group-'+no_groups+'">Add</button>'+
+                                        '<button id="edit-group">Edit</button>'+
+                                        '<button class="remove-group">Remove</button>'+
+                                    '</div>';
+
+                $(".group-inputs").append(stringGroupRow);
+
+                $(".group-inputs").append(stringGroupForm);
+                $("#GroupDiv-"+no_groups).css({"opacity":"0.92",
+                                                "position": "absolute",
+                                                "top": "0px",
+                                                "left": "0px",
+                                                "height": "100%",
+                                                "width": "100%",
+                                                "background": "#ffffff",
+                                                "display": "none"});
+
+                /*registers pop up function for dynamically created group forms*/
+                addGroup();
+                close_group_form();
             });
 
-            $('#remove-group').click(function () {
-                $('#add-group').show();
-                $('#remove-group').hide();
-            });
-
-            $("#close-group-form").click(function () {
-                $("#GroupDiv").css("display", "none");
-                $("#add-group").show();
-                $("#remove-group").hide();
+            /*removes row along with group*/
+            $(".group-inputs").on("click", ".remove-group", function(e){
+                e.preventDefault();
+                $(this).parent('div').remove();
+                no_groups--;
             });
 
             $('#number-of-courses-in-group').change(function () {
@@ -513,27 +653,95 @@
 
         /*Sets functions*/
         {
-            $('#add-set').click(function () {
-                var field = $.trim($('#prospective-set-name').val());
-                if (field.length === 0) {
-                    alert('Prospective set name cannot be empty!!!');
-                    return
-                }
-                $('#add-set').hide();
-                $('#remove-set').show();
-                $('#SetDiv').css("display", "block");
-                $('#set-name').val($('#prospective-set-name').val());
+            var no_sets = 0;
+
+            /*closes group form*/
+            var close_set_form = function(){
+                $("#SetDiv-"+no_sets).on("click", "#close-set-form", function(e){
+                    $(this).parent('form').parent('div').css("display", "none");
+                });
+            }
+
+            /*pops up a new form for the set on the row*/
+            var addSet = function(){
+                $(".set-inputs .add-set").click(function(e){
+                    if (e.target !== this)
+                    {
+                        return;
+                    }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var input = $(btn).attr('inputId');
+                    var value = $('#'+input).val();
+
+                    var currentSetForm = input.substring(input.length - 1, input.length);
+                    if ( value.length === 0)
+                    {
+                        alert("Please fill out set field name first. It cannot be empty.");
+                        return;
+                    }
+
+                    $("#SetDiv-"+currentSetForm).css("display", "block");
+                    $("#SetDiv-"+currentSetForm +" #set-name-"+currentSetForm).val(value);
+                });
+            }
+
+            addSet();
+            close_set_form();
+
+            /*add row for set with its corresponding set pop up form*/
+            $(".add-set-field-rows").click(function(e){
+                e.preventDefault();
+                ++no_sets;
+
+                var stringSetForm = '<div id="SetDiv-'+no_sets+'">'+
+                                        '<form class="prospectiveForm" action="#" id="SetForm">'+
+                                        '<h3>Set Form</h3>'+
+                                        '<label>Set Name: </label>'+
+                                        '<input type="text" id="set-name-'+no_sets+'" placeholder="Set Name" required readonly/></br>'+
+                                        '<label>Select your Group</label>'+
+                                        '<select id="group-selected">'+
+
+                                        '</select>'+
+                                        '<label>Number of Courses: <span>*</span></label>'+
+                                        '<input type="number" id="number-of-courses-in-set-'+no_sets+'" placeholder="Number of courses" required/></br>'+
+                                        '<label>Courses in the Set </label>'+
+                                        '<div id="set-courses"></div>'+
+                                        '<button class="prospective-save-btn" id="save-set-form">Save</button>'+
+                                        '<button class="prospective-close-btn" id="close-set-form">Close</button>'+
+                                        '<br/>'+
+                                        '</form>'+
+                                    '</div>';
+
+                var stringSetRow = '<div>'+
+                                        '<input type="text" name="my-prospective-sets[]" id="my-prospective-set-'+no_sets+'"/>'+
+                                        '<button class="add-set" inputId="my-prospective-set-'+no_sets+'">Add</button>'+
+                                        '<button id="edit-set">Edit</button>'+
+                                        '<button class="remove-set">Remove</button>'+
+                                   '</div>';
+
+                $(".set-inputs").append(stringSetRow);
+
+                $(".set-inputs").append(stringSetForm);
+                $("#SetDiv-"+no_sets).css({"opacity":"0.92",
+                                            "position": "absolute",
+                                            "top": "0px",
+                                            "left": "0px",
+                                            "height": "100%",
+                                            "width": "100%",
+                                            "background": "#ffffff",
+                                            "display": "none"});
+
+                /*registers pop up function for dynamically created set forms*/
+                addSet();
+                close_set_form();
             });
 
-            $('#remove-set').click(function () {
-                $('#add-set').show();
-                $('#remove-set').hide();
-            });
-
-            $("#close-set-form").click(function () {
-                $("#SetDiv").css("display", "none");
-                $("#add-set").show();
-                $("#remove-set").hide();
+            /*removes row along with group*/
+            $(".set-inputs").on("click", ".remove-set", function(e){
+                e.preventDefault();
+                $(this).parent('div').remove();
+                no_sets--;
             });
 
             $('#number-of-courses-in-set').change(function () {
@@ -552,114 +760,97 @@
 
         /*Course functions*/
         {
-            $('#add-course').click(function () {
+            var no_course = 0;
 
-                var field = $.trim($('#prospective-course-name').val());
-                if (field.length === 0) {
-                    alert('Prospective course name cannot be empty!!!');
-                    return
-                }
-                $('#add-course').hide();
-                $('#remove-course').show();
-                $('#CourseDiv').css("display", "block");
-                $('#course-name').val($('#prospective-course-name').val());
+            /*closes group form*/
+            var close_course_form = function(){
+                $("#CourseDiv-"+no_course).on("click", "#close-course-form", function(e){
+                    $(this).parent('form').parent('div').css("display", "none");
+                });
+            }
 
-
-            });
-
-            $('#edit-course').click(function () {
-                alert('Please edit the following file');
-            });
-
-            $('#remove-course').click(function () {
-                $('#add-course').show();
-                $('#remove-course').hide();
-            });
-
-            $("#close-course-form").click(function () {
-                $("#CourseDiv").css("display", "none");
-                $("#add-course").show();
-                $("#remove-course").hide();
-            });
-        }
-
-        /*tables trials*/
-        {
-            $('#course-table').jtable({
-                title: 'Table of people',
-                actions: {}, /*
-                 listAction: '/GettingStarted/PersonList',
-                 createAction: '/GettingStarted/CreatePerson',
-                 updateAction: '/GettingStarted/UpdatePerson',
-                 deleteAction: '/GettingStarted/DeletePerson'
-                 },*/
-                fields: {
-                    PersonId: {
-                        key: true,
-                        list: false
-                    },
-                    Name: {
-                        title: 'Author Name',
-                        width: '40%'
-                    },
-                    Age: {
-                        title: 'Age',
-                        width: '20%'
-                    },
-                    RecordDate: {
-                        title: 'Record date',
-                        width: '30%',
-                        type: 'date',
-                        create: false,
-                        edit: false
+            /*pops up a new form for the group on the row*/
+            var addCourse = function(){
+                $(".course-inputs .add-course").click(function(e){
+                    if (e.target !== this)
+                    {
+                        return;
                     }
-                }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var input = $(btn).attr('inputId');
+                    var value = $('#'+input).val();
+
+                    var currentCourseForm = input.substring(input.length - 1, input.length);
+                    if ( value.length === 0)
+                    {
+                        alert("Please fill out course field name first. It cannot be empty.");
+                        return;
+                    }
+
+                    $("#CourseDiv-"+currentCourseForm).css("display", "block");
+                    $("#CourseDiv-"+currentCourseForm +" #course-name-"+currentCourseForm).val(value);
+                });
+            }
+
+            addCourse();
+            close_course_form();
+
+            /*add row for group with its corresponding group pop up form*/
+            $(".add-course-field-rows").click(function(e){
+                e.preventDefault();
+                ++no_course;
+
+                var stringCourseForm = '<div id="CourseDiv-'+no_course+'">'+
+                                            '<form class="prospectiveForm" action="#" id="CourseForm">'+
+                                            '<h3>Course Form</h3>'+
+                                            '<label>Prefix: <span>*</span></label>'+
+                                            '<input type="text" id="course-prefix-'+no_course+'" placeholder="Course Prefix" required/></br>'+
+                                            '<label>Code: <span>*</span></label>'+
+                                            '<input type="text" id="course-code-'+no_course+'" placeholder="Course Code" required/></br>'+
+                                            '<label>Name: </label>'+
+                                            '<input type="text" id="course-name-'+no_course+'" placeholder="Course Name" required readonly/></br>'+
+                                            '<label>Description: <span>*</span></label>'+
+                                            '<input type="text" id="course-description-'+no_course+'" placeholder="Course Description" required readonly/></br>'+
+                                            '<button class="prospective-save-btn" id="save-course-form">Save</button>'+
+                                            '<button class="prospective-close-btn" id="close-course-form">Close</button>'+
+                                            '<br/>'+
+                                            '</form>'+
+                                        '</div>';
+
+                var stringCourseRow = '<div>'+
+                                            '<input type="text" name="my-prospective-courses[]" id="my-prospective-course-'+no_course+'"/>'+
+                                            '<button class="add-course" inputId="my-prospective-course-'+no_course+'">Add</button>'+
+                                            '<button id="edit-course">Edit</button>'+
+                                            '<button class="remove-course">Remove</button>'+
+                                        '</div>';
+
+                $(".course-inputs").append(stringCourseRow);
+
+                $(".course-inputs").append(stringCourseForm);
+                $("#CourseDiv-"+no_course).css({"opacity":"0.92",
+                                                "position": "absolute",
+                                                "top": "0px",
+                                                "left": "0px",
+                                                "height": "100%",
+                                                "width": "100%",
+                                                "background": "#ffffff",
+                                                "display": "none"});
+
+                /*registers pop up function for dynamically created group forms*/
+                addCourse();
+                close_course_form();
             });
 
-            //Load student list from server
-            $('#course-table').jtable('load');
-
-
-            /*
-             jQuery("#course-table").jqGrid({
-             datatype: "xml",
-             colNames:['Index','Prefix', 'ID', 'Name','Description'],
-             colModel:[
-             {name:'id',index:'id', width:55, editable:false, editoptions:{readonly:true,size:10}},
-             {name:'prefix',index:'prefix', width:90, editable:true,editoptions:{size:10}},
-             {name:'courseid',index:'courseid', width:80, align:"right",editable:true,editoptions:{size:10}},
-             {name:'name',index:'name', width:80, align:"right",editable:true,editoptions:{size:10}},
-             {name:'description',index:'description', width:255,align:"right",editable:true,editoptions:{size:10}}
-             ],
-             rowNum:10,
-             rowList:[10,20,30],
-             pager: '#prospective-course-pager',
-             sortname: 'id',
-             viewrecords: true,
-             sortorder: "des",
-             editurl: "server.php",
-             caption: "Prospective Course"
-             });
-
-             $("#course-table").jqGrid('navGrid','#prospective-course-pager',{},{width:300});
-
-             jQuery("#course-table")
-             .navGrid('#prospective-course-pager',{edit:true,add:true,del:true,search:true}, {width:300})
-             .navButtonAdd('#prospective-course-pager',{
-             caption:"Add",
-             onClickButton: function(){
-             alert("Adding Row");
-             },
-             position:"last"
-             })
-             .navButtonAdd('#prospective-course-pager',{
-             caption:"Del",
-             onClickButton: function(){
-             alert("Deleting Row");
-             },
-             position:"last"
-             });*/
+            /*removes row along with group*/
+            $(".course-inputs").on("click", ".remove-course", function(e){
+                e.preventDefault();
+                $(this).parent('div').remove();
+                no_course--;
+            });
         }
+
+
 
 });
 </script>
@@ -775,7 +966,7 @@
                 <button class="add-group-field-rows">+</button>
                 <div class="group-inputs">
                     <div>
-                        <input type="text" name="my-prospective-groups[]" id="prospective-group-name"/>
+                        <input type="text" name="my-prospective-groups[]" id="my-prospective-group-0"/>
                         <button class="add-group" inputId="my-prospective-group-0">Add</button>
                         <button id="edit-group">Edit</button>
                         <button id="remove-group">Remove</button>
@@ -788,7 +979,7 @@
                 <button class="add-set-field-rows">+</button>
                 <div class="set-inputs">
                     <div>
-                        <input type="text" name="my-prospective-sets[]" id="prospective-set-name"/>
+                        <input type="text" name="my-prospective-sets[]" id="my-prospective-set-0"/>
                         <button class="add-set" inputId="my-prospective-set-0">Add</button>
                         <button id="edit-set">Edit</button>
                         <button id="remove-set">Remove</button>
@@ -801,7 +992,7 @@
                 <button class="add-course-field-rows">+</button>
                 <div class="course-inputs">
                     <div>
-                        <input type="text" name="my-prospective-courses[]" id="prospective-course-name"/>
+                        <input type="text" name="my-prospective-courses[]" id="my-prospective-course-0"/>
                         <button class="add-course" inputId="my-prospective-course-0">Add</button>
                         <button id="edit-course">Edit</button>
                         <button id="remove-course">Remove</button>
@@ -880,7 +1071,6 @@
             <br/>
         </form>
     </div>
-
 
     <!-- Certificate Form -->
     <div id="CertificateDiv-0">

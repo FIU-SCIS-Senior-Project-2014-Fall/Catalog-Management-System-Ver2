@@ -72,12 +72,12 @@
                         
                         if (obj.id.indexOf("box") == 0) {
                             var index = parseInt(obj.id.substring(3));
-                            document.getElementById("position"+index).value = value;
+                            document.getElementById("hidden"+index).value = value;
                         }       
                   
                         if (sourceId.indexOf("box") == 0) {
                             var index = parseInt(sourceId.substring(3));
-                            document.getElementById("position"+index).value = "";
+                            document.getElementById("hidden"+index).value = "";
                         }
         }
     }
@@ -173,10 +173,10 @@ if (empty($setByCourse)) {
                     document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
 
             if ($x < sizeof($string)) { //eventually, this will be a test to see if item belongs in current row
-                echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '</div>');";
-                echo "document.write('<input type=\"hidden')";      
-            }        
-
+                echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '');";
+                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $x + \"'>\");";      
+                echo "document.write(\"</div>\");";
+            }   	
             echo "document.write(\"</div></div>\");
                 row++;
             </script>";

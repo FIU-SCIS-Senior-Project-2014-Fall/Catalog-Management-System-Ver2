@@ -69,6 +69,16 @@
                         arrBox[dropTarget.id].canDrop = false;
                         arrBox[dropTarget.id].value = dragId;
                         arrBox[parentId].value = "";
+                        
+                        if (obj.id.indexOf("box") == 0) {
+                            var index = parseInt(obj.id.substring(3));
+                            document.getElementById("position"+index).value = value;
+                        }       
+                  
+                        if (sourceId.indexOf("box") == 0) {
+                            var index = parseInt(sourceId.substring(3));
+                            document.getElementById("position"+index).value = "";
+                        }
         }
     }
 
@@ -112,7 +122,7 @@ if (empty($setByCourse)) {
     echo '</ul>';
 }
 
-
+//FLOW CHART START
     $row = 0;
     echo '<div class=\'outer\'>';
     $string = array();
@@ -151,32 +161,29 @@ if (empty($setByCourse)) {
             }
         }
         $row+=1;
-    }    
-        for($x = 0; $x<sizeof($string)+2; $x++)  
+    }   
+        
+        for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
         {
             echo "<script>
                 arrBox[row] = new Box(row, true);
 
                 document.write(\"<div class='box-container float-left'><div id ='\" + row + \"' class='box' \");
                     document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
-                    document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");
-                document.write(\"</div></div>\");
+                    document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
 
+            if ($x < sizeof($string)) { //eventually, this will be a test to see if item belongs in current row
+                echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '</div>');";
+                echo "document.write('<input type=\"hidden')";      
+            }        
 
+            echo "document.write(\"</div></div>\");
                 row++;
-            </script>";
-        }
-        foreach($string AS $line)
-        {
-            echo "<script>
-                var div = document.getElementById(row1);
-                var content = document.createTextNode(document.write('<div id=\"drag' + row1 + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '${line}' + '</div>'));
-                div.appendChild(content);
-                row1++;
             </script>";
         }
         
     echo "</div>";
+//FLOW CHART END
 ?>
 <br/>
 

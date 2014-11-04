@@ -66,19 +66,14 @@
                         var dragId = dragData.substring(indexColon+1);
                         alert(dropTarget.id + ":" + parentId);
             ev.target.appendChild(document.getElementById(dragId));
+                        var dragv = document.getElementById(dragId);
                         arrBox[dropTarget.id].canDrop = false;
                         arrBox[dropTarget.id].value = dragId;
                         arrBox[parentId].value = "";
                         
-                        if (obj.id.indexOf("box") == 0) {
-                            var index = parseInt(obj.id.substring(3));
-                            document.getElementById("hidden"+index).value = value;
-                        }       
-                  
-                        if (sourceId.indexOf("box") == 0) {
-                            var index = parseInt(sourceId.substring(3));
-                            document.getElementById("hidden"+index).value = "";
-                        }
+                        dragv.getElementsByTagName("input")[0].value = dropTarget.id;
+                        
+                       
         }
     }
 

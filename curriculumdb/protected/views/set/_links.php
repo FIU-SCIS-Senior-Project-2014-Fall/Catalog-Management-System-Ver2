@@ -64,7 +64,7 @@
                         var indexColon = dragData.indexOf(":");
                         var parentId = dragData.substring(0,indexColon);
                         var dragId = dragData.substring(indexColon+1);
-                        alert(dropTarget.id + ":" + parentId);
+                        //alert(dropTarget.id + ":" + parentId);
             ev.target.appendChild(document.getElementById(dragId));
                         var dragv = document.getElementById(dragId);
                         arrBox[dropTarget.id].canDrop = false;
@@ -121,6 +121,7 @@ if (empty($setByCourse)) {
     $row = 0;
     echo '<div class=\'outer\'>';
     $string = array();
+    $courseid = array();
     foreach ($setByCourse AS $course)
     {      
         global $string;
@@ -131,6 +132,7 @@ if (empty($setByCourse)) {
         $string[$row] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
         $string[$row].= ' '.$data->number.'<br>';
         $string[$row].= $course->course->name.'<br>';
+        $courseid[$row] = $course->course_id;
         foreach($setByReq AS $req)
         {
             $entity1 = new Course($req->requisite_id, $this->catalogId);
@@ -157,7 +159,6 @@ if (empty($setByCourse)) {
         }
         $row+=1;
     }   
-        
         for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
         {
             echo "<script>
@@ -167,9 +168,9 @@ if (empty($setByCourse)) {
                     document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
                     document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
 
-            if ($x < sizeof($string)) { //eventually, this will be a test to see if item belongs in current row
+            if (!empty($string[$x])) { //eventually, this will be a test to see if item belongs in current row
                 echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '');";
-                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $x + \"'>\");";      
+                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' courseid='\" + $courseid[$x] + \"' value='\" + $x + \"'>\");";      
                 echo "document.write(\"</div>\");";
             }   	
             echo "document.write(\"</div></div>\");

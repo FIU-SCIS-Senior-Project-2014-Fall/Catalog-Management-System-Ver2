@@ -177,7 +177,9 @@ if (empty($setByCourse)) {
                 row++;
             </script>";
         }
-        
+        //database changes
+        //create a controller that has an update
+        //gii model for flow_course controller and model
     echo "</div>";
 //FLOW CHART END
 ?>

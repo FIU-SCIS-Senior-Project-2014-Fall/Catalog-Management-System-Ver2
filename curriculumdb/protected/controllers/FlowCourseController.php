@@ -17,10 +17,30 @@ class FlowCourseController extends Controller
 		$this->render('index');
 	}
 
-	public function actionUpdate()
+	public function actionUpdate($id)
 	{
-		$this->render('update');
+                $entity = new FlowCourse($id, $this->id);
+                
+                $currModel = $entity->getEntity();
+                $hisModel = $currModel->flowCharts[0];
+
+		// Uncomment the following line if AJAX validation is needed
+		$this->performAjaxValidation($hisModel);
+
+		if(isset($_POST['FlowCourse']))
+		{
+                    $entityAttributes = $entity->getEntity();
+                    $entityData = $entityAttributes->flowCharts[0];
+                    
+                    
+                    $entityData->attributes = $_POST['FlowCourse'];
+		}
+
+		$this->render('update',array(
+                    'currModel'=>$currModel, 'hisModel'=>$hisModel,
+		));
 	}
+	
 
 	public function actionView()
 	{

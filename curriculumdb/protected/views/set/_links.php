@@ -117,7 +117,7 @@ if (empty($setByCourse)) {
     echo '</ul>';
 }
 
-//FLOW CHART START
+//FLOW CHART START We already have a set of courses.
     $row = 0;
     echo '<div class=\'outer\'>';
     $string = array();
@@ -182,6 +182,7 @@ if (empty($setByCourse)) {
         //gii model for flow_course controller and model
     echo "</div>";
 //FLOW CHART END
+//FlowCourseController::model()->actionUpdate(ID)->with(array(FlowChartID, CourseID, Position));
 ?>
 <br/>
 

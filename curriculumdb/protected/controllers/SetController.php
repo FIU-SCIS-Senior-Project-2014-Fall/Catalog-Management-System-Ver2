@@ -19,11 +19,28 @@ class SetController extends Controller
 		);
 	}
 
+        public function actionFlowSet()
+        {
+            $hidden = array();
+            $hidden = Yii::app()->request->getPost('hidden');
+            //find the flowchart id based on this flowID '1' and courseid
+            $record = FlowCourse::model()->findAll('t.flowchartid=:id AND t.courseid=:cid', array(':id' => '1', ':cid'=>'41' ));
+            //$value = $record->id;
+            echo $record[0]->id;
+            //FlowCourse::model()->load()
+            foreach($_POST AS $test)
+            {
+                
+                echo $test;
+            }
+        }
+        
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
+        
 	public function accessRules()
 	{
 		return array(
@@ -36,7 +53,7 @@ class SetController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete', 'flowSet'),
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users

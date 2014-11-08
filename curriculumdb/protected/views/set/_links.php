@@ -159,6 +159,14 @@ if (empty($setByCourse)) {
         }
         $row+=1;
     }   
+        echo "<div class=\"form\">";
+
+        $form=$this->beginWidget('CActiveForm', array(
+                'id'=>'flow-course-form',
+                'enableAjaxValidation'=>false,
+                'action' => Yii::app()->createUrl('//set/flowSet'),
+        )); 
+        
         for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
         {
             echo "<script>
@@ -170,19 +178,21 @@ if (empty($setByCourse)) {
 
             if (!empty($string[$x])) { //eventually, this will be a test to see if item belongs in current row
                 echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '');";
-                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' courseid='\" + $courseid[$x] + \"' value='\" + $x + \"'>\");";      
+                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $x +\":\"+$courseid[$x] + \"'>\");";      
                 echo "document.write(\"</div>\");";
             }   	
             echo "document.write(\"</div></div>\");
                 row++;
             </script>";
         }
+        echo "<input type=\"submit\">";
+        $this->endWidget();
         //database changes
         //create a controller that has an update
         //gii model for flow_course controller and model
+        echo "</div>";
     echo "</div>";
-//FLOW CHART END
-//FlowCourseController::model()->actionUpdate(ID)->with(array(FlowChartID, CourseID, Position));
+
 ?>
 <br/>
 

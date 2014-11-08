@@ -33,7 +33,8 @@
     var objSource = "";
     var row = 0;
     var row1 = 0;
-
+    var test = 0;
+    
     function Box (id, dropState) {
       this.id = id;
       this.canDrop = dropState;
@@ -70,17 +71,20 @@
                         arrBox[dropTarget.id].canDrop = false;
                         arrBox[dropTarget.id].value = dragId;
                         arrBox[parentId].value = "";
-                        
-                        dragv.getElementsByTagName("input")[0].value = dropTarget.id;
-                        
-                       
-        }
+                        var newPosition = dropTarget.id;
+                        //dragv.getElementHsByTagName("input")[0].value = newPosition;
+                        var temp = document.getElementById(test).getElementsByTagName('hidden');
+                        var index = temp.indexOf(':');
+                        var cid = temp.substring(index+1);
+                        dragv.getElementsByTagName("input")[0].value = newPosition + ':' + cid;
+            }
     }
 
     function dragStart(obj) {
         isDragging = true;
         objSource = obj;
         objSource.style.border = 'thin solid black';
+        test = objSource;
     }
 
     function dragEnd(obj) {

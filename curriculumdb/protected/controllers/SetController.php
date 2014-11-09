@@ -23,16 +23,24 @@ class SetController extends Controller
         {
             $hidden = array();
             $hidden = Yii::app()->request->getPost('hidden');
-            //find the flowchart id based on this flowID '1' and courseid
-            $record = FlowCourse::model()->findAll('t.flowchartid=:id AND t.courseid=:cid', array(':id' => '1', ':cid'=>'41' ));
-            //$value = $record->id;
-            echo $record[0]->id;
-            //FlowCourse::model()->load()
             foreach($_POST AS $test)
             {
+                $posc = strpos($test, ':');
+                $position = substr($test, 0, $posc);
+                $courseid = substr($test, $posc+1);
+                echo "Position of course: ". $position. " "; 
+                echo "Course id: ". $courseid. " ";
                 
-                echo $test;
+                $record = FlowCourse::model()->findAll('t.flowchartid=:fid AND t.courseid=:cid', array(':fid' => '1', ':cid'=>'31'));
+                $indexPrim = $record[0]->id;
+                echo "Primary ID: ". $indexPrim;
+                echo "<br>";
+                
+                $post =  FlowCourse::model()->findByPk($indexPrim);
+                $post->position = $position;
+                $post->save();
             }
+            
         }
         
 	/**

@@ -73,10 +73,10 @@
                         arrBox[parentId].value = "";
                         var newPosition = dropTarget.id;
                         //dragv.getElementHsByTagName("input")[0].value = newPosition;
-                        var temp = document.getElementById(test).getElementsByTagName('hidden');
-                        var index = temp.indexOf(':');
-                        var cid = temp.substring(index+1);
-                        dragv.getElementsByTagName("input")[0].value = newPosition + ':' + cid;
+                        //var temp = document.getElementById(test).getElementsByTagName('hidden');
+                        //var index = temp.indexOf(':');
+                        //var cid = temp.substring(index+1);
+                        dragv.getElementsByTagName("input")[0].value = newPosition;
             }
     }
 

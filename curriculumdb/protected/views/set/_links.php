@@ -1,120 +1,99 @@
-  <style>
-      .spacer {
+   <style>
+      .float-left {
           position:relative;
           float:left;
-          width:100%;
       }
-	.box {
-	    position:relative;
-            width: 100%;
-            height: 60px;
-	    text-align: center;
-            border: solid black thin;
-            overflow: hidden;
-            padding: 0;
-            margin: 0;
-	}
-        .box-left {
-	    float:left;
-        }
-	.box-right {
-            float:right;
-	}
-	.row {
-            position:relative;
-            float:left;
-		width:100%;
-		height:auto;
-	}
-        .outer {
-          position: relative;
-          float: left;
-          width: 750px;
+      .outer {
+          position:relative;
+          float:left;
+          width:600px;
           border: thin solid red;
       }
-      
+
       .box-container {
-          position: relative;
           width: 25%;
-          float: left;
       }
+
+    .box {
+            width: 100%;
+            height: 60px;
+        text-align: center;
+            border: solid black thin;
+            margin: 0;
+            padding: 0;
+    }
+
+        #result {
+            clear: left;
+        }
+
   </style>
-  <script>
+   <script>
     var isDragging = false;
     var objSource = "";
     var row = 0;
-  
+    var row1 = 0;
+    var test = 0;
+    
     function Box (id, dropState) {
       this.id = id;
       this.canDrop = dropState;
+      this.value="empty";
     }
-    
-    function BoxRight (id) {
-      Box.call(this, id, true);
-    }
-    BoxRight.prototype = Object.create(Box.prototype);
-    BoxRight.prototype.constructor = BoxRight;
-    
-    function BoxLeft (id) {
-      Box.call(this, id, false);
-    }
-    BoxLeft.prototype = Object.create(Box.prototype);
-    BoxLeft.prototype.constructor = BoxLeft;
-    
+
 
     var arrBox = new Array();
-    var arrBoxLeft = new Array();
 
-    
-	function allowDrop(obj, ev)
-	{
-		if (arrBox[obj.id].canDrop) {
-			ev.preventDefault();
-		}
-	}
 
-	function drag(parent, ev)
-	{
-		ev.dataTransfer.setData("Text",parent.id + ":" + ev.target.id);
-	}
+    function allowDrop(obj, ev)
+    {
+        if (arrBox[obj.id].canDrop) {
+                    ev.preventDefault(); //allow drop
+        }
+    }
 
-	function drop(obj, ev)
-	{   
-		if (arrBox[obj.id].canDrop) {
-			ev.preventDefault();
-			var dragData=ev.dataTransfer.getData("Text");
+    function drag(parent, ev)
+    {
+        ev.dataTransfer.setData("Text",parent.id + ":" + ev.target.id);
+    }
+
+    function drop(dropTarget, ev)
+    {
+        if (arrBox[dropTarget.id].canDrop) {
+            ev.preventDefault(); //do not try to open link
+            var dragData=ev.dataTransfer.getData("Text");
                         var indexColon = dragData.indexOf(":");
-                        var sourceId = dragData.substring(0,indexColon);
+                        var parentId = dragData.substring(0,indexColon);
                         var dragId = dragData.substring(indexColon+1);
-			ev.target.appendChild(document.getElementById(dragId));
-                        var value = document.getElementById(dragId).innerHTML;
-                        
-                        if (obj.id.indexOf("boxRight") == 0) {
-                            var index = parseInt(obj.id.substring(8));
-                        }       
-                  
-                        if (sourceId.indexOf("boxRight") == 0) {
-                            var index = parseInt(sourceId.substring(8));
-                        }
-                        
-                    arrBox[obj.id].canDrop = !arrBox[obj.id].canDrop;  
-		}
-	}
-	
-	function dragStart(obj) {
-	    isDragging = true;
-	    objSource = obj;
-		objSource.style.border = "thin solid black";
-	}
-	
-	function dragEnd(obj) {
-	    if (isDragging) {
-			objSource.style.border = "thin solid red";
-			arrBox[objSource.id].canDrop = !arrBox[objSource.id].canDrop;
-		}
-		isDragging = false;
-	}
-</script>';
+                        //alert(dropTarget.id + ":" + parentId);
+            ev.target.appendChild(document.getElementById(dragId));
+                        var dragv = document.getElementById(dragId);
+                        arrBox[dropTarget.id].canDrop = false;
+                        arrBox[dropTarget.id].value = dragId;
+                        arrBox[parentId].value = "";
+                        var newP = dropTarget.id;
+                        var temp = dragv.getElementsByTagName("input")[0].value;                      
+                        var index = temp.indexOf(':');
+                        var cid = temp.substring(index+1);
+                        dragv.getElementsByTagName("input")[0].value = newP + ":" + cid;
+            }
+    }
+
+    function dragStart(obj) {
+        isDragging = true;
+        objSource = obj;
+        objSource.style.border = 'thin solid black';
+    }
+
+    function dragEnd(obj) {
+        if (isDragging) {
+                    objSource.style.border = 'thin solid red';
+                    arrBox[objSource.id].canDrop = true;
+            }
+            isDragging = false;
+    }
+    
+   </script>
 <?php
 
 /**
@@ -140,20 +119,24 @@ if (empty($setByCourse)) {
     echo '</ul>';
 }
 
-
+//FLOW CHART START We already have a set of courses.
     $row = 0;
     echo '<div class=\'outer\'>';
     $string = array();
-    foreach ($setByCourse AS $course)
+    $courseid = array();
+    $recordSet = FlowCourse::model()->findAll('t.flowchartid=:fid', array(':fid' => '1'));
+    foreach ($recordSet AS $course)
     {      
         global $string;
-        $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->course_id));
-        $entity = new Course($course->course_id, $this->catalogId); //$entity has current and history
+        $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->courseid));
+        $entity = new Course($course->courseid, $this->catalogId); //$entity has current and history
         $data = $entity->getHistoryEntity();    //extract history into $data, it has the course prefix id
         $prefix = new CoursePrefix($data->coursePrefix_id, $this->catalogId); //prefix his and curr
-        $string[$row] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
-        $string[$row].= ' '.$data->number.'<br>';
-        $string[$row].= $course->course->name.'<br>';
+        $string[$course->position] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
+        $string[$course->position].= ' '.$data->number.'<br>';
+        //$course2 = CurrSetByCourse::model()->with('course')->findAll('t.set_id=:fid AND t.catalog_id=:catalogId', array(':fid' => '1', 'catalogId' => $this->catalogId));
+        //$string[$course->position].= $course2->course->name.'<br>';
+        $courseid[$course->position] = $course->courseid;
         foreach($setByReq AS $req)
         {
             $entity1 = new Course($req->requisite_id, $this->catalogId);
@@ -161,8 +144,8 @@ if (empty($setByCourse)) {
             $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
             if($req->level == 0)
             {
-                $string[$row].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                $string[$row].= ' '.$data1->number.' <br>'; 
+                $string[$course->position].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                $string[$course->position].= ' '.$data1->number.' <br>'; 
                 break; //Flow chart to display only a single course as pre-req
             }
         }
@@ -173,65 +156,47 @@ if (empty($setByCourse)) {
             $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
             if($req->level == 1)
             {
-                $string[$row].= 'Co: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                $string[$row].= ' '.$data1->number.' <br>';
+                $string[$course->position].= 'Co: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                $string[$course->position].= ' '.$data1->number.' <br>';
                 break; //Flow chart to display only a single course as co-req
             }
         }
         $row+=1;
-    }    
-       
-        
-        //echo "<div id = row".$row ."class = row>";
-        //echo "<div id = boxLeft".$row ." class=\"box box-left\">";
-    
-    foreach($string AS $line)
-    {
-        echo "<script>
-            arrBox[\"boxLeft\"+(row*3+0+row)] = new BoxLeft(row);
-            arrBox[\"boxRight\"+(row*3+1+row)] = new BoxRight(row);
-            arrBox[\"boxRight\"+(row*3+2+row)] = new BoxRight(row);
-            arrBox[\"boxRight\"+(row*3+3+row)] = new BoxRight(row);
+    }   
+        echo "<div class=\"form\">";
 
-            document.write(\"<div class='row'>\");
-                    document.write(\"<div class = 'box-container'><div id ='boxLeft\" + (row*3+0+row) + \"' class='box box-left' \");
-                            document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
-                            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");
-                           
-                            document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$line');
-                             document.write(\"<input type='hidden' id='hidden\" + 
-                    (row*3+0+row) + \"' name='hidden\" + (row*3+0+row) + \"' row='\" + (row) + \"'>\");    
-                            
-                    document.write(\"</div></div></div>\");
-                    
-                    document.write(\"<div class = 'box-container'><div id = 'boxRight\" + (row*3+1+row) + \"' class='box box-right' \");
-                            document.write(\"ondragstart=dragStart(this) ondragend=dragEnd(this) \");
-                            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'\");
-                    document.write(\"></div></div>\");
-                    
-                    document.write(\"<div class = 'box-container'><div id = 'boxRight\" + (row*3+2+row) + \"' class='box box-right' \");
-                            document.write(\"ondragstart=dragStart(this) ondragend=dragEnd(this) \");
-                            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'\");
-                    document.write(\"></div></div>\");
-                   
-                    document.write(\"<div class = 'box-container'><div id = 'boxRight\" + (row*3+3+row) + \"' class='box box-right' \");
-                            document.write(\"ondragstart=dragStart(this) ondragend=dragEnd(this) \");
-                            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'\");
-                    document.write(\"></div></div>\");
-            document.write(\"</div>\");
-            row++;
-        </script>";
-    }
-    echo '</div>';
-    
-        //echo '<br></div>'; //Close Left
-        //echo "<div id = boxRight".$row ." class=\"box box-right\">";
-            //echo "Test";
-        //echo '</div>';
-        //echo '</div>'; //Close Row
-        //$row = $row + 1;
-    //}
-    //echo '</div>';    
+        $form=$this->beginWidget('CActiveForm', array(
+                'id'=>'flow-course-form',
+                'enableAjaxValidation'=>false,
+                'action' => Yii::app()->createUrl('//set/flowSet'),
+        )); 
+        
+        for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
+        {
+            echo "<script>
+                arrBox[row] = new Box(row, true);
+
+                document.write(\"<div class='box-container float-left'><div id ='\" + row + \"' class='box' \");
+                    document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
+                    document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
+
+            if (!empty($string[$x])) { //eventually, this will be a test to see if item belongs in current row
+                echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '');";
+                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $x +\":\"+$courseid[$x] + \"'>\");";      
+                echo "document.write(\"</div>\");";
+            }   	
+            echo "document.write(\"</div></div>\");
+                row++;
+            </script>";
+        }
+        echo "<input type=\"submit\">";
+        $this->endWidget();
+        //database changes
+        //create a controller that has an update
+        //gii model for flow_course controller and model
+        echo "</div>";
+    echo "</div>";
+
 ?>
 <br/>
 

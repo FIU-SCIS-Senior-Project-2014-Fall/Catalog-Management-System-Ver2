@@ -6,7 +6,6 @@
  * The followings are the available columns in table 'curr_minor':
  * @property integer $id
  * @property string $name
- * @property integer $lastActivated_catalogId
  * @property integer $catalog_id
  */
 class CurrMinor extends CActiveRecord
@@ -37,12 +36,12 @@ class CurrMinor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, name, lastActivated_catalogId, catalog_id', 'required'),
-			array('id, lastActivated_catalogId, catalog_id', 'numerical', 'integerOnly'=>true),
+			array('id, name, catalog_id', 'required'),
+			array('id, catalog_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, lastActivated_catalogId, catalog_id', 'safe', 'on'=>'search'),
+			array('id, name, catalog_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,7 +64,6 @@ class CurrMinor extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Name',
-			'lastActivated_catalogId' => 'Last Activated Catalog',
 			'catalog_id' => 'Catalog',
 		);
 	}
@@ -83,7 +81,6 @@ class CurrMinor extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('lastActivated_catalogId',$this->lastActivated_catalogId);
 		$criteria->compare('catalog_id',$this->catalog_id);
 
 		return new CActiveDataProvider($this, array(

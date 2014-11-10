@@ -1,19 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "curr_certificate".
+ * This is the model class for table "flow_course".
  *
- * The followings are the available columns in table 'curr_certificate':
+ * The followings are the available columns in table 'flow_course':
  * @property integer $id
- * @property string $name
- * @property integer $catalog_id
+ * @property integer $flowchartid
+ * @property integer $courseid
+ * @property integer $position
+ *
+ * The followings are the available model relations:
+ * @property FlowChart[] $flowCharts
+ * @property HisCourse $course
  */
-class CurrCertificate extends CActiveRecord
+class FlowCourse extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return CurrCertificate the static model class
+	 * @return FlowCourse the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -25,7 +30,7 @@ class CurrCertificate extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'curr_certificate';
+		return 'flow_course';
 	}
 
 	/**
@@ -36,12 +41,11 @@ class CurrCertificate extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, name, catalog_id', 'required'),
-			array('id, catalog_id', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>255),
+			array('flowchartid, courseid, position', 'required'),
+			array('flowchartid, courseid, position', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, catalog_id', 'safe', 'on'=>'search'),
+			array('id, flowchartid, courseid, position', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,6 +57,8 @@ class CurrCertificate extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'flowCharts' => array(self::HAS_MANY, 'FlowChart', 'flowID'),
+			'course' => array(self::BELONGS_TO, 'HisCourse', 'courseid'),
 		);
 	}
 
@@ -63,8 +69,9 @@ class CurrCertificate extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'catalog_id' => 'Catalog',
+			'flowchartid' => 'Flowchartid',
+			'courseid' => 'Courseid',
+			'position' => 'Position',
 		);
 	}
 
@@ -80,8 +87,9 @@ class CurrCertificate extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('catalog_id',$this->catalog_id);
+		$criteria->compare('flowchartid',$this->flowchartid);
+		$criteria->compare('courseid',$this->courseid);
+		$criteria->compare('position',$this->position);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

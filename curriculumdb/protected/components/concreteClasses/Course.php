@@ -30,7 +30,7 @@ class Course extends VersionedEntity {
         return HisCourse::model()->findAll('identifier_id=:entityId', array('entityId'=>$this->entity->id));
         
     }
-    
+
     //*************************** FIND ENTITY *************************************
     
         /**

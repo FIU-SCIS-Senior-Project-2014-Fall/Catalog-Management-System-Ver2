@@ -14,19 +14,14 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/page.css" />
+    <!--    <link rel="stylesheet" type="text/css" href="<?php //echo Yii::app()->request->baseUrl; ?>/css/page.css" />-->
 
 
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/prospective.css" media="screen, projection" />
 
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/x.x.x/jquery.min.js"></script>
-    <script src="jquery.bpopup-x.x.x.min.js"></script>
 
-    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/tools/jtable.2.4.0/jquery.jtable.min.js" ></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo Yii::app()->request->baseUrl; ?>/tools/jtable.2.4.0/themes/metro/blue/jtable.min.css" />
-
-    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/tools/jquery.jqGrid-4.6.0/js/jquery.jqGrid.min.js" ></script>
+     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/tools/jquery.jqGrid-4.6.0/js/jquery.jqGrid.min.js" ></script>
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo Yii::app()->request->baseUrl; ?>/tools/jquery.jqGrid-4.6.0/themes/basic/grid.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo Yii::app()->request->baseUrl; ?>/tools/jquery.jqGrid-4.6.0/themes/jqModal.css" />
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/tools/jquery.jqGrid-4.6.0/src/jqModal.js" type="text/javascript"></script>

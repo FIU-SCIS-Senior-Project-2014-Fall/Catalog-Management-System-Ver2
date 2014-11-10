@@ -31,7 +31,19 @@ class Group extends VersionedEntity{
         return HisGroup::model()->findAll('identifier_id=:entityId', array('entityId'=>$this->entity->id));
         
     }
-    
+
+    public function getGroups()
+    {
+        $menu = '';
+        $query = CurrGroup::model()->findAllBySql("select name from curr_group");
+         foreach($query as $row)
+        {
+            $r1 = $row['name'];
+            //echo "<option value='$r1'> $r1 </option>";
+            $menu = $menu + '<option value="' . $r1 . '">' . $r1 . '</option>';
+        }
+        return $menu;
+    }
     //*************************** FIND ENTITY *************************************
     
         /**

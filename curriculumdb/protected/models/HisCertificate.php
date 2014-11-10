@@ -1,19 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "curr_certificate".
+ * This is the model class for table "his_certificate".
  *
- * The followings are the available columns in table 'curr_certificate':
+ * The followings are the available columns in table 'his_certificate':
  * @property integer $id
- * @property string $name
+ * @property string $description
+ * @property integer $minCredits
  * @property integer $catalog_id
+ * @property integer $identifier_id
  */
-class CurrCertificate extends CActiveRecord
+class HisCertificate extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return CurrCertificate the static model class
+	 * @return HisCertificate the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -25,7 +27,7 @@ class CurrCertificate extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'curr_certificate';
+		return 'his_certificate';
 	}
 
 	/**
@@ -36,12 +38,12 @@ class CurrCertificate extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, name, catalog_id', 'required'),
-			array('id, catalog_id', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>255),
+			array('catalog_id, identifier_id', 'required'),
+			array('minCredits, catalog_id, identifier_id', 'numerical', 'integerOnly'=>true),
+			array('description', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, catalog_id', 'safe', 'on'=>'search'),
+			array('id, description, minCredits, catalog_id, identifier_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,8 +65,10 @@ class CurrCertificate extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'description' => 'Description',
+			'minCredits' => 'Min Credits',
 			'catalog_id' => 'Catalog',
+			'identifier_id' => 'Identifier',
 		);
 	}
 
@@ -80,8 +84,10 @@ class CurrCertificate extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('description',$this->description,true);
+		$criteria->compare('minCredits',$this->minCredits);
 		$criteria->compare('catalog_id',$this->catalog_id);
+		$criteria->compare('identifier_id',$this->identifier_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

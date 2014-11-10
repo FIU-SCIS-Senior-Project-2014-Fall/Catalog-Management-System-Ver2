@@ -31,7 +31,7 @@ class SetController extends Controller
                 echo "Position of course: ". $position. " "; 
                 echo "Course id: ". $courseid. " ";
                 
-                $record = FlowCourse::model()->findAll('t.flowchartid=:fid AND t.courseid=:cid', array(':fid' => '1', ':cid'=>'31'));
+                $record = FlowCourse::model()->findAll('t.flowchartid=:fid AND t.courseid=:cid', array(':fid' => '1', ':cid'=>$courseid));
                 $indexPrim = $record[0]->id;
                 echo "Primary ID: ". $indexPrim;
                 echo "<br>";

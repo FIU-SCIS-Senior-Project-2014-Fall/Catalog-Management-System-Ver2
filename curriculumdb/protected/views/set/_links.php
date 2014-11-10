@@ -71,12 +71,11 @@
                         arrBox[dropTarget.id].canDrop = false;
                         arrBox[dropTarget.id].value = dragId;
                         arrBox[parentId].value = "";
-                        var newPosition = dropTarget.id;
-                        //dragv.getElementHsByTagName("input")[0].value = newPosition;
-                        //var temp = document.getElementById(test).getElementsByTagName('hidden');
-                        //var index = temp.indexOf(':');
-                        //var cid = temp.substring(index+1);
-                        dragv.getElementsByTagName("input")[0].value = newPosition;
+                        var newP = dropTarget.id;
+                        var temp = dragv.getElementsByTagName("input")[0].value;                      
+                        var index = temp.indexOf(':');
+                        var cid = temp.substring(index+1);
+                        dragv.getElementsByTagName("input")[0].value = newP + ":" + cid;
             }
     }
 
@@ -84,7 +83,6 @@
         isDragging = true;
         objSource = obj;
         objSource.style.border = 'thin solid black';
-        test = objSource;
     }
 
     function dragEnd(obj) {
@@ -126,17 +124,19 @@ if (empty($setByCourse)) {
     echo '<div class=\'outer\'>';
     $string = array();
     $courseid = array();
-    foreach ($setByCourse AS $course)
+    $recordSet = FlowCourse::model()->findAll('t.flowchartid=:fid', array(':fid' => '1'));
+    foreach ($recordSet AS $course)
     {      
         global $string;
-        $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->course_id));
-        $entity = new Course($course->course_id, $this->catalogId); //$entity has current and history
+        $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->courseid));
+        $entity = new Course($course->courseid, $this->catalogId); //$entity has current and history
         $data = $entity->getHistoryEntity();    //extract history into $data, it has the course prefix id
         $prefix = new CoursePrefix($data->coursePrefix_id, $this->catalogId); //prefix his and curr
-        $string[$row] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
-        $string[$row].= ' '.$data->number.'<br>';
-        $string[$row].= $course->course->name.'<br>';
-        $courseid[$row] = $course->course_id;
+        $string[$course->position] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
+        $string[$course->position].= ' '.$data->number.'<br>';
+        //$course2 = CurrSetByCourse::model()->with('course')->findAll('t.set_id=:fid AND t.catalog_id=:catalogId', array(':fid' => '1', 'catalogId' => $this->catalogId));
+        //$string[$course->position].= $course2->course->name.'<br>';
+        $courseid[$course->position] = $course->courseid;
         foreach($setByReq AS $req)
         {
             $entity1 = new Course($req->requisite_id, $this->catalogId);
@@ -144,8 +144,8 @@ if (empty($setByCourse)) {
             $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
             if($req->level == 0)
             {
-                $string[$row].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                $string[$row].= ' '.$data1->number.' <br>'; 
+                $string[$course->position].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                $string[$course->position].= ' '.$data1->number.' <br>'; 
                 break; //Flow chart to display only a single course as pre-req
             }
         }
@@ -156,8 +156,8 @@ if (empty($setByCourse)) {
             $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
             if($req->level == 1)
             {
-                $string[$row].= 'Co: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                $string[$row].= ' '.$data1->number.' <br>';
+                $string[$course->position].= 'Co: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                $string[$course->position].= ' '.$data1->number.' <br>';
                 break; //Flow chart to display only a single course as co-req
             }
         }

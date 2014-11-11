@@ -24,6 +24,7 @@ $this->menu=array(
 		'id',
 		'flowchartid',
 		'courseid',
+		'setid',
 		'position',
 	),
 )); ?>

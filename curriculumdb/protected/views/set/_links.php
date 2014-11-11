@@ -72,10 +72,12 @@
                         arrBox[dropTarget.id].value = dragId;
                         arrBox[parentId].value = "";
                         var newP = dropTarget.id;
-                        var temp = dragv.getElementsByTagName("input")[0].value;                      
+                        var temp = dragv.getElementsByTagName("input")[0].value;
+                        var index1 = temp.indexOf(';');
                         var index = temp.indexOf(':');
                         var cid = temp.substring(index+1);
-                        dragv.getElementsByTagName("input")[0].value = newP + ":" + cid;
+                        var fid = temp.substring(0,index1);
+                        dragv.getElementsByTagName("input")[0].value = fid + ";" + newP + ":" + cid;
             }
     }
 
@@ -124,7 +126,8 @@ if (empty($setByCourse)) {
     echo '<div class=\'outer\'>';
     $string = array();
     $courseid = array();
-    $recordSet = FlowCourse::model()->findAll('t.flowchartid=:fid', array(':fid' => '1'));
+    $recordSet = FlowCourse::model()->findAll('t.setid=:sid', array(':sid' => $id));
+    $flowchartid = $recordSet[0]->flowchartid;
     foreach ($recordSet AS $course)
     {      
         global $string;
@@ -182,7 +185,7 @@ if (empty($setByCourse)) {
 
             if (!empty($string[$x])) { //eventually, this will be a test to see if item belongs in current row
                 echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '');";
-                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $x +\":\"+$courseid[$x] + \"'>\");";      
+                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+$courseid[$x] + \"'>\");";      
                 echo "document.write(\"</div>\");";
             }   	
             echo "document.write(\"</div></div>\");

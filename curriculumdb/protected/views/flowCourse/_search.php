@@ -27,6 +27,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'setid'); ?>
+		<?php echo $form->textField($model,'setid'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'position'); ?>
 		<?php echo $form->textField($model,'position'); ?>
 	</div>

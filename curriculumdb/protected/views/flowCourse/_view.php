@@ -17,6 +17,10 @@
 	<?php echo CHtml::encode($data->courseid); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('setid')); ?>:</b>
+	<?php echo CHtml::encode($data->setid); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('position')); ?>:</b>
 	<?php echo CHtml::encode($data->position); ?>
 	<br />

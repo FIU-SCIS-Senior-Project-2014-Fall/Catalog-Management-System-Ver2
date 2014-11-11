@@ -25,13 +25,17 @@ class SetController extends Controller
             $hidden = Yii::app()->request->getPost('hidden');
             foreach($_POST AS $test)
             {
+                $fidpos = strpos($test, ';');
                 $posc = strpos($test, ':');
-                $position = substr($test, 0, $posc);
+                $fid = substr($test, 0, $fidpos);
+                $position1 = substr($test, $fidpos+1);
+                $position = substr($position1, 0, strpos($position1, ':'));
                 $courseid = substr($test, $posc+1);
+                echo "fid ". $fid. "<br>";
                 echo "Position of course: ". $position. " "; 
                 echo "Course id: ". $courseid. " ";
                 
-                $record = FlowCourse::model()->findAll('t.flowchartid=:fid AND t.courseid=:cid', array(':fid' => '1', ':cid'=>$courseid));
+                $record = FlowCourse::model()->findAll('t.flowchartid=:fid AND t.courseid=:cid', array(':fid' => $fid, ':cid'=>$courseid));
                 $indexPrim = $record[0]->id;
                 echo "Primary ID: ". $indexPrim;
                 echo "<br>";

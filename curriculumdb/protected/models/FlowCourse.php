@@ -11,9 +11,9 @@
  * @property integer $position
  *
  * The followings are the available model relations:
- * @property FlowChart $flowchart
+ * @property CurrSet $set
  * @property HisCourse $course
- * @property FlowSet[] $flowSets
+ * @property FlowChart $flowchart
  */
 class FlowCourse extends CActiveRecord
 {
@@ -59,9 +59,9 @@ class FlowCourse extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'flowchart' => array(self::BELONGS_TO, 'FlowChart', 'flowchartid'),
+			'set' => array(self::BELONGS_TO, 'CurrSet', 'setid'),
 			'course' => array(self::BELONGS_TO, 'HisCourse', 'courseid'),
-			'flowSets' => array(self::HAS_MANY, 'FlowSet', 'setid'),
+			'flowchart' => array(self::BELONGS_TO, 'FlowChart', 'flowchartid'),
 		);
 	}
 

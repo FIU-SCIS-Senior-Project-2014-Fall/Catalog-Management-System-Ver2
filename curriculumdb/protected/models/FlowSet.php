@@ -11,10 +11,9 @@
  * @property integer $position
  *
  * The followings are the available model relations:
- * @property FlowGroup[] $flowGroups
- * @property FlowSet $flowchart
- * @property FlowSet[] $flowSets
- * @property FlowCourse $set
+ * @property FlowChart $flowchart
+ * @property CurrSet $set
+ * @property CurrGroup $group
  */
 class FlowSet extends CActiveRecord
 {
@@ -60,10 +59,9 @@ class FlowSet extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'flowGroups' => array(self::HAS_MANY, 'FlowGroup', 'groupid'),
-			'flowchart' => array(self::BELONGS_TO, 'FlowSet', 'flowchartid'),
-			'flowSets' => array(self::HAS_MANY, 'FlowSet', 'flowchartid'),
-			'set' => array(self::BELONGS_TO, 'FlowCourse', 'setid'),
+			'flowchart' => array(self::BELONGS_TO, 'FlowChart', 'flowchartid'),
+			'set' => array(self::BELONGS_TO, 'CurrSet', 'setid'),
+			'group' => array(self::BELONGS_TO, 'CurrGroup', 'groupid'),
 		);
 	}
 

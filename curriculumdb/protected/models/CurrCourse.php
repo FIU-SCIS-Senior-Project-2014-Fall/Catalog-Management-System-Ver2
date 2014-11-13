@@ -99,4 +99,5 @@ class CurrCourse extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
 }

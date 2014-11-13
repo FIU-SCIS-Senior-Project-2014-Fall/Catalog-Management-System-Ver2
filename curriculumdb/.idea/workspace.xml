@@ -33,98 +33,77 @@
       <file leaf-file-name="ProspectiveController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.192307" vertical-offset="2393" max-vertical-offset="4964">
-              <caret line="265" column="43" selection-start-line="265" selection-start-column="43" selection-end-line="265" selection-end-column="43" />
+            <state vertical-scroll-proportion="-15.076923" vertical-offset="2923" max-vertical-offset="7446">
+              <caret line="223" column="46" selection-start-line="223" selection-start-column="46" selection-end-line="223" selection-end-column="46" />
               <folding>
-                <element signature="n#actionRemoveTrackMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionUpdateCourse#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionGetLastCatalogID#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRemoveGroupTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRemoveSetGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <element signature="n#actionRemoveCourseSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <marker date="1415639642454" expanded="true" signature="5133:5209" placeholder="DELETE FROM ..." />
-                <marker date="1415639642454" expanded="true" signature="6253:6329" placeholder="DELETE FROM ..." />
-                <marker date="1415639642454" expanded="true" signature="7250:7320" placeholder="DELETE FROM ..." />
-                <marker date="1415639642454" expanded="true" signature="8247:8320" placeholder="DELETE FROM ..." />
+                <marker date="1415855242836" expanded="true" signature="9302:9378" placeholder="DELETE FROM ..." />
+                <marker date="1415855242836" expanded="true" signature="10422:10498" placeholder="DELETE FROM ..." />
+                <marker date="1415855242836" expanded="true" signature="11419:11489" placeholder="DELETE FROM ..." />
+                <marker date="1415855242836" expanded="true" signature="12416:12489" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RemoveCourseSet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveCourseSet.php">
+      <file leaf-file-name="CurrCourse.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/models/CurrCourse.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="578">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="26" selection-end-column="46" />
-              <folding>
-                <marker date="1415592741991" expanded="true" signature="490:563" placeholder="DELETE FROM ..." />
-              </folding>
+            <state vertical-scroll-proportion="1.7297298" vertical-offset="245" max-vertical-offset="1836">
+              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HisCourse.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/HisCourse.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="31.346153" vertical-offset="1155" max-vertical-offset="2006">
+              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64285713" vertical-offset="5300" max-vertical-offset="16779">
-              <caret line="1521" column="11" selection-start-line="1521" selection-start-column="11" selection-end-line="1521" selection-end-column="11" />
+            <state vertical-scroll-proportion="-11.192307" vertical-offset="8464" max-vertical-offset="18037">
+              <caret line="1936" column="88" selection-start-line="1936" selection-start-column="88" selection-end-line="1936" selection-end-column="88" />
               <folding>
-                <element signature="tag#style#0" expanded="false" />
-                <element signature="e#2884#15771#0#HTML" expanded="false" />
-                <element signature="e#3036#3240#0#HTML" expanded="false" />
-                <element signature="e#3335#3542#0#HTML" expanded="false" />
-                <element signature="e#3666#4573#0#HTML" expanded="false" />
-                <element signature="e#4672#5570#0#HTML" expanded="false" />
-                <element signature="e#5668#6131#0#HTML" expanded="false" />
-                <element signature="e#15002#15257#0#HTML" expanded="false" />
-                <element signature="e#15376#15506#0#HTML" expanded="false" />
-                <element signature="e#15628#15759#0#HTML" expanded="false" />
-                <element signature="e#15809#28762#0#HTML" expanded="false" />
-                <element signature="e#15962#16166#0#HTML" expanded="false" />
-                <element signature="e#16261#16468#0#HTML" expanded="false" />
-                <element signature="e#16592#17499#0#HTML" expanded="false" />
-                <element signature="e#17598#18500#0#HTML" expanded="false" />
-                <element signature="e#18598#19060#0#HTML" expanded="false" />
-                <element signature="e#28806#42469#0#HTML" expanded="false" />
-                <element signature="e#28975#29197#0#HTML" expanded="false" />
-                <element signature="e#29304#29529#0#HTML" expanded="false" />
-                <element signature="e#30748#31710#0#HTML" expanded="false" />
-                <element signature="e#42666#42879#0#HTML" expanded="false" />
-                <element signature="e#42966#43170#0#HTML" expanded="false" />
-                <element signature="e#43269#44171#0#HTML" expanded="false" />
-                <element signature="e#44307#45214#0#HTML" expanded="false" />
-                <element signature="e#45312#45774#0#HTML" expanded="false" />
-                <element signature="e#48582#51513#0#HTML" expanded="false" />
-                <element signature="e#51615#55119#0#HTML" expanded="false" />
-                <element signature="e#56191#56395#0#HTML" expanded="false" />
-                <element signature="e#56477#56683#0#HTML" expanded="false" />
-                <element signature="e#56782#57684#0#HTML" expanded="false" />
-                <element signature="e#60022#60478#0#HTML" expanded="false" />
-                <element signature="e#61676#64535#0#HTML" expanded="false" />
-                <element signature="e#69006#69206#0#HTML" expanded="false" />
-                <element signature="e#69283#69481#0#HTML" expanded="false" />
-                <element signature="e#81110#81378#0#HTML" expanded="false" />
-                <element signature="e#81429#92796#0#HTML" expanded="false" />
-                <element signature="e#95852#96009#0#PHP" expanded="true" />
-                <element signature="e#102166#102339#0#PHP" expanded="true" />
-                <marker date="1415640107671" expanded="true" signature="93040:93065" placeholder="select name ..curr_dgu..." />
-                <marker date="1415640107671" expanded="true" signature="93207:93234" placeholder="select name ..curr_major..." />
-                <marker date="1415640107671" expanded="true" signature="93557:93584" placeholder="select name ..curr_minor..." />
-                <marker date="1415640107671" expanded="true" signature="93930:93963" placeholder="select name ..curr_certificate..." />
-                <marker date="1415640107671" expanded="true" signature="94292:94319" placeholder="select name ..curr_track..." />
-                <marker date="1415640107671" expanded="true" signature="94655:94682" placeholder="select name ..curr_group..." />
-                <marker date="1415640107671" expanded="true" signature="95010:95032" placeholder="select name ..curr_group..." />
-                <marker date="1415640107671" expanded="true" signature="95010:95035" placeholder="select name ..curr_set..." />
-                <marker date="1415640107671" expanded="true" signature="95373:95401" placeholder="select name ..curr_course..." />
+                <element signature="e#16522#29475#0#HTML" expanded="false" />
+                <element signature="e#29519#43182#0#HTML" expanded="false" />
+                <element signature="e#43220#56722#0#HTML" expanded="false" />
+                <element signature="e#56760#69544#0#HTML" expanded="false" />
+                <element signature="e#69581#84375#0#HTML" expanded="false" />
+                <element signature="e#71397#72439#0#HTML" expanded="false" />
+                <element signature="e#73125#74022#0#HTML" expanded="false" />
+                <element signature="e#74117#74999#0#HTML" expanded="false" />
+                <element signature="e#80242#83475#0#HTML" expanded="false" />
+                <element signature="e#83590#83719#0#HTML" expanded="false" />
+                <element signature="e#83841#83970#0#HTML" expanded="false" />
+                <element signature="e#84171#84317#0#HTML" expanded="false" />
+                <element signature="e#84560#84796#0#HTML" expanded="false" />
+                <element signature="e#84888#85127#0#HTML" expanded="false" />
+                <element signature="e#85254#87489#0#HTML" expanded="false" />
+                <element signature="e#92476#96306#0#HTML" expanded="false" />
+                <element signature="e#103742#103899#0#PHP" expanded="true" />
+                <element signature="e#110077#110250#0#PHP" expanded="true" />
+                <marker date="1415855026856" expanded="true" signature="72831:72840" placeholder="..." />
+                <marker date="1415855026856" expanded="true" signature="100930:100955" placeholder="select name ..curr_dgu..." />
+                <marker date="1415855026856" expanded="true" signature="101097:101124" placeholder="select name ..curr_major..." />
+                <marker date="1415855026856" expanded="true" signature="101447:101474" placeholder="select name ..curr_minor..." />
+                <marker date="1415855026856" expanded="true" signature="101820:101853" placeholder="select name ..curr_certificate..." />
+                <marker date="1415855026856" expanded="true" signature="102182:102209" placeholder="select name ..curr_track..." />
+                <marker date="1415855026856" expanded="true" signature="102545:102572" placeholder="select name ..curr_group..." />
+                <marker date="1415855026856" expanded="true" signature="102900:102922" placeholder="select name ..curr_group..." />
+                <marker date="1415855026856" expanded="true" signature="102900:102925" placeholder="select name ..curr_set..." />
+                <marker date="1415855026856" expanded="true" signature="103263:103291" placeholder="select name ..curr_course..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RetrieveCourseFields.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/RetrieveCourseFields.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="833">
-              <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +131,6 @@
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveTrackMajor.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/removeGroupMinor.php" />
-        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/RetrieveCourseFields.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddGroupMinor.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveGroupTrack.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveSetGroup.php" />
@@ -161,8 +139,13 @@
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddGroupTrack.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddTrackMajor.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddSetGroup.php" />
-        <option value="$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/RetrieveCourseFields.php" />
+        <option value="$PROJECT_DIR$/protected/modules/user/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/menu.php" />
+        <option value="$PROJECT_DIR$/protected/models/CurrCourse.php" />
+        <option value="$PROJECT_DIR$/framework/yiilite.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php" />
       </list>
     </option>
   </component>
@@ -175,8 +158,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -269,11 +251,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,6 +270,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,7 +377,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Prospective" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -433,15 +467,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="e531322c-b95e-48d1-941a-505c493717c1" server_name="curriculum">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="e531322c-b95e-48d1-941a-505c493717c1" server_name="curriculum">
       <method />
     </configuration>
     <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/index.php">
@@ -497,30 +531,52 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.6703911" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494612" sideWeight="0.60045403" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.60045403" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20181043" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20437567" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2521645" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21390086" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21344717" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.6703911" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2521645" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21344717" sideWeight="0.60045403" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.60045403" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20437567" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout>
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -540,32 +596,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/menu.php</url>
+          <line>3</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/doc/api/Catalog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.923077" vertical-offset="0" max-vertical-offset="0">
-          <caret line="939" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="323">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/print.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.113680154" vertical-offset="59" max-vertical-offset="578">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/ie.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.4" vertical-offset="112" max-vertical-offset="697">
@@ -615,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/yiilite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307" vertical-offset="60741" max-vertical-offset="166583">
-          <caret line="3617" column="47" selection-start-line="3617" selection-start-column="47" selection-end-line="3617" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-37.0" vertical-offset="0" max-vertical-offset="2244">
@@ -653,13 +688,6 @@
     <entry file="file://$PROJECT_DIR$/protected/commands/DocCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10132">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Catalog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2686">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -710,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.23077" vertical-offset="290" max-vertical-offset="1428">
           <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,23 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="340">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/user/UserModule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.73077" vertical-offset="1952" max-vertical-offset="4692">
-          <caret line="152" column="12" selection-start-line="152" selection-start-column="12" selection-end-line="152" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,11 +806,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.33960047" vertical-offset="561" max-vertical-offset="1751">
           <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/CurrCoursePrefix.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddGroupCertificate.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -810,184 +825,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveGroupCertificate.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/RegistrationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="856">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveGroupMinor.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55934197" vertical-offset="0" max-vertical-offset="851">
-          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-          <folding>
-            <marker date="1415579662389" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
+        <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="2890">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddGroupMinor.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="1819">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/UserModule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-94.80769" vertical-offset="0" max-vertical-offset="4692">
+          <caret line="152" column="12" selection-start-line="152" selection-start-column="12" selection-end-line="152" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/HisSet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.807693" vertical-offset="255" max-vertical-offset="1802">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/HisGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.47943595" vertical-offset="408" max-vertical-offset="1853">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/CurrSet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9615386" vertical-offset="169" max-vertical-offset="1785">
+        <state vertical-scroll-proportion="23.5" vertical-offset="883" max-vertical-offset="1785">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/RetrieveCourseFields.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="833">
-          <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="30" />
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="340">
+          <caret line="8" column="121" selection-start-line="8" selection-start-column="121" selection-end-line="8" selection-end-column="121" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddTrackMajor.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/Catalog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.059929494" vertical-offset="0" max-vertical-offset="851">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="21" selection-end-column="30" />
+        <state vertical-scroll-proportion="-2.1562867" vertical-offset="1835" max-vertical-offset="2686">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddSetGroup.php">
+    <entry file="file://$PROJECT_DIR$/framework/yiilite.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="510">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="21" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddCourseSet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="476">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="20" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveTrackMajor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="578">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="25" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddGroupTrack.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.079905994" vertical-offset="0" max-vertical-offset="851">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="22" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveGroupTrack.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="578">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="26" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveSetGroup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="578">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="26" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveCourseSet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="578">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="26" selection-end-column="46" />
+        <state vertical-scroll-proportion="-11.076923" vertical-offset="109447" max-vertical-offset="166583">
+          <caret line="6475" column="20" selection-start-line="6475" selection-start-column="20" selection-end-line="6475" selection-end-column="20" />
           <folding>
-            <marker date="1415592741991" expanded="true" signature="490:563" placeholder="DELETE FROM ..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="/*...*/" />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="/*...*/" />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="DROP TABLE :..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="ALTER TABLE ..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="ALTER TABLE ..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="ALTER TABLE ..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="ALTER TABLE ..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="ALTER TABLE ..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="ALTER TABLE ..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="SELECT MAX(`..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="UPDATE sqlit..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..sqlite_master..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1415854304684" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/HisCourse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="31.346153" vertical-offset="1155" max-vertical-offset="2006">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.192307" vertical-offset="8464" max-vertical-offset="18037">
+          <caret line="1936" column="88" selection-start-line="1936" selection-start-column="88" selection-end-line="1936" selection-end-column="88" />
+          <folding>
+            <element signature="e#16522#29475#0#HTML" expanded="false" />
+            <element signature="e#29519#43182#0#HTML" expanded="false" />
+            <element signature="e#43220#56722#0#HTML" expanded="false" />
+            <element signature="e#56760#69544#0#HTML" expanded="false" />
+            <element signature="e#69581#84375#0#HTML" expanded="false" />
+            <element signature="e#71397#72439#0#HTML" expanded="false" />
+            <element signature="e#73125#74022#0#HTML" expanded="false" />
+            <element signature="e#74117#74999#0#HTML" expanded="false" />
+            <element signature="e#80242#83475#0#HTML" expanded="false" />
+            <element signature="e#83590#83719#0#HTML" expanded="false" />
+            <element signature="e#83841#83970#0#HTML" expanded="false" />
+            <element signature="e#84171#84317#0#HTML" expanded="false" />
+            <element signature="e#84560#84796#0#HTML" expanded="false" />
+            <element signature="e#84888#85127#0#HTML" expanded="false" />
+            <element signature="e#85254#87489#0#HTML" expanded="false" />
+            <element signature="e#92476#96306#0#HTML" expanded="false" />
+            <element signature="e#103742#103899#0#PHP" expanded="true" />
+            <element signature="e#110077#110250#0#PHP" expanded="true" />
+            <marker date="1415855026856" expanded="true" signature="72831:72840" placeholder="..." />
+            <marker date="1415855026856" expanded="true" signature="100930:100955" placeholder="select name ..curr_dgu..." />
+            <marker date="1415855026856" expanded="true" signature="101097:101124" placeholder="select name ..curr_major..." />
+            <marker date="1415855026856" expanded="true" signature="101447:101474" placeholder="select name ..curr_minor..." />
+            <marker date="1415855026856" expanded="true" signature="101820:101853" placeholder="select name ..curr_certificate..." />
+            <marker date="1415855026856" expanded="true" signature="102182:102209" placeholder="select name ..curr_track..." />
+            <marker date="1415855026856" expanded="true" signature="102545:102572" placeholder="select name ..curr_group..." />
+            <marker date="1415855026856" expanded="true" signature="102900:102922" placeholder="select name ..curr_group..." />
+            <marker date="1415855026856" expanded="true" signature="102900:102925" placeholder="select name ..curr_set..." />
+            <marker date="1415855026856" expanded="true" signature="103263:103291" placeholder="select name ..curr_course..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.192307" vertical-offset="2393" max-vertical-offset="4964">
-          <caret line="265" column="43" selection-start-line="265" selection-start-column="43" selection-end-line="265" selection-end-column="43" />
+        <state vertical-scroll-proportion="-15.076923" vertical-offset="2923" max-vertical-offset="7446">
+          <caret line="223" column="46" selection-start-line="223" selection-start-column="46" selection-end-line="223" selection-end-column="46" />
           <folding>
-            <element signature="n#actionRemoveTrackMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionUpdateCourse#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionGetLastCatalogID#0;n#ProspectiveController#0;n#!!top" expanded="false" />
             <element signature="n#actionRemoveGroupTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
             <element signature="n#actionRemoveSetGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRemoveCourseSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <marker date="1415639642454" expanded="true" signature="5133:5209" placeholder="DELETE FROM ..." />
-            <marker date="1415639642454" expanded="true" signature="6253:6329" placeholder="DELETE FROM ..." />
-            <marker date="1415639642454" expanded="true" signature="7250:7320" placeholder="DELETE FROM ..." />
-            <marker date="1415639642454" expanded="true" signature="8247:8320" placeholder="DELETE FROM ..." />
+            <marker date="1415855242836" expanded="true" signature="9302:9378" placeholder="DELETE FROM ..." />
+            <marker date="1415855242836" expanded="true" signature="10422:10498" placeholder="DELETE FROM ..." />
+            <marker date="1415855242836" expanded="true" signature="11419:11489" placeholder="DELETE FROM ..." />
+            <marker date="1415855242836" expanded="true" signature="12416:12489" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/CurrCourse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64285713" vertical-offset="5300" max-vertical-offset="16779">
-          <caret line="1521" column="11" selection-start-line="1521" selection-start-column="11" selection-end-line="1521" selection-end-column="11" />
-          <folding>
-            <element signature="tag#style#0" expanded="false" />
-            <element signature="e#2884#15771#0#HTML" expanded="false" />
-            <element signature="e#3036#3240#0#HTML" expanded="false" />
-            <element signature="e#3335#3542#0#HTML" expanded="false" />
-            <element signature="e#3666#4573#0#HTML" expanded="false" />
-            <element signature="e#4672#5570#0#HTML" expanded="false" />
-            <element signature="e#5668#6131#0#HTML" expanded="false" />
-            <element signature="e#15002#15257#0#HTML" expanded="false" />
-            <element signature="e#15376#15506#0#HTML" expanded="false" />
-            <element signature="e#15628#15759#0#HTML" expanded="false" />
-            <element signature="e#15809#28762#0#HTML" expanded="false" />
-            <element signature="e#15962#16166#0#HTML" expanded="false" />
-            <element signature="e#16261#16468#0#HTML" expanded="false" />
-            <element signature="e#16592#17499#0#HTML" expanded="false" />
-            <element signature="e#17598#18500#0#HTML" expanded="false" />
-            <element signature="e#18598#19060#0#HTML" expanded="false" />
-            <element signature="e#28806#42469#0#HTML" expanded="false" />
-            <element signature="e#28975#29197#0#HTML" expanded="false" />
-            <element signature="e#29304#29529#0#HTML" expanded="false" />
-            <element signature="e#30748#31710#0#HTML" expanded="false" />
-            <element signature="e#42666#42879#0#HTML" expanded="false" />
-            <element signature="e#42966#43170#0#HTML" expanded="false" />
-            <element signature="e#43269#44171#0#HTML" expanded="false" />
-            <element signature="e#44307#45214#0#HTML" expanded="false" />
-            <element signature="e#45312#45774#0#HTML" expanded="false" />
-            <element signature="e#48582#51513#0#HTML" expanded="false" />
-            <element signature="e#51615#55119#0#HTML" expanded="false" />
-            <element signature="e#56191#56395#0#HTML" expanded="false" />
-            <element signature="e#56477#56683#0#HTML" expanded="false" />
-            <element signature="e#56782#57684#0#HTML" expanded="false" />
-            <element signature="e#60022#60478#0#HTML" expanded="false" />
-            <element signature="e#61676#64535#0#HTML" expanded="false" />
-            <element signature="e#69006#69206#0#HTML" expanded="false" />
-            <element signature="e#69283#69481#0#HTML" expanded="false" />
-            <element signature="e#81110#81378#0#HTML" expanded="false" />
-            <element signature="e#81429#92796#0#HTML" expanded="false" />
-            <element signature="e#95852#96009#0#PHP" expanded="true" />
-            <element signature="e#102166#102339#0#PHP" expanded="true" />
-            <marker date="1415640107671" expanded="true" signature="93040:93065" placeholder="select name ..curr_dgu..." />
-            <marker date="1415640107671" expanded="true" signature="93207:93234" placeholder="select name ..curr_major..." />
-            <marker date="1415640107671" expanded="true" signature="93557:93584" placeholder="select name ..curr_minor..." />
-            <marker date="1415640107671" expanded="true" signature="93930:93963" placeholder="select name ..curr_certificate..." />
-            <marker date="1415640107671" expanded="true" signature="94292:94319" placeholder="select name ..curr_track..." />
-            <marker date="1415640107671" expanded="true" signature="94655:94682" placeholder="select name ..curr_group..." />
-            <marker date="1415640107671" expanded="true" signature="95010:95032" placeholder="select name ..curr_group..." />
-            <marker date="1415640107671" expanded="true" signature="95010:95035" placeholder="select name ..curr_set..." />
-            <marker date="1415640107671" expanded="true" signature="95373:95401" placeholder="select name ..curr_course..." />
-          </folding>
+        <state vertical-scroll-proportion="1.7297298" vertical-offset="245" max-vertical-offset="1836">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

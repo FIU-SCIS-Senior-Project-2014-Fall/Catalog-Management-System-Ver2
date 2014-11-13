@@ -29,7 +29,6 @@ class ProspectiveController extends Controller
                                         'minor'=>$minor, 
                                         'certificate'=>$certificate),false, true);
 
-        //$this->renderPartial('create')
 	}
 
     public function actionAddTrackMajor()
@@ -54,17 +53,6 @@ class ProspectiveController extends Controller
         $majorByTrack->catalog_id = 0;
         $majorByTrack->save();
 
-       /* $model=new Catalog;
-        $major = new CurrMajor;
-        $track = new CurrTrack;
-        $relMajorTrack = new CurrMajorByTrack;
-
-
-
-        $this->render('AddTrackMajor',array('model'=>$model,
-                                                    'major'=>$major,
-                                                    'track'=>$track,
-                                                    'majorByTrack'=>$relMajorTrack),false, true);*/
     }
 
     public function actionAddGroupTrack()
@@ -151,9 +139,139 @@ class ProspectiveController extends Controller
 
     public function actionRetrieveCourseFields()
     {
-        $model=new Catalog;
+        $course = new CurrCourse();
+        $prefix = new CurrCoursePrefix();
+        $courseInfo = new HisCourse();
 
-        $this->render('RetrieveCourseFields', array('model'=>$model));
+
+        //name of course being passed
+        $myCourse = $_GET['mycourse'];
+
+        $cID = $course->find('name=:name', array(':name'=>$myCourse));
+
+        //get id of the course
+        $myCourseID = $cID->getAttribute('id');
+
+        //get info for course from db based on id
+        $cInfo = $courseInfo->find('identifier_id=:identifier_id', array(':identifier_id'=>$myCourseID));
+
+        //get id of the course prefix id of the course
+        $myPrefixID = $cInfo->getAttribute('coursePrefix_id');
+
+
+        $cPrefix = $prefix->find('id=:id', array(':id'=>$myPrefixID));
+
+        $return = $_GET;
+
+        //get name of the prefix id
+        $return["myCoursePrefixID"] = $cPrefix->getAttribute('name');                 //eg COP
+        $return["myCourseAbstract"] = $cInfo->getAttribute('abstract');               //description of course
+        $return["myCourseNote"] = $cInfo->getAttribute('notes');                      //notes of the course
+        $return["myCourseNumber"] = $cInfo->getAttribute('number');                   //number id of course
+        $return["myCourseCredits"] = $cInfo->getAttribute('credits');                 //number of credits
+        $return["myCourseName"] = $myCourse;
+
+        echo json_encode($return);
+    }
+
+    public function actionUpdateCourse()
+    {
+        $courseModel = new CurrCourse();
+        $prefixModel = new CurrCoursePrefix();
+        $courseInfoModel = new HisCourse();
+
+        $course = $_GET['name'];
+        $prefix = $_GET['prefix'];
+        $code = $_GET['code'];
+        $description = $_GET['description'];
+        $notes = $_GET['note'];
+        $credits = $_GET['credits'];
+        $catalogID = $_GET['catalogID'];
+
+        $myCourse = $courseModel->find('name=:name', array(':name'=>$course));
+        $courseIdentifierID = $myCourse->getAttribute('id');
+
+        $myPrefix = $prefixModel->find('name=:name', array(':name'=>$prefix));
+        $prefixID = $myPrefix->getAttribute('id');
+
+        $courseInfoModel->coursePrefix_id = $prefixID;
+        $courseInfoModel->abstract = $description;
+        $courseInfoModel->credits = $credits;
+        $courseInfoModel->notes = $notes;
+        $courseInfoModel->number = $code;
+        $courseInfoModel->identifier_id = $courseIdentifierID;
+        $courseInfoModel->catalog_id = $catalogID;
+        $courseInfoModel->save();
+    }
+
+    public function actionSaveNewCourse()
+    {
+        $courseModel = new CurrCourse();
+        $prefixModel = new CurrCoursePrefix();
+        $courseInfoModel = new HisCourse();
+
+        //get data send from form
+        $course = $_GET['name'];
+        $prefix = $_GET['prefix'];
+        $code = $_GET['code'];
+        $description = $_GET['description'];
+        $notes = $_GET['note'];
+        $credits = $_GET['credits'];
+        $catalogID = $_GET['catalogID'];
+
+        //save new course into curr_course table
+        $courseModel->name = $course;
+        $courseModel->catalog_id = $catalogID;
+
+        $courseModel->save(false);
+/*
+        //get the id of the course just inserted in curr_course table to get the identifier_ID
+        $myCourse = $courseModel->find('name=:name', array(':name'=>$course));
+        $courseIdentifierID = $myCourse->getAttribute('id');
+
+        //get the prefix id  of the course inserted to get the course coursePrefix_id
+        $myPrefix = $prefixModel->find('name=:name', array(':name'=>$prefix));
+        $prefixID = $myPrefix->getAttribute('id');
+
+        //save course information in his_course
+        $courseInfoModel->coursePrefix_id = $prefixID;
+        $courseInfoModel->abstract = $description;
+        $courseInfoModel->credits = $credits;
+        $courseInfoModel->notes = $notes;
+        $courseInfoModel->number = $code;
+        $courseInfoModel->identifier_id = $courseIdentifierID;
+        $courseInfoModel->catalog_id = $catalogID;
+        $courseInfoModel->save();*/
+    }
+
+    public function actionSaveNewSet()
+    {
+        $setModel = new CurrSet();
+        $setCourseModel = new CurrSetByCourse();
+        $courseModel = new CurrCourse();
+
+        $set = $_GET['name'];
+        $description = $_GET['description'];
+        $minCredits = $_GET['credits'];
+        $catalogID = $_GET['catalogID'];
+
+        $setModel->name = $set;
+        $setModel->catalog_id = $catalogID;
+       // $setModel->save();
+    }
+
+    public function actionGetLastCatalogID()
+    {
+        $max = Yii::app()->db->createCommand()->select('max(id) as max')->from('catalog')->queryScalar();
+
+        $max = intval($max);
+        $max++;
+
+        $return = $_GET;
+        $return["catalogId"] = $max;
+
+        echo json_encode($return);
+
     }
 
     public function actionRemoveTrackMajor()

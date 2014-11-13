@@ -1,4 +1,4 @@
-<style>
+<style xmlns="http://www.w3.org/1999/html">
     @import url(http://fonts.googleapis.com/css?family=Fauna+One|Muli);
     h3{
         font-size:18px;
@@ -26,7 +26,7 @@
         font-Weight:bold;
         font-size:18px;
         color:white;
-        width:49%;
+        width:50%;
     }
 
     .prospective-close-btn{
@@ -36,7 +36,7 @@
         font-Weight:bold;
         font-size:18px;
         color:white;
-        width:49%;
+        width:50%;
     }
 
     textarea{
@@ -57,7 +57,6 @@
         width: 100%;
         background: #ffffff;
         display: none;
-        overflow: scroll;
     }
 
     #MajorForm, #MinorForm, #TrackForm, #CertificateForm, #GroupForm, #SetForm, #CourseForm    {
@@ -124,17 +123,46 @@
 
     #CourseForm{
         width:400px;
-        height: 350px;
+        height: 500px;
         left: 50%;
         top: 50%;
         margin-left:-200px;
-        margin-top:-175px;
+        margin-top:-250px;
+    }
+
+    #CourseDiv-0 input {
+        width: 100%;
+        border: 1px solid #999;
+        border-radius: 3px;
     }
 
 
 </style>
 <script>
     $(document).ready(function() {
+
+        var catalogName = $("#catalog-name").val();
+
+        var catalogID = 0;
+
+        $.ajax({
+            type: 'GET',
+            url: '<?php echo  Yii::app()->createUrl('catalog/prospective/GetLastCatalogID'); ?>',
+            dataType: 'json',
+            data: {},
+            success: function (data) {
+                catalogID = data["catalogId"];
+                alert('next catalog id is ' + catalogID);
+
+                //data returned from php
+            },
+            error: function(data){
+                alert('error getting catalog id');
+            }
+        });
+
+
+
         /*Major functions*/
         {
             var no_majors = 0;
@@ -1553,8 +1581,8 @@
 
                 $(".add-course-to-set-field-rows").click(function(){
                     var groupToTrackDiv = '<div>'+
-                        '<input type="text" name="my-prospective-set-'+no_sets+'[]" id="my-prospective-set-0"/>'+
-                        '<button class="remove-course-in-new-set">Remove</button>'+
+                        '<input style="width:65%" type="text" name="my-prospective-set-'+no_sets+'[]" id="my-prospective-set-0"/>'+
+                        '<button style="width:30%" class="remove-course-in-new-set">Remove</button>'+
                         '</div>';
 
                     $(".course-to-set").append(groupToTrackDiv);
@@ -1609,8 +1637,43 @@
                 });
             }
 
+            var saveNewSet = function()
+            {
+                $("#save-set-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    //alert ( name);
+                    var formIdno = name.substring(name.length - 1, name.length);
+
+                    var name  = $("#SetDiv-"+formIdno+ " #set-name-"+formIdno).val();
+                    var description  = $("#SetDiv-"+formIdno+ " #set-description-"+formIdno).val();
+                    var credits  = $("#SetDiv-"+formIdno+ " #set-credits-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  +
+                        '&description='+ encodeURI(description) + '&credits='+ encodeURI(credits) +
+                        '&catalogID='+ encodeURI(''+catalogID);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/SaveNewSet'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Save was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+            }
+
             addSet();
             close_set_form();
+            saveNewSet();
 
             /*add row for set with its corresponding set pop up form*/
             $(".add-set-field-rows").click(function(e){
@@ -1619,17 +1682,21 @@
 
                 var stringSetForm = '<div id="SetDiv-'+no_sets+'">'+
                                         '<form class="prospectiveForm" action="#" id="SetForm">'+
-                                        '<h3>Set Form</h3>'+
+                                        '<h3>New Set Form</h3>'+
                                         '<label>Set Name: </label>'+
                                         '<input type="text" id="set-name-'+no_sets+'" placeholder="Set Name" required readonly/></br>'+
+                                        '<lable>Min Credits: </label>'+
+                                        '<input type="text" id="set-credits-'+no_sets+'" placeholder="Set Name" /></br>'+
+                                        '<label>Description: <span>*</span></label>'+
+                                        '<textarea id="set-description-'+no_sets+'" placeholder="Set Description" required/></br>'+
                                         '<button class="add-course-to-set-field-rows">+</button>' +
                                         '<div class="course-to-set">' +
                                         '<div>'+
-                                        '<input type="text" name="my-prospective-set-'+no_groups+'[]" />'+
+                                        '<input type="text" name="my-prospective-set-'+no_sets+'[]" />'+
                                         '<button class="remove-course-in-new-set">Remove</button>'+
                                         '</div>'+
                                         '</div>' +
-                                        '<button class="prospective-save-btn" id="save-set-form">Save</button>'+
+                                        '<button class="prospective-save-btn" id="save-set-form" inputId="save-course-form-'+no_sets+'">Save</button>'+
                                         '<button class="prospective-close-btn" id="close-set-form">Close</button>'+
                                         '<br/>'+
                                         '</form>'+
@@ -1653,12 +1720,16 @@
                                             "width": "100%",
                                             "background": "#ffffff",
                                             "display": "none"});
+                $("#SetDiv-"+no_sets +" input").css({"width":"100%",
+                                                    "border":"1px solid #999",
+                                                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created set forms*/
                 addSet();
                 close_set_form();
                 addCourseRowInSet();
                 removeCourseRowInSet();
+                saveNewSet();
             });
 
             /*add a new edit track row*/
@@ -1719,14 +1790,14 @@
             $(".set-inputs").on("click", ".remove-set", function(e){
                 e.preventDefault();
                 $(this).parent('div').remove();
-                //no_sets--;
+                return false;
             });
 
             /*removes row along with edit group*/
-            $(".eset-inputs").on("click", ".remove-group", function(e){
+            $(".eset-inputs").on("click", ".remove-set", function(e){
                 e.preventDefault();
                 $(this).parent('div').remove();
-                //no_groups--;
+                return false;
             });
 
             /*removes row for new group*/
@@ -1736,6 +1807,7 @@
                     $(this).parent('div').remove();
                     //no_majors--;
                 });
+                return false;
             };
 
         }
@@ -1750,13 +1822,15 @@
                 $("#CourseDiv-"+no_course).on("click", "#close-course-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
                 });
+                return false;
             }
 
             /*closes editable group form*/
             var close_ecourse_form = function(){
-                $("#eCourseDiv-"+no_course).on("click", "#close-ecourse-form", function(e){
+                $("#eCourseDiv-"+no_ecourse).on("click", "#close-ecourse-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
                 });
+                return false;
             }
 
             /*pops up a new course edit form for the course on the row*/
@@ -1788,38 +1862,96 @@
                         dataType: "json",
                         data: data,
                         async: false,
-                        success:function(){
-
-                            alert('success');
-                            /*$("#eCourseDiv-"+currentCourseForm +" #ecourse-prefix-"+currentCourseForm).val(data["myCoursePrefixID"]);
-                            $("#eCourseDiv-"+currentCourseForm +" #ecourse-code-"+currentCourseForm).val(data["myCourseNumber"]);
-                            $("#eCourseDiv-"+currentCourseForm +" #ecourse-description-"+currentCourseForm).val(data["myCourseAbstract"]);*/
-
+                        success:function(result){
+                            $("#eCourseDiv-"+currentCourseForm +" #ecourse-prefix-"+currentCourseForm).val(result["myCoursePrefixID"]);
+                            $("#eCourseDiv-"+currentCourseForm +" #ecourse-code-"+currentCourseForm).val(result["myCourseNumber"]);
+                            $("#eCourseDiv-"+currentCourseForm +" #ecourse-description-"+currentCourseForm).val(result["myCourseAbstract"]);
+                            $("#eCourseDiv-"+currentCourseForm +" #ecourse-notes-"+currentCourseForm).val(result["myCourseNote"]);
+                            $("#eCourseDiv-"+currentCourseForm +" #ecourse-credits-"+currentCourseForm).val(result["myCourseCredits"]);
                         },
-
-                            error:function(){
-                                alert('error')
-
-                            /*$("#eCourseDiv-"+currentCourseForm +" #ecourse-prefix-"+currentCourseForm).val(data["myCoursePrefixID"]);
-                            $("#eCourseDiv-"+currentCourseForm +" #ecourse-code-"+currentCourseForm).val(data["myCourseNumber"]);
-                            $("#eCourseDiv-"+currentCourseForm +" #ecourse-description-"+currentCourseForm).val(data["myCourseAbstract"]);*/
-
-                            }
+                        error:function(){
+                            alert('error');
+                        }
                     });
-
-                    <?php $_GET["myCoursePrefixID"] = '4300'; ?>
 
                     $("#eCourseDiv-"+currentCourseForm).css("display", "block");
                     $("#eCourseDiv-"+currentCourseForm +" #ecourse-name-"+currentCourseForm).val(value);
-                    $("#eCourseDiv-"+currentCourseForm +" #ecourse-prefix-"+currentCourseForm).val(<?php echo $_GET['myCoursePrefixID']; ?>);
-                    /*$("#eCourseDiv-"+currentCourseForm +" #ecourse-code-"+currentCourseForm).val(data["myCourseNumber"]);
-                    $("#eCourseDiv-"+currentCourseForm +" #ecourse-description-"+currentCourseForm).val(data["myCourseAbstract"]);*/
+                });
+                return false;
+            }
 
+            var updateCourse = function()
+            {
+                $("#save-ecourse-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    //alert ( name);
+                    var formIdno = name.substring(name.length - 1, name.length);
+
+                    var name  = $("#eCourseDiv-"+formIdno+ " #ecourse-name-"+formIdno).val();
+                    var prefix  = $("#eCourseDiv-"+formIdno+ " #ecourse-prefix-"+formIdno).val();
+                    var code  = $("#eCourseDiv-"+formIdno+ " #ecourse-code-"+formIdno).val();
+                    var description  = $("#eCourseDiv-"+formIdno+ " #ecourse-description-"+formIdno).val();
+                    var credits  = $("#eCourseDiv-"+formIdno+ " #ecourse-credits-"+formIdno).val();
+                    var note  = $("#eCourseDiv-"+formIdno+ " #ecourse-notes-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  +  '&prefix='+ encodeURI(prefix) +  '&code='+ encodeURI(code)+
+                                    '&description='+ encodeURI(description) + '&credits='+ encodeURI(credits) +  '&note='+ encodeURI(note) +
+                                    '&catalogID='+ encodeURI(''+catalogID);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/UpdateCourse'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Update was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
                 });
             }
 
-            var saveeCourse = function()
+            var saveNewCourse = function()
             {
+                $("#save-course-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    //alert ( name);
+                    var formIdno = name.substring(name.length - 1, name.length);
+
+                    var name  = $("#CourseDiv-"+formIdno+ " #course-name-"+formIdno).val();
+                    var prefix  = $("#CourseDiv-"+formIdno+ " #course-prefix-"+formIdno).val();
+                    var code  = $("#CourseDiv-"+formIdno+ " #course-code-"+formIdno).val();
+                    var description  = $("#CourseDiv-"+formIdno+ " #course-description-"+formIdno).val();
+                    var credits  = $("#CourseDiv-"+formIdno+ " #course-credits-"+formIdno).val();
+                    var note  = $("#CourseDiv-"+formIdno+ " #course-notes-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name) + '&prefix='+ encodeURI(prefix) + '&code='+ encodeURI(code) + '&description='+ encodeURI(description) +
+                            '&credits='+ encodeURI(credits) + '&note='+ encodeURI(note)+
+                            '&catalogID='+ encodeURI(''+catalogID);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/SaveNewCourse'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Save was successful' );
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
             }
 
             /*pops up a new form for the group on the row*/
@@ -1840,8 +1972,6 @@
                         alert("Please fill out course field name first. It cannot be empty.");
                         return;
                     }
-
-
                     $("#CourseDiv-"+currentCourseForm).css("display", "block");
                     $("#CourseDiv-"+currentCourseForm +" #course-name-"+currentCourseForm).val(value);
                 });
@@ -1849,6 +1979,7 @@
 
             addCourse();
             close_course_form();
+            saveNewCourse();
 
             /*add a new edit course row*/
             $(".edit-course-field-rows").click(function(e){
@@ -1860,26 +1991,32 @@
                                             CourseList +
                                             '</select>'+
                                                 //'<input type="text" name="my-prospective-majors[]" id="my-prospective-major-'+ (no_majors) +'">'  +
-                                            '<button class="edit-course" inputId="my-prospective-ecourse-'+ (no_course) +'" >Edit</button>' +
+                                            '<button class="edit-course" inputId="my-prospective-ecourse-'+ (no_ecourse) +'" >Edit</button>' +
                                             '<button class="remove-course">Remove</button>' +
                                         '</div>';
 
-                var stringeCourseForm = '<div id="eCourseDiv-'+(no_emajors)+'">'+
+                var stringeCourseForm = '<div id="eCourseDiv-'+(no_ecourse)+'">'+
                                             '<form class="prospectiveForm" action="#" id="CourseForm">' +
                                             '<h3>Edit Course Form</h3>'+
-                                            '<label>Prefix: <span>*</span></label>'+
-                                            '<input type="text" id="ecourse-prefix-'+no_course+'" placeholder="Course Prefix" required/></br>'+
-                                            '<label>Code: <span>*</span></label>'+
-                                            '<input type="text" id="ecourse-code-'+no_course+'" placeholder="Course Code" required/></br>'+
                                             '<label>Name: </label>'+
-                                            '<input type="text" id="ecourse-name-'+no_course+'" placeholder="Course Name" required readonly/></br>'+
+                                            '<input type="text" id="ecourse-name-'+no_ecourse+'" placeholder="Course Name" required readonly/></br>'+
+                                            '<label>Prefix: <span>*</span></label>'+
+                                            '<input type="text" id="ecourse-prefix-'+no_ecourse+'" placeholder="Course Prefix" required/></br>'+
+                                            '<label>Code: <span>*</span></label>'+
+                                            '<input type="text" id="ecourse-code-'+no_ecourse+'" placeholder="Course Code" required/></br>'+
+                                            '<label>Number of Credits: </label>'+
+                                            '<input type="text" id="ecourse-credits-'+no_ecourse+'" placeholder="Number of credits" required/></br>'+
                                             '<label>Description: <span>*</span></label>'+
-                                            '<input type="text" id="course-description-'+no_course+'" placeholder="Course Description" required readonly/></br>'+
-                                            '<button class="prospective-save-btn" id="save-ecourse-form">Save</button>'+
+                                            '<textarea id="ecourse-description-'+no_ecourse+'" placeholder="Course Description" required/></br>'+
+                                            '<label>Notes <span>*</span></label>'+
+                                            '<textarea id="ecourse-notes-'+no_ecourse+'" placeholder="Course Notes" required/></br>'+
+                                            '<button class="prospective-save-btn" id="save-ecourse-form" inputId="save-ecourse-form-'+no_ecourse+'">Save</button>'+
                                             '<button class="prospective-close-btn" id="close-ecourse-form">Close</button>'+
                                             '<br/>'+
                                             '</form>'+
                                         '</div>';
+
+
 
                 $(".ecourse-inputs").append(stringeCourseRow);
                 $(".ecourse-inputs").append(stringeCourseForm);
@@ -1891,11 +2028,14 @@
                     "width": "100%",
                     "background": "#ffffff",
                     "display": "none"});
+                $("#eCourseDiv-"+no_ecourse +" input").css({"width":"100%",
+                                                            "border":"1px solid #999",
+                                                            "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created major forms*/
                 addeCourse();
                 close_ecourse_form();
-                saveeCourse();
+                updateCourse();
                 no_ecourse++;
             })
 
@@ -1904,27 +2044,30 @@
                 e.preventDefault();
                 ++no_course;
 
-                var stringCourseForm = '<div id="CourseDiv-'+no_course+'">'+
-                                            '<form class="prospectiveForm" action="#" id="CourseForm">'+
-                                            '<h3>Course Form</h3>'+
-                                            '<label>Prefix: <span>*</span></label>'+
-                                            '<input type="text" id="course-prefix-'+no_course+'" placeholder="Course Prefix" required/></br>'+
-                                            '<label>Code: <span>*</span></label>'+
-                                            '<input type="text" id="course-code-'+no_course+'" placeholder="Course Code" required/></br>'+
-                                            '<label>Name: </label>'+
-                                            '<input type="text" id="course-name-'+no_course+'" placeholder="Course Name" required readonly/></br>'+
-                                            '<label>Description: <span>*</span></label>'+
-                                            '<input type="text" id="course-description-'+no_course+'" placeholder="Course Description" required readonly/></br>'+
-                                            '<button class="prospective-save-btn" id="save-course-form">Save</button>'+
-                                            '<button class="prospective-close-btn" id="close-course-form">Close</button>'+
-                                            '<br/>'+
+                var stringCourseForm = '<div id="CourseDiv-'+(no_course)+'">'+
+                                            '<form class="prospectiveForm" action="#" id="CourseForm">' +
+                                                '<h3>New Course Form</h3>'+
+                                                '<label>Name: </label>'+
+                                                '<input type="text" id="course-name-'+no_course+'" placeholder="Course Name" required/></br>'+
+                                                '<label>Prefix: <span>*</span></label>'+
+                                                '<input type="text" id="course-prefix-'+no_course+'" placeholder="Course Prefix" required/></br>'+
+                                                '<label>Code: <span>*</span></label>'+
+                                                '<input type="text" id="course-code-'+no_course+'" placeholder="Course Code" required/></br>'+
+                                                '<label>Number of Credits: </label>'+
+                                                '<input type="text" id="course-credits-'+no_course+'" placeholder="Number of credits" required/></br>'+
+                                                '<label>Description: <span>*</span></label>'+
+                                                '<textarea id="course-description-'+no_course+'" placeholder="Course Description" required/></br>'+
+                                                '<label>Notes <span>*</span></label>'+
+                                                '<textarea id="course-notes-'+no_course+'" placeholder="Course Notes" required/></br>'+
+                                                '<button class="prospective-save-btn" id="save-course-form" inputId="save-course-form-'+no_course+'">Save</button>'+
+                                                '<button class="prospective-close-btn" id="close-course-form">Close</button>'+
+                                                '<br/>'+
                                             '</form>'+
                                         '</div>';
 
                 var stringCourseRow = '<div>'+
                                             '<input type="text" name="my-prospective-courses[]" id="my-prospective-course-'+no_course+'"/>'+
                                             '<button class="add-course" inputId="my-prospective-course-'+no_course+'">Add</button>'+
-                                            '<button id="edit-course">Edit</button>'+
                                             '<button class="remove-course">Remove</button>'+
                                         '</div>';
 
@@ -1939,16 +2082,28 @@
                                                 "width": "100%",
                                                 "background": "#ffffff",
                                                 "display": "none"});
+                $("#CourseDiv-"+no_course +" input").css({"width":"100%",
+                                                            "border":"1px solid #999",
+                                                            "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created group forms*/
                 addCourse();
                 close_course_form();
+                saveNewCourse();
             });
 
             /*removes row along with group*/
             $(".course-inputs").on("click", ".remove-course", function(e){
                 e.preventDefault();
                 $(this).parent('div').remove();
+                return false;
+            });
+
+            /*removes edit row course*/
+            $(".ecourse-inputs").on("click", ".remove-course", function(e){
+                e.preventDefault();
+                $(this).parent('div').remove();
+                return false;
             });
         }
 });
@@ -2105,7 +2260,7 @@
         
             <div class="row">
                 <label>Catalog Name</label>
-                <input type="text" name="prospective-catalog-name"/>
+                <input type="text" class="catalog-name" name="prospective-catalog-name"/>
             </div>
         
             <div class="row">
@@ -2345,25 +2500,27 @@
         </form>
     </div>
 
-    <!-- Course Form -->
-    <div id="CourseDiv-0">
-        <form class="prospectiveForm" action="#" id="CourseForm">
-            <h3>Course Form</h3>
-            <label>Prefix: <span>*</span></label>
-            <input type="text" id="course-prefix-0" placeholder="Course Prefix" required/></br>
-            <label>Code: <span>*</span></label>
-            <input type="text" id="course-code-0" placeholder="Course Code" required/></br>
-            <label>Name: </label>
-            <input type="text" id="course-name-0" placeholder="Course Name" required readonly/></br>
-            <label>Description: <span>*</span></label>
-            <input type="text" id="course-description-0" placeholder="Course Description" required readonly/></br>
-            <button class="prospective-save-btn" id="save-course-form">Save</button>
-            <button class="prospective-close-btn" id="close-course-form">Close</button>
-            <br/>
-        </form>
-    </div>
-
-
+<!-- Course Form -->
+<div id="CourseDiv-0">
+    <form class="prospectiveForm" action="#" id="CourseForm">
+        <h3>New Course Form</h3>
+        <label>Name: </label>
+        <input type="text" id="course-name-0" placeholder="Course Name" required/></br>
+        <label>Prefix: <span>*</span></label>
+        <input type="text" id="course-prefix-0" placeholder="Course Prefix" required/></br>
+        <label>Code: <span>*</span></label>
+        <input type="text" id="course-code-0" placeholder="Course Code" required/></br>
+        <label>Number of Credits: </label>
+        <input type="text" id="course-credits-0" placeholder="Number of credits" required/></br>
+        <label>Description: <span>*</span></label>
+        <textarea id="course-description-0" placeholder="Course Description" required/></textarea></br>
+        <label>Notes <span>*</span></label>
+        <textarea id="course-notes-0" placeholder="Course Notes" required/></textarea></br>
+        <button class="prospective-save-btn" id="save-course-form" inputId="save-course-form-0">Save</button>
+        <button class="prospective-close-btn" id="close-course-form">Close</button>
+        <br/>
+    </form>
+</div>';
 
 
   

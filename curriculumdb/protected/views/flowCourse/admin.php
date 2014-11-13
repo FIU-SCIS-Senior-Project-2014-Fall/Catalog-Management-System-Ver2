@@ -48,6 +48,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id',
 		'flowchartid',
 		'courseid',
+		'setid',
 		'position',
 		array(
 			'class'=>'CButtonColumn',

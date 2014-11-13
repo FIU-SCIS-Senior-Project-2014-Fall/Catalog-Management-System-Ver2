@@ -28,6 +28,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'setid'); ?>
+		<?php echo $form->textField($model,'setid'); ?>
+		<?php echo $form->error($model,'setid'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'position'); ?>
 		<?php echo $form->textField($model,'position'); ?>
 		<?php echo $form->error($model,'position'); ?>

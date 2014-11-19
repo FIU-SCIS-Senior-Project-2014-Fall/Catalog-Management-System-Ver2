@@ -205,6 +205,11 @@ if (empty($groupBySet)) {
                 document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
             echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $x + \";\" + $x +\":\"+$x + \"'>\");";      
 
+            
+            echo "document.write(\"<div id='drag\" + row + \"' draggable='true'\" +    
+                   \"ondragstart='drag(this.parentNode,event)'>\");";
+            
+            
             if(!empty($string[$x]))
             {
                 foreach($string[$x] AS $test)
@@ -214,6 +219,9 @@ if (empty($groupBySet)) {
   
                 }
             }
+            //close each group
+                     echo 'document.write("</div>");';
+
             echo "document.write(\"</div></div>\");
                 row++;
             </script>";

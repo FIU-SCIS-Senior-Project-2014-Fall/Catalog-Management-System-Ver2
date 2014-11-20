@@ -137,27 +137,27 @@ if (empty($groupBySet)) {
     $row = 0;
     echo '<div class=\'outer\'>';
     $string = array();
-    //$courseid = array();
-    //$recordSet = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $id));
-    //$flowchartid = $recordSet[0]->flowchartid;
+    $recordSet = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $id));
+    $flowchartid = $recordSet[0]->flowchartid;
+    $setid = array();
     $setindex = 0;
-    foreach ($groupBySet AS $set)
+    foreach ($recordSet AS $set)
     {      
-        $sid = $set->set_id;
+        $sid = $set->setid;
         $courseSet = FlowCourse::model()->findAll('t.setid=:sid', array(':sid'=>$sid));
         $index = 0;
-        foreach ($courseSet as $course)
+        //$setid[$set->position] = $courseSet[$setindex]->setid;
+        foreach ($courseSet AS $course)
         {
             global $string;
             $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->courseid));
             $entity = new Course($course->courseid, $this->catalogId); //$entity has current and history
             $data = $entity->getHistoryEntity();    //extract history into $data, it has the course prefix id
             $prefix = new CoursePrefix($data->coursePrefix_id, $this->catalogId); //prefix his and curr
-            $string[$setindex][$course->position] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
-            $string[$setindex][$course->position].= ' '.$data->number.'<br>';
-            //$course2 = CurrSetByCourse::model()->with('course')->findAll('t.set_id=:fid AND t.catalog_id=:catalogId', array(':fid' => '1', 'catalogId' => $this->catalogId));
-            //$string[$course->position].= $course2->course->name.'<br>';
-            //$courseid[$course->position] = $course->courseid;
+            $string[$set->position][$index] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
+            $string[$set->position][$index].= ' '.$data->number.'<br>';
+            
+            $setid[$set->position] = $set->setid;
             foreach($setByReq AS $req) //GET ONE PRE REQ
             {
                 $entity1 = new Course($req->requisite_id, $this->catalogId);
@@ -165,8 +165,8 @@ if (empty($groupBySet)) {
                 $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
                 if($req->level == 0)
                 {
-                    $string[$setindex][$course->position].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                    $string[$setindex][$course->position].= ' '.$data1->number.' <br>'; 
+                    $string[$set->position][$index].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                    $string[$set->position][$index].= ' '.$data1->number.' <br>'; 
                     break; //Flow chart to display only a single course as pre-req
                 }
             }
@@ -190,7 +190,7 @@ if (empty($groupBySet)) {
         echo "<div class=\"form\">";
 
         $form=$this->beginWidget('CActiveForm', array(
-                'id'=>'flow-course-form',
+                'id'=>'flow-group-form',
                 'enableAjaxValidation'=>false,
                 'action' => Yii::app()->createUrl('//group/flowGroup'),
         )); 
@@ -203,15 +203,18 @@ if (empty($groupBySet)) {
             document.write(\"<div class='box-container float-left'><div id ='\" + row + \"' class='box' \");
                 document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
                 document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
-            echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $x + \";\" + $x +\":\"+$x + \"'>\");";      
 
             
             echo "document.write(\"<div id='drag\" + row + \"' draggable='true'\" +    
                    \"ondragstart='drag(this.parentNode,event)'>\");";
             
+            //if(!empty($setid[$x]))     
+                //echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+ $setid[$x] + \"'>\");";      
+            //hidden fields represent flowchartid;position;setid
             
             if(!empty($string[$x]))
             {
+                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+ $setid[$x] + \"'>\");";      
                 foreach($string[$x] AS $test)
                 {   echo "document.write(\"<div class='box-container1 float-left'><div id ='\" + row + \"' class='box1'>\");";
                     echo "document.write(\"$test\");";

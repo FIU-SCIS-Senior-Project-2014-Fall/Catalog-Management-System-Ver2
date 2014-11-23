@@ -36,7 +36,7 @@ class CurrCertificate extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, name, catalog_id', 'required'),
+			array('name, catalog_id', 'required'),
 			array('id, catalog_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>255),
 			// The following rule is used by search().

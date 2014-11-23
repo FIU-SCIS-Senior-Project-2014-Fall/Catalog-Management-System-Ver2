@@ -9,6 +9,7 @@
  * @property integer $maxCredits
  * @property integer $catalog_id
  * @property integer $identifier_id
+ * @property string $description
  *
  * The followings are the available model relations:
  * @property CurrSet $identifier
@@ -42,11 +43,12 @@ class HisSet extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, maxCredits, catalog_id', 'required'),
-			array('id, minCredits, maxCredits, catalog_id, identifier_id', 'numerical', 'integerOnly'=>true),
+			array('maxCredits, catalog_id', 'required'),
+			array('minCredits, maxCredits, catalog_id, identifier_id', 'numerical', 'integerOnly'=>true),
+            array('description', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, minCredits, maxCredits, catalog_id, identifier_id', 'safe', 'on'=>'search'),
+			array('id, minCredits, maxCredits, catalog_id, identifier_id, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,6 +76,7 @@ class HisSet extends CActiveRecord
 			'maxCredits' => 'Max Credits',
 			'catalog_id' => 'Catalog',
 			'identifier_id' => 'Identifier',
+            'description' => 'Description',
 		);
 	}
 
@@ -93,6 +96,7 @@ class HisSet extends CActiveRecord
 		$criteria->compare('maxCredits',$this->maxCredits);
 		$criteria->compare('catalog_id',$this->catalog_id);
 		$criteria->compare('identifier_id',$this->identifier_id);
+        $criteria->compare('description',$this->description);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

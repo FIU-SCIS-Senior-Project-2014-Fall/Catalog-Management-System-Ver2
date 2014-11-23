@@ -36,7 +36,7 @@ class TrackController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('delete'),
+				'actions'=>array('delete', 'flowTrack'),
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
@@ -55,7 +55,33 @@ class TrackController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
-
+        public function actionFlowTrack()
+        {
+            $hidden = array();
+            $hidden = Yii::app()->request->getPost('hidden');
+            foreach($_POST AS $test)
+            {
+                $fidpos = strpos($test, ';');
+                $posc = strpos($test, ':');
+                $fid = substr($test, 0, $fidpos);
+                $position1 = substr($test, $fidpos+1);
+                $position = substr($position1, 0, strpos($position1, ':'));
+                $groupid = substr($test, $posc+1);
+                echo "fid ". $fid. "<br>";
+                echo "Position of group: ". $position. " "; 
+                echo "group id: ". $groupid. " ";
+                
+                $record = FlowGroup::model()->findAll('t.flowchartid=:fid AND t.groupid=:gid', array(':fid' => $fid, ':gid'=>$groupid));
+             
+                $indexPrim = $record[0]->id;
+                echo "Primary ID: ". $indexPrim;
+                echo "<br>";
+                
+                $post =  FlowGroup::model()->findByPk($indexPrim);
+                $post->position = $position;
+                $post->save();
+            }
+        }
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.

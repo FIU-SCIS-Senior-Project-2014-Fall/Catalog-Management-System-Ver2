@@ -36,7 +36,7 @@ class GroupController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete', 'flowGroup'),
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
@@ -44,7 +44,35 @@ class GroupController extends Controller
 			),
 		);
 	}
-
+        
+        public function actionFlowGroup()
+        {
+            $hidden = array();
+            $hidden = Yii::app()->request->getPost('hidden');
+            foreach($_POST AS $test)
+            {
+                $fidpos = strpos($test, ';');
+                $posc = strpos($test, ':');
+                $fid = substr($test, 0, $fidpos);
+                $position1 = substr($test, $fidpos+1);
+                $position = substr($position1, 0, strpos($position1, ':'));
+                $setid = substr($test, $posc+1);
+                echo "fid ". $fid. "<br>";
+                echo "Position of course: ". $position. " "; 
+                echo "Set id: ". $setid. " ";
+                
+                $record = FlowSet::model()->findAll('t.flowchartid=:fid AND t.setid=:cid', array(':fid' => $fid, ':cid'=>$setid));
+             
+                $indexPrim = $record[0]->id;
+                echo "Primary ID: ". $indexPrim;
+                echo "<br>";
+                
+                $post =  FlowSet::model()->findByPk($indexPrim);
+                $post->position = $position;
+                $post->save();
+            }
+        }
+        
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed

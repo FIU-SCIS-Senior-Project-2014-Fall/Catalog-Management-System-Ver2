@@ -15,12 +15,11 @@
       }
 
     .box {
-            width: 100%;
             height: 60px;
         text-align: center;
             border: solid black thin;
-            margin: 0;
-            padding: 0;
+            margin: 2px;
+            padding: 5px;
     }
 
         #result {
@@ -123,7 +122,6 @@ if (empty($setByCourse)) {
 
 //FLOW CHART START We already have a set of courses.
     $row = 0;
-    echo '<div class=\'outer\'>';
     $string = array();
     $courseid = array();
     $recordSet = FlowCourse::model()->findAll('t.setid=:sid', array(':sid' => $id));
@@ -166,14 +164,14 @@ if (empty($setByCourse)) {
         }
         $row+=1;
     }   
-        echo "<div class=\"form\">";
 
         $form=$this->beginWidget('CActiveForm', array(
                 'id'=>'flow-course-form',
                 'enableAjaxValidation'=>false,
                 'action' => Yii::app()->createUrl('//set/flowSet'),
         )); 
-        
+            echo '<div class=\'outer\'>';
+
         for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
         {
             echo "<script>
@@ -192,13 +190,13 @@ if (empty($setByCourse)) {
                 row++;
             </script>";
         }
+        echo "</div>";
         echo "<input type=\"submit\">";
         $this->endWidget();
         //database changes
         //create a controller that has an update
         //gii model for flow_course controller and model
-        echo "</div>";
-    echo "</div>";
+
 
 ?>
 <br/>

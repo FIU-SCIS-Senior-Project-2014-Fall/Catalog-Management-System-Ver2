@@ -9,29 +9,41 @@
           width:600px;
           border: thin solid red;
       }
-
-      .box-container {
-          width: 50%;
+      .drag {
+                    position:relative;
+                    background: #dff;
+                    
       }
-
-    .box {
-            width: 100%;
-            height: 247px;
-        text-align: center;
-            border: solid black thin;
-            margin: 0;
-            padding: 0;
-    }
-    .box-container1 {
+      .box-container1 {
           width: 25%;
+                    position:relative;
+
       }
+
     .box1 {
-            width: 100%;
             height: 60px;
+                      position:relative;
+
         text-align: center;
+            border: solid black thin;
+            margin: 2px;
+            padding: 5px;
+    }
+
+    .box-container {
+          width: 50%;
+                    position:relative;
+                    background: #ddd;
+
+      }
+    .box {
+        text-align: center;
+                  position:relative;
+
             border: solid black thin;
             margin: 0;
             padding: 0;
+            height: 320px;
     }
     
         #result {
@@ -135,7 +147,6 @@ if (empty($groupBySet)) {
 
 //FLOW CHART START We already have a set of courses.
     $row = 0;
-    echo '<div class=\'outer\'>';
     $string = array();
     $recordSet = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $id));
     $flowchartid = $recordSet[0]->flowchartid;
@@ -187,14 +198,14 @@ if (empty($groupBySet)) {
         $setindex += 1;
         $row+=1;
     }   
-        echo "<div class=\"form\">";
 
         $form=$this->beginWidget('CActiveForm', array(
                 'id'=>'flow-group-form',
                 'enableAjaxValidation'=>false,
                 'action' => Yii::app()->createUrl('//group/flowGroup'),
         )); 
-        
+            echo '<div class=\'outer\'>';
+
         for($x = 0; $x<($setindex + (4-$setindex%4)); $x++)  
         {
             echo "<script>
@@ -205,7 +216,7 @@ if (empty($groupBySet)) {
                 document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
 
             
-            echo "document.write(\"<div id='drag\" + row + \"' draggable='true'\" +    
+            echo "document.write(\"<div class='drag' id='drag\" + row + \"' draggable='true'\" +    
                    \"ondragstart='drag(this.parentNode,event)'>\");";
             
             //if(!empty($setid[$x]))     
@@ -229,14 +240,14 @@ if (empty($groupBySet)) {
                 row++;
             </script>";
         }
-        
+            echo "</div>";
+
         echo "<input type=\"submit\">";
+        
         $this->endWidget();
         //database changes
         //create a controller that has an update
         //gii model for flow_course controller and model
-        echo "</div>";
-    echo "</div>";
 
 ?>
 <br/>

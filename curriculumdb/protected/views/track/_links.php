@@ -3,6 +3,10 @@
           position:relative;
           float:left;
       }
+      .drag {
+          position: relative;
+          
+      }
       .outer {
           position:relative;
           float:left;
@@ -12,37 +16,60 @@
 
       .box-container {
           width: 100%;
+                      position: relative;    
+
       }
 
     .box {
+                    position: relative;    
+            height: 300px;        
             width: 100%;
-            height: 275px;
         text-align: center;
             border: solid black thin;
             margin: 0;
             padding: 0;
+            background: #fdd;
+            box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
     }
     .box-container1 {
           width: 25%;
+                      position: relative;    
+
+      
       }
+
     .box1 {
-            width: 100%;
+            position: relative;
             height: 60px;
         text-align: center;
             border: solid black thin;
-            margin: 0;
-            padding: 0;
+            margin: 2px;
+            background: #ddd;
+            padding: 2px;
+           
+
     }
     .box-container2 {
-          width: 50%;
+         
+          width: 50%;  
+                      position: relative;    
+
+          
       }
     .box2 {
+            position: relative;    
             width: 100%;
-            height: 250px;
-        text-align: center;
+            height: 290px;
+            text-align: center;
             border: solid black thin;
+            background-color: #dfd;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
     }
     
         #result {
@@ -208,7 +235,6 @@ if (empty($trackByGroup)) {
         $groupindex +=1;
         $row+=1;
     }
-        echo "<div class=\"form\">";
 
         $form=$this->beginWidget('CActiveForm', array(
                 'id'=>'flow-group-form',
@@ -226,40 +252,45 @@ if (empty($trackByGroup)) {
                 document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
 
             
-            echo "document.write(\"<div id='drag\" + row + \"' draggable='true'\" +    
+            echo "document.write(\"<div class='drag' id='drag\" + row + \"' draggable='true'\" +    
                    \"ondragstart='drag(this.parentNode,event)'>\");";
             
             if(!empty($string[$x]))
             {
+                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+ $groupid[$x] + \"'>\");";      
+
                 for($i = 0; $i<$setindex; $i++)
                 {
                     if(!empty($string[$x][$i]))
                     {
                         echo "document.write(\"<div class='box-container2 float-left'><div id ='\" + row + \"' class='box2'>\");";
-                        echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+ $groupid[$x] + \"'>\");";      
+
                         foreach($string[$x][$i] AS $test)
-                        {   echo "document.write(\"<div class='box-container1 float-left'><div id ='\" + row + \"' class='box1'>\");";
+                        {   
+                            echo "document.write(\"<div class='box-container1 float-left'><div id ='\" + row + \"' class='box1'>\");";
                             echo "document.write(\"$test\");";
                             echo "document.write(\"</div></div>\");";
                         }
-                        echo 'document.write("</div>");';
+                        echo 'document.write("</div></div>");';
                     }
-                }
+                }    
+                //echo 'document.write("</div>");';
             }
             //close each group
-                     echo 'document.write("</div>");';
 
             echo "document.write(\"</div></div>\");
                 row++;
             </script>";
+            
         }
-        
+        echo "<div class = 'box-container'>";
         echo "<input type=\"submit\">";
+        echo "</div>";
         $this->endWidget();
         //database changes
         //create a controller that has an update
         //gii model for flow_course controller and model
-        echo "</div>";
+    
     echo "</div>";    
     
 ?>

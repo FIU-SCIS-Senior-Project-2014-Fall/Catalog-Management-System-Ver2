@@ -10,6 +10,7 @@
  * @property integer $minSets
  * @property integer $catalog_id
  * @property integer $identifier_id
+ * @property string description
  *
  * The followings are the available model relations:
  * @property CurrGroup $identifier
@@ -43,11 +44,11 @@ class HisGroup extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, catalog_id', 'required'),
-			array('id, minCredits, maxCredits, minSets, catalog_id, identifier_id', 'numerical', 'integerOnly'=>true),
+			array('catalog_id', 'required'),
+			array('minCredits, maxCredits, minSets, catalog_id, identifier_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, minCredits, maxCredits, minSets, catalog_id, identifier_id', 'safe', 'on'=>'search'),
+			array('id, minCredits, maxCredits, minSets, catalog_id, identifier_id, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -76,6 +77,7 @@ class HisGroup extends CActiveRecord
 			'minSets' => 'Min Sets',
 			'catalog_id' => 'Catalog',
 			'identifier_id' => 'Identifier',
+            'description' => 'Description',
 		);
 	}
 
@@ -96,6 +98,7 @@ class HisGroup extends CActiveRecord
 		$criteria->compare('minSets',$this->minSets);
 		$criteria->compare('catalog_id',$this->catalog_id);
 		$criteria->compare('identifier_id',$this->identifier_id);
+        $criteria->compare('description',$this->description);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

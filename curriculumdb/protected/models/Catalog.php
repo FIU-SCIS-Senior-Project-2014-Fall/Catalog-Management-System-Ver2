@@ -15,7 +15,8 @@
  * @property integer $activation_userId
  * @property integer $parent_catalogId * 
  * @property integer $isProspective
- * @property integer $creatorId 
+ * @property integer $creatorId
+ * @property integer $isProposed
  *
  * The followings are the available model relations:
  * @property CurrCourse[] $currCourses
@@ -64,13 +65,13 @@ class Catalog extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, creationDate, year, term', 'required'),
-			array('year, activated, activation_userId, parent_catalogId, isProspective, creatorId', 'numerical', 'integerOnly'=>true),
+			array('year, activated, activation_userId, parent_catalogId, isProspective, isProposed, creatorId', 'numerical', 'integerOnly'=>true),
 			array('name, description', 'length', 'max'=>255),
 			array('term', 'length', 'max'=>6),
 			array('startingDate', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, description, creationDate, year, term, activated, startingDate, activation_userId, parent_catalogId, isProspective, creatorId', 'safe', 'on'=>'search'),
+			array('id, name, description, creationDate, year, term, activated, startingDate, activation_userId, parent_catalogId, isProspective, creatorId, isProposed', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -119,6 +120,7 @@ class Catalog extends CActiveRecord
 			'parent_catalogId' => 'Parent Catalog',
             'isProspective' => 'Is Prospective ?',
             'creatorId' => 'Creator',
+            'isProposed' => 'Is Proposed ?',
 		);
 	}
 
@@ -145,6 +147,7 @@ class Catalog extends CActiveRecord
 		$criteria->compare('parent_catalogId',$this->parent_catalogId);
         $criteria->compare('isProspective', $this->isProspective);
         $criteria->compare('creatorId', $this->creatorId);
+        $criteria->compare('isProposed', $this->isProposed);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

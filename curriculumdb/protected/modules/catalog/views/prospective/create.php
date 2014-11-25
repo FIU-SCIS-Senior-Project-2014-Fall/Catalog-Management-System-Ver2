@@ -19,6 +19,10 @@
         float: left;
     }
 
+    .prospective-fields{
+        display: none;
+    }
+
     .prospective-save-btn{
         background-color:darkblue;
         border:1px solid white;
@@ -136,31 +140,129 @@
         border-radius: 3px;
     }
 
+    #SetDiv-0 input {
+        width: 100%;
+        border: 1px solid #999;
+        border-radius: 3px;
+    }
+    #GroupDiv-0 input {
+        width: 100%;
+        border: 1px solid #999;
+        border-radius: 3px;
+    }
+
+    #TrackDiv-0 input {
+        width: 100%;
+        border: 1px solid #999;
+        border-radius: 3px;
+    }
+
+    #CertificateDiv-0 input {
+        width: 100%;
+        border: 1px solid #999;
+        border-radius: 3px;
+    }
+    #MinorDiv-0 input {
+        width: 100%;
+        border: 1px solid #999;
+        border-radius: 3px;
+    }
+    #MajorDiv-0 input {
+        width: 100%;
+        border: 1px solid #999;
+        border-radius: 3px;
+    }
 
 </style>
 <script>
     $(document).ready(function() {
 
         var catalogName = $("#catalog-name").val();
+        var activeUser = <?php echo json_encode(Yii::app()->user->id); ?>;
+        var find = 'user='+ encodeURI(activeUser);
 
         var catalogID = 0;
 
+        //active field for prospective inputs and instert row for prospective catalog for this user.
+        $("#new-catalog").click(function(){
+
+            var name  = $("#prospective-catalog-name").val();
+            var description  = $("#catalog-description").val();
+            var term  = $("#catalog-term").val();
+            var year  = $("#catalog-year").val();
+
+            var data = 'name='+ encodeURI(name) + '&description='+ encodeURI(description) + '&term='+ encodeURI(term) + '&year='+ encodeURI(year);
+
+            $.ajax({
+                type: 'GET',
+                url: '<?php echo  Yii::app()->createUrl('catalog/prospective/InsertNewCatalog'); ?>',
+                dataType: 'json',
+                data: data,
+                success: function (data) {
+                    //alert('catalog created successfully');
+                    alert('catalog created successfully' + data["creator"]);
+
+                    //data returned from php
+                },
+                error: function(data){
+                    alert('catalog was not created');
+                }
+            });
+
+            $(".prospective-fields").css({"display":"block"});
+            $("#new-catalog").css({"display":"none"});
+        });
+
+        /*checks if a prospective catalog for this user exists already. If so, load the the fields.*/
         $.ajax({
             type: 'GET',
-            url: '<?php echo  Yii::app()->createUrl('catalog/prospective/GetLastCatalogID'); ?>',
+            url: '<?php echo  Yii::app()->createUrl('catalog/prospective/LoadProspectiveCatalogInfo'); ?>',
             dataType: 'json',
-            data: {},
+            data: find,
             success: function (data) {
-                catalogID = data["catalogId"];
-                alert('next catalog id is ' + catalogID);
-
-                //data returned from php
+                if ( data["myexist"] === 'yes')
+                {
+                    $("#prospective-catalog-name").val(data["myname"]);
+                    $("#catalog-description").val(data["mydescription"]);
+                    $("#catalog-term").val(data["myterm"]);
+                    $("#catalog-year").val(data["myyear"]);
+                    $(".prospective-fields").css({"display":"block"});
+                    $("#new-catalog").css({"display":"none"});
+                    catalogID = data["myid"];
+                }
             },
             error: function(data){
                 alert('error getting catalog id');
             }
         });
 
+
+        $("#new-prospective-catalog").click(function(e){
+            var name  = $("#prospective-catalog-name").val();
+            var description  = $("#catalog-description").val();
+            var term  = $("#catalog-term").val();
+            var year  = $("#catalog-year").val();
+
+            var data = 'name='+ encodeURI(name) + '&description='+ encodeURI(description) +
+                '&term='+ encodeURI(term) + '&year='+ encodeURI(year) + '&catalogID=' + encodeURI(catalogID) +
+                '&user=' + encodeURI(activeUser) + '&catalogID='+ encodeURI(catalogID);
+
+            $.ajax({
+                type: 'GET',
+                url: '<?php echo  Yii::app()->createUrl('catalog/prospective/ProposeProspectiveCatalog'); ?>',
+                dataType: 'json',
+                data: data,
+                success: function (data) {
+                    //alert('catalog created successfully');
+                    alert('Catalog was successfully proposed');
+
+                    //data returned from php
+                },
+                error: function(data){
+                    alert('catalog was not proposed');
+                }
+            });
+        })
 
 
         /*Major functions*/
@@ -182,6 +284,88 @@
                 });
             }
 
+            var saveNewMajor = function()
+            {
+                $("#save-major-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var group = '';
+
+                    var vals = new Array();
+                    $("select[name=my-prospective-major-"+formIdno+"]").each(function() {
+                        vals.push($(this).val());
+                    });
+
+                    var novals = vals.length;
+
+                    for ( var init = 0; init < novals; init++)
+                    {
+                        group = group + "&element"+init+"="+encodeURI(vals[init]);
+                    }
+
+                    name  = $("#MajorDiv-"+formIdno+ " #major-name-"+formIdno).val();
+                    var description  = $("#MajorDiv-"+formIdno+ " #major-description-"+formIdno).val();
+                    var dgu = $("#dguSelected").val();
+
+                    var data = 'name='+ encodeURI(name)  + '&novals=' + encodeURI(novals) +
+                        '&description='+ encodeURI(description) + '&dgu='+encodeURIComponent(dgu) +
+                        '&catalogID='+ encodeURI(''+catalogID);
+
+                    data = data + group;
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/SaveNewMajor'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Save was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
+            }
+
+            var updateMajor = function()
+            {
+                $("#save-emajor-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    //alert ( name);
+                    var formIdno = name.substring(name.length - 1, name.length);
+
+                    name  = $("#eMajorDiv-"+formIdno+ " #emajor-name-"+formIdno).val();
+                    var description  = $("#eMajorDiv-"+formIdno+ " #emajor-description-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  +
+                        '&description='+ encodeURI(description) + '&catalogID='+ encodeURI(catalogID);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/UpdateMajor'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Update was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
+            }
+
             /*pops up a new major edit form for the major on the row*/
             var addeMajor = function()
             {
@@ -201,6 +385,22 @@
                         alert("Please fill out major field name first. It cannot be empty.");
                         return;
                     }
+
+                    var data = 'mymajor='+ encodeURI(value);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/RetrieveMajorFields'); ?>',
+                        dataType: "json",
+                        data: data,
+                        async: false,
+                        success:function(result){
+                            $("#eMajorDiv-"+currentMajorForm +" #emajor-description-"+currentMajorForm).val(result["myMajorDescription"]);
+                        },
+                        error:function(){
+                            alert('error');
+                        }
+                    });
 
                     $("#eMajorDiv-"+currentMajorForm).css("display", "block");
                     $("#eMajorDiv-"+currentMajorForm +" #emajor-name-"+currentMajorForm).val(value);
@@ -233,19 +433,31 @@
 
             /*add a row to put tracks in major*/
             var addTrackRowInMajor = function(){
-
-                $(".add-tracks-to-major-field-rows").click(function(){
+                $(".add-track-to-major-field-rows").click(function(e){
+                    e.preventDefault();
+                    if (e.target !== this)
+                    {
+                        return;
+                    }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var TrackList = <?php echo json_encode(getTracks()) ?>;
                     var trackToMajorDiv = '<div>'+
-                        '<input type="text" name="my-prospective-major-'+no_majors+'[]" id="my-prospective-set-0"/>'+
-                        '<button class="remove-track-in-new-major">Remove</button>'+
+                        '<select style="width:65%" name="my-prospective-major-'+formIdno+'" >'+
+                            TrackList+
+                        '</select>'+
+                        '<button style="width:30%" class="remove-track-in-new-major">Remove</button>'+
                         '</div>';
 
-                    $(".tracks-to-major").append(trackToMajorDiv);
+                    $(".track-to-major-"+formIdno).append(trackToMajorDiv);
                 });
             };
 
             addMajor();
             close_major_form();
+            addTrackRowInMajor();
 
             /*adds a major-track new relation*/
             var addtrackToMajor = function()
@@ -322,6 +534,8 @@
                                             '<label>Major Name </label>'+
                                             '<div>'+
                                                 '<input type="text" id="emajor-name-'+ (no_emajors) +'" required readonly/>'+
+                                                '<label>Description: <span>*</span></label>'+
+                                                '<textarea id="emajor-description-'+no_emajors+'" placeholder="Major Description" required/></textarea></br>'+
                                                 '<h4>Select Track</h4>'+
                                                 '<select id="track-selected-'+no_emajors+'">'+
                                                 TrackList +
@@ -329,7 +543,7 @@
                                                 '<button class="add-track-to-major" id="add-track-to-major" name="add-track-to-major-'+ (no_emajors) + '">Add this track</button>'+
                                                 '<button class="remove-track-from-major" id="remove-track-from-major" name="remove-track-from-major-' + (no_emajors) + '">Remove this track</button>'+
                                             '</div>'+
-                                            '<button class="prospective-save-btn" id="save-emajor-form">Save</button>'+
+                                            '<button class="prospective-save-btn" id="save-emajor-form" inputId="save-emajor-form-'+no_emajors+'">Save</button>'+
                                             '<button class="prospective-close-btn" id="close-emajor-form">Close</button>'+
                                             '<br/>'+
                                             '</form>'+
@@ -345,12 +559,16 @@
                     "width": "100%",
                     "background": "#ffffff",
                     "display": "none"});
+                $("#eMajorDiv-"+no_emajors +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created major forms*/
                 addeMajor();
                 close_emajor_form();
                 addtrackToMajor();
                 removeTrackFromMajor();
+                updateMajor();
                 no_emajors++;
 
             })
@@ -359,26 +577,30 @@
             $(".add-major-field-rows").click(function(e){
                 e.preventDefault();
                 ++no_majors;
+                var TrackList = <?php echo json_encode(getTracks()) ?>;
                 var stringMajorForm = '<div id="MajorDiv-'+(no_majors)+'">'+
                                         '<form class="prospectiveForm" action="#" id="MajorForm">' +
                                             '<h3>Major Form</h3>'+
                                             '<label>Major Name </label>'+
                                             '<input type="text" id="major-name-'+no_majors+'" placeholder="Major Name" required readonly/></br>'+
-                                            '<label>Tracks in the Major</label>' +
-                                            '<button class="add-tracks-to-major-field-rows">+</button>' +
-                                            '<div class="tracks-to-major">' +
+                                            '<label>Description: <span>*</span></label>'+
+                                            '<textarea id="major-description-'+no_majors+'" placeholder="Major Description" required/></textarea></br>'+
+                                            '<button class="add-track-to-major-field-rows" inputId="my-prospective-major-'+no_majors+'">+</button>'+
+                                            '<div class="track-to-major-'+no_majors+'">'+
                                                 '<div>'+
-                                                    '<input type="text" name="my-prospective-major-'+no_majors+'[]" />'+
-                                                    '<button class="remove-track-in-new-major">Remove</button>'+
+                                                    '<select style="width:65%" name="my-prospective-major-'+no_majors+'" >'+
+                                                    TrackList+
+                                                    '</select>'+
+                                                    '<button style="width:30%" class="remove-track-in-new-major">Remove</button>'+
                                                 '</div>'+
-                                            '</div>' +
-
-
-                                            '<button class="prospective-save-btn" id="save-major-form">Save</button>'+
+                                            '</div>'+
+                                            '<button class="prospective-save-btn" id="save-major-form" inputId="save-major-form-'+no_majors+'">Save</button>'+
                                             '<button class="prospective-close-btn" id="close-major-form">Close</button>'+
                                             '<br/>'+
                                         '</form>'+
                                     '</div>';
+
+
 
                 var stringMajorRow = '<div>' +
                                         '<input type="text" name="my-prospective-majors[]" id="my-prospective-major-'+ (no_majors) +'">'  +
@@ -397,12 +619,16 @@
                                                 "background": "#ffffff",
                                                 "display": "none",
                                                 "overflow": "scroll"});
+                $("#MajorDiv-"+no_majors +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created emajor forms*/
                 addMajor();
                 close_major_form();
                 addTrackRowInMajor();
                 removeRowTrackInMajor();
+                saveNewMajor();
             });
 
             /*removes row for new major*/
@@ -438,14 +664,101 @@
             var close_minor_form = function(){
                 $("#MinorDiv-"+no_minors).on("click", "#close-minor-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
+                    return false;
                 });
+                return false;
             }
 
             /*closes current minor edit form*/
             var close_eminor_form = function(){
                 $("#eMinorDiv-"+no_eminors).on("click", "#close-eminor-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
+                    return false;
                 });
+                return false;
+            }
+
+            var saveNewMinor = function()
+            {
+                $("#save-minor-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var group = '';
+
+                    var vals = new Array();
+                    $("select[name=my-prospective-minor-"+formIdno+"]").each(function() {
+                        vals.push($(this).val());
+                    });
+
+                    var novals = vals.length;
+
+                    for ( var init = 0; init < novals; init++)
+                    {
+                        group = group + "&element"+init+"="+encodeURI(vals[init]);
+                    }
+
+                    name  = $("#MinorDiv-"+formIdno+ " #minor-name-"+formIdno).val();
+                    var description  = $("#MinorDiv-"+formIdno+ " #minor-description-"+formIdno).val();
+                    var mincredits  = $("#MinorDiv-"+formIdno+ " #minor-mincredits-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  + '&novals=' + encodeURI(novals) +
+                        '&description='+ encodeURI(description) + '&mincredits='+ encodeURI(mincredits) +
+                        '&catalogID='+ encodeURI(''+catalogID);
+
+                    data = data + group;
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/SaveNewMinor'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Save was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
+            }
+
+            var updateMinor = function()
+            {
+                $("#save-eminor-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    //alert ( name);
+                    var formIdno = name.substring(name.length - 1, name.length);
+
+                    name  = $("#eMinorDiv-"+formIdno+ " #eminor-name-"+formIdno).val();
+                    var mincredits  = $("#eMinorDiv-"+formIdno+ " #eminor-mincredits-"+formIdno).val();
+                    var description  = $("#eMinorDiv-"+formIdno+ " #eminor-description-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  +  '&mincredits='+ encodeURI(mincredits) +
+                        '&description='+ encodeURI(description) + '&catalogID='+ encodeURI(catalogID);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/UpdateMinor'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Update was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
             }
 
             /*pops up a new minor edit form for the minor on the row*/
@@ -467,6 +780,23 @@
                         alert("Please fill out minor field name first. It cannot be empty.");
                         return;
                     }
+
+                    var data = 'myminor='+ encodeURI(value);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/RetrieveMinorFields'); ?>',
+                        dataType: "json",
+                        data: data,
+                        async: false,
+                        success:function(result){
+                            $("#eMinorDiv-"+currentMinorForm +" #eminor-description-"+currentMinorForm).val(result["myMinorDescription"]);
+                            $("#eMinorDiv-"+currentMinorForm +" #eminor-mincredits-"+currentMinorForm).val(result["myMinorMinCredits"]);
+                        },
+                        error:function(){
+                            alert('error');
+                        }
+                    });
 
                     $("#eMinorDiv-"+currentMinorForm).css("display", "block");
                     $("#eMinorDiv-"+currentMinorForm +" #eminor-name-"+currentMinorForm).val(value);
@@ -500,18 +830,31 @@
             /*add a row to put tracks in major*/
             var addGroupRowInMinor = function(){
 
-                $(".add-group-to-minor-field-rows").click(function(){
+                $(".add-group-to-minor-field-rows").click(function(e){
+                    e.preventDefault();
+                    if (e.target !== this)
+                    {
+                        return;
+                    }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var GroupList = <?php echo json_encode(getGroups()) ?>;
                     var groupToMinorDiv = '<div>'+
-                        '<input type="text" name="my-prospective-minor-'+no_minors+'[]" id="my-prospective-set-0"/>'+
-                        '<button class="remove-group-in-new-minor">Remove</button>'+
+                        '<select style="width:65%" name="my-prospective-minor-'+formIdno+'" >'+
+                            GroupList+
+                        '</select>'+
+                        '<button style="width:30%" class="remove-group-in-new-minor">Remove</button>'+
                         '</div>';
 
-                    $(".groups-to-minor").append(groupToMinorDiv);
+                    $(".groups-to-minor-"+formIdno).append(groupToMinorDiv);
                 });
             };
 
             addMinor();
             close_minor_form();
+            addGroupRowInMinor();
 
             /*adds a major-track new relation*/
             var addGroupToMinor = function()
@@ -570,22 +913,27 @@
             $(".add-minor-field-rows").click(function(e){
                 e.preventDefault();
                 ++no_minors;
-
+                var GroupList = <?php echo json_encode(getGroups()) ?>;
                 var stringMinorForm = '<div id="MinorDiv-'+(no_minors)+'">' +
                                         '<form class="prospectiveForm" action="#" id="MinorForm">'+
                                             '<h3>Minor Form</h3>'+
                                             '<label>Minor Name </label>'+
                                             '<input type="text" id="minor-name-'+no_minors+'" required readonly/></br>'+
-
+                                            '<label>Description: <span>*</span></label>'+
+                                            '<textarea id="minor-description-'+no_minors+'" placeholder="Minor Description" required/></textarea></br>'+
+                                            '<label>Min Credits: <span>*</span></label>'+
+                                            '<input type="text" id="minor-mincredits-'+no_minors+'" placeholder="Min credits" required/></br>'+
                                             '<label>Groups in the Minor </label>'+
-                                            '<button class="add-group-to-minor-field-rows">+</button>' +
-                                            '<div class="groups-to-minor">' +
+                                            '<button class="add-group-to-minor-field-rows" inputId="my-prospective-minor'+no_minors+'">+</button>' +
+                                            '<div class="groups-to-minor-'+no_minors+'">' +
                                                 '<div>'+
-                                                '<input type="text" name="my-prospective-minor-'+no_minors+'[]" />'+
-                                                '<button class="remove-group-in-new-minor">Remove</button>'+
-                                                '</div>'+
+                                                '<select style="width:65%" name="my-prospective-minor-'+no_minors+'" >'+
+                                                    GroupList+
+                                                '</select>'+
+                                                '<button style="width:30%" class="remove-group-in-new-minor">Remove</button>'+
+                                                '</div>' +
                                             '</div>' +
-                                            '<button class="prospective-save-btn" id="save-minor-form">Save</button>'+
+                                            '<button class="prospective-save-btn" id="save-minor-form" inputId="save-minor-form-'+no_minors+'">Save</button>'+
                                             '<button class="prospective-close-btn" id="close-minor-form">Close</button>'+
                                             '<br/>'+
                                         '</form>'+
@@ -594,7 +942,6 @@
                 var stringMinorRow = '<div>'+
                                         '<input type="text" name="my-prospective-minors[]" id="my-prospective-minor-'+no_minors+'"/>'+
                                         '<button class="add-minor" inputId="my-prospective-minor-'+no_minors+'">Add</button>'+
-                                        '<button id="edit-minor">Edit</button>'+
                                         '<button class="remove-minor">Remove</button>'+
                                     '</div>';
 
@@ -609,13 +956,16 @@
                                                 "width": "100%",
                                                 "background": "#ffffff",
                                                 "display": "none"});
+                $("#MinorDiv-"+no_minors +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created minor forms*/
                 addMinor();
                 close_minor_form();
                 removeRowGroupInMinor();
                 addGroupRowInMinor();
-
+                saveNewMinor();
             });
 
             /*add a new edit minor row*/
@@ -639,6 +989,10 @@
                                                 '<label>Minor Name </label>'+
                                                 '<div>'+
                                                     '<input type="text" id="eminor-name-'+no_eminors+'" placeholder="Minor Name" required readonly/></br>'+
+                                                    '<label>Description: <span>*</span></label>'+
+                                                    '<textarea id="eminor-description-'+no_eminors+'" placeholder="Minor Description" required/></textarea></br>'+
+                                                    '<label>Min Credits: <span>*</span></label>'+
+                                                    '<input type="text" id="eminor-mincredits-'+no_eminors+'" placeholder="Min credits" required/></br>'+
                                                     '<h4>Select Track</h4>'+
                                                     '<select id="group-selected-in-minor-'+no_eminors+'">'+
                                                     GroupList +
@@ -646,7 +1000,7 @@
                                                     '<button class="add-group-to-minor" id="add-group-to-minor" name="add-group-to-certificate-'+ (no_eminors) + '">Add this track</button>'+
                                                     '<button class="remove-group-from-minor" id="remove-group-from-minor" name="remove-group-from-certificate-'+ (no_eminors) + '">Remove this track</button>'+
                                                     '</div>'+
-                                                '<button class="prospective-save-btn" id="save-eminor-form">Save</button>'+
+                                                '<button class="prospective-save-btn" id="save-eminor-form" inputId="save-eminor-form-'+no_eminors+'">Save</button>'+
                                                 '<button class="prospective-close-btn" id="close-eminor-form">Close</button>'+
                                                 '<br/>'+
                                                 '</form>'+
@@ -662,12 +1016,16 @@
                     "width": "100%",
                     "background": "#ffffff",
                     "display": "none"});
+                $("#eMinorDiv-"+no_eminors +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created major forms*/
                 addeMinor();
                 close_eminor_form();
                 addGroupToMinor();
                 removeGroupFromMinor();
+                updateMinor();
                 no_eminors++;
 
             })
@@ -706,6 +1064,7 @@
                 $("#CertificateDiv-"+no_certificates).on("click", "#close-certificate-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
                 });
+                return false;
             }
 
             /*closes current certificate edit form*/
@@ -713,6 +1072,90 @@
                 $("#eCertificateDiv-"+no_ecertificates).on("click", "#close-ecertificate-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
                 });
+                return false;
+            }
+
+            var saveNewCertificate = function()
+            {
+                $("#save-certificate-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var group = '';
+
+                    var vals = new Array();
+                    $("select[name=my-prospective-certificate-"+formIdno+"]").each(function() {
+                        vals.push($(this).val());
+                    });
+
+                    var novals = vals.length;
+
+                    for ( var init = 0; init < novals; init++)
+                    {
+                        group = group + "&element"+init+"="+encodeURI(vals[init]);
+                    }
+
+                    name  = $("#CertificateDiv-"+formIdno+ " #certificate-name-"+formIdno).val();
+                    var description  = $("#CertificateDiv-"+formIdno+ " #certificate-description-"+formIdno).val();
+                    var mincredits  = $("#CertificateDiv-"+formIdno+ " #certificate-mincredits-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  + '&novals=' + encodeURI(novals) +
+                        '&description='+ encodeURI(description) + '&mincredits='+ encodeURI(mincredits) +
+                        '&catalogID='+ encodeURI(''+catalogID);
+
+                    data = data + group;
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/SaveNewCertificate'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Save was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
+            }
+
+            var updateCertificate = function()
+            {
+                $("#save-ecertificate-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    //alert ( name);
+                    var formIdno = name.substring(name.length - 1, name.length);
+
+                    name  = $("#eCertificateDiv-"+formIdno+ " #ecertificate-name-"+formIdno).val();
+                    var mincredits  = $("#eCertificateDiv-"+formIdno+ " #ecertificate-mincredits-"+formIdno).val();
+                    var description  = $("#eCertificateDiv-"+formIdno+ " #ecertificate-description-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  +  '&mincredits='+ encodeURI(mincredits) +
+                        '&description='+ encodeURI(description) + '&catalogID='+ encodeURI(catalogID);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/UpdateCertificate'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Update was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
             }
 
             /*pops up a new certificate edit form for the certificate on the row*/
@@ -734,6 +1177,23 @@
                         alert("Please fill out certficate field name first. It cannot be empty.");
                         return;
                     }
+
+                    var data = 'mycertificate='+ encodeURI(value);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/RetrieveCertificateFields'); ?>',
+                        dataType: "json",
+                        data: data,
+                        async: false,
+                        success:function(result){
+                            $("#eCertificateDiv-"+currentCertificateForm +" #ecertificate-description-"+currentCertificateForm).val(result["myCertificateDescription"]);
+                            $("#eCertificateDiv-"+currentCertificateForm +" #ecertificate-mincredits-"+currentCertificateForm).val(result["myCertificateMinCredits"]);
+                        },
+                        error:function(){
+                            alert('error');
+                        }
+                    });
 
                     $("#eCertificateDiv-"+currentCertificateForm).css("display", "block");
                     $("#eCertificateDiv-"+currentCertificateForm +" #ecertificate-name-"+currentCertificateForm).val(value);
@@ -767,18 +1227,32 @@
             /*add a row to put tracks in major*/
             var addGroupRowInCertificate = function(){
 
-                $(".add-group-to-certificate-field-rows").click(function(){
+                $(".add-group-to-certificate-field-rows").click(function(e){
+                    e.preventDefault();
+                    if (e.target !== this)
+                    {
+                        return;
+                    }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var GroupList = <?php echo json_encode(getGroups()) ?>;
                     var groupToCertificateDiv = '<div>'+
-                        '<input type="text" name="my-prospective-certificate-'+no_certificates+'[]" id="my-prospective-set-0"/>'+
-                        '<button class="remove-group-in-new-certificate">Remove</button>'+
+                        '<select style="width:65%" name="my-prospective-certificate-'+formIdno+'">'+
+                            GroupList+
+                            '</select>'+
+                        '<button style="width:30%" class="remove-group-in-new-certificate">Remove</button>'+
                         '</div>';
 
-                    $(".groups-to-certificate").append(groupToCertificateDiv);
+                    $(".groups-to-certificate-"+formIdno).append(groupToCertificateDiv);
+                    return false;
                 });
             };
 
             addCertificate();
             close_certificate_form();
+            addGroupRowInCertificate();
 
             /*adds a major-track new relation*/
             var addGroupToCertificate = function()
@@ -838,21 +1312,28 @@
             $(".add-certificate-field-rows").click(function(e){
                 e.preventDefault();
                 ++no_certificates;
+                var GroupList = <?php echo json_encode(getGroups()) ?>;
 
                 var stringCertificateForm = '<div id="CertificateDiv-'+no_certificates+'">'+
                                                 '<form class="prospectiveForm" action="#" id="CertificateForm">'+
                                                 '<h3>Certificate Form</h3>'+
                                                 '<label>Certificate Name </label>'+
                                                 '<input type="text" id="certificate-name-'+no_certificates+'" placeholder="Certificate Name" required readonly/></br>'+
-                                                '<label>Groups in the Minor </label>'+
-                                                '<button class="add-group-to-certificate-field-rows">+</button>' +
-                                                '<div class="groups-to-certificate">' +
+                                                '<label>Description: <span>*</span></label>'+
+                                                '<textarea id="certificate-description-'+no_certificates+'" placeholder="Certificate Description" required/></textarea></br>'+
+                                                '<label>Min Credits: <span>*</span></label>'+
+                                                '<input type="text" id="certificate-mincredits-'+no_certificates+'" placeholder="Min credits" required/></br>'+
+                                                '<label>Groups in the Certificate </label>'+
+                                                '<button class="add-group-to-certificate-field-rows" inputId="my-prospective-certificate-'+no_certificates+'">+</button>' +
+                                                '<div class="groups-to-certificate-'+no_certificates+'" >' +
                                                     '<div>'+
-                                                        '<input type="text" name="my-prospective-certificate-'+no_minors+'[]" />'+
-                                                        '<button class="remove-group-in-new-minor">Remove</button>'+
+                                                        '<select style="width:65%" name="my-prospective-certificate-'+no_certificates+'" >'+
+                                                        GroupList+
+                                                        '</select>'+
+                                                        '<button style="width:30%" class="remove-group-in-new-minor">Remove</button>'+
                                                     '</div>'+
                                                 '</div>' +
-                                                '<button class="prospective-save-btn" id="save-certificate-form">Save</button>'+
+                                                '<button class="prospective-save-btn" id="save-certificate-form" inputId="save-certificate-form-'+no_certificates+'">Save</button>'+
                                                 '<button class="prospective-close-btn" id="close-certificate-form">Close</button>'+
                                                 '<br/>'+
                                                 '</form>'+
@@ -861,7 +1342,6 @@
                 var stringCertificateRow = '<div>'+
                     '<input type="text" name="my-prospective-certificates[]" id="my-prospective-certificate-'+no_certificates+'"/>'+
                     ' <button class="add-certificate" inputId="my-prospective-certificate-'+no_certificates+'">Add</button>'+
-                    ' <button id="edit-certificate">Edit</button>'+
                     ' <button class="remove-certificate">Remove</button>'+
                     '</div>';
 
@@ -876,12 +1356,16 @@
                     "width": "100%",
                     "background": "#ffffff",
                     "display": "none"});
+                $("#CertificateDiv-"+no_certificates +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created certificate forms*/
                 addCertificate();
                 close_certificate_form();
                 addGroupRowInCertificate();
                 removeRowGroupInCertificate();
+                saveNewCertificate();
             });
 
             /*add a new edit minor row*/
@@ -902,9 +1386,13 @@
                 var stringeCertificateForm = '<div id="eCertificateDiv-'+(no_ecertificates)+'">'+
                                                 '<form class="prospectiveForm" action="#" id="CertificateForm">' +
                                                     '<h3>Certificate Form</h3>'+
-                                                    '<label>Certificate Name </label>'+
                                                     '<div>'+
+                                                        '<label>Certificate Name </label>'+
                                                         '<input type="text" id="ecertificate-name-'+no_ecertificates+'" placeholder="Minor Name" required readonly/></br>'+
+                                                        '<label>Description: <span>*</span></label>'+
+                                                        '<textarea id="ecertificate-description-'+no_ecertificates+'" placeholder="Certificate Description" required/></textarea></br>'+
+                                                        '<label>Min Credits: <span>*</span></label>'+
+                                                        '<input type="text" id="ecertificate-mincredits-'+no_ecertificates+'" placeholder="Min credits" required/></br>'+
                                                         '<h4>Select Track</h4>'+
                                                         '<select id="group-selected-in-certificate-'+no_ecertificates+'">'+
                                                         GroupList +
@@ -912,7 +1400,7 @@
                                                         '<button class="add-group-to-certificate" id="add-group-to-certificate">Add this track</button>'+
                                                         '<button class="remove-group-from-certificate" id="remove-group-from-certificate">Remove this track</button>'+
                                                     '</div>'+
-                                                    '<button class="prospective-save-btn" id="save-ecertificate-form">Save</button>'+
+                                                    '<button class="prospective-save-btn" id="save-ecertificate-form" inputId="save-etrack-form-'+no_ecertificates+'">Save</button>'+
                                                     '<button class="prospective-close-btn" id="close-ecertificate-form">Close</button>'+
                                                     '<br/>'+
                                                 '</form>'+
@@ -928,12 +1416,16 @@
                     "width": "100%",
                     "background": "#ffffff",
                     "display": "none"});
+                $("#CertificateDiv-"+no_ecertificates +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created major forms*/
                 addeCertificate();
                 close_ecertificate_form();
                 addGroupToCertificate();
                 removeGroupFromCertificate();
+                updateCertificate();
                 no_ecertificates++;
 
             })
@@ -973,6 +1465,7 @@
                 $("#eTrackDiv-"+no_ecertificates).on("click", "#close-etrack-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
                 });
+                return false;
             }
 
             /*closes track minor form*/
@@ -980,6 +1473,7 @@
                 $("#TrackDiv-"+no_tracks).on("click", "#close-track-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
                 });
+                return false;
             }
 
             /*pops up a new form for the track on the row*/
@@ -1006,6 +1500,89 @@
                 });
             }
 
+            var saveNewTrack = function()
+            {
+                $("#save-track-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var group = '';
+
+                    var vals = new Array();
+                    $("select[name=my-prospective-track-"+formIdno+"]").each(function() {
+                        vals.push($(this).val());
+                    });
+
+                    var novals = vals.length;
+
+                    for ( var init = 0; init < novals; init++)
+                    {
+                        group = group + "&element"+init+"="+encodeURI(vals[init]);
+                    }
+
+                    name  = $("#TrackDiv-"+formIdno+ " #track-name-"+formIdno).val();
+                    var description  = $("#TrackDiv-"+formIdno+ " #track-description-"+formIdno).val();
+                    var mincredits  = $("#TrackDiv-"+formIdno+ " #track-mincredits-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  + '&novals=' + encodeURI(novals) +
+                        '&description='+ encodeURI(description) + '&mincredits='+ encodeURI(mincredits) +
+                        '&catalogID='+ encodeURI(''+catalogID);
+
+                    data = data + group;
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/SaveNewTrack'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Save was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
+            }
+
+            var updateTrack = function()
+            {
+                $("#save-etrack-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    //alert ( name);
+                    var formIdno = name.substring(name.length - 1, name.length);
+
+                    name  = $("#eTrackDiv-"+formIdno+ " #etrack-name-"+formIdno).val();
+                    var mincredits  = $("#eTrackDiv-"+formIdno+ " #etrack-mincredits-"+formIdno).val();
+                    var description  = $("#eTrackDiv-"+formIdno+ " #etrack-description-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  +  '&mincredits='+ encodeURI(mincredits) +
+                        '&description='+ encodeURI(description) + '&catalogID='+ encodeURI(catalogID);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/UpdateTrack'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Update was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
+            }
+
             /*pops up a new certificate edit form for the certificate on the row*/
             var addeTrack = function()
             {
@@ -1026,6 +1603,24 @@
                         return;
                     }
 
+
+                    var data = 'mytrack='+ encodeURI(value);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/RetrieveTrackFields'); ?>',
+                        dataType: "json",
+                        data: data,
+                        async: false,
+                        success:function(result){
+                            $("#eTrackDiv-"+currentTrackForm +" #etrack-description-"+currentTrackForm).val(result["myTrackDescription"]);
+                            $("#eTrackDiv-"+currentTrackForm +" #etrack-mincredits-"+currentTrackForm).val(result["myTrackMinCredits"]);
+                        },
+                        error:function(){
+                            alert('error');
+                        }
+                    });
+
                     $("#eTrackDiv-"+currentTrackForm).css("display", "block");
                     $("#eTrackDiv-"+currentTrackForm +" #etrack-name-"+currentTrackForm).val(value);
                 });
@@ -1034,18 +1629,29 @@
             /*add a row to put tracks in major*/
             var addGroupRowInTrack = function(){
 
-                $(".add-group-to-track-field-rows").click(function(){
+                $(".add-group-to-track-field-rows").click(function(e){
+                    e.preventDefault();
+                    if (e.target !== this)
+                    {
+                        return;
+                    }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var GroupList = <?php echo json_encode(getGroups()) ?>;
                     var groupToTrackDiv = '<div>'+
-                        '<input type="text" name="my-prospective-track-'+no_tracks+'[]" id="my-prospective-set-0"/>'+
+                        '<select style="width:65%" type="text" name="my-prospective-track-'+formIdno+'">'+
+                            GroupList+
+                            '</select>'+
                         '<button class="remove-group-in-new-track">Remove</button>'+
                         '</div>';
 
-                    $(".groups-to-track").append(groupToTrackDiv);
+                    $(".group-to-track-"+formIdno).append(groupToTrackDiv);
+                    return false;
                 });
+                return false;
             };
-
-            addTrack();
-            close_track_form();
 
             /*adds a major-track new relation*/
             var addGroupToTrack = function()
@@ -1116,19 +1722,26 @@
                 e.preventDefault();
                 ++no_tracks;
 
+                var GroupList = <?php echo json_encode(getGroups()) ?>;
                 var stringTrackForm = '<div id="TrackDiv-'+no_tracks+'">'+
                                             '<form class="prospectiveForm" action="#" id="TrackForm">'+
                                             '<h3>Track Form</h3>'+
                                             '<label>Track Name </label>'+
                                             '<input type="text" id="track-name-'+no_tracks+'" placeholder="Track Name" required readonly/></br>'+
-                                            '<button class="add-group-to-track-field-rows">+</button>' +
-                                            '<div class="group-to-track">' +
+                                            '<label>Description: <span>*</span></label>'+
+                                            '<textarea id="track-description-'+no_tracks+'" placeholder="Track Description" required/></textarea></br>'+
+                                            '<label>Min Credits: <span>*</span></label>'+
+                                            '<input type="text" id="track-mincredits-'+no_tracks+'" placeholder="Min credits" required/></br>'+
+                                            '<button class="add-group-to-track-field-rows" inputId="my-prospective-track-'+no_tracks+'">+</button>'+
+                                            '<div class="group-to-track-'+no_tracks+'">' +
                                                 '<div>'+
-                                                '<input type="text" name="my-prospective-track-'+no_tracks+'[]" />'+
-                                                '<button class="remove-group-in-new-track">Remove</button>'+
+                                                '<select style="width:65%" name="my-prospective-track-'+no_tracks+'" >'+
+                                                    GroupList+
+                                                '</select>'+
+                                                '<button style="width:30%" class="remove-group-in-new-track">Remove</button>'+
                                                 '</div>'+
                                             '</div>' +
-                                            '<button class="prospective-save-btn" id="save-track-form">Save</button>'+
+                                            '<button class="prospective-save-btn" id="save-track-form" inputId="save-track-form-'+no_tracks+'">Save</button>'+
                                             '<button class="prospective-close-btn" id="close-track-form">Close</button>'+
                                             '<br/>'+
                                             '</form>'+
@@ -1137,7 +1750,6 @@
                 var stringTrackRow = '<div>'+
                                         '<input type="text" name="my-prospective-tracks[]" id="my-prospective-track-'+no_tracks+'"/>'+
                                         '<button class="add-track" inputId="my-prospective-track-'+no_tracks+'">Add</button>'+
-                                        '<button id="edit-track">Edit</button>'+
                                         '<button class="remove-track">Remove</button>'+
                                     '</div>';
 
@@ -1152,12 +1764,16 @@
                                                 "width": "100%",
                                                 "background": "#ffffff",
                                                 "display": "none"});
+                $("#TrackDiv-"+no_tracks +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created track forms*/
                 addTrack();
                 close_track_form();
                 addGroupRowInTrack();
                 removeRowGroupInTrack();
+                saveNewTrack();
 
             });
 
@@ -1179,9 +1795,13 @@
                 var stringeTrackForm = '<div id="eTrackDiv-'+(no_etracks)+'">'+
                                                     '<form class="prospectiveForm" action="#" id="TrackForm">' +
                                                         '<h3>Track Form</h3>'+
-                                                        '<label>Track Name </label>'+
                                                         '<div>'+
+                                                            '<label>Track Name </label>'+
                                                             '<input type="text" id="etrack-name-'+no_etracks+'" placeholder="Track Name" required readonly/></br>'+
+                                                            '<label>Description: <span>*</span></label>'+
+                                                            '<textarea id="etrack-description-'+no_etracks+'" placeholder="Track Description" required/></textarea></br>'+
+                                                            '<label>Min Credits: <span>*</span></label>'+
+                                                            '<input type="text" id="etrack-mincredits-'+no_etracks+'" placeholder="Min credits" required/></br>'+
                                                             '<h4>Select Group</h4>'+
                                                             '<select id="group-selected-in-track-'+no_etracks+'">'+
                                                             GroupList +
@@ -1189,7 +1809,7 @@
                                                             '<button class="add-group-to-track" id="add-group-to-track" name="add-group-to-track-'+ (no_etracks) + '">Add this group</button>'+
                                                             '<button class="remove-group-from-track" id="remove-group-from-certificate" name="remove-group-from-track-'+ (no_etracks) + '">Remove this group</button>'+
                                                         '</div>'+
-                                                        '<button class="prospective-save-btn" id="save-etrack-form">Save</button>'+
+                                                        '<button class="prospective-save-btn" id="save-etrack-form" inputId="save-etrack-form-'+no_etracks+'">Save</button>'+
                                                         '<button class="prospective-close-btn" id="close-etrack-form">Close</button>'+
                                                         '<br/>'+
                                                     '</form>'+
@@ -1206,18 +1826,23 @@
                     "background": "#ffffff",
                     "display": "none"});
 
+                $("#eTrackDiv-"+no_etracks +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
+
                 /*registers pop up function for dynamically created major forms*/
                 addeTrack();
                 close_etrack_form();
                 addGroupToTrack();
                 removeGroupFromTrack();
+                updateTrack();
                 no_etracks++;
 
             })
 
             /*removes row for new certificate*/
             var removeRowGroupInTrack = function(){
-                $(".track-inputs #TrackDiv-"+(no_tracks)).on("click", ".remove-group-in-new-track", function(e){
+                $("#TrackDiv-"+(no_tracks)).on("click", ".remove-group-in-new-track", function(e){
                     e.preventDefault();
                     $(this).parent('div').remove();
                     //no_majors--;
@@ -1237,6 +1862,11 @@
                 $(this).parent('div').remove();
                 //no_emajors--;
             });
+
+            addTrack();
+            close_track_form();
+            addGroupRowInTrack();
+            removeRowGroupInTrack();
         }
 
         /*Group functions*/
@@ -1248,14 +1878,103 @@
             var close_group_form = function(){
                 $("#GroupDiv-"+no_groups).on("click", "#close-group-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
+                    return false;
                 });
+                return false;
             }
 
             /*closes group form*/
             var close_egroup_form = function(){
-                $("#eGroupDiv-"+no_groups).on("click", "#close-egroup-form", function(e){
+                $("#eGroupDiv-"+no_egroups).on("click", "#close-egroup-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
+                    return false;
                 });
+                return false;
+            }
+
+            var saveNewGroup = function()
+            {
+                $("#save-group-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var group = '';
+
+                    var vals = new Array();
+                    $("select[name=my-prospective-group-"+formIdno+"]").each(function() {
+                        vals.push($(this).val());
+                    });
+
+                    var novals = vals.length;
+
+                    for ( var init = 0; init < novals; init++)
+                    {
+                        group = group + "&element"+init+"="+encodeURI(vals[init]);
+                    }
+
+                    name  = $("#GroupDiv-"+formIdno+ " #group-name-"+formIdno).val();
+                    var description  = $("#GroupDiv-"+formIdno+ " #group-description-"+formIdno).val();
+                    var mincredits  = $("#GroupDiv-"+formIdno+ " #group-mincredits-"+formIdno).val();
+                    var maxcredits  = $("#GroupDiv-"+formIdno+ " #group-maxcredits-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  + '&novals=' + encodeURI(novals) + '&maxcredits='+ encodeURI(maxcredits) +
+                        '&description='+ encodeURI(description) + '&mincredits='+ encodeURI(mincredits) +
+                        '&catalogID='+ encodeURI(''+catalogID);
+
+                    data = data + group;
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/SaveNewGroup'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Save was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
+            }
+
+            var updateGroup = function()
+            {
+                $("#save-egroup-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    //alert ( name);
+                    var formIdno = name.substring(name.length - 1, name.length);
+
+                    name  = $("#eGroupDiv-"+formIdno+ " #egroup-name-"+formIdno).val();
+                    var mincredits  = $("#eGroupDiv-"+formIdno+ " #egroup-mincredits-"+formIdno).val();
+                    var maxcredits  = $("#eGroupDiv-"+formIdno+ " #egroup-maxcredits-"+formIdno).val();
+                    var description  = $("#eGroupDiv-"+formIdno+ " #egroup-description-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  +  '&mincredits='+ encodeURI(mincredits) +  '&maxcredits='+ encodeURI(maxcredits)+
+                        '&description='+ encodeURI(description) + '&catalogID='+ encodeURI(catalogID);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/UpdateGroup'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Update was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
             }
 
             /*pops up a new form for the group on the row*/
@@ -1333,18 +2052,45 @@
                         }
                     });
                 });
+                return false;
             }
+
             /*add a row to put tracks in major*/
             var addSetRowInGroup = function(){
 
-                $(".add-set-to-group-field-rows").click(function(){
+                $(".add-set-to-group-field-rows").click(function(e){
+
+                    e.preventDefault();
+                    if (e.target !== this)
+                    {
+                        return;
+                    }
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var SetList = <?php echo json_encode(getSets()) ?>;
                     var groupToTrackDiv = '<div>'+
-                        '<input type="text" name="my-prospective-group-'+no_egroups+'[]" id="my-prospective-set-0"/>'+
-                        '<button class="remove-set-in-new-group">Remove</button>'+
+                        '<select style="width:65%" name="my-prospective-group-'+formIdno+'">'+
+                            SetList +
+                        '</select>'+
+                        '<button style="width:30%" class="remove-set-in-new-group">Remove</button>'+
                         '</div>';
 
-                    $(".set-to-group").append(groupToTrackDiv);
+                    $(".set-to-group-"+formIdno).append(groupToTrackDiv);
+                    return false;
                 });
+                return false;
+            };
+
+            /*removes row for new group*/
+            var removeSetRowInGroup = function(){
+                $("#GroupDiv-"+(no_groups)).on("click", ".remove-set-in-new-group", function(e){
+                    e.preventDefault();
+                    $(this).parent('div').remove();
+                    //no_majors--;
+                });
+                return false;
             };
 
             /*pops up a new form for the group on the row*/
@@ -1366,6 +2112,24 @@
                         return;
                     }
 
+                    var data = 'mygroup='+ encodeURI(value);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/RetrieveGroupFields'); ?>',
+                        dataType: "json",
+                        data: data,
+                        async: false,
+                        success:function(result){
+                            $("#eGroupDiv-"+currentGroupForm +" #egroup-description-"+currentGroupForm).val(result["myGroupDescription"]);
+                            $("#eGroupDiv-"+currentGroupForm +" #egroup-mincredits-"+currentGroupForm).val(result["myGroupMinCredits"]);
+                            $("#eGroupDiv-"+currentGroupForm +" #egroup-maxcredits-"+currentGroupForm).val(result["myGroupMaxCredits"]);
+                        },
+                        error:function(){
+                            alert('error');
+                        }
+                    });
+
                     $("#eGroupDiv-"+currentGroupForm).css("display", "block");
                     $("#eGroupDiv-"+currentGroupForm +" #egroup-name-"+currentGroupForm).val(value);
                 });
@@ -1373,34 +2137,44 @@
 
             addGroup();
             close_group_form();
+            addSetRowInGroup();
+            removeSetRowInGroup();
 
             /*add row for group with its corresponding group pop up form*/
             $(".add-group-field-rows").click(function(e){
                 e.preventDefault();
                 ++no_groups;
+                var SetList = <?php echo json_encode(getSets()) ?>;
 
                 var stringGroupForm = '<div id="GroupDiv-'+no_groups+'">'+
                                         '<form class="prospectiveForm" action="#" id="GroupForm">'+
                                         '<h3>Group Form</h3>'+
                                         '<label>Group Name: </label>'+
                                         '<input type="text" id="group-name-'+no_groups+'" placeholder="Group Name" required readonly/></br>'+
-                                        '<button class="add-set-to-group-field-rows">+</button>' +
-                                        '<div class="set-to-group">' +
+                                        '<label>Description: <span>*</span></label>'+
+                                        '<textarea id="group-description-'+no_groups+'" placeholder="Group Description" required/></textarea></br>'+
+                                        '<label>Min Credits: <span>*</span></label>'+
+                                        '<input type="text" id="group-mincredits-'+no_groups+'" placeholder="Min credits" required/></br>'+
+                                        '<label>Max Credits: <span>*</span></label>'+
+                                        '<input type="text" id="group-maxcredits-'+no_groups+'" placeholder="Max credits" required/></br>'+
+                                        '<button class="add-set-to-group-field-rows" inputId="my-prospective-group-'+no_groups+'">+</button>' +
+                                        '<div class="set-to-group-'+no_groups+'">' +
                                             '<div>'+
-                                            '<input type="text" name="my-prospective-group-'+no_groups+'[]" />'+
-                                            '<button class="remove-set-in-new-group">Remove</button>'+
+                                            '<select style="width:65%" name="my-prospective-group-'+no_groups+'">'+
+                                                SetList+
+                                            '</select>'+
+                                            '<button style="width:30%" class="remove-set-in-new-group">Remove</button>'+
                                             '</div>'+
                                         '</div>' +
-                                        '<button class="prospective-save-btn" id="save-group-form">Save</button>'+
+                                        '<button class="prospective-save-btn" id="save-group-form" inputId="save-group-form-'+no_groups+'">Save</button>'+
                                         '<button class="prospective-close-btn" id="close-group-form">Close</button>'+
                                         '<br/>'+
                                         '</form>'+
                                     '</div>';
 
                 var stringGroupRow = '<div>'+
-                                        '<input type="text" name="my-prospective-groups[]" id="my-prospective-group-'+no_groups+'"/>'+
+                                        '<input type="text" name="my-prospective-groups[]" id="my-prospective-group-'+no_groups+'" />'+
                                         '<button class="add-group" inputId="my-prospective-group-'+no_groups+'">Add</button>'+
-                                        '<button id="edit-group">Edit</button>'+
                                         '<button class="remove-group">Remove</button>'+
                                     '</div>';
 
@@ -1417,12 +2191,16 @@
                                                 "width": "100%",
                                                 "background": "#ffffff",
                                                 "display": "none"});
+                $("#GroupDiv-"+no_groups +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created group forms*/
                 addGroup();
                 close_group_form();
                 addSetRowInGroup();
                 removeSetRowInGroup();
+                saveNewGroup();
             });
 
             /*add a new edit track row*/
@@ -1443,9 +2221,15 @@
                 var stringeGroupForm = '<div id="eGroupDiv-'+(no_egroups)+'">'+
                                             '<form class="prospectiveForm" action="#" id="GroupForm">' +
                                                 '<h3>Group Form</h3>'+
-                                                '<label>Group Name </label>'+
                                                 '<div>'+
+                                                    '<label>Group Name </label>'+
                                                     '<input type="text" id="egroup-name-'+no_egroups+'" placeholder="Track Name" required readonly/></br>'+
+                                                    '<label>Description: <span>*</span></label>'+
+                                                    '<textarea id="egroup-description-'+no_egroups+'" placeholder="Group Description" required/></textarea></br>'+
+                                                    '<label>Min Credits: <span>*</span></label>'+
+                                                    '<input type="text" id="egroup-mincredits-'+no_egroups+'" placeholder="Min credits" required/></br>'+
+                                                    '<label>Max Credits: <span>*</span></label>'+
+                                                    '<input type="text" id="egroup-maxcredits-'+no_egroups+'" placeholder="Max credits" required/></br>'+
                                                     '<h4>Select Group</h4>'+
                                                     '<select id="set-selected-in-group-'+no_egroups+'">'+
                                                     SetList +
@@ -1453,7 +2237,7 @@
                                                     '<button class="add-set-to-group" id="add-set-to-group" name="add-set-to-group-'+ (no_egroups) + '">Add this group</button>'+
                                                     '<button class="remove-set-from-group" id="remove-set-from-group" name="remove-set-from-group-'+ (no_egroups) + '">Remove this group</button>'+
                                                 '</div>'+
-                                                '<button class="prospective-save-btn" id="save-egroup-form">Save</button>'+
+                                                '<button class="prospective-save-btn" id="save-egroup-form" inputId="save-egroup-form-'+no_egroups+'">Save</button>'+
                                                 '<button class="prospective-close-btn" id="close-egroup-form">Close</button>'+
                                                 '<br/>'+
                                             '</form>'+
@@ -1469,12 +2253,16 @@
                     "width": "100%",
                     "background": "#ffffff",
                     "display": "none"});
+                $("#eGroupDiv-"+no_egroups +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created major forms*/
                 addeGroup();
                 close_egroup_form();
                 addSetToGroup();
                 removeSetFromGroup();
+                updateGroup();
                 no_egroups++;
 
             })
@@ -1484,6 +2272,7 @@
                 e.preventDefault();
                 $(this).parent('div').remove();
                 //no_groups--;
+                return false;
             });
 
             /*removes row along with edit group*/
@@ -1491,16 +2280,8 @@
                 e.preventDefault();
                 $(this).parent('div').remove();
                 //no_groups--;
+                return false;
             });
-
-            /*removes row for new group*/
-            var removeSetRowInGroup = function(){
-                $(".group-inputs #GroupDiv-"+(no_groups)).on("click", ".remove-set-in-new-group", function(e){
-                    e.preventDefault();
-                    $(this).parent('div').remove();
-                    //no_majors--;
-                });
-            };
 
         }
 
@@ -1514,6 +2295,7 @@
                 $("#eSetDiv-"+no_sets).on("click", "#close-eset-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
                 });
+                return false;
             }
 
             /*closes set form*/
@@ -1521,6 +2303,7 @@
                 $("#SetDiv-"+no_sets).on("click", "#close-set-form", function(e){
                     $(this).parent('form').parent('div').css("display", "none");
                 });
+                return false;
             }
 
             /*adds a major-track new relation*/
@@ -1579,14 +2362,31 @@
             /*add a row to put tracks in major*/
             var addCourseRowInSet = function(){
 
-                $(".add-course-to-set-field-rows").click(function(){
+                $(".add-course-to-set-field-rows").click(function(e){
+                    e.stopImmediatePropagation();
+                    var btn = $(this);
+                    var name = $(btn).attr('name');
+                    var formIdno = name.substring(name.length - 1, name.length);
+                    var CourseList = <?php echo json_encode(getCourses()) ?>;
                     var groupToTrackDiv = '<div>'+
-                        '<input style="width:65%" type="text" name="my-prospective-set-'+no_sets+'[]" id="my-prospective-set-0"/>'+
+                        '<select style="width:65%" name="my-prospective-set-'+formIdno+'">'+
+                            CourseList+
+                        '</select>'+
                         '<button style="width:30%" class="remove-course-in-new-set">Remove</button>'+
                         '</div>';
 
-                    $(".course-to-set").append(groupToTrackDiv);
+                    $(".course-to-set-"+formIdno).append(groupToTrackDiv);
                 });
+            };
+
+            /*removes row for new group*/
+            var removeCourseRowInSet = function(){
+                $("#SetDiv-"+(no_sets)).on("click", ".remove-course-in-new-set", function(e){
+                    e.preventDefault();
+                    $(this).parent('div').remove();
+                    //no_majors--;
+                });
+                return false;
             };
 
             /*pops up a new form for the group on the row*/
@@ -1601,15 +2401,33 @@
                     var input = $(btn).attr('inputId');
                     var value = $('#'+input).val();
 
-                    var currentGroupForm = input.substring(input.length - 1, input.length);
+                    var formID = input.substring(input.length - 1, input.length);
                     if ( value.length === 0)
                     {
                         alert("Please fill out group field name first. It cannot be empty.");
                         return;
                     }
 
-                    $("#eSetDiv-"+currentGroupForm).css("display", "block");
-                    $("#eSetDiv-"+currentGroupForm +" #eset-name-"+currentGroupForm).val(value);
+                    var data = 'myset='+ encodeURI(value);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/RetrieveSetFields'); ?>',
+                        dataType: "json",
+                        data: data,
+                        async: false,
+                        success:function(result){
+                            $("#eSetDiv-"+formID +" #eset-description-"+formID).val(result["mySetDescription"]);
+                            $("#eSetDiv-"+formID +" #eset-mincredits-"+formID).val(result["mySetMinCredits"]);
+                            $("#eSetDiv-"+formID +" #eset-maxcredits-"+formID).val(result["mySetMaxCredits"]);
+                        },
+                        error:function(){
+                            alert('error');
+                        }
+                    });
+
+                    $("#eSetDiv-"+formID).css("display", "block");
+                    $("#eSetDiv-"+formID +" #eset-name-"+formID).val(value);
                 });
             }
 
@@ -1635,6 +2453,7 @@
                     $("#SetDiv-"+currentSetForm).css("display", "block");
                     $("#SetDiv-"+currentSetForm +" #set-name-"+currentSetForm).val(value);
                 });
+                return false;
             }
 
             var saveNewSet = function()
@@ -1645,14 +2464,30 @@
                     var name = $(btn).attr('inputId');
                     //alert ( name);
                     var formIdno = name.substring(name.length - 1, name.length);
+                    var group = '';
+
+                    var vals = new Array();
+                    $("select[name=my-prospective-set-"+formIdno+"]").each(function() {
+                        vals.push($(this).val());
+                    });
+
+                  var novals = vals.length;
+
+                    for ( var init = 0; init < novals; init++)
+                    {
+                           group = group + "&element"+init+"="+encodeURI(vals[init]);
+                    }
 
                     var name  = $("#SetDiv-"+formIdno+ " #set-name-"+formIdno).val();
                     var description  = $("#SetDiv-"+formIdno+ " #set-description-"+formIdno).val();
-                    var credits  = $("#SetDiv-"+formIdno+ " #set-credits-"+formIdno).val();
+                    var mincredits  = $("#SetDiv-"+formIdno+ " #set-mincredits-"+formIdno).val();
+                    var maxcredits  = $("#SetDiv-"+formIdno+ " #set-maxcredits-"+formIdno).val();
 
-                    var data = 'name='+ encodeURI(name)  +
-                        '&description='+ encodeURI(description) + '&credits='+ encodeURI(credits) +
+                    var data = 'name='+ encodeURI(name)  + '&novals=' + encodeURI(novals) + '&maxcredits='+ encodeURI(maxcredits) +
+                        '&description='+ encodeURI(description) + '&mincredits='+ encodeURI(mincredits) +
                         '&catalogID='+ encodeURI(''+catalogID);
+
+                    data = data + group;
 
                     $.ajax({
                         type: 'GET',
@@ -1674,29 +2509,40 @@
             addSet();
             close_set_form();
             saveNewSet();
+            addCourseRowInSet();
+            removeCourseRowInSet();
+
+
+
 
             /*add row for set with its corresponding set pop up form*/
             $(".add-set-field-rows").click(function(e){
                 e.preventDefault();
                 ++no_sets;
 
+                var CourseList = <?php echo json_encode(getCourses()) ?>;
+
                 var stringSetForm = '<div id="SetDiv-'+no_sets+'">'+
                                         '<form class="prospectiveForm" action="#" id="SetForm">'+
                                         '<h3>New Set Form</h3>'+
                                         '<label>Set Name: </label>'+
                                         '<input type="text" id="set-name-'+no_sets+'" placeholder="Set Name" required readonly/></br>'+
-                                        '<lable>Min Credits: </label>'+
-                                        '<input type="text" id="set-credits-'+no_sets+'" placeholder="Set Name" /></br>'+
                                         '<label>Description: <span>*</span></label>'+
-                                        '<textarea id="set-description-'+no_sets+'" placeholder="Set Description" required/></br>'+
-                                        '<button class="add-course-to-set-field-rows">+</button>' +
-                                        '<div class="course-to-set">' +
-                                        '<div>'+
-                                        '<input type="text" name="my-prospective-set-'+no_sets+'[]" />'+
-                                        '<button class="remove-course-in-new-set">Remove</button>'+
-                                        '</div>'+
+                                        '<textarea id="set-description-'+no_sets+'" placeholder="Set Description" required/></textarea></br>'+
+                                        '<label>Min Credits: <span>*</span></label>'+
+                                        '<input type="text" id="set-mincredits-'+no_sets+'" placeholder="Min credits" required/></br>'+
+                                        '<label>Max Credits: <span>*</span></label>'+
+                                        '<input type="text" id="set-maxcredits-'+no_sets+'" placeholder="Max credits" required/></br>'+
+                                        '<button class="add-course-to-set-field-rows" name="my-prospective-set-'+no_sets+'">+</button>' +
+                                        '<div class="course-to-set-'+no_sets+'">' +
+                                            '<div>'+
+                                            '<select name="my-prospective-set-'+no_sets+'" >'+
+                                            CourseList+
+                                            '</select>'+
+                                            '<button class="remove-course-in-new-set">Remove</button>'+
+                                            '</div>'+
                                         '</div>' +
-                                        '<button class="prospective-save-btn" id="save-set-form" inputId="save-course-form-'+no_sets+'">Save</button>'+
+                                        '<button class="prospective-save-btn" id="save-set-form" inputId="save-set-form-'+no_sets+'">Save</button>'+
                                         '<button class="prospective-close-btn" id="close-set-form">Close</button>'+
                                         '<br/>'+
                                         '</form>'+
@@ -1705,7 +2551,6 @@
                 var stringSetRow = '<div>'+
                                         '<input type="text" name="my-prospective-sets[]" id="my-prospective-set-'+no_sets+'"/>'+
                                         '<button class="add-set" inputId="my-prospective-set-'+no_sets+'">Add</button>'+
-                                        '<button id="edit-set">Edit</button>'+
                                         '<button class="remove-set">Remove</button>'+
                                    '</div>';
 
@@ -1732,6 +2577,41 @@
                 saveNewSet();
             });
 
+            var updateSet = function()
+            {
+                $("#save-eset-form").click(function(d) {
+
+                    var btn = $(this);
+                    var name = $(btn).attr('inputId');
+                    //alert ( name);
+                    var formIdno = name.substring(name.length - 1, name.length);
+
+                    name  = $("#eSetDiv-"+formIdno+ " #eset-name-"+formIdno).val();
+                    var mincredits  = $("#eSetDiv-"+formIdno+ " #eset-mincredits-"+formIdno).val();
+                    var maxcredits  = $("#eSetDiv-"+formIdno+ " #eset-maxcredits-"+formIdno).val();
+                    var description  = $("#eSetDiv-"+formIdno+ " #eset-description-"+formIdno).val();
+
+                    var data = 'name='+ encodeURI(name)  +  '&mincredits='+ encodeURI(mincredits) +  '&maxcredits='+ encodeURI(maxcredits)+
+                        '&description='+ encodeURI(description) + '&catalogID='+ encodeURI(catalogID);
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo  Yii::app()->createUrl('catalog/prospective/UpdateSet'); ?>',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            alert('Update was successful');
+                            //data returned from php
+                        },
+                        error: function(data){
+                            alert('error');
+                        }
+                    });
+                    return false;
+                });
+                return false;
+            }
+
             /*add a new edit track row*/
             $(".edit-set-field-rows").click(function(e){
                 e.preventDefault();
@@ -1742,7 +2622,6 @@
                                         '<select id="my-prospective-eset-' + (no_esets) + '">'+
                                         SetList +
                                         '</select>'+
-                                            //'<input type="text" name="my-prospective-majors[]" id="my-prospective-major-'+ (no_majors) +'">'  +
                                         '<button class="edit-set" inputId="my-prospective-eset-'+ (no_esets) +'" >Edit</button>' +
                                         '<button class="remove-set">Remove</button>' +
                                     '</div>';
@@ -1750,9 +2629,15 @@
                 var stringeSetForm = '<div id="eSetDiv-'+(no_esets)+'">'+
                                             '<form class="prospectiveForm" action="#" id="SetForm">' +
                                                 '<h3>Set Form</h3>'+
-                                                '<label>Set Name </label>'+
                                                 '<div>'+
+                                                    '<label>Set Name </label>'+
                                                     '<input type="text" id="eset-name-'+no_esets+'" placeholder="Track Name" required readonly/></br>'+
+                                                    '<label>Description: <span>*</span></label>'+
+                                                    '<textarea id="eset-description-'+no_esets+'" placeholder="Set Description" required/></textarea></br>'+
+                                                    '<label>Min Credits: <span>*</span></label>'+
+                                                    '<input type="text" id="eset-mincredits-'+no_esets+'" placeholder="Min credits" required/></br>'+
+                                                    '<label>Max Credits: <span>*</span></label>'+
+                                                    '<input type="text" id="eset-maxcredits-'+no_esets+'" placeholder="Max credits" required/></br>'+
                                                     '<h4>Select Course</h4>'+
                                                     '<select id="course-selected-in-set-'+no_esets+'">'+
                                                     CourseList +
@@ -1760,7 +2645,7 @@
                                                     '<button class="add-course-to-set" id="add-course-to-set" name="add-course-to-set-'+ (no_esets) + '">Add this group</button>'+
                                                     '<button class="remove-course-from-set" id="remove-course-from-set" name="remove-course-from-set-'+ (no_esets) + '">Remove this group</button>'+
                                                 '</div>'+
-                                                '<button class="prospective-save-btn" id="save-eset-form">Save</button>'+
+                                                '<button class="prospective-save-btn" id="save-eset-form" inputId="save-eset-form-'+no_esets+'">Save</button>'+
                                                 '<button class="prospective-close-btn" id="close-eset-form">Close</button>'+
                                                 '<br/>'+
                                             '</form>'+
@@ -1776,12 +2661,16 @@
                     "width": "100%",
                     "background": "#ffffff",
                     "display": "none"});
+                $("#eSetDiv-"+no_sets +" input").css({"width":"100%",
+                    "border":"1px solid #999",
+                    "border-radius":"3px"});
 
                 /*registers pop up function for dynamically created major forms*/
                 addeSet();
                 close_eset_form();
                 addCourseToSet();
                 removeCourseFromSet();
+                updateSet();
                 no_esets++;
 
             })
@@ -1799,17 +2688,6 @@
                 $(this).parent('div').remove();
                 return false;
             });
-
-            /*removes row for new group*/
-            var removeCourseRowInSet = function(){
-                $(".set-inputs #SetDiv-"+(no_sets)).on("click", ".remove-course-in-new-set", function(e){
-                    e.preventDefault();
-                    $(this).parent('div').remove();
-                    //no_majors--;
-                });
-                return false;
-            };
-
         }
 
         /*Course functions*/
@@ -1935,7 +2813,7 @@
 
                     var data = 'name='+ encodeURI(name) + '&prefix='+ encodeURI(prefix) + '&code='+ encodeURI(code) + '&description='+ encodeURI(description) +
                             '&credits='+ encodeURI(credits) + '&note='+ encodeURI(note)+
-                            '&catalogID='+ encodeURI(''+catalogID);
+                            '&catalogID='+ encodeURI(catalogID);
 
                     $.ajax({
                         type: 'GET',
@@ -2231,9 +3109,9 @@
 <div class="form">
 
 <script type="text/javascript">
-    window.onbeforeunload = function() {
+   /* window.onbeforeunload = function() {
         return "are you sure to leave this page";
-    }
+    }*/
 </script>
     <?php  /*$form=$this->beginWidget('CActiveForm', array(
 	'id'=>'prospective-catalog-form',
@@ -2260,121 +3138,135 @@
         
             <div class="row">
                 <label>Catalog Name</label>
-                <input type="text" class="catalog-name" name="prospective-catalog-name"/>
+                <input type="text" class="catalog-name" id="prospective-catalog-name" required/>
             </div>
-        
             <div class="row">
-                <div>
-                    <label>Add Majors</label>
-                    <button class="add-major-field-rows">+</button>
-                    <button class="edit-major-field-rows">+edit</button>
-                </div>
-                <div class="major-inputs">
-                    <div>
-                        <input type="text" name="my-prospective-majors[]" id="my-prospective-major-0">
-                        <button class="add-major" inputId="my-prospective-major-0">Add</button>
-                        <!--<button id="edit-major">Edit</button>
-                        <button id="remove-major">Remove</button>-->
-                    </div>
-                </div>
-                <div class="emajor-inputs">
-                </div>
+                <label>Description</label>
+                <textarea id="catalog-description"></textarea>
             </div>
-        
             <div class="row">
-                <label>Add Minors</label>
-                <button class="add-minor-field-rows">+</button>
-                <button class="edit-minor-field-rows">+edit</button>
-                <div class="minor-inputs">
-                    <div>
-                        <input type="text" name="my-prospective-minors[]" id="my-prospective-minor-0"/>
-                        <button class="add-minor" inputId="my-prospective-minor-0">Add</button>
-                        <!--<button id="edit-minor">Edit</button>
-                        <button id="remove-minor">Remove</button>-->
-                    </div>
-                </div>
-                <div class="eminor-inputs">
-                </div>
+                <label>Term to be Activated</label>
+                <select id="catalog-term">
+                    <option value="SPRING">SPRING</option>
+                    <option value="SUMMER">SUMMER</option>
+                    <option value="FALL">FALL</option>
+                </select>
+            </div>
+            <div class="row">
+                <label>Year to be Activated</label>
+                <input type="text" id="catalog-year" required/>
+            </div>
+            <div>
+                <button class="new-catalog" id="new-catalog">Create New Catalog</button>
             </div>
 
-            <div class="row">
-                <label>Add Certificates</label>
-                <button class="add-certificate-field-rows">+</button>
-                <button class="edit-certificate-field-rows">+edit</button>
-                <div class="certificate-inputs">
-                    <div>
-                        <input type="text" name="my-prospective-certificates[]" id="my-prospective-certificate-0"/>
-                        <button class="add-certificate" inputId="my-prospective-certificate-0">Add</button>
-                        <!--<button id="edit-certificate">Edit</button>
-                        <button id="remove-certificate">Remove</button>-->
-                    </div>
-                </div>
-                <div class="ecertificate-inputs">
-                </div>
-            </div>
 
-            <div class="row">
-                <label>Add Tracks</label>
-                <button class="add-track-field-rows">+</button>
-                <button class="edit-track-field-rows">+edit</button>
-                <div class="track-inputs">
+            <div class="prospective-fields">
+                <div class="row">
                     <div>
-                        <input type="text" name="my-prospective-tracks[]" id="my-prospective-track-0"/>
-                        <button class="add-track" inputId="my-prospective-track-0">Add</button>
-                        <!--<button id="edit-track">Edit</button>
-                        <button id="remove-track">Remove</button>-->
+                        <label>Add Majors</label>
+                        <button class="add-major-field-rows">+</button>
+                        <button class="edit-major-field-rows">+edit</button>
+                    </div>
+                    <div class="major-inputs">
+                        <div>
+                            <input type="text" name="my-prospective-majors[]" id="my-prospective-major-0">
+                            <button class="add-major" inputId="my-prospective-major-0">Add</button>
+                        </div>
+                    </div>
+                    <label>Editable Majors</label>
+                    <div class="emajor-inputs">
                     </div>
                 </div>
-                <div class="etrack-inputs">
-                </div>
-            </div>
 
-            
-            <div class="row">
-                <label>Add Groups</label>
-                <button class="add-group-field-rows">+</button>
-                <button class="edit-group-field-rows">+edit</button>
-                <div class="group-inputs">
-                    <div>
-                        <input type="text" name="my-prospective-groups[]" id="my-prospective-group-0"/>
-                        <button class="add-group" inputId="my-prospective-group-0">Add</button>
-                        <!--<button id="edit-group">Edit</button>
-                        <button id="remove-group">Remove</button>-->
+                <div class="row">
+                    <label>Add Minors</label>
+                    <button class="add-minor-field-rows">+</button>
+                    <button class="edit-minor-field-rows">+edit</button>
+                    <div class="minor-inputs">
+                        <div>
+                            <input type="text" name="my-prospective-minors[]" id="my-prospective-minor-0"/>
+                            <button class="add-minor" inputId="my-prospective-minor-0">Add</button>
+                        </div>
+                    </div>
+                    <label>Editable Minors</label>
+                    <div class="eminor-inputs">
                     </div>
                 </div>
-                <div class="egroup-inputs">
-                </div>
-            </div>
-        
-            <div class="row">
-                <label>Add Sets</label>
-                <button class="add-set-field-rows">+</button>
-                <button class="edit-set-field-rows">+edit</button>
-                <div class="set-inputs">
-                    <div>
-                        <input type="text" name="my-prospective-sets[]" id="my-prospective-set-0"/>
-                        <button class="add-set" inputId="my-prospective-set-0">Add</button>
-                        <!--<button id="edit-set">Edit</button>
-                        <button id="remove-set">Remove</button>-->
+
+                <div class="row">
+                    <label>Add Certificates</label>
+                    <button class="add-certificate-field-rows">+</button>
+                    <button class="edit-certificate-field-rows">+edit</button>
+                    <div class="certificate-inputs">
+                        <div>
+                            <input type="text" name="my-prospective-certificates[]" id="my-prospective-certificate-0"/>
+                            <button class="add-certificate" inputId="my-prospective-certificate-0">Add</button>
+                        </div>
+                    </div>
+                    <label>Editable Certificate</label>
+                    <div class="ecertificate-inputs">
                     </div>
                 </div>
-                <div class="eset-inputs">
-                </div>
-            </div>
-        
-            <div class="row">
-                <label>Add Courses</label>
-                <button class="add-course-field-rows">+</button>
-                <button class="edit-course-field-rows">+edit</button>
-                <div class="course-inputs">
-                    <div>
-                        <input type="text" name="my-prospective-courses[]" id="my-prospective-course-0"/>
-                        <button class="add-course" inputId="my-prospective-course-0">Add</button>
-                        <!--<button id="edit-course">Edit</button>
-                        <button id="remove-course">Remove</button>-->
+
+                <div class="row">
+                    <label>Add Tracks</label>
+                    <button class="add-track-field-rows">+</button>
+                    <button class="edit-track-field-rows">+edit</button>
+                    <div class="track-inputs">
+                        <div>
+                            <input type="text" name="my-prospective-tracks[]" id="my-prospective-track-0"/>
+                            <button class="add-track" inputId="my-prospective-track-0">Add</button>
+                        </div>
+                    </div>
+                    <label>Editable Tracks</label>
+                    <div class="etrack-inputs">
                     </div>
                 </div>
-                <div class="ecourse-inputs">
+
+                <div class="row">
+                    <label>Add Groups</label>
+                    <button class="add-group-field-rows">+</button>
+                    <button class="edit-group-field-rows">+edit</button>
+                    <div class="group-inputs">
+                        <div>
+                            <input type="text" name="my-prospective-groups[]" id="my-prospective-group-0"/>
+                            <button class="add-group" inputId="my-prospective-group-0">Add</button>
+                        </div>
+                    </div>
+                    <label>Editable Groups</label>
+                    <div class="egroup-inputs">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label>Add Sets</label>
+                    <button class="add-set-field-rows">+</button>
+                    <button class="edit-set-field-rows">+edit</button>
+                    <div class="set-inputs">
+                        <div>
+                            <input type="text" name="my-prospective-sets[]" id="my-prospective-set-0"/>
+                            <button class="add-set" inputId="my-prospective-set-0">Add</button>
+                        </div>
+                    </div>
+                    <label>Editable Sets</label>
+                    <div class="eset-inputs">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label>Add Courses</label>
+                    <button class="add-course-field-rows">+</button>
+                    <button class="edit-course-field-rows">+edit</button>
+                    <div class="course-inputs">
+                        <div>
+                            <input type="text" name="my-prospective-courses[]" id="my-prospective-course-0"/>
+                            <button class="add-course" inputId="my-prospective-course-0">Add</button>
+                        </div>
+                    </div>
+                    <label>Editable Courses</label>
+                    <div class="ecourse-inputs">
+                    </div>
                 </div>
             </div>
 
@@ -2387,11 +3279,11 @@
 
 
             <div class="row buttons">
-                    <?php echo CHtml::submitButton('Create'); ?>
+                <button class="prospective-fields" id="new-prospective-catalog">Propose Prospective Catalog</button>
             </div>
 
 
- 
+
     <?php /*$this->endWidget();*/ ?>
   </div><!-- form -->
 
@@ -2401,22 +3293,16 @@
             <h3>Major Form</h3>
             <label>Major Name </label>
             <input type="text" id="major-name-0" placeholder="Major Name" required readonly/></br>
-            <label>Number of Pre-requisite Courses: <span>*</span></label>
-            <input type="number" id="number-of-prereq-in-major-0" placeholder="Number of courses" required/></br>
-            <label>Prerequisites <span>*</span></label>
-            <div id="major-prereq-courses"></div>
-
-            <label>Number of Core Courses: <span>*</span></label>
-            <input type="number" id="number-of-core-in-major-0" placeholder="Number of courses" required/></br>
-            <label>Core Courses <span>*</span></label>
-            <div id="major-core-courses"></div>
-
-            <label>Number of Elective Courses: <span>*</span></label>
-            <input type="number" id="number-of-elective-in-major-0" placeholder="Number of courses" required/></br>
-            <label>Electives <span>*</span></label>
-            <div id="major-elective-courses"></div>
-
-            <button class="prospective-save-btn" id="save-major-form">Save</button>
+            <label>Description: <span>*</span></label>
+            <textarea id="major-description-0" placeholder="Major Description" required/></textarea></br>
+            <button class="add-track-to-major-field-rows">+</button>
+            <div class="track-to-major-0">
+                <div>
+                    <input style="width:65%" type="text" name="my-prospective-major-0[]" />
+                    <button style="width:30%" class="remove-track-in-new-major">Remove</button>
+                </div>
+            </div>
+            <button class="prospective-save-btn" id="save-major-form" inputId="save-minor-form-0">Save</button>
             <button class="prospective-close-btn" id="close-major-form">Close</button>
             <br/>
         </form>
@@ -2428,11 +3314,18 @@
             <h3>Minor Form</h3>
             <label>Minor Name </label>
             <input type="text" id="minor-name-0" required readonly/></br>
-            <label>Number of Courses: <span>*</span></label>
-            <input type="number" id="number-of-courses-in-minor-0" placeholder="Number of courses" required/></br>
-            <label>Courses in the Minor </label>
-            <div id="minor-courses"></div>
-            <button class="prospective-save-btn" id="save-minor-form">Save</button>
+            <label>Description: <span>*</span></label>
+            <textarea id="minor-description-0" placeholder="Minor Description" required/></textarea></br>
+            <label>Min Credits: <span>*</span></label>
+            <input type="text" id="minor-mincredits-0" placeholder="Min credits" required/></br>
+            <button class="add-group-to-minor-field-rows">+</button>
+            <div class="group-to-minor-0">
+                <div>
+                    <input style="width:65%" type="text" name="my-prospective-minor-0[]" />
+                    <button style="width:30%" class="remove-group-in-new-minor">Remove</button>
+                </div>
+            </div>
+            <button class="prospective-save-btn" id="save-minor-form" inputId="save-minor-form-0">Save</button>
             <button class="prospective-close-btn" id="close-minor-form">Close</button>
             <br/>
         </form>
@@ -2444,7 +3337,18 @@
             <h3>Track Form</h3>
             <label>Track name </label>
             <input type="text" id="track-name-0" placeholder="track Name" required readonly/></br>
-            <button class="prospective-save-btn" id="save-track-form">Save</button>
+            <label>Description: <span>*</span></label>
+            <textarea id="track-description-0" placeholder="Track Description" required/></textarea></br>
+            <label>Min Credits: <span>*</span></label>
+            <input type="text" id="track-mincredits-0" placeholder="Min credits" required/></br>
+            <button class="add-group-to-track-field-rows">+</button>
+            <div class="group-to-track-0">
+                <div>
+                    <input style="width:65%" type="text" name="my-prospective-track-0[]" />
+                    <button style="width:30%" class="remove-group-in-new-track">Remove</button>
+                </div>
+            </div>
+            <button class="prospective-save-btn" id="save-track-form" inputId="save-track-form-0">Save</button>
             <button class="prospective-close-btn" id="close-track-form">Close</button>
             <br/>
         </form>
@@ -2456,7 +3360,18 @@
             <h3>Certificate Form</h3>
             <label>Certificate Name </label>
             <input type="text" id="certificate-name-0" placeholder="Certificate Name" required readonly/></br>
-            <button class="prospective-save-btn" id="save-certificate-form">Save</button>
+            <label>Description: <span>*</span></label>
+            <textarea id="certificate-description-0" placeholder="Certificate Description" required/></textarea></br>
+            <label>Min Credits: <span>*</span></label>
+            <input type="text" id="certificate-mincredits-0" placeholder="Min credits" required/></br>
+            <button class="add-group-to-certificate-field-rows">+</button>
+            <div class="group-to-certificate-0">
+                <div>
+                    <input style="width:65%" type="text" name="my-prospective-certificate-0[]" />
+                    <button style="width:30%" class="remove-group-in-new-certificate">Remove</button>
+                </div>
+            </div>
+            <button class="prospective-save-btn" id="save-certificate-form" inputId="save-certificate-form-0">Save</button>
             <button class="prospective-close-btn" id="close-certificate-form">Close</button>
             <br/>
         </form>
@@ -2465,14 +3380,23 @@
     <!-- Group Form -->
     <div id="GroupDiv-0">
         <form class="prospectiveForm" action="#" id="GroupForm">
-            <h3>Group Form</h3>
+            <h3>New Group Form</h3>
             <label>Group Name: </label>
             <input type="text" id="group-name-0" placeholder="Group Name" required readonly/></br>
-            <label>Number of Courses: <span>*</span></label>
-            <input type="number" id="number-of-courses-in-group-0" placeholder="Number of courses" required/></br>
-            <label>Courses in the Group </label>
-            <div id="group-courses"></div>
-            <button class="prospective-save-btn" id="save-group-form">Save</button>
+            <label>Description: <span>*</span></label>
+            <textarea id="group-description-0" placeholder="Group Description" required/></textarea></br>
+            <label>Min Credits: <span>*</span></label>
+            <input type="text" id="group-mincredits-0" placeholder="Min credits" required/></br>
+            <label>Max Credits: <span>*</span></label>
+            <input type="text" id="group-maxcredits-0" placeholder="Max credits" required/></br>
+            <button class="add-set-to-group-field-rows">+</button>
+            <div class="set-to-group-0">
+                <div>
+                    <input style="width:65%" type="text" name="my-prospective-group-0[]" />
+                    <button style="width:30%" class="remove-set-in-new-group">Remove</button>
+                </div>
+            </div>
+            <button class="prospective-save-btn" id="save-group-form" inputId="save-group-form-0">Save</button>
             <button class="prospective-close-btn" id="close-group-form">Close</button>
             <br/>
         </form>
@@ -2481,20 +3405,23 @@
     <!-- Set Form -->
     <div id="SetDiv-0">
         <form class="prospectiveForm" action="#" id="SetForm">
-            <h3>Set Form</h3>
+            <h3>New Set Form</h3>
             <label>Set Name: </label>
             <input type="text" id="set-name-0" placeholder="Set Name" required readonly/></br>
-            <label>Select your Group</label>
-            <select id="group-selected-0">
-                <?php
-                    echo getGroups();
-                ?>
-            </select>
-            <label>Number of Courses: <span>*</span></label>
-            <input type="number" id="number-of-courses-in-set-0" placeholder="Number of courses" required/></br>
-            <label>Courses in the Set </label>
-            <div id="set-courses"></div>
-            <button class="prospective-save-btn" id="save-set-form">Save</button>
+            <label>Description: <span>*</span></label>
+            <textarea id="set-description-0" placeholder="Set Description" required/></textarea></br>
+            <label>Min Credits: <span>*</span></label>
+            <input type="text" id="set-mincredits-0" placeholder="Min credits" required/></br>
+            <label>Max Credits: <span>*</span></label>
+            <input type="text" id="set-maxcredits-0" placeholder="Max credits" required/></br>
+            <button class="add-course-to-set-field-rows">+</button>
+            <div class="course-to-set-0">
+                <div>
+                    <input style="width:65%" type="text" name="my-prospective-set-0[]" />
+                    <button style="width:30%" class="remove-course-in-new-set">Remove</button>
+                </div>
+            </div>
+            <button class="prospective-save-btn" id="save-set-form" inputId="save-set-form-0">Save</button>
             <button class="prospective-close-btn" id="close-set-form">Close</button>
             <br/>
         </form>
@@ -2520,7 +3447,7 @@
         <button class="prospective-close-btn" id="close-course-form">Close</button>
         <br/>
     </form>
-</div>';
+</div>
 
 
   

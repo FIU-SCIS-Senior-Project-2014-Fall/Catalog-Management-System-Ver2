@@ -12,7 +12,7 @@ $cs->registerCssFile($baseUrl.'/css/flowchart.css');
 $setByCourse = CurrSetByCourse::model()->with('course')->findAll('t.set_id=:id AND t.catalog_id=:catalogId', array(':id' => $id, 'catalogId' => $this->catalogId));
 if (empty($setByCourse)) {
 
-    echo "no Courses available for this Set.<br/>";
+    //echo "no Courses available for this Set.<br/>";
 } else {
     // Create the list
     echo '<ul>';
@@ -40,7 +40,7 @@ if (empty($setByCourse)) {
         $form=$this->beginWidget('CActiveForm', array(
                 'id'=>'flow-course-form',
                 'enableAjaxValidation'=>false,
-                'action' => Yii::app()->createUrl('//set/flowSet'),
+                'action' => Yii::app()->createUrl('//set/flowSet'), 
         )); 
             echo '<div class=\'outer\'>';
 

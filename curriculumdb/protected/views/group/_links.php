@@ -13,7 +13,7 @@ $cs->registerCssFile($baseUrl.'/css/flowchart.css');
 $groupBySet = CurrGroupBySet::model()->with('set')->findAll('t.group_id=:id AND t.catalog_id=:catalogId', array(':id' => $id, 'catalogId' => $this->catalogId));
 if (empty($groupBySet)) {
 
-    echo "no Set available for this group.<br/>";
+    //echo "no Set available for this group.<br/>";
 } else {
     // Create the list
     echo '<ul>';
@@ -96,10 +96,12 @@ if (empty($groupBySet)) {
             {
                 echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+ $setid[$x] + \"'>\");";      
                 foreach($string[$x] AS $test)
-                {   echo "document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course'>\");";
-                    echo "document.write(\"$test\");";
+                {   
+                    echo "document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course'>\");";
+                    echo 'document.write("<a href=\'/Catalog-Management-System-Ver2/curriculumdb/index.php/set/'. $setid[$x]. '\'>'. $test. ' </a>");';
                     echo "document.write(\"</div></div>\");"; 
                 }
+                
             }
             //close each group
             echo 'document.write("</div>");';

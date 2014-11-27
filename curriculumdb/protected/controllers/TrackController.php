@@ -74,6 +74,7 @@ class TrackController extends Controller
                 $record = FlowGroup::model()->findAll('t.flowchartid=:fid AND t.groupid=:gid', array(':fid' => $fid, ':gid'=>$groupid));
              
                 $indexPrim = $record[0]->id;
+                $trackid = $record[0]->trackid;
                 echo "Primary ID: ". $indexPrim;
                 echo "<br>";
                 
@@ -81,6 +82,7 @@ class TrackController extends Controller
                 $post->position = $position;
                 $post->save();
             }
+            $this->redirect(array('/track/'.$trackid));
         }
 	/**
 	 * Creates a new model.

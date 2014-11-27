@@ -13,7 +13,7 @@ $cs->registerCssFile($baseUrl.'/css/flowchart.css');
 $trackByGroup = CurrTrackByGroup::model()->with('group')->findAll('t.track_id=:id AND t.catalog_id=:catalogId', array(':id' => $id, 'catalogId' => $this->catalogId));
 if (empty($trackByGroup)) {
 
-    echo "no Groups available for this track.<br/>";
+    //echo "no Groups available for this track.<br/>";
 } else {
     // Create the list
     echo '<ul>';
@@ -115,7 +115,7 @@ if (empty($trackByGroup)) {
                         foreach($string[$x][$i] AS $test)
                         {   
                             echo "document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course'>\");";
-                            echo "document.write(\"$test\");";
+                            echo 'document.write("<a href=\'/Catalog-Management-System-Ver2/curriculumdb/index.php/group/'. $groupid[$x]. '\'>'. $test. ' </a>");';
                             echo "document.write(\"</div></div>\");";
                         }
                         echo 'document.write("</div></div>");';

@@ -37,6 +37,7 @@ class SetController extends Controller
                 
                 $record = FlowCourse::model()->findAll('t.flowchartid=:fid AND t.courseid=:cid', array(':fid' => $fid, ':cid'=>$courseid));
                 $indexPrim = $record[0]->id;
+                $setid = $record[0]->setid;
                 echo "Primary ID: ". $indexPrim;
                 echo "<br>";
                 
@@ -44,7 +45,7 @@ class SetController extends Controller
                 $post->position = $position;
                 $post->save();
             }
-            
+            $this->redirect(array('/set/'.$setid));
         }
         
 	/**

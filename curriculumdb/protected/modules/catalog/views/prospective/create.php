@@ -3170,8 +3170,8 @@
                     </div>
                     <div class="major-inputs">
                         <div>
-                            <input type="text" name="my-prospective-majors[]" id="my-prospective-major-0">
-                            <button class="add-major" inputId="my-prospective-major-0">Add</button>
+                            <!--<input type="text" name="my-prospective-majors[]" id="my-prospective-major-0">
+                            <button class="add-major" inputId="my-prospective-major-0">Add</button>-->
                         </div>
                     </div>
                     <label>Editable Majors</label>
@@ -3185,8 +3185,8 @@
                     <button class="edit-minor-field-rows">+edit</button>
                     <div class="minor-inputs">
                         <div>
-                            <input type="text" name="my-prospective-minors[]" id="my-prospective-minor-0"/>
-                            <button class="add-minor" inputId="my-prospective-minor-0">Add</button>
+                            <!--<input type="text" name="my-prospective-minors[]" id="my-prospective-minor-0"/>
+                            <button class="add-minor" inputId="my-prospective-minor-0">Add</button>-->
                         </div>
                     </div>
                     <label>Editable Minors</label>
@@ -3200,8 +3200,8 @@
                     <button class="edit-certificate-field-rows">+edit</button>
                     <div class="certificate-inputs">
                         <div>
-                            <input type="text" name="my-prospective-certificates[]" id="my-prospective-certificate-0"/>
-                            <button class="add-certificate" inputId="my-prospective-certificate-0">Add</button>
+                            <!--<input type="text" name="my-prospective-certificates[]" id="my-prospective-certificate-0"/>
+                            <button class="add-certificate" inputId="my-prospective-certificate-0">Add</button>-->
                         </div>
                     </div>
                     <label>Editable Certificate</label>
@@ -3215,8 +3215,8 @@
                     <button class="edit-track-field-rows">+edit</button>
                     <div class="track-inputs">
                         <div>
-                            <input type="text" name="my-prospective-tracks[]" id="my-prospective-track-0"/>
-                            <button class="add-track" inputId="my-prospective-track-0">Add</button>
+                            <!--<input type="text" name="my-prospective-tracks[]" id="my-prospective-track-0"/>
+                            <button class="add-track" inputId="my-prospective-track-0">Add</button>-->
                         </div>
                     </div>
                     <label>Editable Tracks</label>
@@ -3230,8 +3230,8 @@
                     <button class="edit-group-field-rows">+edit</button>
                     <div class="group-inputs">
                         <div>
-                            <input type="text" name="my-prospective-groups[]" id="my-prospective-group-0"/>
-                            <button class="add-group" inputId="my-prospective-group-0">Add</button>
+                            <!--<input type="text" name="my-prospective-groups[]" id="my-prospective-group-0"/>
+                            <button class="add-group" inputId="my-prospective-group-0">Add</button>-->
                         </div>
                     </div>
                     <label>Editable Groups</label>
@@ -3245,8 +3245,8 @@
                     <button class="edit-set-field-rows">+edit</button>
                     <div class="set-inputs">
                         <div>
-                            <input type="text" name="my-prospective-sets[]" id="my-prospective-set-0"/>
-                            <button class="add-set" inputId="my-prospective-set-0">Add</button>
+                            <!--<input type="text" name="my-prospective-sets[]" id="my-prospective-set-0"/>
+                            <button class="add-set" inputId="my-prospective-set-0">Add</button>-->
                         </div>
                     </div>
                     <label>Editable Sets</label>
@@ -3260,8 +3260,8 @@
                     <button class="edit-course-field-rows">+edit</button>
                     <div class="course-inputs">
                         <div>
-                            <input type="text" name="my-prospective-courses[]" id="my-prospective-course-0"/>
-                            <button class="add-course" inputId="my-prospective-course-0">Add</button>
+                            <!--<input type="text" name="my-prospective-courses[]" id="my-prospective-course-0"/>
+                            <button class="add-course" inputId="my-prospective-course-0">Add</button>-->
                         </div>
                     </div>
                     <label>Editable Courses</label>

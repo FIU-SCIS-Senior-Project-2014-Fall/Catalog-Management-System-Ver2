@@ -7776,3 +7776,32 @@ Stack trace:
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
 HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/
 ---
+2014/11/24 21:58:07 [error] [php] PDOStatement::execute(): MySQL server has gone away (C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:497)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveFinder.php(784): CDbCommand->queryAll()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveFinder.php(70): CJoinElement->find()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1296): CActiveFinder->query()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1410): CurrSetByCourse->query()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements\_groupContent.php(15): CurrSetByCourse->findAll()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): SiteController->renderFile()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements.php(40): SiteController->renderPartial()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): SiteController->renderFile()
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): SiteController->renderPartial()
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(54): SiteController->render()
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): SiteController->runAction()
+#18 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#19 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): SiteController->run()
+#20 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements\_groupContent.php (15)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements.php (40)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php (54)

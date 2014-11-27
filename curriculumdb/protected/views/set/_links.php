@@ -1,102 +1,9 @@
-   <style>
-      .float-left {
-          position:relative;
-          float:left;
-      }
-      .outer {
-          position:relative;
-          float:left;
-          width:600px;
-          border: thin solid red;
-      }
-
-      .box-container {
-          width: 25%;
-      }
-
-    .box {
-            height: 60px;
-        text-align: center;
-            border: solid black thin;
-            margin: 2px;
-            padding: 5px;
-    }
-
-        #result {
-            clear: left;
-        }
-
-  </style>
-   <script>
-    var isDragging = false;
-    var objSource = "";
-    var row = 0;
-    var row1 = 0;
-    var test = 0;
-    
-    function Box (id, dropState) {
-      this.id = id;
-      this.canDrop = dropState;
-      this.value="empty";
-    }
-
-
-    var arrBox = new Array();
-
-
-    function allowDrop(obj, ev)
-    {
-        if (arrBox[obj.id].canDrop) {
-                    ev.preventDefault(); //allow drop
-        }
-    }
-
-    function drag(parent, ev)
-    {
-        ev.dataTransfer.setData("Text",parent.id + ":" + ev.target.id);
-    }
-
-    function drop(dropTarget, ev)
-    {
-        if (arrBox[dropTarget.id].canDrop) {
-            ev.preventDefault(); //do not try to open link
-            var dragData=ev.dataTransfer.getData("Text");
-                        var indexColon = dragData.indexOf(":");
-                        var parentId = dragData.substring(0,indexColon);
-                        var dragId = dragData.substring(indexColon+1);
-                        //alert(dropTarget.id + ":" + parentId);
-            ev.target.appendChild(document.getElementById(dragId));
-                        var dragv = document.getElementById(dragId);
-                        arrBox[dropTarget.id].canDrop = false;
-                        arrBox[dropTarget.id].value = dragId;
-                        arrBox[parentId].value = "";
-                        var newP = dropTarget.id;
-                        var temp = dragv.getElementsByTagName("input")[0].value;
-                        var index1 = temp.indexOf(';');
-                        var index = temp.indexOf(':');
-                        var cid = temp.substring(index+1);
-                        var fid = temp.substring(0,index1);
-                        dragv.getElementsByTagName("input")[0].value = fid + ";" + newP + ":" + cid;
-            }
-    }
-
-    function dragStart(obj) {
-        isDragging = true;
-        objSource = obj;
-        objSource.style.border = 'thin solid black';
-    }
-
-    function dragEnd(obj) {
-        if (isDragging) {
-                    objSource.style.border = 'thin solid red';
-                    arrBox[objSource.id].canDrop = true;
-            }
-            isDragging = false;
-    }
-    
-   </script>
 <?php
 
+$baseUrl = Yii::app()->baseUrl; 
+$cs = Yii::app()->getClientScript();
+$cs->registerScriptFile($baseUrl.'/javascript/flowchartdrag.js');
+$cs->registerCssFile($baseUrl.'/css/flowchart.css');
 /**
  * @var int Id the id for the parent to get the links from.
  *  
@@ -121,81 +28,44 @@ if (empty($setByCourse)) {
 }
 
 //FLOW CHART START We already have a set of courses.
-    $row = 0;
-    $string = array();
-    $courseid = array();
+   
     $recordSet = FlowCourse::model()->findAll('t.setid=:sid', array(':sid' => $id));
     $flowchartid = $recordSet[0]->flowchartid;
-    foreach ($recordSet AS $course)
-    {      
-        global $string;
-        $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->courseid));
-        $entity = new Course($course->courseid, $this->catalogId); //$entity has current and history
-        $data = $entity->getHistoryEntity();    //extract history into $data, it has the course prefix id
-        $prefix = new CoursePrefix($data->coursePrefix_id, $this->catalogId); //prefix his and curr
-        $string[$course->position] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
-        $string[$course->position].= ' '.$data->number.'<br>';
-        //$course2 = CurrSetByCourse::model()->with('course')->findAll('t.set_id=:fid AND t.catalog_id=:catalogId', array(':fid' => '1', 'catalogId' => $this->catalogId));
-        //$string[$course->position].= $course2->course->name.'<br>';
-        $courseid[$course->position] = $course->courseid;
-        foreach($setByReq AS $req)
-        {
-            $entity1 = new Course($req->requisite_id, $this->catalogId);
-            $data1 = $entity1->getHistoryEntity();    //extract history into $data, it has the course prefix id
-            $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
-            if($req->level == 0)
-            {
-                $string[$course->position].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                $string[$course->position].= ' '.$data1->number.' <br>'; 
-                break; //Flow chart to display only a single course as pre-req
-            }
-        }
-        foreach($setByReq AS $req)
-        {
-            $entity1 = new Course($req->requisite_id, $this->catalogId);
-            $data1 = $entity1->getHistoryEntity();    //extract history into $data, it has the course prefix id
-            $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
-            if($req->level == 1)
-            {
-                $string[$course->position].= 'Co: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                $string[$course->position].= ' '.$data1->number.' <br>';
-                break; //Flow chart to display only a single course as co-req
-            }
-        }
-        $row+=1;
-    }   
+    $info = CourseFlowInfo::getCourseInfo($recordSet);
+    $string = $info[0];
+    $courseid = $info[1];
+    
+    $form=$this->beginWidget('CActiveForm', array(
+            'id'=>'flow-course-form',
+            'enableAjaxValidation'=>false,
+            'action' => Yii::app()->createUrl('//set/flowSet'),
+    )); 
+        echo '<div class=\'outer\'>';
 
-        $form=$this->beginWidget('CActiveForm', array(
-                'id'=>'flow-course-form',
-                'enableAjaxValidation'=>false,
-                'action' => Yii::app()->createUrl('//set/flowSet'),
-        )); 
-            echo '<div class=\'outer\'>';
+    for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
+    {
+        echo "<script>
+            arrBox[row] = new Box(row, true);
 
-        for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
-        {
-            echo "<script>
-                arrBox[row] = new Box(row, true);
+            document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course' \");
+                document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
+                document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
 
-                document.write(\"<div class='box-container float-left'><div id ='\" + row + \"' class='box' \");
-                    document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
-                    document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
-
-            if (!empty($string[$x])) { //eventually, this will be a test to see if item belongs in current row
-                echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '');";
-                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+$courseid[$x] + \"'>\");";      
-                echo "document.write(\"</div>\");";
-            }   	
-            echo "document.write(\"</div></div>\");
-                row++;
-            </script>";
-        }
-        echo "</div>";
-        echo "<input type=\"submit\">";
-        $this->endWidget();
-        //database changes
-        //create a controller that has an update
-        //gii model for flow_course controller and model
+        if (!empty($string[$x])) { //eventually, this will be a test to see if item belongs in current row
+            echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '');";
+            echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+$courseid[$x] + \"'>\");";      
+            echo "document.write(\"</div>\");";
+        }   	
+        echo "document.write(\"</div></div>\");
+            row++;
+        </script>";
+    }        
+    echo "<input type=\"submit\">";
+    echo "</div>";
+    $this->endWidget();
+    //database changes
+    //create a controller that has an update
+    //gii model for flow_course controller and model
 
 
 ?>

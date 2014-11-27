@@ -1,150 +1,3 @@
-   <style>
-      .float-left {
-          position:relative;
-          float:left;
-      }
-      .drag {
-          position: relative;
-          
-      }
-      .outer {
-          position:relative;
-          float:left;
-          width:600px;
-          border: thin solid red;
-      }
-
-      .box-container {
-          width: 100%;
-                      position: relative;    
-
-      }
-
-    .box {
-                    position: relative;    
-            height: 300px;        
-            width: 100%;
-        text-align: center;
-            border: solid black thin;
-            margin: 0;
-            padding: 0;
-            background: #fdd;
-            box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          -webkit-box-sizing: border-box;
-    }
-    .box-container1 {
-          width: 25%;
-                      position: relative;    
-
-      
-      }
-
-    .box1 {
-            position: relative;
-            height: 60px;
-        text-align: center;
-            border: solid black thin;
-            margin: 2px;
-            background: #ddd;
-            padding: 2px;
-           
-
-    }
-    .box-container2 {
-         
-          width: 50%;  
-                      position: relative;    
-
-          
-      }
-    .box2 {
-            position: relative;    
-            width: 100%;
-            height: 290px;
-            text-align: center;
-            border: solid black thin;
-            background-color: #dfd;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          -webkit-box-sizing: border-box;
-    }
-    
-        #result {
-            clear: left;
-        }
-
-  </style>
-   <script>
-    var isDragging = false;
-    var objSource = "";
-    var row = 0;
-    var row1 = 0;
-    var test = 0;
-    
-    function Box (id, dropState) {
-      this.id = id;
-      this.canDrop = dropState;
-      this.value="empty";
-    }
-
-
-    var arrBox = new Array();
-
-
-    function allowDrop(obj, ev)
-    {
-        if (arrBox[obj.id].canDrop) {
-                    ev.preventDefault(); //allow drop
-        }
-    }
-
-    function drag(parent, ev)
-    {
-        ev.dataTransfer.setData("Text",parent.id + ":" + ev.target.id);
-    }
-
-    function drop(dropTarget, ev)
-    {
-        if (arrBox[dropTarget.id].canDrop) {
-            ev.preventDefault(); //do not try to open link
-            var dragData=ev.dataTransfer.getData("Text");
-                        var indexColon = dragData.indexOf(":");
-                        var parentId = dragData.substring(0,indexColon);
-                        var dragId = dragData.substring(indexColon+1);
-                        //alert(dropTarget.id + ":" + parentId);
-            ev.target.appendChild(document.getElementById(dragId));
-                        var dragv = document.getElementById(dragId);
-                        arrBox[dropTarget.id].canDrop = false;
-                        arrBox[dropTarget.id].value = dragId;
-                        arrBox[parentId].value = "";
-                        var newP = dropTarget.id;
-                        var temp = dragv.getElementsByTagName("input")[0].value;
-                        var index1 = temp.indexOf(';');
-                        var index = temp.indexOf(':');
-                        var cid = temp.substring(index+1);
-                        var fid = temp.substring(0,index1);
-                        dragv.getElementsByTagName("input")[0].value = fid + ";" + newP + ":" + cid;
-            }
-    }
-
-    function dragStart(obj) {
-        isDragging = true;
-        objSource = obj;
-        objSource.style.border = 'thin solid black';
-    }
-
-    function dragEnd(obj) {
-        if (isDragging) {
-                    objSource.style.border = 'thin solid red';
-                    arrBox[objSource.id].canDrop = true;
-            }
-            isDragging = false;
-    }
-    
-   </script>
 <?php
 
 /**
@@ -152,7 +5,11 @@
  *  
  */
 //**************************** LIST OF GROUPS FOR MAJOR **************************************************
-
+$baseUrl = Yii::app()->baseUrl; 
+$cs = Yii::app()->getClientScript();
+$cs->registerScriptFile($baseUrl.'/javascript/flowchartdrag.js');
+$cs->registerCssFile($baseUrl.'/css/flowchart.css');
+  
 $trackByGroup = CurrTrackByGroup::model()->with('group')->findAll('t.track_id=:id AND t.catalog_id=:catalogId', array(':id' => $id, 'catalogId' => $this->catalogId));
 if (empty($trackByGroup)) {
 
@@ -172,7 +29,6 @@ if (empty($trackByGroup)) {
 }
 //FLOW CHART START We already have a set of courses.
     $row = 0;
-    echo '<div class=\'outer\'>';
     $string = array(); //store course information
     $recordGroup = FlowGroup::model()->findAll('t.trackid=:tid', array(':tid' => $id));
     $flowchartid = $recordGroup[0]->flowchartid;
@@ -215,19 +71,6 @@ if (empty($trackByGroup)) {
                         
                     }
                 }
-                //echo $string[$group->position][$set->position][$index]. "<br>";
-                /*foreach($setByReq AS $req) //GET ONE CO REQ
-                {
-                    $entity1 = new Course($req->requisite_id, $this->catalogId);
-                    $data1 = $entity1->getHistoryEntity();    //extract history into $data, it has the course prefix id
-                    $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
-                    if($req->level == 1)
-                    {
-                        $string[$setindex][$index].= 'Co: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                        $string[$setindex][$index].= ' '.$data1->number.' <br>';
-                        break; //Flow chart to display only a single course as co-req
-                    }
-                }*/
                 $index += 1;
             }
             $setindex += 1;
@@ -236,61 +79,63 @@ if (empty($trackByGroup)) {
         $row+=1;
     }
 
-        $form=$this->beginWidget('CActiveForm', array(
-                'id'=>'flow-group-form',
-                'enableAjaxValidation'=>false,
-                'action' => Yii::app()->createUrl('//track/flowTrack'),
-        )); 
-        
-        for($x = 0; $x<($groupindex + (4-$groupindex%4)); $x++)  
+    echo '<div class=\'outer\'>';
+
+    $form=$this->beginWidget('CActiveForm', array(
+            'id'=>'flow-group-form',
+            'enableAjaxValidation'=>false,
+            'action' => Yii::app()->createUrl('//track/flowTrack'),
+    )); 
+
+    for($x = 0; $x<($groupindex + (4-$groupindex%4)); $x++)  
+    {
+        echo "<script>
+        arrBox[row] = new Box(row, true);
+
+        document.write(\"<div class='box-container-group float-left'><div id ='\" + row + \"' class='box-group' \");
+            document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
+            document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
+
+
+        echo "document.write(\"<div class='drag' id='drag\" + row + \"' draggable='true'\" +    
+               \"ondragstart='drag(this.parentNode,event)'>\");";
+
+        if(!empty($string[$x]))
         {
-            echo "<script>
-            arrBox[row] = new Box(row, true);
+            echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+ $groupid[$x] + \"'>\");";      
 
-            document.write(\"<div class='box-container float-left'><div id ='\" + row + \"' class='box' \");
-                document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
-                document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
-
-            
-            echo "document.write(\"<div class='drag' id='drag\" + row + \"' draggable='true'\" +    
-                   \"ondragstart='drag(this.parentNode,event)'>\");";
-            
-            if(!empty($string[$x]))
+            for($i = 0; $i<$setindex; $i++)
             {
-                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+ $groupid[$x] + \"'>\");";      
-
-                for($i = 0; $i<$setindex; $i++)
+                if(!empty($string[$x][$i]))
                 {
-                    if(!empty($string[$x][$i]))
-                    {
-                        echo "document.write(\"<div class='box-container2 float-left'><div id ='\" + row + \"' class='box2'>\");";
+                    echo "document.write(\"<div class='box-container-set float-left'><div id ='\" + row + \"' class='box-set'>\");";
 
-                        foreach($string[$x][$i] AS $test)
-                        {   
-                            echo "document.write(\"<div class='box-container1 float-left'><div id ='\" + row + \"' class='box1'>\");";
-                            echo "document.write(\"$test\");";
-                            echo "document.write(\"</div></div>\");";
-                        }
-                        echo 'document.write("</div></div>");';
+                    foreach($string[$x][$i] AS $test)
+                    {   
+                        echo "document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course'>\");";
+                        echo "document.write(\"$test\");";
+                        echo "document.write(\"</div></div>\");";
                     }
-                }    
-                //echo 'document.write("</div>");';
-            }
-            //close each group
-
-            echo "document.write(\"</div></div>\");
-                row++;
-            </script>";
-            
+                    echo 'document.write("</div></div>");';
+                }
+            }    
+            //echo 'document.write("</div>");';
         }
-        echo "<div class = 'box-container'>";
-        echo "<input type=\"submit\">";
-        echo "</div>";
-        $this->endWidget();
-        //database changes
-        //create a controller that has an update
-        //gii model for flow_course controller and model
-    
+        //close each group
+
+        echo "document.write(\"</div></div>\");
+            row++;
+        </script>";
+
+    }
+    echo "<div class = 'box-container'>";
+    echo "<input type=\"submit\">";
+    echo "</div>";
+    $this->endWidget();
+    //database changes
+    //create a controller that has an update
+    //gii model for flow_course controller and model
+
     echo "</div>";    
     
 ?>

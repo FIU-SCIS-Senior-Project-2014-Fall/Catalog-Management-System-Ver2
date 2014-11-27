@@ -30,43 +30,45 @@ if (empty($setByCourse)) {
 //FLOW CHART START We already have a set of courses.
    
     $recordSet = FlowCourse::model()->findAll('t.setid=:sid', array(':sid' => $id));
-    $flowchartid = $recordSet[0]->flowchartid;
-    $info = CourseFlowInfo::getCourseInfo($recordSet);
-    $string = $info[0];
-    $courseid = $info[1];
-    
-    $form=$this->beginWidget('CActiveForm', array(
-            'id'=>'flow-course-form',
-            'enableAjaxValidation'=>false,
-            'action' => Yii::app()->createUrl('//set/flowSet'),
-    )); 
-        echo '<div class=\'outer\'>';
-
-    for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
+    if(!empty($recordSet))
     {
-        echo "<script>
-            arrBox[row] = new Box(row, true);
+        $flowchartid = $recordSet[0]->flowchartid;
+        $info = CourseFlowInfo::getCourseInfo($recordSet);
+        $string = $info[0];
+        $courseid = $info[1];
 
-            document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course' \");
-                document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
-                document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
+        $form=$this->beginWidget('CActiveForm', array(
+                'id'=>'flow-course-form',
+                'enableAjaxValidation'=>false,
+                'action' => Yii::app()->createUrl('//set/flowSet'),
+        )); 
+            echo '<div class=\'outer\'>';
 
-        if (!empty($string[$x])) { //eventually, this will be a test to see if item belongs in current row
-            echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '');";
-            echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+$courseid[$x] + \"'>\");";      
-            echo "document.write(\"</div>\");";
-        }   	
-        echo "document.write(\"</div></div>\");
-            row++;
-        </script>";
-    }        
-    echo "<input type=\"submit\">";
-    echo "</div>";
-    $this->endWidget();
-    //database changes
-    //create a controller that has an update
-    //gii model for flow_course controller and model
+        for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
+        {
+            echo "<script>
+                arrBox[row] = new Box(row, true);
 
+                document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course' \");
+                    document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
+                    document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
+
+            if (!empty($string[$x])) { //eventually, this will be a test to see if item belongs in current row
+                echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '');";
+                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+$courseid[$x] + \"'>\");";      
+                echo "document.write(\"</div>\");";
+            }   	
+            echo "document.write(\"</div></div>\");
+                row++;
+            </script>";
+        }        
+        echo "<input type=\"submit\">";
+        echo "</div>";
+        $this->endWidget();
+        //database changes
+        //create a controller that has an update
+        //gii model for flow_course controller and model
+    }
 
 ?>
 <br/>

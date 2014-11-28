@@ -686,7 +686,7 @@ class ProspectiveController extends Controller
 
         $this->render('RemoveGroupTrack',array('model'=>$model),false, true);*/
     }
-    /*end track function*/
+
 
     public function actionRetrieveTrackFields()
     {
@@ -744,6 +744,7 @@ class ProspectiveController extends Controller
             $trackInfoModel->save();
         }
     }
+    /*end track function*/
 
     /*GROUP functions*/
     public function actionAddSetGroup()

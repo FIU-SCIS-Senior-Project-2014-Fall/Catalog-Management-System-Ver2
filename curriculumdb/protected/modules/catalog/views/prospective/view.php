@@ -1,13 +1,4 @@
-<script>
-$(document).ready(function() {
 
-     function goToCreate(){
-         alert('hi');
-     }
-
-});
-
-</script>
 <?php
 /* @var $this ProspectiveController */
 

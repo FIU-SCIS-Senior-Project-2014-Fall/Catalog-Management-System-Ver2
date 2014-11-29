@@ -33,7 +33,7 @@
       <file leaf-file-name="ProspectiveController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.038462" vertical-offset="1284" max-vertical-offset="2380">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1284" max-vertical-offset="2380">
               <caret line="948" column="0" selection-start-line="948" selection-start-column="0" selection-end-line="948" selection-end-column="0" />
               <folding>
                 <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
@@ -94,11 +94,9 @@
       <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="10727">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11118">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#21467#21652#0#HTML" expanded="false" />
-                <element signature="e#21696#22482#0#HTML" expanded="false" />
                 <marker date="1417144262988" expanded="false" signature="574:584" placeholder="..." />
                 <marker date="1417144262988" expanded="false" signature="2184:2194" placeholder="..." />
                 <marker date="1417144262988" expanded="false" signature="5620:5630" placeholder="..." />
@@ -114,7 +112,7 @@
       <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="6732">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6732">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#206#276#0#PHP" expanded="false" />
@@ -141,7 +139,7 @@
       <file leaf-file-name="createProspectiveJs.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0763807" vertical-offset="47055" max-vertical-offset="47906">
+            <state vertical-scroll-proportion="0.0" vertical-offset="47055" max-vertical-offset="47906">
               <caret line="2664" column="20" selection-start-line="2664" selection-start-column="20" selection-end-line="2664" selection-end-column="20" />
               <folding>
                 <marker date="1417148221696" expanded="true" signature="10332:10341" placeholder="..." />
@@ -482,15 +480,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="e531322c-b95e-48d1-941a-505c493717c1" server_name="curriculum">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="e531322c-b95e-48d1-941a-505c493717c1" server_name="curriculum">
       <method />
     </configuration>
     <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/index.php">
@@ -546,29 +544,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.6703911" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2513843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21344717" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.6703911" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.60045403" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23056443" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21344717" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2513843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -588,9 +586,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22204472" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -877,8 +875,8 @@
           <nodes>
             <node x="" y="">\CatalogModule</node>
             <node x="" y="">\CModule</node>
-            <node x="" y="">\CComponent</node>
             <node x="" y="">\CWebModule</node>
+            <node x="" y="">\CComponent</node>
           </nodes>
           <notes />
           <edges />
@@ -894,7 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1581">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -906,10 +903,10 @@
           <nodes>
             <node x="" y="">\MajorController</node>
             <node x="" y="">\CController</node>
-            <node x="" y="">\Controller</node>
             <node x="" y="">\CBaseController</node>
-            <node x="" y="">\SiteController</node>
+            <node x="" y="">\Controller</node>
             <node x="" y="">\CComponent</node>
+            <node x="" y="">\SiteController</node>
           </nodes>
           <notes />
           <edges />
@@ -925,7 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1802">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -935,13 +931,13 @@
           <ID>PHP</ID>
           <OriginalElement>\HisDgu</OriginalElement>
           <nodes>
-            <node x="1244.1286323130569" y="361.3227431228206">\CurrTrack</node>
             <node x="1441.7778638770499" y="82.88802789616432">\CurrMajor</node>
+            <node x="1244.1286323130569" y="361.3227431228206">\CurrTrack</node>
             <node x="1964.584786258556" y="446.1025442335012">\HisTrack</node>
             <node x="1392.2462869688752" y="358.6454862456412">\CurrMajorType</node>
             <node x="1576.7747643032417" y="357.7530672865814">\CurrMinor</node>
-            <node x="1456.669378793749" y="437.17835464290323">\CurrMinorGroup</node>
             <node x="1867.078393387576" y="156.06638253906755">\CurrRequisite</node>
+            <node x="1456.669378793749" y="437.17835464290323">\CurrMinorGroup</node>
             <node x="1790.2397003745318" y="403.26643419863103">\HisMajor</node>
             <node x="2128.6974041069357" y="405.9436910758104">\CurrSet</node>
             <node x="1926.6678290068448" y="403.26643419863103">\HisDgu</node>
@@ -959,26 +955,26 @@
             <node x="2150.9811442593314" y="452.34947694691976">\CurrSetByCourse</node>
             <node x="1499.723750484308" y="118.58478625855616">\CurrCertificate</node>
             <node x="1833.4794007490639" y="438.9631925610228">\FlowSet</node>
-            <node x="1256.7322743122818" y="90.91979852770248">\CurrMajorByTrack</node>
             <node x="1677.0830427482888" y="401.48159628051144">\CurrGroup</node>
-            <node x="1876.3963580007746" y="356.8606483275217">\CurrDgu</node>
+            <node x="1256.7322743122818" y="90.91979852770248">\CurrMajorByTrack</node>
             <node x="2007.6791941108097" y="71.28658142838694">\HisMinor</node>
+            <node x="1876.3963580007746" y="356.8606483275217">\CurrDgu</node>
             <node x="1288.0138189332301" y="438.070773601963">\HisCoursePrefix</node>
-            <node x="1350.1899780446856" y="392.5574066899135">\HisSet</node>
             <node x="1915.1636316673128" y="113.23027250419736">\CurrTrackByGroup</node>
+            <node x="1350.1899780446856" y="392.5574066899135">\HisSet</node>
             <node x="1332.0009040423604" y="128.40139480821387">\FlowGroup</node>
             <node x="2149.9204442722466" y="73.96383830556636">\CurrCourse</node>
             <node x="2090.253261009945" y="115.01511042231695">\HisRequisite</node>
-            <node x="1567.0876921090012" y="156.06638253906758">\CurrCoursePrefix</node>
             <node x="1742.5" y="78.0">\CModel</node>
+            <node x="1567.0876921090012" y="156.06638253906758">\CurrCoursePrefix</node>
           </nodes>
           <notes />
           <edges>
-            <edge source="\HisMajor" target="\CActiveRecord">
+            <edge source="\FlowGroup" target="\CActiveRecord">
               <point x="0.0" y="-14.0" />
-              <point x="1827.7397003745318" y="344.0" />
-              <point x="1780.3870967741937" y="344.0" />
-              <point x="3.387096774193651" y="14.0" />
+              <point x="1374.5009040423604" y="243.1075810409402" />
+              <point x="1739.7419354838707" y="244.0" />
+              <point x="-37.25806451612925" y="14.0" />
             </edge>
             <edge source="\CurrDgu" target="\CActiveRecord">
               <point x="0.0" y="-14.0" />
@@ -986,11 +982,11 @@
               <point x="1787.1612903225805" y="324.0" />
               <point x="10.161290322580498" y="14.0" />
             </edge>
-            <edge source="\FlowGroup" target="\CActiveRecord">
+            <edge source="\HisMajor" target="\CActiveRecord">
               <point x="0.0" y="-14.0" />
-              <point x="1374.5009040423604" y="243.1075810409402" />
-              <point x="1739.7419354838707" y="244.0" />
-              <point x="-37.25806451612925" y="14.0" />
+              <point x="1827.7397003745318" y="344.0" />
+              <point x="1780.3870967741937" y="344.0" />
+              <point x="3.387096774193651" y="14.0" />
             </edge>
             <edge source="\CurrTrack" target="\CActiveRecord">
               <point x="0.0" y="-14.0" />
@@ -1010,17 +1006,17 @@
               <point x="1749.9032258064517" y="274.0" />
               <point x="-27.0967741935483" y="14.0" />
             </edge>
-            <edge source="\HisCourse" target="\CActiveRecord">
-              <point x="0.0" y="-14.0" />
-              <point x="2258.480046493607" y="264.0" />
-              <point x="1807.4838709677424" y="264.0" />
-              <point x="30.483870967742405" y="14.0" />
-            </edge>
             <edge source="\CurrTrackByGroup" target="\CActiveRecord">
               <point x="0.0" y="-14.0" />
               <point x="1977.056050626372" y="212.2151620818804" />
               <point x="1824.4193548387093" y="214.0" />
               <point x="47.419354838709296" y="14.0" />
+            </edge>
+            <edge source="\HisCourse" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="2258.480046493607" y="264.0" />
+              <point x="1807.4838709677424" y="264.0" />
+              <point x="30.483870967742405" y="14.0" />
             </edge>
             <edge source="\CurrCertificateGroup" target="\CActiveRecord">
               <point x="0.0" y="-14.0" />
@@ -1120,17 +1116,17 @@
               <point x="1763.4516129032259" y="314.0" />
               <point x="-13.54838709677415" y="14.0" />
             </edge>
-            <edge source="\FlowSet" target="\CActiveRecord">
-              <point x="0.0" y="-14.0" />
-              <point x="1868.586981790004" y="334.0" />
-              <point x="1783.7741935483873" y="334.0" />
-              <point x="6.774193548387302" y="14.0" />
-            </edge>
             <edge source="\Catalog" target="\CActiveRecord">
               <point x="0.0" y="-14.0" />
               <point x="2092.288970683198" y="230.43032416376082" />
               <point x="1817.645161290323" y="234.0" />
               <point x="40.6451612903229" y="14.0" />
+            </edge>
+            <edge source="\FlowSet" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1868.586981790004" y="334.0" />
+              <point x="1783.7741935483873" y="334.0" />
+              <point x="6.774193548387302" y="14.0" />
             </edge>
             <edge source="\CurrSetByCourse" target="\CActiveRecord">
               <point x="0.0" y="-14.0" />
@@ -1150,17 +1146,17 @@
               <point x="1773.6129032258063" y="344.0" />
               <point x="-3.387096774193651" y="14.0" />
             </edge>
-            <edge source="\CModel" target="\ArrayAccess">
-              <point x="0.0" y="-14.0" />
-              <point x="1777.0" y="53.0" />
-              <point x="1783.75" y="53.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
             <edge source="\CurrMinorGroup" target="\CActiveRecord">
               <point x="0.0" y="-14.0" />
               <point x="1504.5300271212707" y="301.3227431228206" />
               <point x="1760.0645161290322" y="304.0" />
               <point x="-16.9354838709678" y="14.0" />
+            </edge>
+            <edge source="\CModel" target="\ArrayAccess">
+              <point x="0.0" y="-14.0" />
+              <point x="1777.0" y="53.0" />
+              <point x="1783.75" y="53.0" />
+              <point x="0.0" y="14.0" />
             </edge>
             <edge source="\CurrMajorType" target="\CActiveRecord">
               <point x="0.0" y="-14.0" />
@@ -1186,6 +1182,7 @@
             <node>\HisCourse</node>
           </SelectedNodes>
           <Categories />
+          <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
@@ -1229,11 +1226,33 @@
               <point x="697.0" y="209.0" />
               <point x="22.0" y="14.0" />
             </edge>
+            <edge source="\CController" target="\CBaseController">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\MajorController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="520.0" y="284.0" />
+              <point x="602.55" y="282.0" />
+              <point x="-36.450000000000045" y="14.0" />
+            </edge>
+            <edge source="\CourseController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="903.5" y="303.0" />
+              <point x="659.25" y="302.0" />
+              <point x="20.25" y="14.0" />
+            </edge>
             <edge source="\TrackController" target="\Controller">
               <point x="0.0" y="-14.0" />
               <point x="418.50000000000006" y="312.0" />
               <point x="626.8500000000001" y="312.0" />
               <point x="-12.149999999999977" y="14.0" />
+            </edge>
+            <edge source="\CoursePrefixController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="563.5" y="322.0" />
+              <point x="634.95" y="322.0" />
+              <point x="-4.0499999999999545" y="14.0" />
             </edge>
             <edge source="\DguController" target="\Controller">
               <point x="0.0" y="-14.0" />
@@ -1247,37 +1266,15 @@
               <point x="667.3500000000001" y="292.0" />
               <point x="28.350000000000023" y="14.0" />
             </edge>
-            <edge source="\Controller" target="\CController">
-              <point x="0.0" y="-14.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
             <edge source="\GroupController" target="\Controller">
               <point x="0.0" y="-14.0" />
               <point x="849.0" y="312.0" />
               <point x="651.1500000000001" y="312.0" />
               <point x="12.149999999999977" y="14.0" />
             </edge>
-            <edge source="\MajorController" target="\Controller">
-              <point x="0.0" y="-14.0" />
-              <point x="520.0" y="284.0" />
-              <point x="602.55" y="282.0" />
-              <point x="-36.450000000000045" y="14.0" />
-            </edge>
-            <edge source="\CController" target="\CBaseController">
+            <edge source="\Controller" target="\CController">
               <point x="0.0" y="-14.0" />
               <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="\CourseController" target="\Controller">
-              <point x="0.0" y="-14.0" />
-              <point x="903.5" y="303.0" />
-              <point x="659.25" y="302.0" />
-              <point x="20.25" y="14.0" />
-            </edge>
-            <edge source="\CoursePrefixController" target="\Controller">
-              <point x="0.0" y="-14.0" />
-              <point x="563.5" y="322.0" />
-              <point x="634.95" y="322.0" />
-              <point x="-4.0499999999999545" y="14.0" />
             </edge>
             <edge source="\SetController" target="\Controller">
               <point x="0.0" y="-14.0" />
@@ -1291,6 +1288,7 @@
             <node>\DguController</node>
           </SelectedNodes>
           <Categories />
+          <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
@@ -1299,7 +1297,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75910693" vertical-offset="0" max-vertical-offset="1615">
           <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1307,7 +1304,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1315,7 +1311,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="4556">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1323,7 +1318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="289" max-vertical-offset="1870">
           <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1331,15 +1325,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1972">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1417132325845" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.038462" vertical-offset="1284" max-vertical-offset="2380">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1284" max-vertical-offset="2380">
           <caret line="948" column="0" selection-start-line="948" selection-start-column="0" selection-end-line="948" selection-end-column="0" />
           <folding>
             <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
@@ -1400,9 +1391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1410,13 +1398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="42412" max-vertical-offset="47906">
           <caret line="2519" column="8" selection-start-line="2519" selection-start-column="8" selection-end-line="2519" selection-end-column="8" />
-          <folding>
-            <marker date="1417143914329" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417143914329" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417143914329" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417143914329" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417143914329" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1425,8 +1406,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10727">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#21467#21652#0#HTML" expanded="false" />
-            <element signature="e#21696#22482#0#HTML" expanded="false" />
             <marker date="1417144262988" expanded="false" signature="574:584" placeholder="..." />
             <marker date="1417144262988" expanded="false" signature="2184:2194" placeholder="..." />
             <marker date="1417144262988" expanded="false" signature="5620:5630" placeholder="..." />
@@ -1442,7 +1421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8390129" vertical-offset="0" max-vertical-offset="3077">
           <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,7 +1451,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0763807" vertical-offset="47055" max-vertical-offset="47906">
+        <state vertical-scroll-proportion="0.0" vertical-offset="47055" max-vertical-offset="47906">
           <caret line="2664" column="20" selection-start-line="2664" selection-start-column="20" selection-end-line="2664" selection-end-column="20" />
           <folding>
             <marker date="1417148221696" expanded="true" signature="10332:10341" placeholder="..." />

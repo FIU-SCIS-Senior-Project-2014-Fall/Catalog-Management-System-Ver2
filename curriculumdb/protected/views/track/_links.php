@@ -56,8 +56,8 @@ if (empty($trackByGroup)) {
                     $entity = new Course($course->courseid, $this->catalogId); //$entity has current and history
                     $data = $entity->getHistoryEntity();    //extract history into $data, it has the course prefix id
                     $prefix = new CoursePrefix($data->coursePrefix_id, $this->catalogId); //prefix his and curr
-                    $string[$group->position][$setindex][$index] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
-                    $string[$group->position][$setindex][$index].= ' '.$data->number.'<br>';
+                    $string[$groupindex][$set->position][$index] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
+                    $string[$groupindex][$set->position][$index].= ' '.$data->number.'<br>';
 
                     $setid[$set->position] = $set->setid;
                     foreach($setByReq AS $req) //GET ONE PRE REQ
@@ -67,19 +67,48 @@ if (empty($trackByGroup)) {
                         $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
                         if($req->level == 0)
                         {
-                            $string[$group->position][$setindex][$index].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                            $string[$group->position][$setindex][$index].= ' '.$data1->number.' <br>'; 
+                            $string[$groupindex][$set->position][$index].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                            $string[$groupindex][$set->position][$index].= ' '.$data1->number.' <br>'; 
                             break; //Flow chart to display only a single course as pre-req
 
                         }
-                    }
+                    }//pre req close
                     $index += 1;
-                }
-                $setindex += 1;
-            }  
-            $groupindex +=1;
+                } //course set close
+                $setindex += 1;            
+            } //set close
             $row+=1;
-        }
+            $groupindex +=1;
+        } //group close
+        
+        /*echo $string[0][0][0];
+        echo $string[0][0][1];
+        echo $string[0][0][2];
+        
+        echo $string[1][0][0];
+        echo $string[1][0][1];
+        echo $string[1][0][2];
+        echo $string[1][0][3];
+        echo $string[1][0][4];
+        echo $string[1][0][5];
+        echo $string[1][0][6];
+        echo $string[1][0][7];
+        echo $string[1][0][8];
+        echo $string[1][0][9];
+        echo $string[1][0][10];
+        echo $string[1][0][11];
+        echo $string[1][0][12];
+        echo $string[1][0][13];
+        
+        echo $string[2][0][0];
+        echo $string[2][0][1];
+        echo $string[2][0][2];
+        echo $string[2][0][3];
+        echo $string[2][0][4];
+        echo $string[2][0][5];
+        
+        echo $string[2][1][0];*/
+ 
 
         echo '<div class=\'outer\'>';
 
@@ -88,7 +117,7 @@ if (empty($trackByGroup)) {
                 'enableAjaxValidation'=>false,
                 'action' => Yii::app()->createUrl('//track/flowTrack'),
         )); 
-
+        
         for($x = 0; $x<($groupindex + (4-$groupindex%4)); $x++)  
         {
             echo "<script>

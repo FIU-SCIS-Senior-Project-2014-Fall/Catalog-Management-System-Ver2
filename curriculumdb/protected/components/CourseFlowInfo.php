@@ -29,8 +29,8 @@ class CourseFlowInfo {
             $prefix = new CoursePrefix($data->coursePrefix_id, $this->catalogId); //prefix his and curr
             $string[$course->position] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
             $string[$course->position].= ' '.$data->number.'<br>';
-            //$course2 = CurrSetByCourse::model()->with('course')->findAll('t.set_id=:fid AND t.catalog_id=:catalogId', array(':fid' => '1', 'catalogId' => $this->catalogId));
-            //$string[$course->position].= $course2->course->name.'<br>';
+            $course2 = CurrSetByCourse::model()->with('course')->findAll('t.course_id=:cid AND t.catalog_id=:catalogId', array(':cid' => $course->courseid, 'catalogId' => $this->catalogId));
+            $string[$course->position].= $course2[0]->course->name.'<br>';
             $courseid[$course->position] = $course->courseid;
             foreach($setByReq AS $req)
             {
@@ -59,5 +59,10 @@ class CourseFlowInfo {
             $row+=1;
         }  
         return array($string, $courseid);
+    }
+    
+    public function getOrderedInfo($n)
+    {
+        
     }
 }

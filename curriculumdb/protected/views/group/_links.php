@@ -103,6 +103,7 @@ if (empty($groupBySet)) {
                 }
                 
             }
+
             //close each group
             echo 'document.write("</div>");';
 

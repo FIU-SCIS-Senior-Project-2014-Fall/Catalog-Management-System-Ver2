@@ -53,8 +53,9 @@ if (empty($setByCourse)) {
                     document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
                     document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
 
-            if (!empty($string[$x])) { //eventually, this will be a test to see if item belongs in current row
-                echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">' + '$string[$x]' + '');";
+            if (!empty($string[$x])) {
+                echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">');";
+                echo 'document.write("<a href=\'../course/'. $courseid[$x]. '\'>'. $string[$x]. ' </a>");';
                 echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+$courseid[$x] + \"'>\");";      
                 echo "document.write(\"</div>\");";
             }   	

@@ -115,7 +115,7 @@ if (empty($trackByGroup)) {
                         foreach($string[$x][$i] AS $test)
                         {   
                             echo "document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course'>\");";
-                            echo 'document.write("<a href=\'/Catalog-Management-System-Ver2/curriculumdb/index.php/group/'. $groupid[$x]. '\'>'. $test. ' </a>");';
+                            echo 'document.write("<a href=\'../group/'. $groupid[$x]. '\'>'. $test. ' </a>");';
                             echo "document.write(\"</div></div>\");";
                         }
                         echo 'document.write("</div></div>");';

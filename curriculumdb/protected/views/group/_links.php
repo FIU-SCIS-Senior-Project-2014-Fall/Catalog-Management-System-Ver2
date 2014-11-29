@@ -98,7 +98,7 @@ if (empty($groupBySet)) {
                 foreach($string[$x] AS $test)
                 {   
                     echo "document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course'>\");";
-                    echo 'document.write("<a href=\'/Catalog-Management-System-Ver2/curriculumdb/index.php/set/'. $setid[$x]. '\'>'. $test. ' </a>");';
+                    echo 'document.write("<a href=\'../set/'. $setid[$x]. '\'>'. $test. ' </a>");';
                     echo "document.write(\"</div></div>\");"; 
                 }
                 

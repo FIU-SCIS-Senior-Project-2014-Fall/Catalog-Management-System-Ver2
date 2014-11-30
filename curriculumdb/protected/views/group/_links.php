@@ -29,49 +29,17 @@ if (empty($groupBySet)) {
 }
 
 //FLOW CHART START We already have a set of courses.
-    $row = 0;
-    $string = array();
+   
     $recordSet = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $id));
     if(!empty($recordSet))
     {
         $flowchartid = $recordSet[0]->flowchartid;
-        $setid = array();
-        $setindex = 0;
-        foreach ($recordSet AS $set)
-        {      
-            $sid = $set->setid;
-            $courseSet = FlowCourse::model()->findAll('t.setid=:sid', array(':sid'=>$sid));
-            $index = 0;
-            //$setid[$set->position] = $courseSet[$setindex]->setid;
-            foreach ($courseSet AS $course)
-            {
-                global $string;
-                $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->courseid));
-                $entity = new Course($course->courseid, $this->catalogId); //$entity has current and history
-                $data = $entity->getHistoryEntity();    //extract history into $data, it has the course prefix id
-                $prefix = new CoursePrefix($data->coursePrefix_id, $this->catalogId); //prefix his and curr
-                $string[$set->position][$index] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
-                $string[$set->position][$index].= ' '.$data->number.'<br>';
-
-                $setid[$set->position] = $set->setid;
-                foreach($setByReq AS $req) //GET ONE PRE REQ
-                {
-                    $entity1 = new Course($req->requisite_id, $this->catalogId);
-                    $data1 = $entity1->getHistoryEntity();    //extract history into $data, it has the course prefix id
-                    $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
-                    if($req->level == 0)
-                    {
-                        $string[$set->position][$index].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
-                        $string[$set->position][$index].= ' '.$data1->number.' <br>'; 
-                        break; //Flow chart to display only a single course as pre-req
-                    }
-                }
-                $index += 1;
-            }
-            $setindex += 1;
-            $row+=1;
-        }   
-
+        $info = CourseFlowInfo::getSetInfo($recordSet);
+        $string = $info[0];
+        $setid = $info[1];
+        $setindex = $info[2];
+        
+       
         $form=$this->beginWidget('CActiveForm', array(
                 'id'=>'flow-group-form',
                 'enableAjaxValidation'=>false,

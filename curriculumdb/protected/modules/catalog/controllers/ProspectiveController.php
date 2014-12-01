@@ -463,6 +463,66 @@ class ProspectiveController extends Controller
             $minorInfoModel->catalog_id = $catalogID;
             $minorInfoModel->save();
         }
+        $haveMinorRelation = new CurrMinorGroup();
+        $myMinorRelations = $haveMinorRelation->findAll('minor_id=:minor_id AND catalog_id=:catalog_id', array(':minor_id'=>$minorIdentifierID, ':catalog_id'=>$catalogID));
+
+        if ( !$myMinorRelations)
+        {
+            $catalog = new Catalog();
+            $allCatalogs = $catalog->findAll('activated=:activated', array(':activated' => 1));
+            $lastactiveCatalog = 0;
+            //checks for the last active catalog
+            foreach ($allCatalogs as $active) {
+                $lastactiveCatalog = $active->getAttribute('id');
+            }
+
+            $trackRelation = new CurrMinorGroup();
+            $theseTrackRelations = $trackRelation->findAll('minor_id=:minor_id AND catalog_id=:catalog_id', array(':minor_id' => $minorIdentifierID, ':catalog_id' => $lastactiveCatalog));
+            foreach($theseTrackRelations as $trackrel)
+            {
+                $newRelation = new CurrMinorGroup();
+                $newRelation->group_id = $trackrel->group_id;
+                $newRelation->minor_id = $trackrel->minor_id;
+                $newRelation->catalog_id = $catalogID;
+                $newRelation->save();
+
+                $haveGroupRelation = new CurrGroupBySet();
+                $myGroupRelation = $haveGroupRelation->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$trackrel->group_id, ':catalog_id'=>$catalogID));
+
+                if(!$myGroupRelation)
+                {
+                    $groupRelation = new CurrGroupBySet();
+                    $theseGroupRelations = $groupRelation->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id' => $trackrel->group_id, ':catalog_id' => $lastactiveCatalog));
+                    foreach ($theseGroupRelations as $relation) {
+                        $newRelation = new CurrGroupBySet();
+                        $newRelation->group_id = $relation->group_id;
+                        $newRelation->set_id = $relation->set_id;
+                        $newRelation->catalog_id = $catalogID;
+                        $newRelation->save();
+
+                        //for each set pertaining to the group update it too
+                        $setRelations = new CurrSetByCourse();
+                        $mySetRelations = $setRelations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$relation->set_id, ':catalog_id'=>$catalogID));
+                        //if user has not changes in the set copy current active to user prospective catalog
+                        if ( !$mySetRelations) {
+                            //copy current relations to the table
+
+                            $relations = new CurrSetByCourse();
+                            $theseRelations = $relations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id' => $relation->set_id, ':catalog_id' => $lastactiveCatalog));
+                            //copy relations of the active catalog to prospective catalog
+                            foreach ($theseRelations as $relationSet) {
+                                $newRelation = new CurrSetByCourse();
+                                $newRelation->course_id = $relationSet->course_id;
+                                $newRelation->set_id = $relationSet->set_id;
+                                $newRelation->catalog_id = $catalogID;
+                                $newRelation->save();
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
     }
 
 
@@ -574,6 +634,66 @@ class ProspectiveController extends Controller
             $certificateInfoModel->identifier_id = $certificateIdentifierID;
             $certificateInfoModel->catalog_id = $catalogID;
             $certificateInfoModel->save();
+        }
+        $haveCertificateRelation = new CurrCertificateGroup();
+        $myCertificateRelations = $haveCertificateRelation->findAll('certificate_id=:certificate_id AND catalog_id=:catalog_id', array(':certificate_id'=>$certificateIdentifierID, ':catalog_id'=>$catalogID));
+
+        if ( !$myCertificateRelations)
+        {
+            $catalog = new Catalog();
+            $allCatalogs = $catalog->findAll('activated=:activated', array(':activated' => 1));
+            $lastactiveCatalog = 0;
+            //checks for the last active catalog
+            foreach ($allCatalogs as $active) {
+                $lastactiveCatalog = $active->getAttribute('id');
+            }
+
+            $trackRelation = new CurrCertificateGroup();
+            $theseTrackRelations = $trackRelation->findAll('certificate_id=:certificate_id AND catalog_id=:catalog_id', array(':certificate_id' => $certificateIdentifierID, ':catalog_id' => $lastactiveCatalog));
+            foreach($theseTrackRelations as $trackrel)
+            {
+                $newRelation = new CurrCertificateGroup();
+                $newRelation->group_id = $trackrel->group_id;
+                $newRelation->certificate_id = $trackrel->certificate_id;
+                $newRelation->catalog_id = $catalogID;
+                $newRelation->save();
+
+                $haveGroupRelation = new CurrGroupBySet();
+                $myGroupRelation = $haveGroupRelation->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$trackrel->group_id, ':catalog_id'=>$catalogID));
+
+                if(!$myGroupRelation)
+                {
+                    $groupRelation = new CurrGroupBySet();
+                    $theseGroupRelations = $groupRelation->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id' => $trackrel->group_id, ':catalog_id' => $lastactiveCatalog));
+                    foreach ($theseGroupRelations as $relation) {
+                        $newRelation = new CurrGroupBySet();
+                        $newRelation->group_id = $relation->group_id;
+                        $newRelation->set_id = $relation->set_id;
+                        $newRelation->catalog_id = $catalogID;
+                        $newRelation->save();
+
+                        //for each set pertaining to the group update it too
+                        $setRelations = new CurrSetByCourse();
+                        $mySetRelations = $setRelations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$relation->set_id, ':catalog_id'=>$catalogID));
+                        //if user has not changes in the set copy current active to user prospective catalog
+                        if ( !$mySetRelations) {
+                            //copy current relations to the table
+
+                            $relations = new CurrSetByCourse();
+                            $theseRelations = $relations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id' => $relation->set_id, ':catalog_id' => $lastactiveCatalog));
+                            //copy relations of the active catalog to prospective catalog
+                            foreach ($theseRelations as $relationSet) {
+                                $newRelation = new CurrSetByCourse();
+                                $newRelation->course_id = $relationSet->course_id;
+                                $newRelation->set_id = $relationSet->set_id;
+                                $newRelation->catalog_id = $catalogID;
+                                $newRelation->save();
+                            }
+                        }
+
+                    }
+                }
+            }
         }
     }
 
@@ -743,6 +863,67 @@ class ProspectiveController extends Controller
             $trackInfoModel->catalog_id = $catalogID;
             $trackInfoModel->save();
         }
+
+        $haveTrackRelation = new CurrTrackByGroup();
+        $myTrackRelations = $haveTrackRelation->findAll('track_id=:track_id AND catalog_id=:catalog_id', array(':track_id'=>$trackIdentifierID, ':catalog_id'=>$catalogID));
+
+        if ( !$myTrackRelations)
+        {
+            $catalog = new Catalog();
+            $allCatalogs = $catalog->findAll('activated=:activated', array(':activated' => 1));
+            $lastactiveCatalog = 0;
+            //checks for the last active catalog
+            foreach ($allCatalogs as $active) {
+                $lastactiveCatalog = $active->getAttribute('id');
+            }
+
+            $trackRelation = new CurrTrackByGroup();
+            $theseTrackRelations = $trackRelation->findAll('track_id=:track_id AND catalog_id=:catalog_id', array(':track_id' => $trackIdentifierID, ':catalog_id' => $lastactiveCatalog));
+            foreach($theseTrackRelations as $trackrel)
+            {
+                $newRelation = new CurrTrackByGroup();
+                $newRelation->group_id = $trackrel->group_id;
+                $newRelation->track_id = $trackrel->track_id;
+                $newRelation->catalog_id = $catalogID;
+                $newRelation->save();
+
+                $haveGroupRelation = new CurrGroupBySet();
+                $myGroupRelation = $haveGroupRelation->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$trackrel->group_id, ':catalog_id'=>$catalogID));
+
+                if(!$myGroupRelation)
+                {
+                    $groupRelation = new CurrGroupBySet();
+                    $theseGroupRelations = $groupRelation->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id' => $trackrel->group_id, ':catalog_id' => $lastactiveCatalog));
+                    foreach ($theseGroupRelations as $relation) {
+                        $newRelation = new CurrGroupBySet();
+                        $newRelation->group_id = $relation->group_id;
+                        $newRelation->set_id = $relation->set_id;
+                        $newRelation->catalog_id = $catalogID;
+                        $newRelation->save();
+
+                        //for each set pertaining to the group update it too
+                        $setRelations = new CurrSetByCourse();
+                        $mySetRelations = $setRelations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$relation->set_id, ':catalog_id'=>$catalogID));
+                        //if user has not changes in the set copy current active to user prospective catalog
+                        if ( !$mySetRelations) {
+                            //copy current relations to the table
+
+                            $relations = new CurrSetByCourse();
+                            $theseRelations = $relations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id' => $relation->set_id, ':catalog_id' => $lastactiveCatalog));
+                            //copy relations of the active catalog to prospective catalog
+                            foreach ($theseRelations as $relationSet) {
+                                $newRelation = new CurrSetByCourse();
+                                $newRelation->course_id = $relationSet->course_id;
+                                $newRelation->set_id = $relationSet->set_id;
+                                $newRelation->catalog_id = $catalogID;
+                                $newRelation->save();
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
     }
     /*end track function*/
 
@@ -755,6 +936,7 @@ class ProspectiveController extends Controller
 
         $mySet = $_GET['set'];
         $myGroup = $_GET['group'];
+        $catalogId = $_GET['catalogId'];
 
 
         $setID = $set->find('name=:name', array(':name'=>$mySet));
@@ -766,7 +948,7 @@ class ProspectiveController extends Controller
 
         $groupBySet->set_id = $sIDs;
         $groupBySet->group_id = $gIDs;
-        $groupBySet->catalog_id = 0;
+        $groupBySet->catalog_id = $catalogId;
         $groupBySet->save();
 
     }
@@ -882,6 +1064,52 @@ class ProspectiveController extends Controller
             $groupInfoModel->catalog_id = $catalogID;
             $groupInfoModel->save();
         }
+
+        $haveGroupRelation = new CurrGroupBySet();
+        $myGroupRelation = $haveGroupRelation->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$groupIdentifierID, ':catalog_id'=>$catalogID));
+
+        if(!$myGroupRelation)
+        {
+            $catalog = new Catalog();
+            $allCatalogs = $catalog->findAll('activated=:activated', array(':activated' => 1));
+            $lastactiveCatalog = 0;
+            //checks for the last active catalog
+            foreach ($allCatalogs as $active) {
+                $lastactiveCatalog = $active->getAttribute('id');
+            }
+
+            $groupRelation = new CurrGroupBySet();
+            $theseGroupRelations = $groupRelation->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id' => $groupIdentifierID, ':catalog_id' => $lastactiveCatalog));
+            foreach ($theseGroupRelations as $relation) {
+                $newRelation = new CurrGroupBySet();
+                $newRelation->group_id = $relation->group_id;
+                $newRelation->set_id = $relation->set_id;
+                $newRelation->catalog_id = $catalogID;
+                $newRelation->save();
+
+                //for each set pertaining to the group update it too
+                $setRelations = new CurrSetByCourse();
+                $mySetRelations = $setRelations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$relation->set_id, ':catalog_id'=>$catalogID));
+                //if user has not changes in the set copy current active to user prospective catalog
+                if ( !$mySetRelations) {
+                    //copy current relations to the table
+
+                    $relations = new CurrSetByCourse();
+                    $theseRelations = $relations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id' => $relation->set_id, ':catalog_id' => $lastactiveCatalog));
+                    //copy relations of the active catalog to prospective catalog
+                    foreach ($theseRelations as $relationSet) {
+                        $newRelation = new CurrSetByCourse();
+                        $newRelation->course_id = $relationSet->course_id;
+                        $newRelation->set_id = $relationSet->set_id;
+                        $newRelation->catalog_id = $catalogID;
+                        $newRelation->save();
+                    }
+                }
+
+            }
+        }
+
+
     }
 
     public function actionRemoveSetGroup()
@@ -892,6 +1120,7 @@ class ProspectiveController extends Controller
 
         $mySet = $_GET['set'];
         $myGroup = $_GET['group'];
+        $catalogId = $_GET['catalogId'];
 
 
         $setID = $set->find('name=:name', array(':name'=>$mySet));
@@ -904,10 +1133,11 @@ class ProspectiveController extends Controller
         $command = Yii::app()->db->createCommand();
 
 
-        $sql='DELETE FROM curr_group_set WHERE set_id=:set_id AND group_id=:group_id';
+        $sql='DELETE FROM curr_group_set WHERE set_id=:set_id AND group_id=:group_id AND catalog_id=:catalog_id';
         $params = array(
             "set_id" => $sIDs,
-            "group_id" => $gIDs
+            "group_id" => $gIDs,
+            "catalog_id"=>$catalogId
         );
         $command->setText($sql)->execute($params);
         /*
@@ -933,6 +1163,7 @@ class ProspectiveController extends Controller
 
         $mySet = $_GET['set'];
         $myCourse = $_GET['course'];
+        $myCatalogId = $_GET['catalogId'];
 
         $setID = $set->find('name=:name', array(':name'=>$mySet));
         $courseID = $course->find('name=:name', array(':name'=>$myCourse));
@@ -943,7 +1174,7 @@ class ProspectiveController extends Controller
 
         $setByCourse->set_id = $sIDs;
         $setByCourse->course_id = $cIDs;
-        $setByCourse->catalog_id = 0;
+        $setByCourse->catalog_id = $myCatalogId;
         $setByCourse->save();
     }
 
@@ -1013,8 +1244,10 @@ class ProspectiveController extends Controller
         $mySet = $setModel->find('name=:name', array(':name'=>$set));
         $setIdentifierID = $mySet->getAttribute('id');
 
+        //check whether catalog exists
         $exist = $setInfoModel->find('catalog_id=:catalog_id AND identifier_id=:identifier_id', array(':catalog_id' => $catalogID, ':identifier_id' => $setIdentifierID));
 
+        //if it exist update the row
         if ( $exist){
             HisSet::model()->updateByPk($exist->getAttribute('id'),array(
                 'minCredits' => $mincredits,
@@ -1024,6 +1257,7 @@ class ProspectiveController extends Controller
                 'catalog_id' => $catalogID,
             ));
         }
+        //if it does not create a new row in hisset table
         else{
             $setInfoModel->description = $description;
             $setInfoModel->minCredits = $mincredits;
@@ -1031,6 +1265,32 @@ class ProspectiveController extends Controller
             $setInfoModel->identifier_id = $setIdentifierID;
             $setInfoModel->catalog_id = $catalogID;
             $setInfoModel->save();
+        }
+
+        $haveRelations = new CurrSetByCourse();
+        $myRelations = $haveRelations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$setIdentifierID, ':catalog_id'=>$catalogID));
+
+        //if user has not changes in the set copy current active to user prospective catalog
+        if ( !$myRelations) {
+            //copy current relations to the table
+            $catalog = new Catalog();
+            $allCatalogs = $catalog->findAll('activated=:activated', array(':activated' => 1));
+            $lastactiveCatalog = 0;
+            //checks for the last active catalog
+            foreach ($allCatalogs as $active) {
+                $lastactiveCatalog = $active->getAttribute('id');
+            }
+
+            $relations = new CurrSetByCourse();
+            $theseRelations = $relations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id' => $setIdentifierID, ':catalog_id' => $lastactiveCatalog));
+            //copy relations of the active catalog to prospective catalog
+            foreach ($theseRelations as $relation) {
+                $newRelation = new CurrSetByCourse();
+                $newRelation->course_id = $relation->course_id;
+                $newRelation->set_id = $relation->set_id;
+                $newRelation->catalog_id = $catalogID;
+                $newRelation->save();
+            }
         }
     }
 
@@ -1070,6 +1330,7 @@ class ProspectiveController extends Controller
 
         $mySet = $_GET['set'];
         $myCourse = $_GET['course'];
+        $myCatalogId = $_GET['catalogId'];
 
 
         $setID = $set->find('name=:name', array(':name'=>$mySet));
@@ -1082,10 +1343,11 @@ class ProspectiveController extends Controller
         $command = Yii::app()->db->createCommand();
 
 
-        $sql='DELETE FROM curr_set_course WHERE set_id=:set_id AND course_id=:course_id';
+        $sql='DELETE FROM curr_set_course WHERE set_id=:set_id AND course_id=:course_id AND catalog_id=:catalog_id';
         $params = array(
             "set_id" => $sIDs,
-            "course_id" => $cIDs
+            "course_id" => $cIDs,
+            "catalog_id"=> $myCatalogId
         );
         $command->setText($sql)->execute($params);
         /*

@@ -392,7 +392,7 @@ else {
         echo 'Maximum Credits: '.$groupProposed->getAttribute('maxCredits').'</br>';
 
         $groupbyset = new CurrGroupBySet();
-        $setsInGroup = $groupbyset->findAll('group_id=:group_id', array(':group_id'=>$mygroup->getAttribute('id')));
+        $setsInGroup = $groupbyset->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$mygroup->getAttribute('id'),':catalog_id'=>$prospCatId));
         foreach ( $setsInGroup as $sig)
         {
             $setModel = new CurrSet();
@@ -402,7 +402,7 @@ else {
             echo $thisSet->getAttribute('name').'</br>';
 
             $setByCourse = new CurrSetByCourse();
-            $courses = $setByCourse->findAll('set_id=:set_id', array(':set_id'=>$sig->getAttribute('set_id')));
+            $courses = $setByCourse->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$sig->getAttribute('set_id'), ':catalog_id'=>$prospCatId));
 
 
             foreach($courses as $course)

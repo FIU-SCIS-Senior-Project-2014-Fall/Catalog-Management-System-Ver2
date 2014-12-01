@@ -7805,3 +7805,36 @@ REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
 in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements\_groupContent.php (15)
 in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements.php (40)
 in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php (54)
+2014/12/01 03:07:04 [error] [php] Undefined index: catalogId (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php:1098)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/RemoveCourseSet?set=CS%20Core%20Set%202&course=Introduction%20to%20Computer%20Programming
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1098)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/01 03:07:13 [error] [php] Undefined index: catalogId (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php:1098)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/RemoveCourseSet?set=CS%20Core%20Set%202&course=Introduction%20to%20Computer%20Programming
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1098)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/01 03:07:16 [error] [php] Undefined index: catalogId (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php:1098)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/RemoveCourseSet?set=CS%20Core%20Set%202&course=Introduction%20to%20Computer%20Programming
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1098)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)

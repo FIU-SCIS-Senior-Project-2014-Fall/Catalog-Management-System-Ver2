@@ -1490,7 +1490,7 @@ $(document).ready(function() {
 
                 var track = $("#eTrackDiv-"+formIdno+ " #etrack-name-"+formIdno).val();
                 var group = $("#eTrackDiv-"+formIdno+ " #group-selected-in-track-"+formIdno).val();
-                var data = /*'{}'; */'track='+ encodeURI(track)  +  '&group='+ encodeURI(group);
+                var data = /*'{}'; */'track='+ encodeURI(track)  +  '&group='+ encodeURI(group)+ '&catalogId='+catalogID;
                 /*
                 var jsonData = {};
                 jsonData.track = track;
@@ -1526,7 +1526,7 @@ $(document).ready(function() {
 
             var track = $("#eTrackDiv-"+formIdno+ " #etrack-name-"+formIdno).val();
             var group = $("#eTrackDiv-"+formIdno+ " #group-selected-in-track-"+formIdno).val();
-            var data = 'track='+ encodeURI(track)  +  '&group='+ encodeURI(group);
+            var data = 'track='+ encodeURI(track)  +  '&group='+ encodeURI(group)+ '&catalogId='+catalogID;
 
             $.ajax({
                 type: 'GET',
@@ -1838,7 +1838,7 @@ $(document).ready(function() {
 
                 var group = $("#eGroupDiv-"+formIdno+ " #egroup-name-"+formIdno).val();
                 var set = $("#eGroupDiv-"+formIdno+ " #set-selected-in-group-"+formIdno).val();
-                var data = 'group='+ encodeURI(group)  +  '&set='+ encodeURI(set);
+                var data = 'group='+ encodeURI(group)  +  '&set='+ encodeURI(set)+ '&catalogId='+catalogID;
 
                 $.ajax({
                     type: 'GET',
@@ -1864,7 +1864,7 @@ $(document).ready(function() {
 
                 var group = $("#eGroupDiv-"+formIdno+ " #egroup-name-"+formIdno).val();
                 var set = $("#eGroupDiv-"+formIdno+ " #set-selected-in-group-"+formIdno).val();
-                var data = 'group='+ encodeURI(group)  +  '&set='+ encodeURI(set);
+                var data = 'group='+ encodeURI(group)  +  '&set='+ encodeURI(set)+ '&catalogId='+catalogID;
 
                 $.ajax({
                     type: 'GET',
@@ -2143,7 +2143,7 @@ $(document).ready(function() {
 
                 var set = $("#eSetDiv-"+formIdno+ " #eset-name-"+formIdno).val();
                 var course = $("#eSetDiv-"+formIdno+ " #course-selected-in-set-"+formIdno).val();
-                var data = 'set='+ encodeURI(set)  +  '&course='+ encodeURI(course);
+                var data = 'set='+ encodeURI(set)  +  '&course='+ encodeURI(course) + '&catalogId='+catalogID;
 
                 $.ajax({
                     type: 'GET',
@@ -2155,7 +2155,9 @@ $(document).ready(function() {
                         //data returned from php
                     }
                 });
+                return false;
             });
+            return false;
         }
 
         var removeCourseFromSet = function()
@@ -2169,7 +2171,7 @@ $(document).ready(function() {
 
                 var set = $("#eSetDiv-"+formIdno+ " #eset-name-"+formIdno).val();
                 var course = $("#eSetDiv-"+formIdno+ " #course-selected-in-set-"+formIdno).val();
-                var data = 'set='+ encodeURI(set)  +  '&course='+ encodeURI(course);
+                var data = 'set='+ encodeURI(set)  +  '&course='+ encodeURI(course) + '&catalogId='+catalogID;
 
                 $.ajax({
                     type: 'GET',
@@ -2181,7 +2183,9 @@ $(document).ready(function() {
                         //data returned from php
                     }
                 });
+                return false;
             });
+            return false;
         }
 
         /*add a row to put tracks in major*/

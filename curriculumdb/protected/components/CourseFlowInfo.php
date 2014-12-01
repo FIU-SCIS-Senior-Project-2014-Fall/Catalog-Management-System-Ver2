@@ -20,7 +20,9 @@ class CourseFlowInfo {
         $row = 0;
         $string = array();
         $courseid = array();
-        foreach ($n AS $course)
+        $setByCourse = FlowCourse::model()->findAll('t.setid=:id', array(':id' => $n));
+        $flowchartid = $setByCourse[0]->flowchartid;
+        foreach ($setByCourse AS $course)
         {      
             global $string;
             $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->courseid));
@@ -58,7 +60,7 @@ class CourseFlowInfo {
             }
             $row+=1;
         }  
-        return array($string, $courseid);
+        return array($string, $courseid, $flowchartid);
     }
     
     
@@ -68,7 +70,15 @@ class CourseFlowInfo {
         $string = array();
         $setid = array();
         $setindex = 0;
-        foreach ($n AS $set)
+        $recordGroup = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $n));
+        if(empty($recordTrack))
+        {
+            $flowchartid = -1;
+            $setindex = -1;
+        }
+        else
+            $flowchartid = $recordTrack[0]->flowchartid;
+        foreach ($recordGroup AS $set)
         {      
             $sid = $set->setid;
             $courseSet = FlowCourse::model()->findAll(array('order'=>'t.position', 'condition'=>'t.setid=:sid', 'params'=>array(':sid'=>$sid)));
@@ -103,7 +113,7 @@ class CourseFlowInfo {
             $row+=1;
            
         }
-        return array($string, $setid, $setindex);
+        return array($string, $setid, $setindex, $flowchartid);
     }
     
     public function getTrackInfo($n)
@@ -112,7 +122,16 @@ class CourseFlowInfo {
         $string = array(); //store course information
         $groupid = array();
         $groupindex = 0;
-        foreach ($n AS $group)
+        $recordTrack = FlowGroup::model()->findAll('t.trackid=:tid', array(':tid' => $n));
+        if(empty($recordTrack))
+        {
+            $flowchartid = -1;
+            $setindex = -1;
+            $groupindex = -1;
+        }
+        else
+            $flowchartid = $recordTrack[0]->flowchartid;
+        foreach ($recordTrack AS $group)
         {
             $gid = $group ->groupid;
             $recordSet = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $gid));
@@ -155,6 +174,72 @@ class CourseFlowInfo {
             $row+=1;
             $groupindex +=1;
         }
-        return array($string, $groupid, $setindex, $groupindex);
+        return array($string, $groupid, $setindex, $groupindex, $flowchartid);
     }
+    
+    public function getInfo($n)
+    {
+        $pos = 0;
+        $string = array();
+        $courseid = array();
+        $order = array();
+        $index = 0;
+        
+        $setByCourse = CurrSetByCourse::model()->with('course')->findAll('t.set_id=:id AND t.catalog_id=:catalogId', array(':id' => $n, 'catalogId' => $this->catalogId));
+        $count = sizeof($setByCourse);
+        for($i = 0; $i<4; $i++)
+        {
+            for($j = 0; $j<$count; $j++)
+            {
+                $preSet = HisRequisite::model()->findAll('t.course_id=:cid', array(':cid' => $setByCourse[$j]->course_id));
+                if(sizeof($preSet) == $i)
+                {
+                    $order[$index] = $setByCourse[$j];
+                    $index++;
+                }
+            }
+        }
+        
+        foreach ($order AS $course)
+        {      
+            
+            global $string;
+            $setByReq = HisRequisite::model()->with('requisite')->findAll('t.course_id=:cid', array(':cid' => $course->course_id));
+            $entity = new Course($course->course_id, $this->catalogId); //$entity has current and history
+            $data = $entity->getHistoryEntity();    //extract history into $data, it has the course prefix id
+            $prefix = new CoursePrefix($data->coursePrefix_id, $this->catalogId); //prefix his and curr
+            $string[$pos] = $prefix->getHistoryEntity()->prefix; //extract the prefix from the history
+            $string[$pos].= ' '.$data->number.'<br>';
+            $course2 = CurrSetByCourse::model()->with('course')->findAll('t.course_id=:cid AND t.catalog_id=:catalogId', array(':cid' => $course->course_id, 'catalogId' => $this->catalogId));
+            $string[$pos].= $course2[0]->course->name.'<br>';
+            $courseid[$pos] = $course->course_id;
+            foreach($setByReq AS $req)
+            {
+                $entity1 = new Course($req->requisite_id, $this->catalogId);
+                $data1 = $entity1->getHistoryEntity();    //extract history into $data, it has the course prefix id
+                $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
+                if($req->level == 0)
+                {
+                    $string[$pos].= 'Pre: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                    $string[$pos].= ' '.$data1->number.' <br>'; 
+                    break; //Flow chart to display only a single course as pre-req
+                }
+            }
+            foreach($setByReq AS $req)
+            {
+                $entity1 = new Course($req->requisite_id, $this->catalogId);
+                $data1 = $entity1->getHistoryEntity();    //extract history into $data, it has the course prefix id
+                $prefix1 = new CoursePrefix($data1->coursePrefix_id, $this->catalogId); //prefix his and curr
+                if($req->level == 1)
+                {
+                    $string[$pos].= 'Co: '.$prefix1->getHistoryEntity()->prefix; //extract the prefix from the history
+                    $string[$pos].= ' '.$data1->number.' <br>';
+                    break; //Flow chart to display only a single course as co-req
+                }
+            }
+            $pos++;
+        }  
+        return array($string, $courseid);
+    }
+    
 }

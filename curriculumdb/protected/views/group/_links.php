@@ -30,15 +30,14 @@ if (empty($groupBySet)) {
 
 //FLOW CHART START We already have a set of courses.
    
-    $recordSet = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $id));
-    if(!empty($recordSet))
+    //$recordSet = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $id));
+    $info = CourseFlowInfo::getSetInfo($id);
+    if(!empty($info[0]))
     {
-        $flowchartid = $recordSet[0]->flowchartid;
-        $info = CourseFlowInfo::getSetInfo($recordSet);
         $string = $info[0];
         $setid = $info[1];
         $setindex = $info[2];
-        
+        $flowchartid = $info[3];
        
         $form=$this->beginWidget('CActiveForm', array(
                 'id'=>'flow-group-form',

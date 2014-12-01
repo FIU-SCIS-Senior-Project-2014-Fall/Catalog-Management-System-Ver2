@@ -29,16 +29,14 @@ if (empty($trackByGroup)) {
 }
 //FLOW CHART START We already have a set of courses.
     
-    $recordGroup = FlowGroup::model()->findAll('t.trackid=:tid', array(':tid' => $id));
-    if(!empty($recordGroup))
+    $info = CourseFlowInfo::getTrackInfo($id);
+    if(!empty($info[0]))
     {
-        $flowchartid = $recordGroup[0]->flowchartid;
-        $info = CourseFlowInfo::getTrackInfo($recordGroup);
         $string = $info[0];
         $groupid = $info[1];
         $setindex = $info[2];
         $groupindex = $info[3];
-        
+        $flowchartid = $info[4];
      //group close
         
         echo '<div class=\'outer\'>';

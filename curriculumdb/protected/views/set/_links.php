@@ -28,21 +28,32 @@ if (empty($setByCourse)) {
 }
 
 //FLOW CHART START We already have a set of courses.
-   
-    $recordSet = FlowCourse::model()->findAll('t.setid=:sid', array(':sid' => $id));
-    if(!empty($recordSet))
+    $info = CourseFlowInfo::getCourseInfo($id);
+    if(!empty($info))
     {
-        $flowchartid = $recordSet[0]->flowchartid;
-        $info = CourseFlowInfo::getCourseInfo($recordSet);
         $string = $info[0];
-        $courseid = $info[1];
-
+        $courseid = $info[1];  
+        $flowchartid = $info[2];               
         $form=$this->beginWidget('CActiveForm', array(
                 'id'=>'flow-course-form',
                 'enableAjaxValidation'=>false,
                 'action' => Yii::app()->createUrl('//set/flowSet'), 
         )); 
-            echo '<div class=\'outer\'>';
+    }
+    else
+    {
+        $info = CourseFlowInfo::getInfo($id);
+        $string = $info[0];
+        $courseid = $info[1];
+        $flowchartid = "0";
+        $form=$this->beginWidget('CActiveForm', array(
+                'id'=>'flow-course-form',
+                'enableAjaxValidation'=>false,
+                 
+        )); 
+    }
+        
+        echo '<div class=\'outer\'>';
 
         for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
         {
@@ -53,7 +64,7 @@ if (empty($setByCourse)) {
                     document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
                     document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
 
-            if (!empty($string[$x])) {
+            if (!empty($string[$x]) && !empty($courseid[$x])) {
                 echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">');";
                 echo 'document.write("<a href=\'../course/'. $courseid[$x]. '\'>'. $string[$x]. ' </a>");';
                 echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+$courseid[$x] + \"'>\");";      
@@ -69,8 +80,6 @@ if (empty($setByCourse)) {
         //database changes
         //create a controller that has an update
         //gii model for flow_course controller and model
-    }
-
 ?>
 <br/>
 

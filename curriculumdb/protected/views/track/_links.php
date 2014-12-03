@@ -27,7 +27,6 @@ if (empty($trackByGroup)) {
     }
     echo '</ul>';
 }
-//FLOW CHART START We already have a set of courses.
     
     $info = CourseFlowInfo::getTrackInfo($id);
     if(!empty($info[0]))
@@ -78,10 +77,9 @@ if (empty($trackByGroup)) {
                         echo 'document.write("</div></div>");';
                     }
                 }    
-                //echo 'document.write("</div>");';
+                
             }
-            //close each group
-
+           
             echo "document.write(\"</div></div>\");
                 row++;
             </script>";
@@ -91,9 +89,6 @@ if (empty($trackByGroup)) {
         echo "<input type=\"submit\">";
         echo "</div>";
         $this->endWidget();
-        //database changes
-        //create a controller that has an update
-        //gii model for flow_course controller and model
 
         echo "</div>";    
     }

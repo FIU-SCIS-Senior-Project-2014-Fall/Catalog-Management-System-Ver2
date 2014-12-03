@@ -28,9 +28,6 @@ if (empty($groupBySet)) {
     echo '</ul>';
 }
 
-//FLOW CHART START We already have a set of courses.
-   
-    //$recordSet = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $id));
     $info = CourseFlowInfo::getSetInfo($id);
     if(!empty($info[0]))
     {
@@ -83,9 +80,6 @@ if (empty($groupBySet)) {
         echo "<input type=\"submit\">";
 
         $this->endWidget();
-        //database changes
-        //create a controller that has an update
-        //gii model for flow_course controller and model
     }
 ?>
 <br/>

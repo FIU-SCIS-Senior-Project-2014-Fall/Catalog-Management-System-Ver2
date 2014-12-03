@@ -1,20 +1,24 @@
 <?php
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 
 /**
  * Description of CourseInfo
  * 
- * Class used to get course information such as "COP 2210"
+ * Class used to get course information such as "COP 2210" as well as position
+ * Also includes an algorithm to order courses when no flowchart is available
  *
  * @author Chris
  */
 class CourseFlowInfo {
     
+    /*public function getCourseInfo($n)
+     * Accepts an interger as a parameter which acts as the set id
+     * This function retrieves course information for a particular set.
+     * It requires that a flowchart have already been created for this set.
+     * Returns an array: 
+     * $string which is an array holding course information stored relative to position.
+     * $courseid which is an array holding courseid number relative to position for use in hidden fields.
+     * $flowchartid which is a variable holding the id for the specific flowchart.
+     *      */
     public function getCourseInfo($n)
     {
         $row = 0;
@@ -63,7 +67,17 @@ class CourseFlowInfo {
         return array($string, $courseid, $flowchartid);
     }
     
-    
+    /*public function getSetInfo($n)
+     * Accepts an interger as a parameter which acts as the group id
+     * This function retrieves course information for a particular group.
+     * It requires that a flowchart have already been created for this group.
+     * If a flowchart does not exist '-1' will be returned signalling no flowchart should be created.
+     * Returns an array: 
+     * $string which is an array holding course information stored relative to position.
+     * $setid which is an array holding setid number relative to position for use in hidden fields.
+     * $setindex which is a variable holding the number of sets.
+     * $flowchartid which is a variable holding the id for the specific flowchart.
+     *      */
     public function getSetInfo($n)
     {
         $row = 0;
@@ -83,7 +97,6 @@ class CourseFlowInfo {
             $sid = $set->setid;
             $courseSet = FlowCourse::model()->findAll(array('order'=>'t.position', 'condition'=>'t.setid=:sid', 'params'=>array(':sid'=>$sid)));
             $index = 0;
-            //$setid[$set->position] = $courseSet[$setindex]->setid;
             foreach ($courseSet AS $course)
             {
                 global $string;
@@ -116,6 +129,18 @@ class CourseFlowInfo {
         return array($string, $setid, $setindex, $flowchartid);
     }
     
+    /*public function getTrackInfo($n)
+     * Accepts an interger as a parameter which acts as the track id
+     * This function retrieves course information for a particular track.
+     * It requires that a flowchart have already been created for this track.
+     * If a flowchart does not exist '-1' will be returned signalling no flowchart should be created.
+     * Returns an array: 
+     * $string which is an array holding course information stored relative to position.
+     * $groupid which is an array holding groupid number relative to position for use in hidden fields.
+     * $setindex which is a variable holding the number of sets.
+     * $groupindex which is a variable holding the number of groups in a track.
+     * $flowchartid which is a variable holding the id for the specific flowchart.
+     *  */
     public function getTrackInfo($n)
     {
         $row = 0;
@@ -177,6 +202,15 @@ class CourseFlowInfo {
         return array($string, $groupid, $setindex, $groupindex, $flowchartid);
     }
     
+    /*public function getInfo($n)
+     * Accepts an interger as a parameter which acts as the set id
+     * This function retrieves course information for a particular set where a flowchart does not already exist.
+     * Courses are organized via the number of pre-requisites that each course has.
+     * Returns an array: 
+     * $string which is an array holding course information stored relative to position.
+     * $courseid which is an array holding courseid number relative to position for use in hidden fields.
+     * $flowchartid which is a variable holding the id for the specific flowchart.
+     *      */
     public function getInfo($n)
     {
         $pos = 0;
@@ -187,7 +221,7 @@ class CourseFlowInfo {
         
         $setByCourse = CurrSetByCourse::model()->with('course')->findAll('t.set_id=:id AND t.catalog_id=:catalogId', array(':id' => $n, 'catalogId' => $this->catalogId));
         $count = sizeof($setByCourse);
-        for($i = 0; $i<4; $i++)
+        for($i = 0; $i<5; $i++)
         {
             for($j = 0; $j<$count; $j++)
             {

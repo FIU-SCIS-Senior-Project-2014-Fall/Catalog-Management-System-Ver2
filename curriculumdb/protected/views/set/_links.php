@@ -77,9 +77,6 @@ if (empty($setByCourse)) {
         echo "<input type=\"submit\">";
         echo "</div>";
         $this->endWidget();
-        //database changes
-        //create a controller that has an update
-        //gii model for flow_course controller and model
 ?>
 <br/>
 

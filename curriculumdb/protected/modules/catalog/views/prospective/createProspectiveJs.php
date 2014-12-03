@@ -296,7 +296,7 @@ $(document).ready(function() {
 
                 var major = $("#eMajorDiv-"+formIdno+ " #emajor-name-"+formIdno).val();
                 var track = $("#eMajorDiv-"+formIdno+ " #track-selected-"+formIdno).val();
-                var data = 'major='+ encodeURI(major)  +  '&track='+ encodeURI(track);
+                var data = 'major='+ encodeURI(major)  +  '&track='+ encodeURI(track)  + "&catalogId="+catalogID;
 
                 $.ajax({
                     type: 'GET',
@@ -322,7 +322,7 @@ $(document).ready(function() {
 
                 var major = $("#eMajorDiv-"+formIdno+ " #emajor-name-"+formIdno).val();
                 var track = $("#eMajorDiv-"+formIdno+ " #track-selected-"+formIdno).val();
-                var data = 'major='+ encodeURI(major)  +  '&track='+ encodeURI(track);
+                var data = 'major='+ encodeURI(major)  +  '&track='+ encodeURI(track) + "&catalogId="+catalogID;
 
                 $.ajax({
                     type: 'GET',
@@ -355,7 +355,7 @@ $(document).ready(function() {
 
             var stringeMajorForm = '<div id="eMajorDiv-'+(no_emajors)+'">'+
                 '<form class="prospectiveForm" action="#" id="MajorForm">' +
-                    '<h3>Major Form</h3>'+
+                    '<h3>Edit Major Form</h3>'+
                     '<label>Major Name </label>'+
                     '<div>'+
                         '<input type="text" id="emajor-name-'+ (no_emajors) +'" required readonly/>'+
@@ -405,7 +405,7 @@ $(document).ready(function() {
             var TrackList = <?php echo json_encode(getTracks()) ?>;
             var stringMajorForm = '<div id="MajorDiv-'+(no_majors)+'">'+
                 '<form class="prospectiveForm" action="#" id="MajorForm">' +
-                    '<h3>Major Form</h3>'+
+                    '<h3>New Major Form</h3>'+
                     '<label>Major Name </label>'+
                     '<input type="text" id="major-name-'+no_majors+'" placeholder="Major Name" required readonly/></br>'+
                     '<label>Description: <span>*</span></label>'+
@@ -693,7 +693,7 @@ $(document).ready(function() {
 
                 var minor = $("#eMinorDiv-"+formIdno+ " #eminor-name-"+formIdno).val();
                 var group = $("#eMinorDiv-"+formIdno+ " #group-selected-in-minor-"+formIdno).val();
-                var data = 'minor='+ encodeURI(minor)  +  '&group='+ encodeURI(group);
+                var data = 'minor='+ encodeURI(minor)  +  '&group='+ encodeURI(group) + '&catalogId='+catalogID;
 
                 $.ajax({
                     type: 'GET',
@@ -705,7 +705,9 @@ $(document).ready(function() {
                     //data returned from php
                     }
                 });
+                return false;
             });
+            return false;
         }
 
         var removeGroupFromMinor = function()
@@ -719,7 +721,7 @@ $(document).ready(function() {
 
                 var minor = $("#eMinorDiv-"+formIdno+ " #eminor-name-"+formIdno).val();
                 var group = $("#eMinorDiv-"+formIdno+ " #group-selected-in-minor-"+formIdno).val();
-                var data = 'minor='+ encodeURI(minor)  +  '&group='+ encodeURI(group);
+                var data = 'minor='+ encodeURI(minor)  +  '&group='+ encodeURI(group)  + '&catalogId='+catalogID;
 
                 $.ajax({
                     type: 'GET',
@@ -731,7 +733,9 @@ $(document).ready(function() {
                     //data returned from php
                     }
                 });
+                return false;
             });
+            return false;
         }
 
         /*add row for minor with its corresponding minor pop up form*/
@@ -741,7 +745,7 @@ $(document).ready(function() {
             var GroupList = <?php echo json_encode(getGroups()) ?>;
             var stringMinorForm = '<div id="MinorDiv-'+(no_minors)+'">' +
                 '<form class="prospectiveForm" action="#" id="MinorForm">'+
-                    '<h3>Minor Form</h3>'+
+                    '<h3>New Minor Form</h3>'+
                     '<label>Minor Name </label>'+
                     '<input type="text" id="minor-name-'+no_minors+'" required readonly/></br>'+
                     '<label>Description: <span>*</span></label>'+
@@ -810,7 +814,7 @@ $(document).ready(function() {
 
             var stringeMinorForm = '<div id="eMinorDiv-'+(no_eminors)+'">'+
                 '<form class="prospectiveForm" action="#" id="MinorForm">' +
-                    '<h3>Minor Form</h3>'+
+                    '<h3>Edit Minor Form</h3>'+
                     '<label>Minor Name </label>'+
                     '<div>'+
                         '<input type="text" id="eminor-name-'+no_eminors+'" placeholder="Minor Name" required readonly/></br>'+
@@ -822,8 +826,8 @@ $(document).ready(function() {
                         '<select id="group-selected-in-minor-'+no_eminors+'">'+
                             GroupList +
                             '</select>'+
-                        '<button class="add-group-to-minor" id="add-group-to-minor" name="add-group-to-certificate-'+ (no_eminors) + '">Add this track</button>'+
-                        '<button class="remove-group-from-minor" id="remove-group-from-minor" name="remove-group-from-certificate-'+ (no_eminors) + '">Remove this track</button>'+
+                        '<button class="add-group-to-minor" id="add-group-to-minor" name="add-group-to-minor-'+ (no_eminors) + '">Add this track</button>'+
+                        '<button class="remove-group-from-minor" id="remove-group-from-minor" name="remove-group-from-minor-'+ (no_eminors) + '">Remove this track</button>'+
                         '</div>'+
                     '<button class="prospective-save-btn" id="save-eminor-form" inputId="save-eminor-form-'+no_eminors+'">Save</button>'+
                     '<button class="prospective-close-btn" id="close-eminor-form">Close</button>'+
@@ -1090,8 +1094,8 @@ $(document).ready(function() {
                 var formIdno = name.substring(name.length - 1, name.length);
 
                 var certificate = $("#eCertificateDiv-"+formIdno+ " #ecertificate-name-"+formIdno).val();
-                var group = $("#eCertificateDiv-"+formIdno+ " #group-selected-in-certificate"+formIdno).val();
-                var data = 'certificate='+ encodeURI(certificate)  +  '&group='+ encodeURI(group);
+                var group = $("#eCertificateDiv-"+formIdno+ " #group-selected-in-certificate-"+formIdno).val();
+                var data = 'certificate='+ encodeURI(certificate)  +  '&group='+ encodeURI(group) + '&catalogId='+catalogID;
 
                 $.ajax({
                     type: 'GET',
@@ -1103,7 +1107,9 @@ $(document).ready(function() {
                     //data returned from php
                     }
                 });
+                return false;
             });
+            return false;
         }
 
         var removeGroupFromCertificate = function()
@@ -1112,12 +1118,12 @@ $(document).ready(function() {
 
                 var btn = $(this);
                 var name = $(btn).attr('name');
-                //alert ( name);
+                alert ( name);
                 var formIdno = name.substring(name.length - 1, name.length);
 
                 var certificate = $("#eCertificateDiv-"+formIdno+ " #ecertificate-name-"+formIdno).val();
-                var group = $("#eCertificateMDiv-"+formIdno+ " #group-selected-in-certificate"+formIdno).val();
-                var data = 'certificate='+ encodeURI(certificate)  +  '&group='+ encodeURI(group);
+                var group = $("#eCertificateDiv-"+formIdno+ " #group-selected-in-certificate-"+formIdno).val();
+                var data = 'certificate='+ encodeURI(certificate)  +  '&group='+ encodeURI(group) + '&catalogId='+catalogID;
 
                 $.ajax({
                     type: 'GET',
@@ -1129,7 +1135,9 @@ $(document).ready(function() {
                         //data returned from php
                     }
                 });
+                return false;
             });
+            return false;
         }
 
 
@@ -1141,7 +1149,7 @@ $(document).ready(function() {
 
             var stringCertificateForm = '<div id="CertificateDiv-'+no_certificates+'">'+
                 '<form class="prospectiveForm" action="#" id="CertificateForm">'+
-                    '<h3>Certificate Form</h3>'+
+                    '<h3>New Certificate Form</h3>'+
                     '<label>Certificate Name </label>'+
                     '<input type="text" id="certificate-name-'+no_certificates+'" placeholder="Certificate Name" required readonly/></br>'+
                     '<label>Description: <span>*</span></label>'+
@@ -1210,7 +1218,7 @@ $(document).ready(function() {
 
             var stringeCertificateForm = '<div id="eCertificateDiv-'+(no_ecertificates)+'">'+
                 '<form class="prospectiveForm" action="#" id="CertificateForm">' +
-                    '<h3>Certificate Form</h3>'+
+                    '<h3>Edit Certificate Form</h3>'+
                     '<div>'+
                         '<label>Certificate Name </label>'+
                         '<input type="text" id="ecertificate-name-'+no_ecertificates+'" placeholder="Minor Name" required readonly/></br>'+
@@ -1222,8 +1230,8 @@ $(document).ready(function() {
                         '<select id="group-selected-in-certificate-'+no_ecertificates+'">'+
                             GroupList +
                             '</select>'+
-                        '<button class="add-group-to-certificate" id="add-group-to-certificate">Add this track</button>'+
-                        '<button class="remove-group-from-certificate" id="remove-group-from-certificate">Remove this track</button>'+
+                        '<button class="add-group-to-certificate" id="add-group-to-certificate" name="add-group-to-certificate-'+ (no_ecertificates) + '">Add this track</button>'+
+                        '<button class="remove-group-from-certificate" id="remove-group-from-certificate" name="remove-group-from-certificate-'+ (no_ecertificates) + '">Remove this track</button>'+
                         '</div>'+
                     '<button class="prospective-save-btn" id="save-ecertificate-form" inputId="save-etrack-form-'+no_ecertificates+'">Save</button>'+
                     '<button class="prospective-close-btn" id="close-ecertificate-form">Close</button>'+
@@ -1550,7 +1558,7 @@ $(document).ready(function() {
             var GroupList = <?php echo json_encode(getGroups()) ?>;
             var stringTrackForm = '<div id="TrackDiv-'+no_tracks+'">'+
                 '<form class="prospectiveForm" action="#" id="TrackForm">'+
-                    '<h3>Track Form</h3>'+
+                    '<h3>New Track Form</h3>'+
                     '<label>Track Name </label>'+
                     '<input type="text" id="track-name-'+no_tracks+'" placeholder="Track Name" required readonly/></br>'+
                     '<label>Description: <span>*</span></label>'+
@@ -1619,7 +1627,7 @@ $(document).ready(function() {
 
             var stringeTrackForm = '<div id="eTrackDiv-'+(no_etracks)+'">'+
                 '<form class="prospectiveForm" action="#" id="TrackForm">' +
-                    '<h3>Track Form</h3>'+
+                    '<h3>Edit Track Form</h3>'+
                     '<div>'+
                         '<label>Track Name </label>'+
                         '<input type="text" id="etrack-name-'+no_etracks+'" placeholder="Track Name" required readonly/></br>'+
@@ -1973,7 +1981,7 @@ $(document).ready(function() {
 
             var stringGroupForm = '<div id="GroupDiv-'+no_groups+'">'+
                 '<form class="prospectiveForm" action="#" id="GroupForm">'+
-                    '<h3>Group Form</h3>'+
+                    '<h3>New Group Form</h3>'+
                     '<label>Group Name: </label>'+
                     '<input type="text" id="group-name-'+no_groups+'" placeholder="Group Name" required readonly/></br>'+
                     '<label>Description: <span>*</span></label>'+
@@ -2045,7 +2053,7 @@ $(document).ready(function() {
 
             var stringeGroupForm = '<div id="eGroupDiv-'+(no_egroups)+'">'+
                 '<form class="prospectiveForm" action="#" id="GroupForm">' +
-                    '<h3>Group Form</h3>'+
+                    '<h3>Edit Group Form</h3>'+
                     '<div>'+
                         '<label>Group Name </label>'+
                         '<input type="text" id="egroup-name-'+no_egroups+'" placeholder="Track Name" required readonly/></br>'+
@@ -2457,7 +2465,7 @@ $(document).ready(function() {
 
             var stringeSetForm = '<div id="eSetDiv-'+(no_esets)+'">'+
                 '<form class="prospectiveForm" action="#" id="SetForm">' +
-                    '<h3>Set Form</h3>'+
+                    '<h3>Edit Set Form</h3>'+
                     '<div>'+
                         '<label>Set Name </label>'+
                         '<input type="text" id="eset-name-'+no_esets+'" placeholder="Track Name" required readonly/></br>'+

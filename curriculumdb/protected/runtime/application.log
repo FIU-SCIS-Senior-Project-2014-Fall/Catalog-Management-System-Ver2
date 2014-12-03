@@ -7838,3 +7838,182 @@ Stack trace:
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/RemoveCourseSet?set=CS%20Core%20Set%202&course=Introduction%20to%20Computer%20Programming
 in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1098)
 in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/01 22:15:01 [error] [php] Undefined variable: mygroup (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php:460)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(1582): ProspectiveController->render()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionView()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/View/checkProspectiveCat/4
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php (460)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1582)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/02 01:18:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(624): CApplication->getDb()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Catalog))
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\models\Catalog.php(48): CActiveRecord::model('Catalog')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\index.php(71): Catalog::model()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(60): CController->render('index', Array)
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#19 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#20 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
+---
+2014/12/02 01:19:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] A socket operation was attempted to an unreachable host.
+' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(624): CApplication->getDb()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Catalog))
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\models\Catalog.php(48): CActiveRecord::model('Catalog')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\index.php(71): Catalog::model()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(60): CController->render('index', Array)
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#19 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#20 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
+---
+2014/12/02 01:19:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] A socket operation was attempted to an unreachable host.
+' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(624): CApplication->getDb()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Catalog))
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\models\Catalog.php(48): CActiveRecord::model('Catalog')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\index.php(71): Catalog::model()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(60): CController->render('index', Array)
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#19 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#20 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
+---
+2014/12/02 03:13:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(624): CApplication->getDb()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Catalog))
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\models\Catalog.php(48): CActiveRecord::model('Catalog')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\index.php(71): Catalog::model()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(60): CController->render('index', Array)
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#19 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#20 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
+---
+2014/12/02 03:34:14 [error] [php] Undefined variable: myMinor (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php:192)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(1582): ProspectiveController->render()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionView()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/View/checkProspectiveCat/4
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php (192)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1582)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/03 05:04:59 [error] [php] Undefined index: catalogId (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php:878)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/RemoveGroupCertificate?certificate=New%20Certificate%20JA2&group=undefined&catalogID=4
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (878)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/03 05:06:44 [error] [php] Undefined index: catalogId (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php:878)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/RemoveGroupCertificate?certificate=New%20Certificate%20JA2&group=undefined&catalogID=4
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (878)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/03 05:08:23 [error] [php] Undefined index: catalogId (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php:878)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/RemoveGroupCertificate?certificate=New%20Certificate%20JA2&group=undefined&catalogID=4
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (878)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)

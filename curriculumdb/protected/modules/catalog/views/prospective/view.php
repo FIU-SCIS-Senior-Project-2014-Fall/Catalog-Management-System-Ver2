@@ -421,7 +421,7 @@ else {
 
                 $coursePrefixId = $hisCourseModel->find('identifier_id=:identifier_id', array(':identifier_id'=>$courseId))->getAttribute('coursePrefix_id');
                 $prefixName = $coursePrefix->find('id=:id', array(':id'=>$coursePrefixId))->getAttribute('name');
-
+                
                 $courseNumber = $hisCourseModel->find('identifier_id=:identifier_id', array(':identifier_id'=>$courseId))->getAttribute('number');
 
                 echo '-'.$prefixName.' '.$courseNumber.' - '.$courseName.'</br>';

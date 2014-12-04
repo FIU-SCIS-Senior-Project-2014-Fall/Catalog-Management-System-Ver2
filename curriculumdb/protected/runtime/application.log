@@ -7776,3 +7776,37 @@ Stack trace:
 REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
 HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/
 ---
+2014/11/24 14:36:37 [error] [php] Undefined variable: prefixName (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(1319): ProspectiveController->render()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionView()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/View/checkProspectiveCat/4
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php (427)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1319)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/11/24 14:37:07 [error] [php] Undefined variable: coursePrefixIdred (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php:429)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(1319): ProspectiveController->render()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionView()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/View/checkProspectiveCat/4
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php (429)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1319)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)

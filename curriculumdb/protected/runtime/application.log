@@ -281,3 +281,49 @@ REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/group/3
 in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (344)
 in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\_links.php (47)
 in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\view.php (55)
+2014/12/04 06:18:14 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'group_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_group` `t` WHERE group_id=:group_id LIMIT 1.
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (960)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (640)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/04 06:18:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'group_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_group` `t` WHERE group_id=:group_id LIMIT 1' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(960): CActiveRecord->find('group_id=:group...', Array)
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(640): ProspectiveController->updateGroupSetTable('4', '4')
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionAddGroupMinor()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('AddGroupMinor')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/AddGroupMinor?minor=New%20Minor%20JA1&group=SDD%20Prerequisite&catalogId=4
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/12/04 06:22:24 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'group_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_group` `t` WHERE group_id=:group_id LIMIT 1.
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (960)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (640)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/04 06:22:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'group_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_group` `t` WHERE group_id=:group_id LIMIT 1' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(960): CActiveRecord->find('group_id=:group...', Array)
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(640): ProspectiveController->updateGroupSetTable('4', '4')
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionAddGroupMinor()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('AddGroupMinor')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/AddGroupMinor?minor=New%20Minor%20JA1&group=SDD%20Prerequisite&catalogId=4
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---

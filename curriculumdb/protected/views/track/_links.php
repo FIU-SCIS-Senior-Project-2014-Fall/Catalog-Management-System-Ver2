@@ -29,23 +29,36 @@ if (empty($trackByGroup)) {
 }
     
     $info = CourseFlowInfo::getTrackInfo($id);
-    if(!empty($info[0]))
-    {
-        $string = $info[0];
-        $groupid = $info[1];
-        $setindex = $info[2];
-        $groupindex = $info[3];
-        $flowchartid = $info[4];
-     //group close
-        
+        //if(!empty($info[0]))
+        if(false)
+        {
+            $string = $info[0];
+            $groupid = $info[1];
+            $setindex = $info[2];
+            $groupindex = $info[3];
+            $flowchartid = $info[4];             
+            $form=$this->beginWidget('CActiveForm', array(
+                    'id'=>'flow-course-form',
+                    'enableAjaxValidation'=>false,
+                    'action' => Yii::app()->createUrl('//track/flowTrack'), 
+            )); 
+        }
+        else
+        {
+            $info = CourseFlowInfo::getDefaultTrack($id);
+            $string = $info[0];
+            $groupid = $info[1];
+            $setindex = $info[2];
+            $groupindex = $info[3];    
+            $flowchartid = "0";
+            $form=$this->beginWidget('CActiveForm', array(
+                    'id'=>'flow-course-form',
+                    'enableAjaxValidation'=>false,
+
+            )); 
+        }    
         echo '<div class=\'outer\'>';
 
-        $form=$this->beginWidget('CActiveForm', array(
-                'id'=>'flow-group-form',
-                'enableAjaxValidation'=>false,
-                'action' => Yii::app()->createUrl('//track/flowTrack'),
-        )); 
-        
         for($x = 0; $x<($groupindex + (4-$groupindex%4)); $x++)  
         {
             echo "<script>
@@ -91,7 +104,6 @@ if (empty($trackByGroup)) {
         $this->endWidget();
 
         echo "</div>";    
-    }
 ?>
 <br/>
 <?php if(!$this->catalogActivated){ ?>

@@ -42,7 +42,7 @@ if (empty($setByCourse)) {
     }
     else
     {
-        $info = CourseFlowInfo::getInfo($id);
+        $info = CourseFlowInfo::getDefaultSet($id);
         $string = $info[0];
         $courseid = $info[1];
         $flowchartid = "0";

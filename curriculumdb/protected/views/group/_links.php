@@ -27,20 +27,35 @@ if (empty($groupBySet)) {
     }
     echo '</ul>';
 }
+   
+        $info = CourseFlowInfo::getSetInfo($id);
+        //if(!empty($info[0]))
+        if(false)
+        {
+            $string = $info[0];
+            $setid = $info[1];
+            $setindex = $info[2];
+            $flowchartid = $info[3];              
+            $form=$this->beginWidget('CActiveForm', array(
+                    'id'=>'flow-course-form',
+                    'enableAjaxValidation'=>false,
+                    'action' => Yii::app()->createUrl('//group/flowGroup'), 
+            )); 
+        }
+        else
+        {
+            $info = CourseFlowInfo::getDefaultGroup($id);
+            $string = $info[0];
+            $setid = $info[1];
+            $setindex = $info[2];
+            $flowchartid = "0";
+            $form=$this->beginWidget('CActiveForm', array(
+                    'id'=>'flow-course-form',
+                    'enableAjaxValidation'=>false,
 
-    $info = CourseFlowInfo::getSetInfo($id);
-    if(!empty($info[0]))
-    {
-        $string = $info[0];
-        $setid = $info[1];
-        $setindex = $info[2];
-        $flowchartid = $info[3];
-       
-        $form=$this->beginWidget('CActiveForm', array(
-                'id'=>'flow-group-form',
-                'enableAjaxValidation'=>false,
-                'action' => Yii::app()->createUrl('//group/flowGroup'),
-        )); 
+            )); 
+        }    
+    
         echo '<div class=\'outer\'>';
 
         for($x = 0; $x<($setindex + (4-$setindex%4)); $x++)  
@@ -56,7 +71,7 @@ if (empty($groupBySet)) {
             echo "document.write(\"<div class='drag' id='drag\" + row + \"' draggable='true'\" +    
                    \"ondragstart='drag(this.parentNode,event)'>\");";
 
-            if(!empty($string[$x]))
+            if(!empty($string[$x]) && !empty($setid[$x]))
             {
                 echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+ $setid[$x] + \"'>\");";      
                 foreach($string[$x] AS $test)
@@ -80,7 +95,7 @@ if (empty($groupBySet)) {
         echo "<input type=\"submit\">";
 
         $this->endWidget();
-    }
+    
 ?>
 <br/>
 <?php if(!$this->catalogActivated){ ?>

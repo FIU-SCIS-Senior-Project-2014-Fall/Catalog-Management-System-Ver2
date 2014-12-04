@@ -64,6 +64,7 @@ class GroupController extends Controller
                 $record = FlowSet::model()->findAll('t.flowchartid=:fid AND t.setid=:cid', array(':fid' => $fid, ':cid'=>$setid));
              
                 $indexPrim = $record[0]->id;
+                $groupid = $record[0]->groupid;
                 echo "Primary ID: ". $indexPrim;
                 echo "<br>";
                 
@@ -71,6 +72,7 @@ class GroupController extends Controller
                 $post->position = $position;
                 $post->save();
             }
+            $this->redirect(array('/group/'.$groupid));
         }
         
 	/**

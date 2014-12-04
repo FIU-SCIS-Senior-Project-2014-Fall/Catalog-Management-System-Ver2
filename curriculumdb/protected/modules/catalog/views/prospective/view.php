@@ -1,13 +1,4 @@
-<script>
-$(document).ready(function() {
 
-     function goToCreate(){
-         alert('hi');
-     }
-
-});
-
-</script>
 <?php
 /* @var $this ProspectiveController */
 
@@ -26,10 +17,11 @@ $hisMajorModel = new HisMajor();
 $majors = $hisMajorModel->findAll('catalog_id=:catalog_id', array(':catalog_id'=>$prospCatId));
 if (!$majors)
 {
-    echo '<h4>Currently there are no proposed majors </h4>';
+    echo '<label>Currently there are no proposed majors </label>';
 }
 else
 {
+    set_time_limit(100);
     echo '<table style="width:100%">';
     echo '<tr>';
     echo '<th>Major Name </th>';
@@ -76,7 +68,7 @@ else
 echo '</table>';
 }
 ?>
-
+</br>
 <h3>Minors Proposed</h3>
 <?php
 $currMinorModel = new CurrMinor();
@@ -85,10 +77,11 @@ $minors = $hisMinorModel->findAll('catalog_id=:catalog_id', array(':catalog_id'=
 
 if ( !$minors)
 {
-    echo '<h4>Currently there are no proposed minors </h4>';
+    echo '<label>Currently there are no proposed minors </label>';
 }
 else
 {
+    set_time_limit(100);
     echo '<table style="width:100%">';
     echo '<tr>';
     echo '<th>Minor Name </th>';
@@ -117,7 +110,7 @@ else
         echo 'Mininum Credits: '.$minorProposed->getAttribute('minCredits').'</br>';
 
         $minorByGroup = new CurrMinorGroup();
-        $groupsInMinor = $minorByGroup->findAll('minor_id=:minor_id', array(':minor_id'=>$myMinor->getAttribute('id')));
+        $groupsInMinor = $minorByGroup->findAll('minor_id=:minor_id AND catalog_id=:catalog_id', array(':minor_id'=>$myMinor->getAttribute('id'), ':catalog_id'=>$prospCatId));
 
         foreach ( $groupsInMinor as $git)
         {
@@ -132,7 +125,7 @@ else
             $thisGroupId = $thisgroup->getAttribute('id');
 
             $groupBySet = new CurrGroupBySet();
-            $theseSets = $groupBySet->findAll('group_id=:group_id', array(':group_id'=>$thisGroupId));
+            $theseSets = $groupBySet->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$thisGroupId, ':catalog_id'=>$prospCatId));
 
             foreach ( $theseSets as $set)
             {
@@ -142,7 +135,7 @@ else
                 //echo $setName.'</br>';
 
                 $setByCourse = new CurrSetByCourse();
-                $theseCourse = $setByCourse->findAll('set_id=:set_id', array(':set_id'=>$setId));
+                $theseCourse = $setByCourse->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$setId, ':catalog_id'=>$prospCatId));
 
                 foreach( $theseCourse as $course)
                 {
@@ -170,7 +163,7 @@ else
     echo '</table>';
 }
 ?>
-
+</br>
 <h3>Certificates Proposed</h3>
 <?php
 $currCertificateModel = new CurrCertificate();
@@ -179,10 +172,11 @@ $certificates = $hisCertificateModel->findAll('catalog_id=:catalog_id', array(':
 
 if ( !$certificates)
 {
-    echo '<h4>Currently there are no proposed certificates </h4>';
+    echo '<label>Currently there are no proposed certificates </label>';
 }
 else
 {
+    set_time_limit(100);
     echo '<table style="width:100%">';
     echo '<tr>';
     echo '<th>Certificate Name </th>';
@@ -198,7 +192,7 @@ else
         $myCertificateName = $myCertificate->getAttribute('name');
         $parenthesys = '';
 
-        if($myMinor->getAttribute('catalog_id') == $prospCatId )
+        if($myCertificate->getAttribute('catalog_id') == $prospCatId )
             $parenthesys = ' (New)';
         else{
             $parenthesys = ' (Edited)';
@@ -211,7 +205,7 @@ else
         echo 'Mininum Credits: '.$certificateProposed->getAttribute('minCredits').'</br>';
 
         $certificateByGroup = new CurrCertificateGroup();
-        $groupsInCertificate = $certificateByGroup->findAll('certificate_id=:certificate_id', array(':certificate_id'=>$myCertificate->getAttribute('id')));
+        $groupsInCertificate = $certificateByGroup->findAll('certificate_id=:certificate_id AND catalog_id=:catalog_id', array(':certificate_id'=>$myCertificate->getAttribute('id'), ':catalog_id'=>$prospCatId));
 
         foreach ( $groupsInCertificate as $git)
         {
@@ -226,7 +220,7 @@ else
             $thisGroupId = $thisgroup->getAttribute('id');
 
             $groupBySet = new CurrGroupBySet();
-            $theseSets = $groupBySet->findAll('group_id=:group_id', array(':group_id'=>$thisGroupId));
+            $theseSets = $groupBySet->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$thisGroupId, ':catalog_id'=>$prospCatId));
 
             foreach ( $theseSets as $set)
             {
@@ -236,7 +230,7 @@ else
                 //echo $setName.'</br>';
 
                 $setByCourse = new CurrSetByCourse();
-                $theseCourse = $setByCourse->findAll('set_id=:set_id', array(':set_id'=>$setId));
+                $theseCourse = $setByCourse->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$setId, ':catalog_id'=>$prospCatId));
 
                 foreach( $theseCourse as $course)
                 {
@@ -264,7 +258,7 @@ else
     echo '</table>';
 }
 ?>
-
+</br>
 <h3>Tracks Proposed</h3>
 <?php
 $currTrackModel = new CurrTrack();
@@ -273,10 +267,11 @@ $tracks = $hisTrackModel->findAll('catalog_id=:catalog_id', array(':catalog_id'=
 
 if ( !$tracks)
 {
-    echo '<h4>Currently there are no proposed tracks </h4>';
+    echo '<label>Currently there are no proposed tracks </label>';
 }
 else
 {
+    set_time_limit(100);
     echo '<table style="width:100%">';
     echo '<tr>';
     echo '<th>Track Name </th>';
@@ -305,7 +300,7 @@ else
         echo 'Mininum Credits: '.$trackProposed->getAttribute('minCredits').'</br>';
 
         $trackByGroup = new CurrTrackByGroup();
-        $groupsInTracks = $trackByGroup->findAll('track_id=:track_id', array(':track_id'=>$myTrack->getAttribute('id')));
+        $groupsInTracks = $trackByGroup->findAll('track_id=:track_id AND catalog_id=:catalog_id', array(':track_id'=>$myTrack->getAttribute('id'), ':catalog_id'=>$prospCatId));
 
         foreach ( $groupsInTracks as $git)
         {
@@ -320,7 +315,7 @@ else
             $thisGroupId = $thisgroup->getAttribute('id');
 
             $groupBySet = new CurrGroupBySet();
-            $theseSets = $groupBySet->findAll('group_id=:group_id', array(':group_id'=>$thisGroupId));
+            $theseSets = $groupBySet->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$thisGroupId,':catalog_id'=>$prospCatId));
 
             foreach ( $theseSets as $set)
             {
@@ -330,7 +325,7 @@ else
                 //echo $setName.'</br>';
 
                 $setByCourse = new CurrSetByCourse();
-                $theseCourse = $setByCourse->findAll('set_id=:set_id', array(':set_id'=>$setId));
+                $theseCourse = $setByCourse->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$setId,':catalog_id'=>$prospCatId));
 
                 foreach( $theseCourse as $course)
                 {
@@ -359,7 +354,7 @@ else
 }
 ?>
 
-
+</br>
 <h3>Groups Proposed</h3>
 <?php
 $currGroupModel = new CurrGroup();
@@ -369,9 +364,10 @@ $groups = $hisGroupModel->findAll('catalog_id=:catalog_id', array(':catalog_id'=
 
 if ( !$groups )
 {
-    echo '<h4>Currently there are no proposed groups </h4>';
+    echo '<label>Currently there are no proposed groups </label>';
 }
 else {
+    set_time_limit(100);
     echo '<table style="width:100%">';
     echo '<tr>';
     echo '<th>Group Name </th>';
@@ -401,7 +397,7 @@ else {
         echo 'Maximum Credits: '.$groupProposed->getAttribute('maxCredits').'</br>';
 
         $groupbyset = new CurrGroupBySet();
-        $setsInGroup = $groupbyset->findAll('group_id=:group_id', array(':group_id'=>$mygroup->getAttribute('id')));
+        $setsInGroup = $groupbyset->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$mygroup->getAttribute('id'),':catalog_id'=>$prospCatId));
         foreach ( $setsInGroup as $sig)
         {
             $setModel = new CurrSet();
@@ -411,7 +407,7 @@ else {
             echo $thisSet->getAttribute('name').'</br>';
 
             $setByCourse = new CurrSetByCourse();
-            $courses = $setByCourse->findAll('set_id=:set_id', array(':set_id'=>$sig->getAttribute('set_id')));
+            $courses = $setByCourse->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$sig->getAttribute('set_id'), ':catalog_id'=>$prospCatId));
 
 
             foreach($courses as $course)
@@ -442,6 +438,7 @@ else {
 }
 ?>
 
+</br>
 <h3>Sets Proposed</h3>
 <?php
 $currSetModel = new CurrSet();
@@ -450,13 +447,14 @@ $sets = $hisSetModel->findAll('catalog_id=:catalog_id', array(':catalog_id'=>$pr
 
 if ( !$sets )
 {
-    echo '<h4>Currently there are no proposed groups </h4>';
+    echo '<label>Currently there are no proposed groups </label>';
 }
 else {
+    set_time_limit(100);
     echo '<table style="width:100%">';
     echo '<tr>';
-    echo '<th>Group Name </th>';
-    echo '<th>Group Information </th>';
+    echo '<th>Set Name </th>';
+    echo '<th>Set Information </th>';
     echo '</tr>';
 
     foreach($sets as $setProposed)
@@ -465,7 +463,7 @@ else {
         $set = $setProposed->getAttribute('identifier_id');
         $mySet = $currSetModel->find('id=:id', array(':id'=>$set));
 
-        $mygroupname = $mygroup->getAttribute('name');
+        $mygroupname = $mySet->getAttribute('name');
         $parenthesys = '';
 
         if($mySet->getAttribute('catalog_id') == $prospCatId )
@@ -489,7 +487,7 @@ else {
             echo 'Courses In Set</br>';
 
             $setByCourse = new CurrSetByCourse();
-            $courses = $setByCourse->findAll('set_id=:set_id', array(':set_id'=>$set));
+            $courses = $setByCourse->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$set, ':catalog_id'=>$prospCatId));
 
 
             foreach($courses as $course)
@@ -520,7 +518,7 @@ else {
 }
 ?>
 
-
+</br>
 <h3>Courses Proposed</h3>
 <?php
 $currCourseModel = new CurrCourse();
@@ -529,10 +527,11 @@ $courses = $hisCourseModel->findAll('catalog_id=:catalog_id', array(':catalog_id
 
 if ( !$courses )
 {
-    echo '<h4>Currently there are no proposed courses </h4>';
+    echo '<label>Currently there are no proposed courses </label>';
 }
 else
 {
+    set_time_limit(100);
     echo '<table style="width:100%">';
     echo '<tr>';
     echo '<th>Course Name </th>';

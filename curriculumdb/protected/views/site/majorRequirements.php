@@ -26,6 +26,8 @@
     }
     else{
        
+       echo CHtml::link("View Flowchart", array('track/' . $track->id));
+       echo "<br><br>";
        foreach($groups AS $singleGroupId=>$singleGroup){
     ?>
         <div class="group">
@@ -36,12 +38,13 @@
                     $sets = CurrGroupBySet::model()->with('set')->findAll('t.group_id=:groupId AND t.catalog_id=:catalog', 
                             array(':groupId'=>$singleGroupId, ':catalog'=>$this->catalogId));
                     $sets=CHtml::listData($sets,'set_id','set.name');
-                    
                     echo $this->renderPartial('majorRequirements/_groupContent', array('sets'=>$sets)); 
                 ?>
              </div>
         </div>
-    <?php       
+    
+        
+    <?php    
        }
     }?>
 </div>

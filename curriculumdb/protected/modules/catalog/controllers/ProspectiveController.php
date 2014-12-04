@@ -636,6 +636,8 @@ class ProspectiveController extends Controller
         $minorByGroup->group_id = $gIDs;
         $minorByGroup->catalog_id = $myCatalogId;
         $minorByGroup->save();
+
+        $this->updateGroupSetTable($gIDs, $myCatalogId);
     }
 
 
@@ -918,6 +920,8 @@ class ProspectiveController extends Controller
         $certificateByGroup->group_id = $gIDs;
         $certificateByGroup->catalog_id = $myCatalogId;
         $certificateByGroup->save();
+
+        $this->updateGroupSetTable($gIDs, $myCatalogId);
     }
 
     /*end certificate function*/
@@ -945,6 +949,34 @@ class ProspectiveController extends Controller
         $trackByGroup->group_id = $gIDs;
         $trackByGroup->catalog_id = $myCatalogId;
         $trackByGroup->save();
+
+        $this->updateGroupSetTable($gIDs, $myCatalogId);
+    }
+
+    private function updateGroupSetTable($groupId, $catalogNumber)
+    {
+        $groupBySetTable = new CurrGroupBySet();
+        $currGroup = new CurrGroup();
+        $catNeeded = $currGroup->find('id=:id', array(':id'=>$groupId))->getAttribute('catalog_id');
+        $rels = $groupBySetTable->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$groupId, ':catalog_id'=>$catNeeded));
+        foreach($rels as $r)
+        {
+            $setId = $r->getAttribute('set_id');
+            var_dump($setId);
+            $tableGroupSet = new CurrGroupBySet();
+            $exist = $tableGroupSet->find('group_id=:group_id AND catalog_id=:catalog_id AND set_id=:set_id', array(':group_id'=>$groupId, ':catalog_id'=>$catalogNumber, ':set_id'=>$setId));
+            if ( !$exist )
+            {
+                $tableGroupSet = new CurrGroupBySet();
+                $tableGroupSet->set_id = $setId;
+                $tableGroupSet->group_id = $groupId;
+                $tableGroupSet->catalog_id = $catalogNumber;
+                $tableGroupSet->save();
+
+                //updates set by course tables
+                $this->updateSetByCourseTable($setId, $catalogNumber );
+            }
+        }
     }
 
     public function actionSaveNewTrack()
@@ -1227,6 +1259,30 @@ class ProspectiveController extends Controller
         $groupBySet->catalog_id = $catalogId;
         $groupBySet->save();
 
+        $this->updateSetByCourseTable($sIDs, $catalogId);
+
+    }
+
+    private function updateSetByCourseTable($setid, $catalogNumber)
+    {
+        $setByCourseTable = new CurrSetByCourse();
+        $currSet = new CurrSet();
+        $catNeeded = $currSet->find('id=:id', array(':id'=>$setid))->getAttribute('catalog_id');
+        $rels = $setByCourseTable->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$setid, ':catalog_id'=>$catNeeded));
+        foreach($rels as $r)
+        {
+            $courseId = $r->getAttribute('course_id');
+            $tableSetCourse = new CurrSetByCourse();
+            $exist = $tableSetCourse->find('set_id=:set_id AND catalog_id=:catalog_id AND course_id=:course_id', array(':set_id'=>$setid, ':catalog_id'=>$catalogNumber, ':course_id'=>$courseId));
+            if ( !$exist )
+            {
+                $tableSetCourse = new CurrSetByCourse();
+                $tableSetCourse->set_id = $setid;
+                $tableSetCourse->course_id = $courseId;
+                $tableSetCourse->catalog_id = $catalogNumber;
+                $tableSetCourse->save();
+            }
+        }
     }
 
     public function actionSaveNewGroup()

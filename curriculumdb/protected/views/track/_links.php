@@ -1,5 +1,47 @@
 <?php
 
+    function displayFlowChart($string, $groupid, $groupindex, $setindex, $flowchartid)
+    {
+        echo '<div class=\'outer\'>';
+        for($x = 0; $x<($groupindex + (4-$groupindex%4)); $x++)  
+        {
+            echo "<script>
+            arrBox[row] = new Box(row, true);
+            document.write(\"<div class='box-container-group float-left'><div id ='\" + row + \"' class='box-group' \");
+                document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
+                document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
+
+            echo "document.write(\"<div class='drag' id='drag\" + row + \"' draggable='true'\" +    
+                   \"ondragstart='drag(this.parentNode,event)'>\");";
+            if(!empty($string[$x]))
+            {
+                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+ $groupid[$x] + \"'>\");";      
+                for($i = 0; $i<$setindex; $i++)
+                {
+                    if(!empty($string[$x][$i]))
+                    {
+                        echo "document.write(\"<div class='box-container-set float-left'><div id ='\" + row + \"' class='box-set'>\");";
+                        foreach($string[$x][$i] AS $test)
+                        {   
+                            echo "document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course'>\");";
+                            echo 'document.write("<a href=\'../group/'. $groupid[$x]. '\'>'. $test. ' </a>");'; 
+                            echo "document.write(\"</div></div>\");";
+                        }
+                        echo 'document.write("</div></div>");';
+                    }
+                }       
+            }         
+            echo "document.write(\"</div></div>\");
+                row++;
+            </script>";
+
+        }
+        echo "<div class = 'box-container'>";
+        echo "<input type=\"submit\">";
+        echo "</div>"; 
+        echo "</div>"; 
+    }
+
 /**
  * @var int Id the id for the parent to get the links from.
  *  
@@ -29,8 +71,7 @@ if (empty($trackByGroup)) {
 }
     
     $info = CourseFlowInfo::getTrackInfo($id);
-        //if(!empty($info[0]))
-        if(false)
+        if(!empty($info[0]))
         {
             $string = $info[0];
             $groupid = $info[1];
@@ -57,53 +98,13 @@ if (empty($trackByGroup)) {
 
             )); 
         }    
-        echo '<div class=\'outer\'>';
-
-        for($x = 0; $x<($groupindex + (4-$groupindex%4)); $x++)  
-        {
-            echo "<script>
-            arrBox[row] = new Box(row, true);
-
-            document.write(\"<div class='box-container-group float-left'><div id ='\" + row + \"' class='box-group' \");
-                document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
-                document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
-
-
-            echo "document.write(\"<div class='drag' id='drag\" + row + \"' draggable='true'\" +    
-                   \"ondragstart='drag(this.parentNode,event)'>\");";
-
-            if(!empty($string[$x]))
-            {
-                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+ $groupid[$x] + \"'>\");";      
-
-                for($i = 0; $i<$setindex; $i++)
-                {
-                    if(!empty($string[$x][$i]))
-                    {
-                        echo "document.write(\"<div class='box-container-set float-left'><div id ='\" + row + \"' class='box-set'>\");";
-                        foreach($string[$x][$i] AS $test)
-                        {   
-                            echo "document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course'>\");";
-                            echo 'document.write("<a href=\'../group/'. $groupid[$x]. '\'>'. $test. ' </a>");'; 
-                            echo "document.write(\"</div></div>\");";
-                        }
-                        echo 'document.write("</div></div>");';
-                    }
-                }    
-                
-            }
-           
-            echo "document.write(\"</div></div>\");
-                row++;
-            </script>";
-
-        }
-        echo "<div class = 'box-container'>";
-        echo "<input type=\"submit\">";
-        echo "</div>";
+        
+        if($info != NULL)
+            displayFlowChart($string, $groupid, $groupindex, $setindex, $flowchartid);
+        
         $this->endWidget();
 
-        echo "</div>";    
+          
 ?>
 <br/>
 <?php if(!$this->catalogActivated){ ?>

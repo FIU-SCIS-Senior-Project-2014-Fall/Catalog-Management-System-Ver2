@@ -2135,6 +2135,7 @@ $(document).ready(function() {
         var close_set_form = function(){
             $("#SetDiv-"+no_sets).on("click", "#close-set-form", function(e){
                 $(this).parent('form').parent('div').css("display", "none");
+                return false;
             });
             return false;
         }
@@ -2213,7 +2214,9 @@ $(document).ready(function() {
                     '</div>';
 
                 $(".course-to-set-"+formIdno).append(groupToTrackDiv);
+                return false;
             });
+            return false;
         };
 
         /*removes row for new group*/
@@ -2341,6 +2344,7 @@ $(document).ready(function() {
                 });
                 return false;
             });
+            return false;
         }
 
         addSet();

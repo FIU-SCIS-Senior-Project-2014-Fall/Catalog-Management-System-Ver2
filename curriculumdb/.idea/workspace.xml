@@ -30,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProspectiveController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProspectiveController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.538462" vertical-offset="3584" max-vertical-offset="5202">
-              <caret line="1649" column="0" selection-start-line="1649" selection-start-column="0" selection-end-line="1649" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.4883149" vertical-offset="4729" max-vertical-offset="5542">
+              <caret line="1764" column="0" selection-start-line="1764" selection-start-column="0" selection-end-line="1764" selection-end-column="0" />
               <folding>
                 <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionGetLastCatalogID#0;n#ProspectiveController#0;n#!!top" expanded="false" />
@@ -47,6 +47,13 @@
                 <element signature="n#actionRejectCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#updateTrackGroupTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#updateGroupSetTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#updateSetByCourseTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#saveNewSetCourseRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#getCatalogForSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#getCatalogForGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#getCatalogForTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#getCatalogForMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#getCatalogForCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionAddTrackMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRetrieveMajorFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionSaveNewMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
@@ -54,48 +61,48 @@
                 <element signature="n#actionRemoveTrackMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRetrieveMinorFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionSaveNewMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="e#25411#29700#0#PHP" expanded="false" />
                 <element signature="n#actionUpdateMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRemoveGroupMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionAddGroupMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRetrieveCertificateFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionSaveNewCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="e#38515#42881#0#PHP" expanded="false" />
                 <element signature="n#actionUpdateCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRemoveGroupCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionAddGroupCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionAddGroupTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionSaveNewTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="e#51939#56149#0#PHP" expanded="false" />
                 <element signature="n#actionRemoveGroupTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRetrieveTrackFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionUpdateTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionAddSetGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionSaveNewGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="e#64776#67535#0#PHP" expanded="false" />
                 <element signature="n#actionRetrieveGroupFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionUpdateGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRemoveSetGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionAddCourseSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <element signature="e#68172#68910#0#PHP" expanded="false" />
-                <element signature="e#68586#68910#0#PHP" expanded="false" />
+                <element signature="n#actionSaveNewSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionUpdateSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRetrieveSetFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRemoveCourseSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionSaveNewCourse#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionRetrieveCourseFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionUpdateCourse#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <element signature="n#actionAcceptReject#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <element signature="n#actionDelete#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <element signature="n#actionIndex#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <element signature="n#actionUpdate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <element signature="n#actionPropose#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <element signature="n#actionView#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <element signature="e#79783#80261#0#PHP" expanded="false" />
-                <marker date="1417731287345" expanded="true" signature="14470:14546" placeholder="DELETE FROM ..." />
-                <marker date="1417731287345" expanded="true" signature="14470:14573" placeholder="DELETE FROM ..." />
-                <marker date="1417731287345" expanded="true" signature="26831:26934" placeholder="DELETE FROM ..." />
-                <marker date="1417731287345" expanded="true" signature="40209:40330" placeholder="DELETE FROM ..." />
-                <marker date="1417731287345" expanded="true" signature="48270:48346" placeholder="DELETE FROM ..." />
-                <marker date="1417731287345" expanded="true" signature="48270:48373" placeholder="DELETE FROM ..." />
-                <marker date="1417731287345" expanded="true" signature="64240:64310" placeholder="DELETE FROM ..." />
-                <marker date="1417731287345" expanded="true" signature="64240:64337" placeholder="DELETE FROM ..." />
-                <marker date="1417731287345" expanded="true" signature="71759:71832" placeholder="DELETE FROM ..." />
-                <marker date="1417731287345" expanded="true" signature="71759:71859" placeholder="DELETE FROM ..." />
+                <element signature="n#actionCourseProspectiveForm#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="e#88237#88715#0#PHP" expanded="false" />
+                <marker date="1417756967428" expanded="true" signature="22681:22757" placeholder="DELETE FROM ..." />
+                <marker date="1417756967428" expanded="true" signature="22681:22784" placeholder="DELETE FROM ..." />
+                <marker date="1417756967428" expanded="true" signature="35133:35236" placeholder="DELETE FROM ..." />
+                <marker date="1417756967428" expanded="true" signature="48608:48729" placeholder="DELETE FROM ..." />
+                <marker date="1417756967428" expanded="true" signature="56781:56857" placeholder="DELETE FROM ..." />
+                <marker date="1417756967428" expanded="true" signature="56781:56884" placeholder="DELETE FROM ..." />
+                <marker date="1417756967428" expanded="true" signature="72837:72907" placeholder="DELETE FROM ..." />
+                <marker date="1417756967428" expanded="true" signature="72837:72934" placeholder="DELETE FROM ..." />
+                <marker date="1417756967428" expanded="true" signature="80213:80286" placeholder="DELETE FROM ..." />
+                <marker date="1417756967428" expanded="true" signature="80213:80313" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -104,17 +111,22 @@
       <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="11254">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="11254">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding>
-                <marker date="1417572295828" expanded="true" signature="605:615" placeholder="..." />
-                <marker date="1417572295828" expanded="true" signature="2251:2261" placeholder="..." />
-                <marker date="1417572295828" expanded="true" signature="5888:5898" placeholder="..." />
-                <marker date="1417572295828" expanded="true" signature="9615:9625" placeholder="..." />
-                <marker date="1417572295828" expanded="true" signature="13261:13271" placeholder="..." />
-                <marker date="1417572295828" expanded="true" signature="16277:16287" placeholder="..." />
-                <marker date="1417572295828" expanded="true" signature="18863:18873" placeholder="..." />
-                <marker date="1417572295828" expanded="true" signature="20120:20158" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="605:615" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="2251:2261" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="5888:5898" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="9615:9625" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="13133:13204" placeholder="{...}" />
+                <marker date="1417748322284" expanded="true" signature="13211:15958" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="13261:13271" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="13423:15936" placeholder="{...}" />
+                <marker date="1417748322284" expanded="true" signature="14443:15883" placeholder="{...}" />
+                <marker date="1417748322284" expanded="true" signature="14971:15847" placeholder="{...}" />
+                <marker date="1417748322284" expanded="true" signature="16293:16303" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="18879:18889" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="20136:20174" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -159,23 +171,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createProspectiveJs.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createProspectiveJs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-40.29142" vertical-offset="45882" max-vertical-offset="47651">
-              <caret line="709" column="25" selection-start-line="709" selection-start-column="25" selection-end-line="709" selection-end-column="25" />
+            <state vertical-scroll-proportion="1.2745098" vertical-offset="35935" max-vertical-offset="47719">
+              <caret line="2137" column="29" selection-start-line="2137" selection-start-column="29" selection-end-line="2137" selection-end-column="29" />
               <folding>
                 <element signature="e#368#1373#0#HTML" expanded="false" />
-                <marker date="1417580322421" expanded="false" signature="10332:10341" placeholder="..." />
-                <marker date="1417580322421" expanded="false" signature="17366:17375" placeholder="..." />
-                <marker date="1417580322421" expanded="false" signature="27622:27631" placeholder="..." />
-                <marker date="1417580322421" expanded="false" signature="31555:31564" placeholder="..." />
-                <marker date="1417580322421" expanded="true" signature="45725:45734" placeholder="..." />
-                <marker date="1417580322421" expanded="false" signature="50026:50035" placeholder="..." />
-                <marker date="1417580322421" expanded="false" signature="68629:68638" placeholder="..." />
-                <marker date="1417580322421" expanded="false" signature="83220:83229" placeholder="..." />
-                <marker date="1417580322421" expanded="false" signature="87396:87405" placeholder="..." />
-                <marker date="1417580322421" expanded="false" signature="97073:97082" placeholder="..." />
+                <marker date="1417750030887" expanded="false" signature="10332:10341" placeholder="..." />
+                <marker date="1417750030887" expanded="false" signature="17366:17375" placeholder="..." />
+                <marker date="1417750030887" expanded="false" signature="27622:27631" placeholder="..." />
+                <marker date="1417750030887" expanded="false" signature="31555:31564" placeholder="..." />
+                <marker date="1417750030887" expanded="true" signature="45725:45734" placeholder="..." />
+                <marker date="1417750030887" expanded="false" signature="50026:50035" placeholder="..." />
+                <marker date="1417750030887" expanded="false" signature="68629:68638" placeholder="..." />
+                <marker date="1417750030887" expanded="false" signature="83220:83229" placeholder="..." />
+                <marker date="1417750030887" expanded="false" signature="87396:87405" placeholder="..." />
+                <marker date="1417750030887" expanded="false" signature="97103:97112" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -229,10 +241,10 @@
         <option value="$PROJECT_DIR$/javascript/createProspective.js" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspective.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php" />
-        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php" />
-        <option value="$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php" />
       </list>
     </option>
   </component>
@@ -558,7 +570,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -568,7 +580,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.60045403" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17518637" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11022364" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2513843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21344717" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
@@ -646,21 +658,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php</url>
-          <line>1887</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php</url>
-          <line>1318</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php</url>
-          <line>1952</line>
+          <line>2161</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="67" />
+      <option name="time" value="72" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -670,14 +672,19 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="11254">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
-            <marker date="1417572295828" expanded="true" signature="605:615" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="2251:2261" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="5888:5898" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="9615:9625" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="13261:13271" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="16277:16287" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="18863:18873" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="20120:20158" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="605:615" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="2251:2261" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="5888:5898" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="9615:9625" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="13133:13204" placeholder="{...}" />
+            <marker date="1417748322284" expanded="true" signature="13211:15958" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="13261:13271" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="13423:15936" placeholder="{...}" />
+            <marker date="1417748322284" expanded="true" signature="14443:15883" placeholder="{...}" />
+            <marker date="1417748322284" expanded="true" signature="14971:15847" placeholder="{...}" />
+            <marker date="1417748322284" expanded="true" signature="16293:16303" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="18879:18889" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="20136:20174" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -715,16 +722,16 @@
           <caret line="709" column="25" selection-start-line="709" selection-start-column="25" selection-end-line="709" selection-end-column="25" />
           <folding>
             <element signature="e#368#1373#0#HTML" expanded="false" />
-            <marker date="1417580322421" expanded="false" signature="10332:10341" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="17366:17375" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="27622:27631" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="31555:31564" placeholder="..." />
-            <marker date="1417580322421" expanded="true" signature="45725:45734" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="50026:50035" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="68629:68638" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="83220:83229" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="87396:87405" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="97073:97082" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="10332:10341" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="17366:17375" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="27622:27631" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="31555:31564" placeholder="..." />
+            <marker date="1417750030887" expanded="true" signature="45725:45734" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="50026:50035" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="68629:68638" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="83220:83229" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="87396:87405" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="97103:97112" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1572,86 +1579,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="11254">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="11254">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
-            <marker date="1417572295828" expanded="true" signature="605:615" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="2251:2261" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="5888:5898" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="9615:9625" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="13261:13271" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="16277:16287" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="18863:18873" placeholder="..." />
-            <marker date="1417572295828" expanded="true" signature="20120:20158" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.538462" vertical-offset="3584" max-vertical-offset="5202">
-          <caret line="1649" column="0" selection-start-line="1649" selection-start-column="0" selection-end-line="1649" selection-end-column="0" />
-          <folding>
-            <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionGetLastCatalogID#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionInsertNewCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionProposeProspectiveCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionLoadProspectiveCatalogInfo#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionProposeCatalogFromView#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAcceptCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="e#4569#4732#0#PHP" expanded="false" />
-            <element signature="n#actionRejectCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#updateTrackGroupTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#updateGroupSetTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAddTrackMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRetrieveMajorFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionSaveNewMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionUpdateMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRemoveTrackMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRetrieveMinorFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionSaveNewMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionUpdateMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRemoveGroupMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRetrieveCertificateFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionSaveNewCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionUpdateCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRemoveGroupCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAddGroupCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAddGroupTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionSaveNewTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRemoveGroupTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRetrieveTrackFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionUpdateTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAddSetGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionSaveNewGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRetrieveGroupFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionUpdateGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRemoveSetGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAddCourseSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="e#68172#68910#0#PHP" expanded="false" />
-            <element signature="e#68586#68910#0#PHP" expanded="false" />
-            <element signature="n#actionRetrieveSetFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRemoveCourseSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionSaveNewCourse#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionRetrieveCourseFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionUpdateCourse#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAcceptReject#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionDelete#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionIndex#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionUpdate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionPropose#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionView#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="e#79783#80261#0#PHP" expanded="false" />
-            <marker date="1417731287345" expanded="true" signature="14470:14546" placeholder="DELETE FROM ..." />
-            <marker date="1417731287345" expanded="true" signature="14470:14573" placeholder="DELETE FROM ..." />
-            <marker date="1417731287345" expanded="true" signature="26831:26934" placeholder="DELETE FROM ..." />
-            <marker date="1417731287345" expanded="true" signature="40209:40330" placeholder="DELETE FROM ..." />
-            <marker date="1417731287345" expanded="true" signature="48270:48346" placeholder="DELETE FROM ..." />
-            <marker date="1417731287345" expanded="true" signature="48270:48373" placeholder="DELETE FROM ..." />
-            <marker date="1417731287345" expanded="true" signature="64240:64310" placeholder="DELETE FROM ..." />
-            <marker date="1417731287345" expanded="true" signature="64240:64337" placeholder="DELETE FROM ..." />
-            <marker date="1417731287345" expanded="true" signature="71759:71832" placeholder="DELETE FROM ..." />
-            <marker date="1417731287345" expanded="true" signature="71759:71859" placeholder="DELETE FROM ..." />
+            <marker date="1417748322284" expanded="true" signature="605:615" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="2251:2261" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="5888:5898" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="9615:9625" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="13133:13204" placeholder="{...}" />
+            <marker date="1417748322284" expanded="true" signature="13211:15958" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="13261:13271" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="13423:15936" placeholder="{...}" />
+            <marker date="1417748322284" expanded="true" signature="14443:15883" placeholder="{...}" />
+            <marker date="1417748322284" expanded="true" signature="14971:15847" placeholder="{...}" />
+            <marker date="1417748322284" expanded="true" signature="16293:16303" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="18879:18889" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="20136:20174" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1683,6 +1626,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2745098" vertical-offset="35935" max-vertical-offset="47719">
+          <caret line="2137" column="29" selection-start-line="2137" selection-start-column="29" selection-end-line="2137" selection-end-column="29" />
+          <folding>
+            <element signature="e#368#1373#0#HTML" expanded="false" />
+            <marker date="1417750030887" expanded="false" signature="10332:10341" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="17366:17375" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="27622:27631" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="31555:31564" placeholder="..." />
+            <marker date="1417750030887" expanded="true" signature="45725:45734" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="50026:50035" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="68629:68638" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="83220:83229" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="87396:87405" placeholder="..." />
+            <marker date="1417750030887" expanded="false" signature="97103:97112" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308" vertical-offset="51" max-vertical-offset="3111">
@@ -1691,22 +1654,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-40.29142" vertical-offset="45882" max-vertical-offset="47651">
-          <caret line="709" column="25" selection-start-line="709" selection-start-column="25" selection-end-line="709" selection-end-column="25" />
+        <state vertical-scroll-proportion="-1.4883149" vertical-offset="4729" max-vertical-offset="5542">
+          <caret line="1764" column="0" selection-start-line="1764" selection-start-column="0" selection-end-line="1764" selection-end-column="0" />
           <folding>
-            <element signature="e#368#1373#0#HTML" expanded="false" />
-            <marker date="1417580322421" expanded="false" signature="10332:10341" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="17366:17375" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="27622:27631" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="31555:31564" placeholder="..." />
-            <marker date="1417580322421" expanded="true" signature="45725:45734" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="50026:50035" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="68629:68638" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="83220:83229" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="87396:87405" placeholder="..." />
-            <marker date="1417580322421" expanded="false" signature="97073:97082" placeholder="..." />
+            <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionGetLastCatalogID#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionInsertNewCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionProposeProspectiveCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionLoadProspectiveCatalogInfo#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionProposeCatalogFromView#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAcceptCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="e#4569#4732#0#PHP" expanded="false" />
+            <element signature="n#actionRejectCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#updateTrackGroupTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#updateGroupSetTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#updateSetByCourseTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#saveNewSetCourseRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#getCatalogForSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#getCatalogForGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#getCatalogForTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#getCatalogForMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#getCatalogForCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAddTrackMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRetrieveMajorFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionSaveNewMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionUpdateMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRemoveTrackMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRetrieveMinorFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionSaveNewMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="e#25411#29700#0#PHP" expanded="false" />
+            <element signature="n#actionUpdateMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRemoveGroupMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAddGroupMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRetrieveCertificateFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionSaveNewCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="e#38515#42881#0#PHP" expanded="false" />
+            <element signature="n#actionUpdateCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRemoveGroupCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAddGroupCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAddGroupTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionSaveNewTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="e#51939#56149#0#PHP" expanded="false" />
+            <element signature="n#actionRemoveGroupTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRetrieveTrackFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionUpdateTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAddSetGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionSaveNewGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="e#64776#67535#0#PHP" expanded="false" />
+            <element signature="n#actionRetrieveGroupFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionUpdateGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRemoveSetGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAddCourseSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionSaveNewSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionUpdateSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRetrieveSetFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRemoveCourseSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionSaveNewCourse#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRetrieveCourseFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionUpdateCourse#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionCourseProspectiveForm#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="e#88237#88715#0#PHP" expanded="false" />
+            <marker date="1417756967428" expanded="true" signature="22681:22757" placeholder="DELETE FROM ..." />
+            <marker date="1417756967428" expanded="true" signature="22681:22784" placeholder="DELETE FROM ..." />
+            <marker date="1417756967428" expanded="true" signature="35133:35236" placeholder="DELETE FROM ..." />
+            <marker date="1417756967428" expanded="true" signature="48608:48729" placeholder="DELETE FROM ..." />
+            <marker date="1417756967428" expanded="true" signature="56781:56857" placeholder="DELETE FROM ..." />
+            <marker date="1417756967428" expanded="true" signature="56781:56884" placeholder="DELETE FROM ..." />
+            <marker date="1417756967428" expanded="true" signature="72837:72907" placeholder="DELETE FROM ..." />
+            <marker date="1417756967428" expanded="true" signature="72837:72934" placeholder="DELETE FROM ..." />
+            <marker date="1417756967428" expanded="true" signature="80213:80286" placeholder="DELETE FROM ..." />
+            <marker date="1417756967428" expanded="true" signature="80213:80313" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>

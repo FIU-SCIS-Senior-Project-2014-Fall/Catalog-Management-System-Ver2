@@ -184,7 +184,8 @@ class ProspectiveController extends Controller
     {
         $trackByGroupTable = new CurrTrackByGroup();
         $currTrack = new CurrTrack();
-        $catNeeded = $$currTrack->find('id=:id', array(':id'=>$trackId))->getAttribute('catalog_id');
+        //$catNeeded = $currTrack->find('id=:id', array(':id'=>$trackId))->getAttribute('catalog_id');
+        $catNeeded = $this->getCatalogForTrack($trackId);
         $rels = $trackByGroupTable->findAll('track_id=:track_id AND catalog_id=:catalog_id', array(':track_id'=>$trackId, ':catalog_id'=>$catNeeded));
         foreach($rels as $r)
         {
@@ -209,7 +210,8 @@ class ProspectiveController extends Controller
     {
         $groupBySetTable = new CurrGroupBySet();
         $currGroup = new CurrGroup();
-        $catNeeded = $currGroup->find('id=:id', array(':id'=>$groupId))->getAttribute('catalog_id');
+        //$catNeeded = $currGroup->find('id=:id', array(':id'=>$groupId))->getAttribute('catalog_id');
+        $catNeeded = $this->getCatalogForGroup($groupId);
         $rels = $groupBySetTable->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$groupId, ':catalog_id'=>$catNeeded));
         foreach($rels as $r)
         {
@@ -234,7 +236,8 @@ class ProspectiveController extends Controller
     {
         $setByCourseTable = new CurrSetByCourse();
         $currSet = new CurrSet();
-        $catNeeded = $currSet->find('id=:id', array(':id'=>$setid))->getAttribute('catalog_id');
+        //$catNeeded = $currSet->find('id=:id', array(':id'=>$setid))->getAttribute('catalog_id');
+        $catNeeded = $this->getCatalogForSet($setid);
         $rels = $setByCourseTable->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$setid, ':catalog_id'=>$catNeeded));
         foreach($rels as $r)
         {
@@ -250,6 +253,216 @@ class ProspectiveController extends Controller
                 $tableSetCourse->save();
             }
         }
+    }
+
+    private function saveNewTrackGroupRelation($groupName, $trackIdentifierID, $catalogID)
+    {
+        $groupModel = new CurrGroup();
+        $trackGroupModel = new CurrTrackByGroup();
+        $myGroup = $groupModel->find('name=:name', array(':name'=>$groupName));
+        $groupIdentifierID = $myGroup->getAttribute('id');
+
+        $exist = $trackGroupModel->find('track_id=:track_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':track_id' => $trackIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
+
+        if ( !$exist )
+        {
+            $trackGroupModel = new CurrTrackByGroup();
+            $trackGroupModel->group_id = $groupIdentifierID;
+            $trackGroupModel->track_id = $trackIdentifierID;
+            $trackGroupModel->catalog_id = $catalogID;
+            $trackGroupModel->save();
+
+            $this->updateGroupSetTable($groupIdentifierID, $catalogID);
+        }
+    }
+
+    private function saveNewMinorGroupRelation($groupName, $minorIdentifierID, $catalogID)
+    {
+        $groupModel = new CurrGroup();
+        $minorGroupModel = new CurrMinorGroup();
+        $myGroup = $groupModel->find('name=:name', array(':name'=>$groupName));
+        $groupIdentifierID = $myGroup->getAttribute('id');
+
+        $exist = $minorGroupModel->find('track_id=:track_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':track_id' => $minorIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
+
+        if ( !$exist )
+        {
+            $trackGroupModel = new CurrMinorGroup();
+            $trackGroupModel->group_id = $groupIdentifierID;
+            $trackGroupModel->minor_id = $minorIdentifierID;
+            $trackGroupModel->catalog_id = $catalogID;
+            $trackGroupModel->save();
+
+            $this->updateGroupSetTable($groupIdentifierID, $catalogID);
+        }
+    }
+
+    private function saveNewCertificateGroupRelation($groupName, $certificateIdentifierID, $catalogID)
+    {
+        $groupModel = new CurrGroup();
+        $certificateGroupModel = new CurrCertificateGroup();
+        $myGroup = $groupModel->find('name=:name', array(':name'=>$groupName));
+        $groupIdentifierID = $myGroup->getAttribute('id');
+
+        $exist = $certificateGroupModel->find('track_id=:track_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':track_id' => $certificateIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
+
+        if ( !$exist )
+        {
+            $trackGroupModel = new CurrCertificateGroup();
+            $trackGroupModel->group_id = $groupIdentifierID;
+            $trackGroupModel->certificate_id = $certificateIdentifierID;
+            $trackGroupModel->catalog_id = $catalogID;
+            $trackGroupModel->save();
+
+            $this->updateGroupSetTable($groupIdentifierID, $catalogID);
+        }
+    }
+
+    private function saveNewGroupSetRelation($setName, $groupIdentifierID, $catalogID)
+    {
+        $setModel = new CurrSet();
+        $groupSetModel = new CurrGroupBySet();
+        $mySet = $setModel->find('name=:name', array(':name'=>$setName));
+        $setIdentifierID = $mySet->getAttribute('id');
+
+        $exist = $groupSetModel->find('set_id=:set_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':set_id' => $setIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
+
+        if ( !$exist )
+        {
+            $groupSetModel = new CurrGroupBySet();
+            $groupSetModel->group_id = $groupIdentifierID;
+            $groupSetModel->set_id = $setIdentifierID;
+            $groupSetModel->catalog_id = $catalogID;
+            $groupSetModel->save();
+
+            $this->updateSetByCourseTable($setIdentifierID, $catalogID);
+        }
+    }
+
+    private function saveNewSetCourseRelation($courseName, $setIdentifierID, $catalogID )
+    {
+        $courseModel = new CurrCourse();
+        $setCourseModel = new CurrSetByCourse();
+        $myCourse = $courseModel->find('name=:name', array(':name'=>$courseName));
+        $courseIdentifierID = $myCourse->getAttribute('id');
+
+        $exist = $setCourseModel->find('set_id=:set_id AND course_id=:course_id AND catalog_id=:catalog_id', array(':set_id' => $setIdentifierID, ':course_id' => $courseIdentifierID, ':catalog_id' => $catalogID));
+
+        if ( !$exist )
+        {
+            $setCourseModel = new CurrSetByCourse();
+            $setCourseModel->course_id = $courseIdentifierID;
+            $setCourseModel->set_id = $setIdentifierID;
+            $setCourseModel->catalog_id = $catalogID;
+            $setCourseModel->save();
+        }
+    }
+
+    //gets the latest catalog active for the set
+    private function getCatalogForSet($setIdentifierID)
+    {
+        $hisSet = new HisSet();
+        $catNeeded = 0;
+        $theseVersions = $hisSet->findAll('identifier_id=:identifier_id', array(':identifier_id'=>$setIdentifierID));
+        foreach($theseVersions as $version)
+        {
+            $currentActive = $catNeeded;
+            $currentCat = $version->getAttribute('catalog_id');
+            if (  $currentCat > $currentActive)
+            {
+                $catNeeded = $currentCat;
+            }
+            else
+            {
+                $catNeeded = $currentActive;
+            }
+        }
+        return $catNeeded;
+    }
+
+    //gets the latest catalog active for the group
+    private function getCatalogForGroup($groupIdentifierID)
+    {
+        $hisGroup = new HisGroup();
+        $catNeeded = 0;
+        $theseVersions = $hisGroup->findAll('identifier_id=:identifier_id', array(':identifier_id'=>$groupIdentifierID));
+        foreach($theseVersions as $version)
+        {
+            $currentActive = $catNeeded;
+            $currentCat = $version->getAttribute('catalog_id');
+            if (  $currentCat > $currentActive)
+            {
+                $catNeeded = $currentCat;
+            }
+            else
+            {
+                $catNeeded = $currentActive;
+            }
+        }
+        return $catNeeded;
+    }
+
+    private function getCatalogForTrack($trackIdentifierID)
+    {
+        $hisTrack = new HisTrack();
+        $catNeeded = 0;
+        $theseVersions = $hisTrack->findAll('identifier_id=:identifier_id', array(':identifier_id'=>$trackIdentifierID));
+        foreach($theseVersions as $version)
+        {
+            $currentActive = $catNeeded;
+            $currentCat = $version->getAttribute('catalog_id');
+            if (  $currentCat > $currentActive)
+            {
+                $catNeeded = $currentCat;
+            }
+            else
+            {
+                $catNeeded = $currentActive;
+            }
+        }
+        return $catNeeded;
+    }
+
+    private function getCatalogForMinor($minorIdentifierID)
+    {
+        $hisMinor = new HisMinor();
+        $catNeeded = 0;
+        $theseVersions = $hisMinor->findAll('identifier_id=:identifier_id', array(':identifier_id'=>$minorIdentifierID));
+        foreach($theseVersions as $version)
+        {
+            $currentActive = $catNeeded;
+            $currentCat = $version->getAttribute('catalog_id');
+            if (  $currentCat > $currentActive)
+            {
+                $catNeeded = $currentCat;
+            }
+            else
+            {
+                $catNeeded = $currentActive;
+            }
+        }
+        return $catNeeded;
+    }
+
+    private function getCatalogForCertificate($certificateIdentifierID)
+    {
+        $hisCertificate = new HisCertificate();
+        $catNeeded = 0;
+        $theseVersions = $hisCertificate->findAll('identifier_id=:identifier_id', array(':identifier_id'=>$certificateIdentifierID));
+        foreach($theseVersions as $version)
+        {
+            $currentActive = $catNeeded;
+            $currentCat = $version->getAttribute('catalog_id');
+            if (  $currentCat > $currentActive)
+            {
+                $catNeeded = $currentCat;
+            }
+            else
+            {
+                $catNeeded = $currentActive;
+            }
+        }
+        return $catNeeded;
     }
 
 
@@ -493,8 +706,10 @@ class ProspectiveController extends Controller
         //insert each relation if needed to be inserted
         for ( $i = 0; $i < $novals; $i++)
         {
+
             $group = $_GET['element'.$i];
-            $myGroup = $groupModel->find('name=:name', array(':name'=>$group));
+            $this->saveNewTrackGroupRelation($group, $minorIdentifierID, $catalogID);
+           /* $myGroup = $groupModel->find('name=:name', array(':name'=>$group));
             $groupIdentifierID = $myGroup->getAttribute('id');
 
             $exist = $minorGroupModel->find('minor_id=:minor_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':minor_id' => $minorIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
@@ -563,7 +778,7 @@ class ProspectiveController extends Controller
                         }
                     }
                 }
-            }
+            }*/
             continue;
         }
     }
@@ -777,8 +992,10 @@ class ProspectiveController extends Controller
         //insert each relation if needed to be inserted
         for ( $i = 0; $i < $novals; $i++)
         {
+
             $group = $_GET['element'.$i];
-            $myGroup = $groupModel->find('name=:name', array(':name'=>$group));
+            $this->saveNewTrackGroupRelation($group, $certificateIdentifierID, $catalogID);
+            /*$myGroup = $groupModel->find('name=:name', array(':name'=>$group));
             $groupIdentifierID = $myGroup->getAttribute('id');
 
             $exist = $certificateGroupModel->find('certificate_id=:certificate_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':certificate_id' => $certificateIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
@@ -847,7 +1064,7 @@ class ProspectiveController extends Controller
                         }
                     }
                 }
-            }
+            }*/
             continue;
         }
     }
@@ -1028,8 +1245,6 @@ class ProspectiveController extends Controller
         $this->updateGroupSetTable($gIDs, $myCatalogId);
     }
 
-
-
     public function actionSaveNewTrack()
     {
         $trackModel = new CurrTrack();
@@ -1062,8 +1277,9 @@ class ProspectiveController extends Controller
         for ( $i = 0; $i < $novals; $i++)
         {
             $group = $_GET['element'.$i];
-            $myGroup = $groupModel->find('name=:name', array(':name'=>$group));
-            $groupIdentifierID = $myGroup->getAttribute('id');
+            //$myGroup = $groupModel->find('name=:name', array(':name'=>$group))->getAttribute('name');
+            $this->saveNewTrackGroupRelation($group, $trackIdentifierID, $catalogID);
+            /*$groupIdentifierID = $myGroup->getAttribute('id');
 
             $exist = $trackGroupModel->find('track_id=:track_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':track_id' => $trackIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
 
@@ -1131,7 +1347,7 @@ class ProspectiveController extends Controller
                         }
                     }
                 }
-            }
+            }*/
             continue;
         }
     }
@@ -1165,7 +1381,6 @@ class ProspectiveController extends Controller
         );
         $command->setText($sql)->execute($params);
     }
-
 
     public function actionRetrieveTrackFields()
     {
@@ -1286,6 +1501,7 @@ class ProspectiveController extends Controller
     }
     /*end track function*/
 
+
     /*GROUP functions*/
     public function actionAddSetGroup()
     {
@@ -1313,8 +1529,6 @@ class ProspectiveController extends Controller
         $this->updateSetByCourseTable($sIDs, $catalogId);
 
     }
-
-
 
     public function actionSaveNewGroup()
     {
@@ -1350,7 +1564,8 @@ class ProspectiveController extends Controller
         for ( $i = 0; $i < $novals; $i++)
         {
             $set = $_GET['element'.$i];
-            $mySet = $setModel->find('name=:name', array(':name'=>$set));
+            $this->saveNewGroupSetRelation($set, $groupIdentifierID, $catalogID);
+            /*$mySet = $setModel->find('name=:name', array(':name'=>$set));
             $setIdentifierID = $mySet->getAttribute('id');
 
             $exist = $groupSetModel->find('set_id=:set_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':set_id' => $setIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
@@ -1382,6 +1597,8 @@ class ProspectiveController extends Controller
                     }
                 }
                 //once catalog id was found get the relation of course set with the latest catalog an copy it
+
+
                 $SetRelations = new CurrSetByCourse();
                 $currentSetRels = $SetRelations->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$setIdentifierID, ':catalog_id'=>$catNeeded));
                 foreach($currentSetRels as $setRel)
@@ -1398,7 +1615,7 @@ class ProspectiveController extends Controller
                         $saveNewSetRel->save();
                     }
                 }
-            }
+            }*/
             continue;
         }
     }
@@ -1539,16 +1756,7 @@ class ProspectiveController extends Controller
             "catalog_id"=>$catalogId
         );
         $command->setText($sql)->execute($params);
-        /*
-        $model=new Catalog;
-        $major = new CurrMajor;
-        $track = new CurrTrack;
-        $relMajorTrack = new CurrMajorByTrack;
-
-        $this->render('RemoveSetGroup',array('model'=>$model),false, true);*/
     }
-
-
     /*end group function*/
 
 
@@ -1611,7 +1819,8 @@ class ProspectiveController extends Controller
         for ( $i = 0; $i < $novals; $i++)
         {
             $course = $_GET['element'.$i];
-            $myCourse = $courseModel->find('name=:name', array(':name'=>$course));
+            $this->saveNewSetCourseRelation($course, $setIdentifierID, $catalogID);
+            /*$myCourse = $courseModel->find('name=:name', array(':name'=>$course));
             $courseIdentifierID = $myCourse->getAttribute('id');
 
             $exist = $setCourseModel->find('set_id=:set_id AND course_id=:course_id AND catalog_id=:catalog_id', array(':set_id' => $setIdentifierID, ':course_id' => $courseIdentifierID, ':catalog_id' => $catalogID));
@@ -1624,7 +1833,7 @@ class ProspectiveController extends Controller
                 $setCourseModel->catalog_id = $catalogID;
                 $setCourseModel->save();
             }
-            continue;
+            continue;*/
         }
     }
 

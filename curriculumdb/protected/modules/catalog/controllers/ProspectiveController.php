@@ -180,6 +180,79 @@ class ProspectiveController extends Controller
     /*end catalog functions*/
 
 
+    private function updateTrackGroupTable($trackId, $catalogNumber)
+    {
+        $trackByGroupTable = new CurrTrackByGroup();
+        $currTrack = new CurrTrack();
+        $catNeeded = $$currTrack->find('id=:id', array(':id'=>$trackId))->getAttribute('catalog_id');
+        $rels = $trackByGroupTable->findAll('track_id=:track_id AND catalog_id=:catalog_id', array(':track_id'=>$trackId, ':catalog_id'=>$catNeeded));
+        foreach($rels as $r)
+        {
+            $groupId = $r->getAttribute('$group_id');
+            $tableTrackGroup = new CurrGroupBySet();
+            $exist = $tableTrackGroup->find('group_id=:group_id AND catalog_id=:catalog_id AND track_id=:track_id', array(':track_id'=>$trackId, ':catalog_id'=>$catalogNumber, ':group_id'=>$groupId));
+            if ( !$exist )
+            {
+                $tableTrackGroup = new CurrTrackByGroup();
+                $tableTrackGroup->track_id = $trackId;
+                $tableTrackGroup->group_id = $groupId;
+                $tableTrackGroup->catalog_id = $catalogNumber;
+                $tableTrackGroup->save();
+
+                //updates set by course tables
+                $this->updateGroupSetTable($groupId, $catalogNumber );
+            }
+        }
+    }
+
+    private function updateGroupSetTable($groupId, $catalogNumber)
+    {
+        $groupBySetTable = new CurrGroupBySet();
+        $currGroup = new CurrGroup();
+        $catNeeded = $currGroup->find('id=:id', array(':id'=>$groupId))->getAttribute('catalog_id');
+        $rels = $groupBySetTable->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$groupId, ':catalog_id'=>$catNeeded));
+        foreach($rels as $r)
+        {
+            $setId = $r->getAttribute('set_id');
+            $tableGroupSet = new CurrGroupBySet();
+            $exist = $tableGroupSet->find('group_id=:group_id AND catalog_id=:catalog_id AND set_id=:set_id', array(':group_id'=>$groupId, ':catalog_id'=>$catalogNumber, ':set_id'=>$setId));
+            if ( !$exist )
+            {
+                $tableGroupSet = new CurrGroupBySet();
+                $tableGroupSet->set_id = $setId;
+                $tableGroupSet->group_id = $groupId;
+                $tableGroupSet->catalog_id = $catalogNumber;
+                $tableGroupSet->save();
+
+                //updates set by course tables
+                $this->updateSetByCourseTable($setId, $catalogNumber );
+            }
+        }
+    }
+
+    private function updateSetByCourseTable($setid, $catalogNumber)
+    {
+        $setByCourseTable = new CurrSetByCourse();
+        $currSet = new CurrSet();
+        $catNeeded = $currSet->find('id=:id', array(':id'=>$setid))->getAttribute('catalog_id');
+        $rels = $setByCourseTable->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$setid, ':catalog_id'=>$catNeeded));
+        foreach($rels as $r)
+        {
+            $courseId = $r->getAttribute('course_id');
+            $tableSetCourse = new CurrSetByCourse();
+            $exist = $tableSetCourse->find('set_id=:set_id AND catalog_id=:catalog_id AND course_id=:course_id', array(':set_id'=>$setid, ':catalog_id'=>$catalogNumber, ':course_id'=>$courseId));
+            if ( !$exist )
+            {
+                $tableSetCourse = new CurrSetByCourse();
+                $tableSetCourse->set_id = $setid;
+                $tableSetCourse->course_id = $courseId;
+                $tableSetCourse->catalog_id = $catalogNumber;
+                $tableSetCourse->save();
+            }
+        }
+    }
+
+
     /*MAJOR functions*/
     public function actionAddTrackMajor()
     {
@@ -203,6 +276,8 @@ class ProspectiveController extends Controller
         $majorByTrack->track_id = $tIDs;
         $majorByTrack->catalog_id = $catalogId;
         $majorByTrack->save();
+
+        $this->updateTrackGroupTable($tIDs, $catalogId);
 
     }
 
@@ -953,31 +1028,7 @@ class ProspectiveController extends Controller
         $this->updateGroupSetTable($gIDs, $myCatalogId);
     }
 
-    private function updateGroupSetTable($groupId, $catalogNumber)
-    {
-        $groupBySetTable = new CurrGroupBySet();
-        $currGroup = new CurrGroup();
-        $catNeeded = $currGroup->find('id=:id', array(':id'=>$groupId))->getAttribute('catalog_id');
-        $rels = $groupBySetTable->findAll('group_id=:group_id AND catalog_id=:catalog_id', array(':group_id'=>$groupId, ':catalog_id'=>$catNeeded));
-        foreach($rels as $r)
-        {
-            $setId = $r->getAttribute('set_id');
-            var_dump($setId);
-            $tableGroupSet = new CurrGroupBySet();
-            $exist = $tableGroupSet->find('group_id=:group_id AND catalog_id=:catalog_id AND set_id=:set_id', array(':group_id'=>$groupId, ':catalog_id'=>$catalogNumber, ':set_id'=>$setId));
-            if ( !$exist )
-            {
-                $tableGroupSet = new CurrGroupBySet();
-                $tableGroupSet->set_id = $setId;
-                $tableGroupSet->group_id = $groupId;
-                $tableGroupSet->catalog_id = $catalogNumber;
-                $tableGroupSet->save();
 
-                //updates set by course tables
-                $this->updateSetByCourseTable($setId, $catalogNumber );
-            }
-        }
-    }
 
     public function actionSaveNewTrack()
     {
@@ -1263,27 +1314,7 @@ class ProspectiveController extends Controller
 
     }
 
-    private function updateSetByCourseTable($setid, $catalogNumber)
-    {
-        $setByCourseTable = new CurrSetByCourse();
-        $currSet = new CurrSet();
-        $catNeeded = $currSet->find('id=:id', array(':id'=>$setid))->getAttribute('catalog_id');
-        $rels = $setByCourseTable->findAll('set_id=:set_id AND catalog_id=:catalog_id', array(':set_id'=>$setid, ':catalog_id'=>$catNeeded));
-        foreach($rels as $r)
-        {
-            $courseId = $r->getAttribute('course_id');
-            $tableSetCourse = new CurrSetByCourse();
-            $exist = $tableSetCourse->find('set_id=:set_id AND catalog_id=:catalog_id AND course_id=:course_id', array(':set_id'=>$setid, ':catalog_id'=>$catalogNumber, ':course_id'=>$courseId));
-            if ( !$exist )
-            {
-                $tableSetCourse = new CurrSetByCourse();
-                $tableSetCourse->set_id = $setid;
-                $tableSetCourse->course_id = $courseId;
-                $tableSetCourse->catalog_id = $catalogNumber;
-                $tableSetCourse->save();
-            }
-        }
-    }
+
 
     public function actionSaveNewGroup()
     {

@@ -182,10 +182,11 @@ Include 'createProspectiveCSS.php';
             <div class="prospective-fields">
                 <div class="row">
                     <div>
-                        <label>Add Majors</label>
+                        <label class="section">Majors Section</label>
                         <button class="add-major-field-rows">+</button>
                         <button class="edit-major-field-rows">+edit</button>
                     </div>
+                    <label>New Majors</label>
                     <div class="major-inputs">
                         <div>
                             <!--<input type="text" name="my-prospective-majors[]" id="my-prospective-major-0">
@@ -198,9 +199,10 @@ Include 'createProspectiveCSS.php';
                 </div>
 
                 <div class="row">
-                    <label>Add Minors</label>
+                    <label class="section">Minors Section</label>
                     <button class="add-minor-field-rows">+</button>
                     <button class="edit-minor-field-rows">+edit</button>
+                    <label>New Minors</label>
                     <div class="minor-inputs">
                         <div>
                             <!--<input type="text" name="my-prospective-minors[]" id="my-prospective-minor-0"/>
@@ -213,9 +215,10 @@ Include 'createProspectiveCSS.php';
                 </div>
 
                 <div class="row">
-                    <label>Add Certificates</label>
+                    <label class="section">Certificates Section</label>
                     <button class="add-certificate-field-rows">+</button>
                     <button class="edit-certificate-field-rows">+edit</button>
+                    <label>New Certificate</label>
                     <div class="certificate-inputs">
                         <div>
                             <!--<input type="text" name="my-prospective-certificates[]" id="my-prospective-certificate-0"/>
@@ -228,9 +231,10 @@ Include 'createProspectiveCSS.php';
                 </div>
 
                 <div class="row">
-                    <label>Add Tracks</label>
+                    <label class="section">Tracks Section</label>
                     <button class="add-track-field-rows">+</button>
                     <button class="edit-track-field-rows">+edit</button>
+                    <label>New Tracks</label>
                     <div class="track-inputs">
                         <div>
                             <!--<input type="text" name="my-prospective-tracks[]" id="my-prospective-track-0"/>
@@ -243,9 +247,10 @@ Include 'createProspectiveCSS.php';
                 </div>
 
                 <div class="row">
-                    <label>Add Groups</label>
+                    <label class="section">Groups Section</label>
                     <button class="add-group-field-rows">+</button>
                     <button class="edit-group-field-rows">+edit</button>
+                    <label>New Groups</label>
                     <div class="group-inputs">
                         <div>
                             <!--<input type="text" name="my-prospective-groups[]" id="my-prospective-group-0"/>
@@ -258,9 +263,10 @@ Include 'createProspectiveCSS.php';
                 </div>
 
                 <div class="row">
-                    <label>Add Sets</label>
+                    <label class="section">Sets Section</label>
                     <button class="add-set-field-rows">+</button>
                     <button class="edit-set-field-rows">+edit</button>
+                    <label>New Sets</label>
                     <div class="set-inputs">
                         <div>
                             <!--<input type="text" name="my-prospective-sets[]" id="my-prospective-set-0"/>
@@ -273,9 +279,10 @@ Include 'createProspectiveCSS.php';
                 </div>
 
                 <div class="row">
-                    <label>Add Courses</label>
+                    <label class="section">Courses Section</label>
                     <button class="add-course-field-rows">+</button>
                     <button class="edit-course-field-rows">+edit</button>
+                    <label>New Courses</label>
                     <div class="course-inputs">
                         <div>
                             <!--<input type="text" name="my-prospective-courses[]" id="my-prospective-course-0"/>

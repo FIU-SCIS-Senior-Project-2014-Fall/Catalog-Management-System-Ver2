@@ -283,7 +283,7 @@ class ProspectiveController extends Controller
         $myGroup = $groupModel->find('name=:name', array(':name'=>$groupName));
         $groupIdentifierID = $myGroup->getAttribute('id');
 
-        $exist = $minorGroupModel->find('track_id=:track_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':track_id' => $minorIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
+        $exist = $minorGroupModel->find('minor_id=:minor_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':minor_id' => $minorIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
 
         if ( !$exist )
         {
@@ -304,7 +304,7 @@ class ProspectiveController extends Controller
         $myGroup = $groupModel->find('name=:name', array(':name'=>$groupName));
         $groupIdentifierID = $myGroup->getAttribute('id');
 
-        $exist = $certificateGroupModel->find('track_id=:track_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':track_id' => $certificateIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
+        $exist = $certificateGroupModel->find('certificate_id=:certificate_id AND group_id=:group_id AND catalog_id=:catalog_id', array(':certificate_id' => $certificateIdentifierID, ':group_id' => $groupIdentifierID, ':catalog_id' => $catalogID));
 
         if ( !$exist )
         {
@@ -708,7 +708,7 @@ class ProspectiveController extends Controller
         {
 
             $group = $_GET['element'.$i];
-            $this->saveNewTrackGroupRelation($group, $minorIdentifierID, $catalogID);
+            $this->saveNewMinorGroupRelation($group, $minorIdentifierID, $catalogID);
            /* $myGroup = $groupModel->find('name=:name', array(':name'=>$group));
             $groupIdentifierID = $myGroup->getAttribute('id');
 
@@ -994,7 +994,7 @@ class ProspectiveController extends Controller
         {
 
             $group = $_GET['element'.$i];
-            $this->saveNewTrackGroupRelation($group, $certificateIdentifierID, $catalogID);
+            $this->saveNewCertificateGroupRelation($group, $certificateIdentifierID, $catalogID);
             /*$myGroup = $groupModel->find('name=:name', array(':name'=>$group));
             $groupIdentifierID = $myGroup->getAttribute('id');
 

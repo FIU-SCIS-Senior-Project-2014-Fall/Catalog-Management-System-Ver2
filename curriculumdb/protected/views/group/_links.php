@@ -1,61 +1,7 @@
 <?php
-
-$baseUrl = Yii::app()->baseUrl; 
-$cs = Yii::app()->getClientScript();
-$cs->registerScriptFile($baseUrl.'/javascript/flowchartdrag.js');
-$cs->registerCssFile($baseUrl.'/css/flowchart.css');
-/**
- * @var int Id the id for the parent to get the links from.
- *  
- */
-//**************************** LIST OF GROUPS FOR MAJOR **************************************************
-
-$groupBySet = CurrGroupBySet::model()->with('set')->findAll('t.group_id=:id AND t.catalog_id=:catalogId', array(':id' => $id, 'catalogId' => $this->catalogId));
-if (empty($groupBySet)) {
-
-    //echo "no Set available for this group.<br/>";
-} else {
-    // Create the list
-    echo '<ul>';
-    foreach ($groupBySet AS $set) {
-        echo '<li>';
-        $image = CHtml::image('http://localhost/images/remove_x_image.gif', 'Remove this item from the list', array('style'=>'display: none', 'class'=>'removeLink'));
-        echo CHtml::link($image,"#", array("submit"=>array('removeLink', 'linkId'=>$set->id), 'confirm' => 'Are you sure?',
-                                            'style'=>'display: none', 'class'=>'removeLink'));
-        echo CHtml::link($set->set->name, array('set/' . $set->set->id));
-        echo '</li>';
-    }
-    echo '</ul>';
-}
-   
-        $info = CourseFlowInfo::getSetInfo($id);
-        //if(!empty($info[0]))
-        if(false)
-        {
-            $string = $info[0];
-            $setid = $info[1];
-            $setindex = $info[2];
-            $flowchartid = $info[3];              
-            $form=$this->beginWidget('CActiveForm', array(
-                    'id'=>'flow-course-form',
-                    'enableAjaxValidation'=>false,
-                    'action' => Yii::app()->createUrl('//group/flowGroup'), 
-            )); 
-        }
-        else
-        {
-            $info = CourseFlowInfo::getDefaultGroup($id);
-            $string = $info[0];
-            $setid = $info[1];
-            $setindex = $info[2];
-            $flowchartid = "0";
-            $form=$this->beginWidget('CActiveForm', array(
-                    'id'=>'flow-course-form',
-                    'enableAjaxValidation'=>false,
-
-            )); 
-        }    
     
+    function displayFlowChart($string, $setid, $setindex, $flowchartid)
+    {
         echo '<div class=\'outer\'>';
 
         for($x = 0; $x<($setindex + (4-$setindex%4)); $x++)  
@@ -93,7 +39,66 @@ if (empty($groupBySet)) {
             echo "</div>";
 
         echo "<input type=\"submit\">";
+    }
 
+$baseUrl = Yii::app()->baseUrl; 
+$cs = Yii::app()->getClientScript();
+$cs->registerScriptFile($baseUrl.'/javascript/flowchartdrag.js');
+$cs->registerCssFile($baseUrl.'/css/flowchart.css');
+/**
+ * @var int Id the id for the parent to get the links from.
+ *  
+ */
+//**************************** LIST OF GROUPS FOR MAJOR **************************************************
+
+$groupBySet = CurrGroupBySet::model()->with('set')->findAll('t.group_id=:id AND t.catalog_id=:catalogId', array(':id' => $id, 'catalogId' => $this->catalogId));
+if (empty($groupBySet)) {
+
+    //echo "no Set available for this group.<br/>";
+} else {
+    // Create the list
+    echo '<ul>';
+    foreach ($groupBySet AS $set) {
+        echo '<li>';
+        $image = CHtml::image('http://localhost/images/remove_x_image.gif', 'Remove this item from the list', array('style'=>'display: none', 'class'=>'removeLink'));
+        echo CHtml::link($image,"#", array("submit"=>array('removeLink', 'linkId'=>$set->id), 'confirm' => 'Are you sure?',
+                                            'style'=>'display: none', 'class'=>'removeLink'));
+        echo CHtml::link($set->set->name, array('set/' . $set->set->id));
+        echo '</li>';
+    }
+    echo '</ul>';
+}
+   
+        $info = CourseFlowInfo::getSetInfo($id);
+        if(!empty($info[0]))
+        {
+            $string = $info[0];
+            $setid = $info[1];
+            $setindex = $info[2];
+            $flowchartid = $info[3];              
+            $form=$this->beginWidget('CActiveForm', array(
+                    'id'=>'flow-course-form',
+                    'enableAjaxValidation'=>false,
+                    'action' => Yii::app()->createUrl('//group/flowGroup'), 
+            )); 
+        }
+        else
+        {
+            $info = CourseFlowInfo::getDefaultGroup($id);
+            $string = $info[0];
+            $setid = $info[1];
+            $setindex = $info[2];
+            $flowchartid = "0";
+            $form=$this->beginWidget('CActiveForm', array(
+                    'id'=>'flow-course-form',
+                    'enableAjaxValidation'=>false,
+
+            )); 
+        }  
+        
+        if($info != NULL)
+            displayFlowChart($string, $setid, $setindex, $flowchartid);
+ 
         $this->endWidget();
     
 ?>

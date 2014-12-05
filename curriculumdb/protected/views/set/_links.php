@@ -1,4 +1,30 @@
 <?php
+        function displayFlowChart($string, $courseid, $flowchartid)
+        {
+            echo '<div class=\'outer\'>';
+
+            for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
+            {
+                echo "<script>
+                    arrBox[row] = new Box(row, true);
+
+                    document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course' \");
+                        document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
+                        document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
+
+                if (!empty($string[$x]) && !empty($courseid[$x])) {
+                    echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">');";
+                    echo 'document.write("<a href=\'../course/'. $courseid[$x]. '\'>'. $string[$x]. ' </a>");';
+                    echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+$courseid[$x] + \"'>\");";      
+                    echo "document.write(\"</div>\");";
+                }   	
+                echo "document.write(\"</div></div>\");
+                    row++;
+                </script>";
+            }        
+            echo "<input type=\"submit\">";
+            echo "</div>";
+    }
 
 $baseUrl = Yii::app()->baseUrl; 
 $cs = Yii::app()->getClientScript();
@@ -52,31 +78,11 @@ if (empty($setByCourse)) {
                  
         )); 
     }
-        
-        echo '<div class=\'outer\'>';
-
-        for($x = 0; $x<(sizeof($string) + (4-sizeof($string)%4)); $x++)  
-        {
-            echo "<script>
-                arrBox[row] = new Box(row, true);
-
-                document.write(\"<div class='box-container-course float-left'><div id ='\" + row + \"' class='box-course' \");
-                    document.write(\"ondragstart='dragStart(this)' ondragend='dragEnd(this)' \");
-                    document.write(\"ondrop='drop(this, event)' ondragover='allowDrop(this, event)'>\");";
-
-            if (!empty($string[$x]) && !empty($courseid[$x])) {
-                echo "document.write('<div id=\"drag' + row + '\" draggable=\"true\" ondragstart=\"drag(this.parentNode,event)\">');";
-                echo 'document.write("<a href=\'../course/'. $courseid[$x]. '\'>'. $string[$x]. ' </a>");';
-                echo "document.write(\"<input type='hidden' id='hidden\" + $x + \"' name='hidden\" + $x + \"' value='\" + $flowchartid + \";\" + $x +\":\"+$courseid[$x] + \"'>\");";      
-                echo "document.write(\"</div>\");";
-            }   	
-            echo "document.write(\"</div></div>\");
-                row++;
-            </script>";
-        }        
-        echo "<input type=\"submit\">";
-        echo "</div>";
+        if($info != NULL)
+            displayFlowChart($string, $courseid, $flowchartid);
+       
         $this->endWidget();
+
 ?>
 <br/>
 
@@ -116,3 +122,4 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
 $this->renderPartial('_addLinks', array('setId' => $id));
 $this->endWidget('zii.widgets.jui.CJuiDialog');  
 ?>
+

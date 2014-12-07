@@ -255,6 +255,27 @@ class ProspectiveController extends Controller
         }
     }
 
+    private function saveNewMajorTrackRelation($trackname, $majorIdentifierId, $catalogID)
+    {
+        $trackModel = new CurrTrack();
+        $majorTrackModel = new CurrMajorByTrack();
+        $myTrack = $trackModel->find('name=:name', array(':name'=>$trackname));
+        $trackIdentifierID = $myTrack->getAttribute('id');
+
+        $exist = $majorTrackModel->find('track_id=:track_id AND major_id=:major_id AND catalog_id=:catalog_id', array(':track_id' => $trackIdentifierID, ':major_id' => $majorIdentifierId, ':catalog_id' => $catalogID));
+
+        if ( !$exist )
+        {
+            $trackGroupModel = new CurrMajorByTrack();
+            $trackGroupModel->major_id = $majorIdentifierId;
+            $trackGroupModel->track_id = $trackIdentifierID;
+            $trackGroupModel->catalog_id = $catalogID;
+            $trackGroupModel->save();
+
+            $this->updateTrackGroupTable($trackIdentifierID, $catalogID);
+        }
+    }
+
     private function saveNewTrackGroupRelation($groupName, $trackIdentifierID, $catalogID)
     {
         $groupModel = new CurrGroup();
@@ -555,7 +576,8 @@ class ProspectiveController extends Controller
         for ( $i = 0; $i < $novals; $i++)
         {
             $track = $_GET['element'.$i];
-            $myTrack = $trackModel->find('name=:name', array(':name'=>$track));
+            $this->saveNewMajorTrackRelation($track, $majorIdentifierID, $catalogID);
+           /* $myTrack = $trackModel->find('name=:name', array(':name'=>$track));
             $trackIdentifierID = $myTrack->getAttribute('id');
 
             $exist = $majorTrackModel->find('major_id=:major_id AND track_id=:track_id AND catalog_id=:catalog_id', array(':major_id' => $majorIdentifierID, ':track_id' => $trackIdentifierID, ':catalog_id' => $catalogID));
@@ -568,7 +590,7 @@ class ProspectiveController extends Controller
                 $majorTrackModel->catalog_id = $catalogID;
                 $majorTrackModel->save();
             }
-            continue;
+            continue;*/
         }
     }
 

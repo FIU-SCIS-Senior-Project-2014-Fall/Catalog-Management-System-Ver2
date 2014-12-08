@@ -36,6 +36,7 @@ $(document).ready(function() {
 
         $(".prospective-fields").css({"display":"block"});
         $("#new-catalog").css({"display":"none"});
+        location.reload();
     });
 
     /*checks if a prospective catalog for this user exists already. If so, load the the fields.*/

@@ -4,9 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Chris/Documents/Catalog-Management-System-Ver2/curriculumdb/protected/views/group/_links.php</file>
+            <file>file:/C:/Users/Chris/Documents/Catalog-Management-System-Ver2/curriculumdb/index.php</file>
+            <file>file:/C:/Users/Chris/Documents/Catalog-Management-System-Ver2/curriculumdb/protected/controllers/SetController.php</file>
             <file>file:/C:/Users/Chris/Documents/Catalog-Management-System-Ver2/curriculumdb/protected/components/CourseFlowInfo.php</file>
+            <file>file:/C:/Users/Chris/Documents/Catalog-Management-System-Ver2/curriculumdb/protected/controllers/TrackController.php</file>
             <file>file:/C:/Users/Chris/Documents/Catalog-Management-System-Ver2/curriculumdb/protected/views/track/_links.php</file>
             <file>file:/C:/Users/Chris/Documents/Catalog-Management-System-Ver2/curriculumdb/protected/views/set/_links.php</file>
+            <file>file:/C:/Users/Chris/Documents/Catalog-Management-System-Ver2/curriculumdb/protected/views/site/majorRequirements.php</file>
         </group>
     </open-files>
 </project-private>

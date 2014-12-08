@@ -20,7 +20,6 @@
 );
 
     
-    
     if(empty($groups)){
         echo 'No groups associated with this track';
     }

@@ -24,7 +24,7 @@ class CourseFlowInfo {
         $row = 0;
         $string = array();
         $courseid = array();
-        $setByCourse = FlowCourse::model()->findAll('t.setid=:id', array(':id' => $n));
+        $setByCourse = FlowCourse::model()->findAll('t.setid=:id AND t.catalogid=:cid', array(':id' => $n, ':cid'=>$this->catalogId));
         if(empty($setByCourse))
         {
             return NULL;
@@ -88,7 +88,7 @@ class CourseFlowInfo {
         $string = array();
         $setid = array();
         $setindex = 0;
-        $recordGroup = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $n));
+        $recordGroup = FlowSet::model()->findAll('t.groupid=:id AND t.catalogid=:cid', array(':id' => $n, 'cid' => $this->catalogId));
         if(empty($recordGroup))
         {
             return NULL;
@@ -97,7 +97,7 @@ class CourseFlowInfo {
         foreach ($recordGroup AS $set)
         {      
             $sid = $set->setid;
-            $courseSet = FlowCourse::model()->findAll(array('order'=>'t.position', 'condition'=>'t.setid=:sid', 'params'=>array(':sid'=>$sid)));
+            $courseSet = FlowCourse::model()->findAll(array('order'=>'t.position', 'condition'=>'t.setid=:sid AND t.catalogid=:cid', 'params'=>array(':sid'=>$sid, 'cid' => $this->catalogId)));
             $index = 0;
             foreach ($courseSet AS $course)
             {
@@ -149,7 +149,7 @@ class CourseFlowInfo {
         $string = array(); //store course information
         $groupid = array();
         $groupindex = 0;
-        $recordTrack = FlowGroup::model()->findAll('t.trackid=:tid', array(':tid' => $n));       
+        $recordTrack = FlowGroup::model()->findAll('t.trackid=:id AND t.catalogid=:cid', array(':id' => $n, 'cid' => $this->catalogId));       
         if(empty($recordTrack))
         {
             return NULL;
@@ -158,13 +158,13 @@ class CourseFlowInfo {
         foreach ($recordTrack AS $group)
         {
             $gid = $group ->groupid;
-            $recordSet = FlowSet::model()->findAll('t.groupid=:gid', array(':gid' => $gid));
+            $recordSet = FlowSet::model()->findAll('t.groupid=:id AND t.catalogid=:cid', array(':id' => $gid, 'cid' => $this->catalogId));
             $setid = array();
             $setindex = 0;
             foreach ($recordSet AS $set)
             {      
                 $sid = $set->setid;
-                $courseSet = FlowCourse::model()->findAll(array('order'=>'t.position', 'condition'=>'t.setid=:sid', 'params'=>array(':sid'=>$sid)));
+                $courseSet = FlowCourse::model()->findAll(array('order'=>'t.position', 'condition'=>'t.setid=:sid AND t.catalogid=:cid', 'params'=>array(':sid'=>$sid, 'cid' => $this->catalogId)));
                 $index = 0;
                 //$setid[$set->position] = $courseSet[$setindex]->setid;
                 $groupid[$group->position] = $group->groupid;
@@ -383,7 +383,7 @@ class CourseFlowInfo {
             $row+=1;
             $groupindex +=1;
         }
-        return array($string, $groupid, $setindex, $groupindex);
+        return array($string, $groupid, $setindex, $groupindex, $this->catalogId);
     }
 
     /*public function getRequisites($n)

@@ -69,7 +69,6 @@ if (empty($trackByGroup)) {
     }
     echo '</ul>';
 }
-    
     $info = CourseFlowInfo::getTrackInfo($id);
         if(!empty($info[0]))
         {
@@ -90,7 +89,8 @@ if (empty($trackByGroup)) {
             $string = $info[0];
             $groupid = $info[1];
             $setindex = $info[2];
-            $groupindex = $info[3];    
+            $groupindex = $info[3];
+            $catid =  $info[4];
             $flowchartid = "0";
             $form=$this->beginWidget('CActiveForm', array(
                     'id'=>'flow-course-form',

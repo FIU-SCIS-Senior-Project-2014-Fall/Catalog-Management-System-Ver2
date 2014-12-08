@@ -45,7 +45,7 @@ class SetController extends Controller
                 $post->position = $position;
                 $post->save();
             }
-            //$this->redirect(array('/set/'.$setid));
+            $this->redirect(array('/set/'.$setid));
         }
         
 	/**

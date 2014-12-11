@@ -1,0 +1,1826 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta name="GENERATOR" content="yiidoc http://www.yiiframework.com">
+</head>
+<body>
+<ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="Catalog">
+		<param name="Local" value="Catalog.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="Catalog.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="Catalog.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="Catalog.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="Catalog.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="Catalog.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="Catalog.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="ContactForm">
+		<param name="Local" value="ContactForm.html">
+		</object>
+	<ul>
+								<li><object type="text/sitemap">
+			<param name="Name" value="body">
+			<param name="Local" value="ContactForm.html#body">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="email">
+			<param name="Local" value="ContactForm.html#email">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="name">
+			<param name="Local" value="ContactForm.html#name">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="subject">
+			<param name="Local" value="ContactForm.html#subject">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="verifyCode">
+			<param name="Local" value="ContactForm.html#verifyCode">
+			</object>
+																																																															<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="ContactForm.html#attributeLabels">
+			</object>
+																																																																																																																																					<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="ContactForm.html#rules">
+			</object>
+																</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="Controller">
+		<param name="Local" value="Controller.html">
+		</object>
+	<ul>
+											<li><object type="text/sitemap">
+			<param name="Name" value="breadcrumbs">
+			<param name="Local" value="Controller.html#breadcrumbs">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="catalogActivated">
+			<param name="Local" value="Controller.html#catalogActivated">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="catalogId">
+			<param name="Local" value="Controller.html#catalogId">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="catalogName">
+			<param name="Local" value="Controller.html#catalogName">
+			</object>
+																<li><object type="text/sitemap">
+			<param name="Name" value="lastActivatedCatalog">
+			<param name="Local" value="Controller.html#lastActivatedCatalog">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="layout">
+			<param name="Local" value="Controller.html#layout">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="menu">
+			<param name="Local" value="Controller.html#menu">
+			</object>
+																<li><object type="text/sitemap">
+			<param name="Name" value="showCatalog">
+			<param name="Local" value="Controller.html#showCatalog">
+			</object>
+																																																																																																																																																																											<li><object type="text/sitemap">
+			<param name="Name" value="getLastActivatedCatalog()">
+			<param name="Local" value="Controller.html#getLastActivatedCatalog">
+			</object>
+																																								<li><object type="text/sitemap">
+			<param name="Name" value="init()">
+			<param name="Local" value="Controller.html#init">
+			</object>
+																																																																																								</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="Course">
+		<param name="Local" value="Course.html">
+		</object>
+	<ul>
+																						<li><object type="text/sitemap">
+			<param name="Name" value="Course()">
+			<param name="Local" value="Course.html#Course">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="createNewHistoryRecord()">
+			<param name="Local" value="Course.html#createNewHistoryRecord">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsCurr()">
+			<param name="Local" value="Course.html#entityExistsCurr">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsHis()">
+			<param name="Local" value="Course.html#entityExistsHis">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="findEntity()">
+			<param name="Local" value="Course.html#findEntity">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntities()">
+			<param name="Local" value="Course.html#getHistoryEntities">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntity()">
+			<param name="Local" value="Course.html#getHistoryEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="newEntity()">
+			<param name="Local" value="Course.html#newEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="updateHistoryRecord()">
+			<param name="Local" value="Course.html#updateHistoryRecord">
+			</object>
+				</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CourseController">
+		<param name="Local" value="CourseController.html">
+		</object>
+	<ul>
+																																						<li><object type="text/sitemap">
+			<param name="Name" value="layout">
+			<param name="Local" value="CourseController.html#layout">
+			</object>
+																																																<li><object type="text/sitemap">
+			<param name="Name" value="accessRules()">
+			<param name="Local" value="CourseController.html#accessRules">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAdmin()">
+			<param name="Local" value="CourseController.html#actionAdmin">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionCreate()">
+			<param name="Local" value="CourseController.html#actionCreate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionDelete()">
+			<param name="Local" value="CourseController.html#actionDelete">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionIndex()">
+			<param name="Local" value="CourseController.html#actionIndex">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionUpdate()">
+			<param name="Local" value="CourseController.html#actionUpdate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionView()">
+			<param name="Local" value="CourseController.html#actionView">
+			</object>
+																																																																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="filters()">
+			<param name="Local" value="CourseController.html#filters">
+			</object>
+																																																																									<li><object type="text/sitemap">
+			<param name="Name" value="loadModel()">
+			<param name="Local" value="CourseController.html#loadModel">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="performAjaxValidation()">
+			<param name="Local" value="CourseController.html#performAjaxValidation">
+			</object>
+																																																																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CoursePrefix">
+		<param name="Local" value="CoursePrefix.html">
+		</object>
+	<ul>
+																						<li><object type="text/sitemap">
+			<param name="Name" value="CoursePrefix()">
+			<param name="Local" value="CoursePrefix.html#CoursePrefix">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="createNewHistoryRecord()">
+			<param name="Local" value="CoursePrefix.html#createNewHistoryRecord">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsCurr()">
+			<param name="Local" value="CoursePrefix.html#entityExistsCurr">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsHis()">
+			<param name="Local" value="CoursePrefix.html#entityExistsHis">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="findEntity()">
+			<param name="Local" value="CoursePrefix.html#findEntity">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntities()">
+			<param name="Local" value="CoursePrefix.html#getHistoryEntities">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntity()">
+			<param name="Local" value="CoursePrefix.html#getHistoryEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="newEntity()">
+			<param name="Local" value="CoursePrefix.html#newEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="updateHistoryRecord()">
+			<param name="Local" value="CoursePrefix.html#updateHistoryRecord">
+			</object>
+				</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CoursePrefixController">
+		<param name="Local" value="CoursePrefixController.html">
+		</object>
+	<ul>
+																																						<li><object type="text/sitemap">
+			<param name="Name" value="layout">
+			<param name="Local" value="CoursePrefixController.html#layout">
+			</object>
+																																																<li><object type="text/sitemap">
+			<param name="Name" value="accessRules()">
+			<param name="Local" value="CoursePrefixController.html#accessRules">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAdmin()">
+			<param name="Local" value="CoursePrefixController.html#actionAdmin">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionCreate()">
+			<param name="Local" value="CoursePrefixController.html#actionCreate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionDelete()">
+			<param name="Local" value="CoursePrefixController.html#actionDelete">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionIndex()">
+			<param name="Local" value="CoursePrefixController.html#actionIndex">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionUpdate()">
+			<param name="Local" value="CoursePrefixController.html#actionUpdate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionView()">
+			<param name="Local" value="CoursePrefixController.html#actionView">
+			</object>
+																																																																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="filters()">
+			<param name="Local" value="CoursePrefixController.html#filters">
+			</object>
+																																																																									<li><object type="text/sitemap">
+			<param name="Name" value="loadModel()">
+			<param name="Local" value="CoursePrefixController.html#loadModel">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="performAjaxValidation()">
+			<param name="Local" value="CoursePrefixController.html#performAjaxValidation">
+			</object>
+																																																																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrCourse">
+		<param name="Local" value="CurrCourse.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrCourse.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrCourse.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrCourse.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrCourse.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrCourse.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrCourse.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrCoursePrefix">
+		<param name="Local" value="CurrCoursePrefix.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrCoursePrefix.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrCoursePrefix.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrCoursePrefix.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrCoursePrefix.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrCoursePrefix.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrCoursePrefix.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrDgu">
+		<param name="Local" value="CurrDgu.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrDgu.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrDgu.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrDgu.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrDgu.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrDgu.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrDgu.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrGroup">
+		<param name="Local" value="CurrGroup.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrGroup.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrGroup.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrGroup.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrGroup.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrGroup.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrGroup.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrGroupBySet">
+		<param name="Local" value="CurrGroupBySet.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrGroupBySet.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrGroupBySet.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrGroupBySet.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrGroupBySet.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrGroupBySet.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrGroupBySet.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrMajor">
+		<param name="Local" value="CurrMajor.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrMajor.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrMajor.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrMajor.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrMajor.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrMajor.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrMajor.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrMajorByTrack">
+		<param name="Local" value="CurrMajorByTrack.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrMajorByTrack.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrMajorByTrack.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrMajorByTrack.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrMajorByTrack.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrMajorByTrack.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrMajorByTrack.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrMajorType">
+		<param name="Local" value="CurrMajorType.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrMajorType.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrMajorType.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrMajorType.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrMajorType.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrMajorType.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrMajorType.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrRequisite">
+		<param name="Local" value="CurrRequisite.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrRequisite.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrRequisite.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrRequisite.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrRequisite.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrRequisite.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrRequisite.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrSet">
+		<param name="Local" value="CurrSet.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrSet.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrSet.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrSet.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrSet.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrSet.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrSet.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrSetByCourse">
+		<param name="Local" value="CurrSetByCourse.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrSetByCourse.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrSetByCourse.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrSetByCourse.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrSetByCourse.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrSetByCourse.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrSetByCourse.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrTrack">
+		<param name="Local" value="CurrTrack.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrTrack.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrTrack.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrTrack.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrTrack.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrTrack.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrTrack.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="CurrTrackByGroup">
+		<param name="Local" value="CurrTrackByGroup.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="CurrTrackByGroup.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="CurrTrackByGroup.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="CurrTrackByGroup.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="CurrTrackByGroup.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="CurrTrackByGroup.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="CurrTrackByGroup.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="Dgu">
+		<param name="Local" value="Dgu.html">
+		</object>
+	<ul>
+																						<li><object type="text/sitemap">
+			<param name="Name" value="Dgu()">
+			<param name="Local" value="Dgu.html#Dgu">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="createNewHistoryRecord()">
+			<param name="Local" value="Dgu.html#createNewHistoryRecord">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsCurr()">
+			<param name="Local" value="Dgu.html#entityExistsCurr">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsHis()">
+			<param name="Local" value="Dgu.html#entityExistsHis">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="findEntity()">
+			<param name="Local" value="Dgu.html#findEntity">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntities()">
+			<param name="Local" value="Dgu.html#getHistoryEntities">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntity()">
+			<param name="Local" value="Dgu.html#getHistoryEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="newEntity()">
+			<param name="Local" value="Dgu.html#newEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="updateHistoryRecord()">
+			<param name="Local" value="Dgu.html#updateHistoryRecord">
+			</object>
+				</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="DguController">
+		<param name="Local" value="DguController.html">
+		</object>
+	<ul>
+																																						<li><object type="text/sitemap">
+			<param name="Name" value="layout">
+			<param name="Local" value="DguController.html#layout">
+			</object>
+																																																<li><object type="text/sitemap">
+			<param name="Name" value="accessRules()">
+			<param name="Local" value="DguController.html#accessRules">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAdmin()">
+			<param name="Local" value="DguController.html#actionAdmin">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionCreate()">
+			<param name="Local" value="DguController.html#actionCreate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionDelete()">
+			<param name="Local" value="DguController.html#actionDelete">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionIndex()">
+			<param name="Local" value="DguController.html#actionIndex">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionUpdate()">
+			<param name="Local" value="DguController.html#actionUpdate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionView()">
+			<param name="Local" value="DguController.html#actionView">
+			</object>
+																																																																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="filters()">
+			<param name="Local" value="DguController.html#filters">
+			</object>
+																																																																									<li><object type="text/sitemap">
+			<param name="Name" value="loadModel()">
+			<param name="Local" value="DguController.html#loadModel">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="performAjaxValidation()">
+			<param name="Local" value="DguController.html#performAjaxValidation">
+			</object>
+																																																																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="DocsCommand">
+		<param name="Local" value="DocsCommand.html">
+		</object>
+	<ul>
+					<li><object type="text/sitemap">
+			<param name="Name" value="appOptions">
+			<param name="Local" value="DocsCommand.html#appOptions">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="baseSourceUrl">
+			<param name="Local" value="DocsCommand.html#baseSourceUrl">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="classes">
+			<param name="Local" value="DocsCommand.html#classes">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="currentClass">
+			<param name="Local" value="DocsCommand.html#currentClass">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="currentView">
+			<param name="Local" value="DocsCommand.html#currentView">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="enableViews">
+			<param name="Local" value="DocsCommand.html#enableViews">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="frameworkSourceUrl">
+			<param name="Local" value="DocsCommand.html#frameworkSourceUrl">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="help">
+			<param name="Local" value="DocsCommand.html#help">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="packages">
+			<param name="Local" value="DocsCommand.html#packages">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="pageTitle">
+			<param name="Local" value="DocsCommand.html#pageTitle">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="themePath">
+			<param name="Local" value="DocsCommand.html#themePath">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="version">
+			<param name="Local" value="DocsCommand.html#version">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="views">
+			<param name="Local" value="DocsCommand.html#views">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="yiiOptions">
+			<param name="Local" value="DocsCommand.html#yiiOptions">
+			</object>
+																																																									<li><object type="text/sitemap">
+			<param name="Name" value="buildKeywords()">
+			<param name="Local" value="DocsCommand.html#buildKeywords">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="buildModel()">
+			<param name="Local" value="DocsCommand.html#buildModel">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="buildOfflinePages()">
+			<param name="Local" value="DocsCommand.html#buildOfflinePages">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="buildOnlinePages()">
+			<param name="Local" value="DocsCommand.html#buildOnlinePages">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="buildPackages()">
+			<param name="Local" value="DocsCommand.html#buildPackages">
+			</object>
+																																														<li><object type="text/sitemap">
+			<param name="Name" value="fixMethodAnchor()">
+			<param name="Local" value="DocsCommand.html#fixMethodAnchor">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="fixOfflineLink()">
+			<param name="Local" value="DocsCommand.html#fixOfflineLink">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="fixOnlineLink()">
+			<param name="Local" value="DocsCommand.html#fixOnlineLink">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="getHelp()">
+			<param name="Local" value="DocsCommand.html#getHelp">
+			</object>
+																						<li><object type="text/sitemap">
+			<param name="Name" value="highlight()">
+			<param name="Local" value="DocsCommand.html#highlight">
+			</object>
+																									<li><object type="text/sitemap">
+			<param name="Name" value="render()">
+			<param name="Local" value="DocsCommand.html#render">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="renderImplements()">
+			<param name="Local" value="DocsCommand.html#renderImplements">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="renderInheritance()">
+			<param name="Local" value="DocsCommand.html#renderInheritance">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="renderPartial()">
+			<param name="Local" value="DocsCommand.html#renderPartial">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="renderPropertySignature()">
+			<param name="Local" value="DocsCommand.html#renderPropertySignature">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="renderSourceLink()">
+			<param name="Local" value="DocsCommand.html#renderSourceLink">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="renderSubclasses()">
+			<param name="Local" value="DocsCommand.html#renderSubclasses">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="renderSubjectUrl()">
+			<param name="Local" value="DocsCommand.html#renderSubjectUrl">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="renderTypeUrl()">
+			<param name="Local" value="DocsCommand.html#renderTypeUrl">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="renderViews()">
+			<param name="Local" value="DocsCommand.html#renderViews">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="run()">
+			<param name="Local" value="DocsCommand.html#run">
+			</object>
+							</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="EditorSelectionForm">
+		<param name="Local" value="EditorSelectionForm.html">
+		</object>
+	<ul>
+								<li><object type="text/sitemap">
+			<param name="Name" value="catalog">
+			<param name="Local" value="EditorSelectionForm.html#catalog">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="dgu">
+			<param name="Local" value="EditorSelectionForm.html#dgu">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="major">
+			<param name="Local" value="EditorSelectionForm.html#major">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="track">
+			<param name="Local" value="EditorSelectionForm.html#track">
+			</object>
+																											<li><object type="text/sitemap">
+			<param name="Name" value="MajorSelectionForm()">
+			<param name="Local" value="EditorSelectionForm.html#MajorSelectionForm">
+			</object>
+																																																	<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="EditorSelectionForm.html#attributeLabels">
+			</object>
+																																																																																																																																					<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="EditorSelectionForm.html#rules">
+			</object>
+																</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="Group">
+		<param name="Local" value="Group.html">
+		</object>
+	<ul>
+																						<li><object type="text/sitemap">
+			<param name="Name" value="Group()">
+			<param name="Local" value="Group.html#Group">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="createNewHistoryRecord()">
+			<param name="Local" value="Group.html#createNewHistoryRecord">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsCurr()">
+			<param name="Local" value="Group.html#entityExistsCurr">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsHis()">
+			<param name="Local" value="Group.html#entityExistsHis">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="findEntity()">
+			<param name="Local" value="Group.html#findEntity">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntities()">
+			<param name="Local" value="Group.html#getHistoryEntities">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntity()">
+			<param name="Local" value="Group.html#getHistoryEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="newEntity()">
+			<param name="Local" value="Group.html#newEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="updateHistoryRecord()">
+			<param name="Local" value="Group.html#updateHistoryRecord">
+			</object>
+				</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="GroupController">
+		<param name="Local" value="GroupController.html">
+		</object>
+	<ul>
+																																						<li><object type="text/sitemap">
+			<param name="Name" value="layout">
+			<param name="Local" value="GroupController.html#layout">
+			</object>
+																																																<li><object type="text/sitemap">
+			<param name="Name" value="accessRules()">
+			<param name="Local" value="GroupController.html#accessRules">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAdmin()">
+			<param name="Local" value="GroupController.html#actionAdmin">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAjaxAddLink()">
+			<param name="Local" value="GroupController.html#actionAjaxAddLink">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionCreate()">
+			<param name="Local" value="GroupController.html#actionCreate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionDelete()">
+			<param name="Local" value="GroupController.html#actionDelete">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionIndex()">
+			<param name="Local" value="GroupController.html#actionIndex">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionRemoveLink()">
+			<param name="Local" value="GroupController.html#actionRemoveLink">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionUpdate()">
+			<param name="Local" value="GroupController.html#actionUpdate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionView()">
+			<param name="Local" value="GroupController.html#actionView">
+			</object>
+																																																																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="filters()">
+			<param name="Local" value="GroupController.html#filters">
+			</object>
+																																																																									<li><object type="text/sitemap">
+			<param name="Name" value="loadModel()">
+			<param name="Local" value="GroupController.html#loadModel">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="performAjaxValidation()">
+			<param name="Local" value="GroupController.html#performAjaxValidation">
+			</object>
+																																																																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="HisCourse">
+		<param name="Local" value="HisCourse.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="HisCourse.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="HisCourse.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="HisCourse.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="HisCourse.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="HisCourse.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="HisCourse.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="HisCoursePrefix">
+		<param name="Local" value="HisCoursePrefix.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="HisCoursePrefix.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="HisCoursePrefix.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="HisCoursePrefix.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="HisCoursePrefix.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="HisCoursePrefix.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="HisCoursePrefix.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="HisDgu">
+		<param name="Local" value="HisDgu.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="HisDgu.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="HisDgu.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="HisDgu.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="HisDgu.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="HisDgu.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="HisDgu.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="HisGroup">
+		<param name="Local" value="HisGroup.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="HisGroup.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="HisGroup.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="HisGroup.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="HisGroup.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="HisGroup.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="HisGroup.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="HisMajor">
+		<param name="Local" value="HisMajor.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="HisMajor.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="HisMajor.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="HisMajor.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="HisMajor.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="HisMajor.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="HisMajor.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="HisSet">
+		<param name="Local" value="HisSet.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="HisSet.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="HisSet.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="HisSet.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="HisSet.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="HisSet.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="HisSet.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="HisTrack">
+		<param name="Local" value="HisTrack.html">
+		</object>
+	<ul>
+																																																																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="HisTrack.html#attributeLabels">
+			</object>
+																																																																																																																																																																																																																															<li><object type="text/sitemap">
+			<param name="Name" value="model()">
+			<param name="Local" value="HisTrack.html#model">
+			</object>
+																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="relations()">
+			<param name="Local" value="HisTrack.html#relations">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="HisTrack.html#rules">
+			</object>
+																			<li><object type="text/sitemap">
+			<param name="Name" value="search()">
+			<param name="Local" value="HisTrack.html#search">
+			</object>
+																															<li><object type="text/sitemap">
+			<param name="Name" value="tableName()">
+			<param name="Local" value="HisTrack.html#tableName">
+			</object>
+																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="LoginForm">
+		<param name="Local" value="LoginForm.html">
+		</object>
+	<ul>
+														<li><object type="text/sitemap">
+			<param name="Name" value="password">
+			<param name="Local" value="LoginForm.html#password">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="rememberMe">
+			<param name="Local" value="LoginForm.html#rememberMe">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="username">
+			<param name="Local" value="LoginForm.html#username">
+			</object>
+																																																																					<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="LoginForm.html#attributeLabels">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="authenticate()">
+			<param name="Local" value="LoginForm.html#authenticate">
+			</object>
+																																																																																																							<li><object type="text/sitemap">
+			<param name="Name" value="login()">
+			<param name="Local" value="LoginForm.html#login">
+			</object>
+																																		<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="LoginForm.html#rules">
+			</object>
+																</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="Major">
+		<param name="Local" value="Major.html">
+		</object>
+	<ul>
+																						<li><object type="text/sitemap">
+			<param name="Name" value="Major()">
+			<param name="Local" value="Major.html#Major">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="createNewHistoryRecord()">
+			<param name="Local" value="Major.html#createNewHistoryRecord">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsCurr()">
+			<param name="Local" value="Major.html#entityExistsCurr">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsHis()">
+			<param name="Local" value="Major.html#entityExistsHis">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="findEntity()">
+			<param name="Local" value="Major.html#findEntity">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntities()">
+			<param name="Local" value="Major.html#getHistoryEntities">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntity()">
+			<param name="Local" value="Major.html#getHistoryEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="newEntity()">
+			<param name="Local" value="Major.html#newEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="updateHistoryRecord()">
+			<param name="Local" value="Major.html#updateHistoryRecord">
+			</object>
+				</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="MajorController">
+		<param name="Local" value="MajorController.html">
+		</object>
+	<ul>
+																																						<li><object type="text/sitemap">
+			<param name="Name" value="layout">
+			<param name="Local" value="MajorController.html#layout">
+			</object>
+																																																<li><object type="text/sitemap">
+			<param name="Name" value="accessRules()">
+			<param name="Local" value="MajorController.html#accessRules">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAdmin()">
+			<param name="Local" value="MajorController.html#actionAdmin">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAjaxAddLink()">
+			<param name="Local" value="MajorController.html#actionAjaxAddLink">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionCreate()">
+			<param name="Local" value="MajorController.html#actionCreate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionDelete()">
+			<param name="Local" value="MajorController.html#actionDelete">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionIndex()">
+			<param name="Local" value="MajorController.html#actionIndex">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionRemoveLink()">
+			<param name="Local" value="MajorController.html#actionRemoveLink">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionUpdate()">
+			<param name="Local" value="MajorController.html#actionUpdate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionView()">
+			<param name="Local" value="MajorController.html#actionView">
+			</object>
+																																																																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="filters()">
+			<param name="Local" value="MajorController.html#filters">
+			</object>
+																																																																									<li><object type="text/sitemap">
+			<param name="Name" value="loadModel()">
+			<param name="Local" value="MajorController.html#loadModel">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="performAjaxValidation()">
+			<param name="Local" value="MajorController.html#performAjaxValidation">
+			</object>
+																																																																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="MajorSelectionForm">
+		<param name="Local" value="MajorSelectionForm.html">
+		</object>
+	<ul>
+														<li><object type="text/sitemap">
+			<param name="Name" value="major">
+			<param name="Local" value="MajorSelectionForm.html#major">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="majorName">
+			<param name="Local" value="MajorSelectionForm.html#majorName">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="term">
+			<param name="Local" value="MajorSelectionForm.html#term">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="track">
+			<param name="Local" value="MajorSelectionForm.html#track">
+			</object>
+																											<li><object type="text/sitemap">
+			<param name="Name" value="MajorSelectionForm()">
+			<param name="Local" value="MajorSelectionForm.html#MajorSelectionForm">
+			</object>
+																																																	<li><object type="text/sitemap">
+			<param name="Name" value="attributeLabels()">
+			<param name="Local" value="MajorSelectionForm.html#attributeLabels">
+			</object>
+																																																																																																																																					<li><object type="text/sitemap">
+			<param name="Name" value="rules()">
+			<param name="Local" value="MajorSelectionForm.html#rules">
+			</object>
+																</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="ManageController">
+		<param name="Local" value="ManageController.html">
+		</object>
+	<ul>
+																																						<li><object type="text/sitemap">
+			<param name="Name" value="layout">
+			<param name="Local" value="ManageController.html#layout">
+			</object>
+																																																			<li><object type="text/sitemap">
+			<param name="Name" value="actionIndex()">
+			<param name="Local" value="ManageController.html#actionIndex">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionViewGroup()">
+			<param name="Local" value="ManageController.html#actionViewGroup">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionViewSet()">
+			<param name="Local" value="ManageController.html#actionViewSet">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionViewTrack()">
+			<param name="Local" value="ManageController.html#actionViewTrack">
+			</object>
+																																																																																																																																																																																																																																																																						</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="Set">
+		<param name="Local" value="Set.html">
+		</object>
+	<ul>
+																						<li><object type="text/sitemap">
+			<param name="Name" value="Set()">
+			<param name="Local" value="Set.html#Set">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="createNewHistoryRecord()">
+			<param name="Local" value="Set.html#createNewHistoryRecord">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsCurr()">
+			<param name="Local" value="Set.html#entityExistsCurr">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsHis()">
+			<param name="Local" value="Set.html#entityExistsHis">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="findEntity()">
+			<param name="Local" value="Set.html#findEntity">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntities()">
+			<param name="Local" value="Set.html#getHistoryEntities">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntity()">
+			<param name="Local" value="Set.html#getHistoryEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="newEntity()">
+			<param name="Local" value="Set.html#newEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="updateHistoryRecord()">
+			<param name="Local" value="Set.html#updateHistoryRecord">
+			</object>
+				</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="SetController">
+		<param name="Local" value="SetController.html">
+		</object>
+	<ul>
+																																						<li><object type="text/sitemap">
+			<param name="Name" value="layout">
+			<param name="Local" value="SetController.html#layout">
+			</object>
+																																																<li><object type="text/sitemap">
+			<param name="Name" value="accessRules()">
+			<param name="Local" value="SetController.html#accessRules">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAdmin()">
+			<param name="Local" value="SetController.html#actionAdmin">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAjaxAddLink()">
+			<param name="Local" value="SetController.html#actionAjaxAddLink">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionCreate()">
+			<param name="Local" value="SetController.html#actionCreate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionDelete()">
+			<param name="Local" value="SetController.html#actionDelete">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionIndex()">
+			<param name="Local" value="SetController.html#actionIndex">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionRemoveLink()">
+			<param name="Local" value="SetController.html#actionRemoveLink">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionUpdate()">
+			<param name="Local" value="SetController.html#actionUpdate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionView()">
+			<param name="Local" value="SetController.html#actionView">
+			</object>
+																																																																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="filters()">
+			<param name="Local" value="SetController.html#filters">
+			</object>
+																																																																									<li><object type="text/sitemap">
+			<param name="Name" value="loadModel()">
+			<param name="Local" value="SetController.html#loadModel">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="performAjaxValidation()">
+			<param name="Local" value="SetController.html#performAjaxValidation">
+			</object>
+																																																																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="SiteController">
+		<param name="Local" value="SiteController.html">
+		</object>
+	<ul>
+																																																																																					<li><object type="text/sitemap">
+			<param name="Name" value="actionContact()">
+			<param name="Local" value="SiteController.html#actionContact">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionError()">
+			<param name="Local" value="SiteController.html#actionError">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionGetMajors()">
+			<param name="Local" value="SiteController.html#actionGetMajors">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionGetTerms()">
+			<param name="Local" value="SiteController.html#actionGetTerms">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionGetTracks()">
+			<param name="Local" value="SiteController.html#actionGetTracks">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionIndex()">
+			<param name="Local" value="SiteController.html#actionIndex">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionListMajorPerDgu()">
+			<param name="Local" value="SiteController.html#actionListMajorPerDgu">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionLogout()">
+			<param name="Local" value="SiteController.html#actionLogout">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionManage()">
+			<param name="Local" value="SiteController.html#actionManage">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actions()">
+			<param name="Local" value="SiteController.html#actions">
+			</object>
+																																																																																																																																																																																																																																																																			</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="Track">
+		<param name="Local" value="Track.html">
+		</object>
+	<ul>
+																						<li><object type="text/sitemap">
+			<param name="Name" value="Track()">
+			<param name="Local" value="Track.html#Track">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="createNewHistoryRecord()">
+			<param name="Local" value="Track.html#createNewHistoryRecord">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsCurr()">
+			<param name="Local" value="Track.html#entityExistsCurr">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="entityExistsHis()">
+			<param name="Local" value="Track.html#entityExistsHis">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="findEntity()">
+			<param name="Local" value="Track.html#findEntity">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntities()">
+			<param name="Local" value="Track.html#getHistoryEntities">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntity()">
+			<param name="Local" value="Track.html#getHistoryEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="newEntity()">
+			<param name="Local" value="Track.html#newEntity">
+			</object>
+										<li><object type="text/sitemap">
+			<param name="Name" value="updateHistoryRecord()">
+			<param name="Local" value="Track.html#updateHistoryRecord">
+			</object>
+				</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="TrackController">
+		<param name="Local" value="TrackController.html">
+		</object>
+	<ul>
+																																						<li><object type="text/sitemap">
+			<param name="Name" value="layout">
+			<param name="Local" value="TrackController.html#layout">
+			</object>
+																																																<li><object type="text/sitemap">
+			<param name="Name" value="accessRules()">
+			<param name="Local" value="TrackController.html#accessRules">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAdmin()">
+			<param name="Local" value="TrackController.html#actionAdmin">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionAjaxAddLink()">
+			<param name="Local" value="TrackController.html#actionAjaxAddLink">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionCreate()">
+			<param name="Local" value="TrackController.html#actionCreate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionDelete()">
+			<param name="Local" value="TrackController.html#actionDelete">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionIndex()">
+			<param name="Local" value="TrackController.html#actionIndex">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionRemoveLink()">
+			<param name="Local" value="TrackController.html#actionRemoveLink">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionUpdate()">
+			<param name="Local" value="TrackController.html#actionUpdate">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="actionView()">
+			<param name="Local" value="TrackController.html#actionView">
+			</object>
+																																																																																																																						<li><object type="text/sitemap">
+			<param name="Name" value="filters()">
+			<param name="Local" value="TrackController.html#filters">
+			</object>
+																																																																									<li><object type="text/sitemap">
+			<param name="Name" value="loadModel()">
+			<param name="Local" value="TrackController.html#loadModel">
+			</object>
+													<li><object type="text/sitemap">
+			<param name="Name" value="performAjaxValidation()">
+			<param name="Local" value="TrackController.html#performAjaxValidation">
+			</object>
+																																																																												</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="UserIdentity">
+		<param name="Local" value="UserIdentity.html">
+		</object>
+	<ul>
+																																																													<li><object type="text/sitemap">
+			<param name="Name" value="authenticate()">
+			<param name="Local" value="UserIdentity.html#authenticate">
+			</object>
+																																																																									</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="VersionedEntity">
+		<param name="Local" value="VersionedEntity.html">
+		</object>
+	<ul>
+					<li><object type="text/sitemap">
+			<param name="Name" value="catalog">
+			<param name="Local" value="VersionedEntity.html#catalog">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="catalog_id">
+			<param name="Local" value="VersionedEntity.html#catalog_id">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="entity">
+			<param name="Local" value="VersionedEntity.html#entity">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="entityType">
+			<param name="Local" value="VersionedEntity.html#entityType">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="his_tableName">
+			<param name="Local" value="VersionedEntity.html#his_tableName">
+			</object>
+									<li><object type="text/sitemap">
+			<param name="Name" value="VersionedEntity()">
+			<param name="Local" value="VersionedEntity.html#VersionedEntity">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="createNewEntity()">
+			<param name="Local" value="VersionedEntity.html#createNewEntity">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="createNewHistoryRecord()">
+			<param name="Local" value="VersionedEntity.html#createNewHistoryRecord">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="deleteOrRevertEntity()">
+			<param name="Local" value="VersionedEntity.html#deleteOrRevertEntity">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="findEntity()">
+			<param name="Local" value="VersionedEntity.html#findEntity">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getArrEntity()">
+			<param name="Local" value="VersionedEntity.html#getArrEntity">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getEntity()">
+			<param name="Local" value="VersionedEntity.html#getEntity">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntities()">
+			<param name="Local" value="VersionedEntity.html#getHistoryEntities">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getHistoryEntity()">
+			<param name="Local" value="VersionedEntity.html#getHistoryEntity">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getMostResentActivatedVersionForEntity()">
+			<param name="Local" value="VersionedEntity.html#getMostResentActivatedVersionForEntity">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="updateData()">
+			<param name="Local" value="VersionedEntity.html#updateData">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="updateHistoryRecord()">
+			<param name="Local" value="VersionedEntity.html#updateHistoryRecord">
+			</object>
+				</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="degreeInfo">
+		<param name="Local" value="degreeInfo.html">
+		</object>
+	<ul>
+							<li><object type="text/sitemap">
+			<param name="Name" value="DegreeInfo()">
+			<param name="Local" value="degreeInfo.html#DegreeInfo">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getGroups()">
+			<param name="Local" value="degreeInfo.html#getGroups">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getMajor()">
+			<param name="Local" value="degreeInfo.html#getMajor">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getTerm()">
+			<param name="Local" value="degreeInfo.html#getTerm">
+			</object>
+							<li><object type="text/sitemap">
+			<param name="Name" value="getTrack()">
+			<param name="Local" value="degreeInfo.html#getTrack">
+			</object>
+				</ul>
+</ul>
+</body>
+</html>

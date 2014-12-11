@@ -30,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProspectiveController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProspectiveController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16216215" vertical-offset="1715" max-vertical-offset="21590">
+            <state vertical-scroll-proportion="-7.269231" vertical-offset="1664" max-vertical-offset="21590">
               <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
               <folding>
                 <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
@@ -88,27 +88,40 @@
       <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="11254">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state vertical-scroll-proportion="-96.80769" vertical-offset="611" max-vertical-offset="3264">
+              <caret line="671" column="10" selection-start-line="671" selection-start-column="10" selection-end-line="671" selection-end-column="10" />
               <folding>
-                <marker date="1417748322284" expanded="true" signature="605:615" placeholder="..." />
-                <marker date="1417748322284" expanded="true" signature="2251:2261" placeholder="..." />
-                <marker date="1417748322284" expanded="true" signature="5888:5898" placeholder="..." />
-                <marker date="1417748322284" expanded="true" signature="9615:9625" placeholder="..." />
-                <marker date="1417748322284" expanded="true" signature="13261:13271" placeholder="..." />
-                <marker date="1417748322284" expanded="true" signature="16293:16303" placeholder="..." />
-                <marker date="1417748322284" expanded="true" signature="18879:18889" placeholder="..." />
-                <marker date="1417748322284" expanded="true" signature="20136:20174" placeholder="..." />
+                <element signature="e#553#1992#0#PHP" expanded="false" />
+                <element signature="e#638#1992#0#PHP" expanded="false" />
+                <element signature="e#2231#5608#0#PHP" expanded="false" />
+                <element signature="e#2317#5608#0#PHP" expanded="false" />
+                <element signature="e#5889#9422#0#PHP" expanded="false" />
+                <element signature="e#5987#9422#0#PHP" expanded="false" />
+                <element signature="e#9661#13041#0#PHP" expanded="false" />
+                <element signature="e#9747#13041#0#PHP" expanded="false" />
+                <element signature="e#13339#16180#0#PHP" expanded="false" />
+                <element signature="e#13426#16180#0#PHP" expanded="false" />
+                <element signature="e#16406#18774#0#PHP" expanded="false" />
+                <element signature="e#16491#18774#0#PHP" expanded="false" />
+                <element signature="e#19021#20401#0#PHP" expanded="false" />
+                <element signature="e#19110#20401#0#PHP" expanded="false" />
+                <marker date="1418262578030" expanded="false" signature="694:704" placeholder="..." />
+                <marker date="1418262578030" expanded="false" signature="2373:2383" placeholder="..." />
+                <marker date="1418262578030" expanded="false" signature="6043:6053" placeholder="..." />
+                <marker date="1418262578030" expanded="false" signature="9803:9813" placeholder="..." />
+                <marker date="1418262578030" expanded="false" signature="13482:13492" placeholder="..." />
+                <marker date="1418262578030" expanded="false" signature="16547:16557" placeholder="..." />
+                <marker date="1418262578030" expanded="false" signature="19166:19176" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2261" max-vertical-offset="6851">
-              <caret line="217" column="70" selection-start-line="217" selection-start-column="70" selection-end-line="217" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.72737956" vertical-offset="3342" max-vertical-offset="7055">
+              <caret line="319" column="18" selection-start-line="319" selection-start-column="18" selection-end-line="319" selection-end-column="18" />
               <folding>
                 <element signature="e#206#276#0#PHP" expanded="false" />
                 <element signature="n#getMajors#0;n#!!top" expanded="false" />
@@ -118,14 +131,14 @@
                 <element signature="n#getGroups#0;n#!!top" expanded="false" />
                 <element signature="n#getSets#0;n#!!top" expanded="false" />
                 <element signature="n#getCourses#0;n#!!top" expanded="false" />
-                <marker date="1417739734478" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
-                <marker date="1417739734478" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
-                <marker date="1417739734478" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
-                <marker date="1417739734478" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
-                <marker date="1417739734478" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
-                <marker date="1417739734478" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
-                <marker date="1417739734478" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
-                <marker date="1417739734478" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
+                <marker date="1418262905671" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
+                <marker date="1418262905671" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
+                <marker date="1418262905671" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
+                <marker date="1418262905671" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
+                <marker date="1418262905671" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
+                <marker date="1418262905671" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
+                <marker date="1418262905671" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
+                <marker date="1418262905671" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
               </folding>
             </state>
           </provider>
@@ -134,8 +147,8 @@
       <file leaf-file-name="createProspectiveCSS.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="3111">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="3196">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -144,19 +157,19 @@
       <file leaf-file-name="createProspectiveJs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="36329" max-vertical-offset="48178">
-              <caret line="2137" column="29" selection-start-line="2137" selection-start-column="29" selection-end-line="2137" selection-end-column="29" />
+            <state vertical-scroll-proportion="2.6153846" vertical-offset="714" max-vertical-offset="48195">
+              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
               <folding>
-                <marker date="1417750030887" expanded="false" signature="10332:10341" placeholder="..." />
-                <marker date="1417750030887" expanded="false" signature="17366:17375" placeholder="..." />
-                <marker date="1417750030887" expanded="false" signature="27622:27631" placeholder="..." />
-                <marker date="1417750030887" expanded="false" signature="31555:31564" placeholder="..." />
-                <marker date="1417750030887" expanded="true" signature="45725:45734" placeholder="..." />
-                <marker date="1417750030887" expanded="false" signature="50026:50035" placeholder="..." />
-                <marker date="1417750030887" expanded="false" signature="68629:68638" placeholder="..." />
-                <marker date="1417750030887" expanded="false" signature="83220:83229" placeholder="..." />
-                <marker date="1417750030887" expanded="false" signature="87396:87405" placeholder="..." />
-                <marker date="1417750030887" expanded="false" signature="97103:97112" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="10359:10368" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="17393:17402" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="27649:27658" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="31582:31591" placeholder="..." />
+                <marker date="1418075436636" expanded="true" signature="45752:45761" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="50053:50062" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="68656:68665" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="83247:83256" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="87423:87432" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="97130:97139" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -209,11 +222,12 @@
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/menu.php" />
         <option value="$PROJECT_DIR$/javascript/createProspective.js" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspective.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/viewCSS.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php" />
-        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php" />
-        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php" />
-        <option value="$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php" />
       </list>
     </option>
   </component>
@@ -226,7 +240,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -427,20 +441,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="curriculumdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="curriculumdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -539,8 +539,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -549,7 +549,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.60045403" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11341853" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16862327" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2513843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21344717" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -557,9 +559,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2513843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -622,7 +622,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php</url>
-          <line>144</line>
+          <line>145</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -636,28 +636,11 @@
           <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="73" />
+      <option name="time" value="74" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="11254">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding>
-            <marker date="1417748322284" expanded="true" signature="605:615" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="2251:2261" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="5888:5898" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="9615:9625" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="13261:13271" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="16293:16303" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="18879:18889" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="20136:20174" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1058" max-vertical-offset="6732">
@@ -671,14 +654,14 @@
             <element signature="n#getGroups#0;n#!!top" expanded="false" />
             <element signature="n#getSets#0;n#!!top" expanded="false" />
             <element signature="n#getCourses#0;n#!!top" expanded="false" />
-            <marker date="1417739734478" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
-            <marker date="1417739734478" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
-            <marker date="1417739734478" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
-            <marker date="1417739734478" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
-            <marker date="1417739734478" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
-            <marker date="1417739734478" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
-            <marker date="1417739734478" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
-            <marker date="1417739734478" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
+            <marker date="1418262905671" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
+            <marker date="1418262905671" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
+            <marker date="1418262905671" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
+            <marker date="1418262905671" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
+            <marker date="1418262905671" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
+            <marker date="1418262905671" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
+            <marker date="1418262905671" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
+            <marker date="1418262905671" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
           </folding>
         </state>
       </provider>
@@ -688,16 +671,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="12053" max-vertical-offset="48110">
           <caret line="709" column="25" selection-start-line="709" selection-start-column="25" selection-end-line="709" selection-end-column="25" />
           <folding>
-            <marker date="1417750030887" expanded="false" signature="10332:10341" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="17366:17375" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="27622:27631" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="31555:31564" placeholder="..." />
-            <marker date="1417750030887" expanded="true" signature="45725:45734" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="50026:50035" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="68629:68638" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="83220:83229" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="87396:87405" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="97103:97112" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="10359:10368" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="17393:17402" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="27649:27658" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="31582:31591" placeholder="..." />
+            <marker date="1418075436636" expanded="true" signature="45752:45761" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="50053:50062" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="68656:68665" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="83247:83256" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="87423:87432" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="97130:97139" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1543,78 +1526,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="11254">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding>
-            <marker date="1417748322284" expanded="true" signature="605:615" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="2251:2261" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="5888:5898" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="9615:9625" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="13261:13271" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="16293:16303" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="18879:18889" placeholder="..." />
-            <marker date="1417748322284" expanded="true" signature="20136:20174" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2261" max-vertical-offset="6851">
-          <caret line="217" column="70" selection-start-line="217" selection-start-column="70" selection-end-line="217" selection-end-column="70" />
-          <folding>
-            <element signature="e#206#276#0#PHP" expanded="false" />
-            <element signature="n#getMajors#0;n#!!top" expanded="false" />
-            <element signature="n#getMinors#0;n#!!top" expanded="false" />
-            <element signature="n#getCertificates#0;n#!!top" expanded="false" />
-            <element signature="n#getTracks#0;n#!!top" expanded="false" />
-            <element signature="n#getGroups#0;n#!!top" expanded="false" />
-            <element signature="n#getSets#0;n#!!top" expanded="false" />
-            <element signature="n#getCourses#0;n#!!top" expanded="false" />
-            <marker date="1417739734478" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
-            <marker date="1417739734478" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
-            <marker date="1417739734478" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
-            <marker date="1417739734478" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
-            <marker date="1417739734478" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
-            <marker date="1417739734478" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
-            <marker date="1417739734478" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
-            <marker date="1417739734478" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="36329" max-vertical-offset="48178">
-          <caret line="2137" column="29" selection-start-line="2137" selection-start-column="29" selection-end-line="2137" selection-end-column="29" />
-          <folding>
-            <marker date="1417750030887" expanded="false" signature="10332:10341" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="17366:17375" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="27622:27631" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="31555:31564" placeholder="..." />
-            <marker date="1417750030887" expanded="true" signature="45725:45734" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="50026:50035" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="68629:68638" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="83220:83229" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="87396:87405" placeholder="..." />
-            <marker date="1417750030887" expanded="false" signature="97103:97112" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="3111">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16216215" vertical-offset="1715" max-vertical-offset="21590">
+        <state vertical-scroll-proportion="-7.269231" vertical-offset="1664" max-vertical-offset="21590">
           <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
           <folding>
             <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
@@ -1661,6 +1575,96 @@
             <marker date="1417841585209" expanded="true" signature="73893:73990" placeholder="DELETE FROM ..." />
             <marker date="1417841585209" expanded="true" signature="81269:81342" placeholder="DELETE FROM ..." />
             <marker date="1417841585209" expanded="true" signature="81269:81369" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-96.80769" vertical-offset="611" max-vertical-offset="3264">
+          <caret line="671" column="10" selection-start-line="671" selection-start-column="10" selection-end-line="671" selection-end-column="10" />
+          <folding>
+            <element signature="e#553#1992#0#PHP" expanded="false" />
+            <element signature="e#638#1992#0#PHP" expanded="false" />
+            <element signature="e#2231#5608#0#PHP" expanded="false" />
+            <element signature="e#2317#5608#0#PHP" expanded="false" />
+            <element signature="e#5889#9422#0#PHP" expanded="false" />
+            <element signature="e#5987#9422#0#PHP" expanded="false" />
+            <element signature="e#9661#13041#0#PHP" expanded="false" />
+            <element signature="e#9747#13041#0#PHP" expanded="false" />
+            <element signature="e#13339#16180#0#PHP" expanded="false" />
+            <element signature="e#13426#16180#0#PHP" expanded="false" />
+            <element signature="e#16406#18774#0#PHP" expanded="false" />
+            <element signature="e#16491#18774#0#PHP" expanded="false" />
+            <element signature="e#19021#20401#0#PHP" expanded="false" />
+            <element signature="e#19110#20401#0#PHP" expanded="false" />
+            <marker date="1418262578030" expanded="false" signature="694:704" placeholder="..." />
+            <marker date="1418262578030" expanded="false" signature="2373:2383" placeholder="..." />
+            <marker date="1418262578030" expanded="false" signature="6043:6053" placeholder="..." />
+            <marker date="1418262578030" expanded="false" signature="9803:9813" placeholder="..." />
+            <marker date="1418262578030" expanded="false" signature="13482:13492" placeholder="..." />
+            <marker date="1418262578030" expanded="false" signature="16547:16557" placeholder="..." />
+            <marker date="1418262578030" expanded="false" signature="19166:19176" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/viewCSS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29964748" vertical-offset="0" max-vertical-offset="851">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.6153846" vertical-offset="714" max-vertical-offset="48195">
+          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+          <folding>
+            <marker date="1418075436636" expanded="false" signature="10359:10368" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="17393:17402" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="27649:27658" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="31582:31591" placeholder="..." />
+            <marker date="1418075436636" expanded="true" signature="45752:45761" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="50053:50062" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="68656:68665" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="83247:83256" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="87423:87432" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="97130:97139" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="3196">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72737956" vertical-offset="3342" max-vertical-offset="7055">
+          <caret line="319" column="18" selection-start-line="319" selection-start-column="18" selection-end-line="319" selection-end-column="18" />
+          <folding>
+            <element signature="e#206#276#0#PHP" expanded="false" />
+            <element signature="n#getMajors#0;n#!!top" expanded="false" />
+            <element signature="n#getMinors#0;n#!!top" expanded="false" />
+            <element signature="n#getCertificates#0;n#!!top" expanded="false" />
+            <element signature="n#getTracks#0;n#!!top" expanded="false" />
+            <element signature="n#getGroups#0;n#!!top" expanded="false" />
+            <element signature="n#getSets#0;n#!!top" expanded="false" />
+            <element signature="n#getCourses#0;n#!!top" expanded="false" />
+            <marker date="1418262905671" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
+            <marker date="1418262905671" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
+            <marker date="1418262905671" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
+            <marker date="1418262905671" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
+            <marker date="1418262905671" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
+            <marker date="1418262905671" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
+            <marker date="1418262905671" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
+            <marker date="1418262905671" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
           </folding>
         </state>
       </provider>

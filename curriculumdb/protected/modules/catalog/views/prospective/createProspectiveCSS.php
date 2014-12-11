@@ -6,7 +6,12 @@
         text-shadow:1px 0px 3px gray;
     }
 
-
+    .inputborder{
+        border: 3px;
+        border-radius:2px;
+        padding:20px 30px;
+        box-shadow:0 0 15px;
+    }
 
     .prospectiveForm{
         display: inline-block;

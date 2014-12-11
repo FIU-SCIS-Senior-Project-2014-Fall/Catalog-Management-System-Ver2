@@ -141,6 +141,8 @@ Include 'createProspectiveCSS.php';
 
 <!-- MAIN FORM --->
     <div class="contentContainer">
+        <div class="inputborder">
+            <h3>Catalog Information</h3>
             <div class="row">
                     <label>Select Your DGU</label>
                     <select id="dguSelected">
@@ -153,7 +155,7 @@ Include 'createProspectiveCSS.php';
                         ?>
                     </select>
             </div>
-        
+
             <div class="row">
                 <label>Catalog Name</label>
                 <input type="text" class="catalog-name" id="prospective-catalog-name" required/>
@@ -177,12 +179,14 @@ Include 'createProspectiveCSS.php';
             <div>
                 <button class="new-catalog" id="new-catalog">Create New Catalog</button>
             </div>
+                </div>
 
 
             <div class="prospective-fields">
+                <div class="inputborder">
                 <div class="row">
                     <div>
-                        <label class="section">Majors Section</label>
+                        <h3>Majors Section</h3>
                         <button class="add-major-field-rows">+</button>
                         <button class="edit-major-field-rows">+edit</button>
                     </div>
@@ -197,9 +201,10 @@ Include 'createProspectiveCSS.php';
                     <div class="emajor-inputs">
                     </div>
                 </div>
-
+                </div>
+                <div class="inputborder">
                 <div class="row">
-                    <label class="section">Minors Section</label>
+                    <h3>Minors Section</h3>
                     <button class="add-minor-field-rows">+</button>
                     <button class="edit-minor-field-rows">+edit</button>
                     <label>New Minors</label>
@@ -213,9 +218,10 @@ Include 'createProspectiveCSS.php';
                     <div class="eminor-inputs">
                     </div>
                 </div>
-
+                </div>
+                <div class="inputborder">
                 <div class="row">
-                    <label class="section">Certificates Section</label>
+                    <h3>Certificates Section</h3>
                     <button class="add-certificate-field-rows">+</button>
                     <button class="edit-certificate-field-rows">+edit</button>
                     <label>New Certificate</label>
@@ -229,9 +235,10 @@ Include 'createProspectiveCSS.php';
                     <div class="ecertificate-inputs">
                     </div>
                 </div>
-
+                </div>
+                <div class="inputborder">
                 <div class="row">
-                    <label class="section">Tracks Section</label>
+                    <h3>Tracks Section</h3>
                     <button class="add-track-field-rows">+</button>
                     <button class="edit-track-field-rows">+edit</button>
                     <label>New Tracks</label>
@@ -245,9 +252,10 @@ Include 'createProspectiveCSS.php';
                     <div class="etrack-inputs">
                     </div>
                 </div>
-
+                </div>
+                <div class="inputborder">
                 <div class="row">
-                    <label class="section">Groups Section</label>
+                    <h3>Groups Section</h3>
                     <button class="add-group-field-rows">+</button>
                     <button class="edit-group-field-rows">+edit</button>
                     <label>New Groups</label>
@@ -261,9 +269,10 @@ Include 'createProspectiveCSS.php';
                     <div class="egroup-inputs">
                     </div>
                 </div>
-
+                </div>
+                <div class="inputborder">
                 <div class="row">
-                    <label class="section">Sets Section</label>
+                    <h3>Sets Section</h3>
                     <button class="add-set-field-rows">+</button>
                     <button class="edit-set-field-rows">+edit</button>
                     <label>New Sets</label>
@@ -277,9 +286,10 @@ Include 'createProspectiveCSS.php';
                     <div class="eset-inputs">
                     </div>
                 </div>
-
+                </div>
+                <div class="inputborder">
                 <div class="row">
-                    <label class="section">Courses Section</label>
+                    <h3>Courses Section</h3>
                     <button class="add-course-field-rows">+</button>
                     <button class="edit-course-field-rows">+edit</button>
                     <label>New Courses</label>
@@ -293,6 +303,7 @@ Include 'createProspectiveCSS.php';
                     <div class="ecourse-inputs">
                     </div>
                 </div>
+                </div>
             </div>
 
             <div>
@@ -302,9 +313,10 @@ Include 'createProspectiveCSS.php';
                 ?>
             </div>
 
-
+        <div class="inputborder">
             <div class="row buttons">
                 <button class="prospective-fields" id="new-prospective-catalog">Propose Prospective Catalog</button>
+            </div>
             </div>
 
 

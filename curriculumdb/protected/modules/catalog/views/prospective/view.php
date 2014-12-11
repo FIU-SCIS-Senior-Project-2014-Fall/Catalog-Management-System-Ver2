@@ -1,4 +1,6 @@
-
+<?php
+Include 'viewCSS.php';
+?>
 <?php
 /* @var $this ProspectiveController */
 
@@ -8,8 +10,10 @@ $this->breadcrumbs=array(
 );
 ?>
 <?php $prospCatId = $_GET['checkProspectiveCat']; ?>
+<div class="inputborder">
 <h1><?php echo 'Prospective Catalog ID: '.$_GET['checkProspectiveCat']; ?></h1>
-
+</div>
+<div class="inputborder">
 <h3>Majors Proposed</h3>
 <?php
 $currMajorModel = new CurrMajor();
@@ -69,6 +73,8 @@ echo '</table>';
 }
 ?>
 </br>
+</div>
+<div class="inputborder">
 <h3>Minors Proposed</h3>
 <?php
 $currMinorModel = new CurrMinor();
@@ -164,6 +170,8 @@ else
 }
 ?>
 </br>
+</div>
+<div class="inputborder">
 <h3>Certificates Proposed</h3>
 <?php
 $currCertificateModel = new CurrCertificate();
@@ -259,6 +267,8 @@ else
 }
 ?>
 </br>
+</div>
+<div class="inputborder">
 <h3>Tracks Proposed</h3>
 <?php
 $currTrackModel = new CurrTrack();
@@ -355,6 +365,8 @@ else
 ?>
 
 </br>
+</div>
+<div class="inputborder">
 <h3>Groups Proposed</h3>
 <?php
 $currGroupModel = new CurrGroup();
@@ -439,6 +451,8 @@ else {
 ?>
 
 </br>
+</div>
+<div class="inputborder">
 <h3>Sets Proposed</h3>
 <?php
 $currSetModel = new CurrSet();
@@ -519,6 +533,8 @@ else {
 ?>
 
 </br>
+</div>
+<div class="inputborder">
 <h3>Courses Proposed</h3>
 <?php
 $currCourseModel = new CurrCourse();
@@ -569,8 +585,9 @@ else
     echo '</table>';
 }
 ?>
+</div>
 
-
+<div class="inputborder">
 <div class="row">
     <?php if ( Yii::app()->getModule('user')->isUserAdmin()) { ?>
     <button class="accept-prospective" id="accept-prospective" onclick="acceptCatalog()">Accept</button>
@@ -652,4 +669,5 @@ else
         </script>
     <?php }?>
 </div>
+    </div>
 

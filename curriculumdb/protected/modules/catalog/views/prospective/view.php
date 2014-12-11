@@ -626,7 +626,6 @@ else
             function goToCreate()
             {
                 var loc = '<?php echo  Yii::app()->createUrl('catalog/prospective/Create');?>';
-                alert('hi');
                 window.location.assign(loc);
             }
             function propose()

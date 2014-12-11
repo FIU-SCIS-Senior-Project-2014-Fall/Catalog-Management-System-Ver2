@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9f48b43b-32ca-4b34-939d-66d1dee5acf1" name="Default" comment="" />
+    <ignored path="curriculumdb.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="curriculumdb" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="ProspectiveController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.3076925" vertical-offset="1715" max-vertical-offset="21590">
+              <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
+              <folding>
+                <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionGetLastCatalogID#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionInsertNewCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionProposeProspectiveCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionLoadProspectiveCatalogInfo#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionProposeCatalogFromView#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionAcceptCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="e#4569#4732#0#PHP" expanded="false" />
+                <element signature="n#actionRejectCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#updateGroupSetTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#updateSetByCourseTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#saveNewTrackGroupRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#saveNewMinorGroupRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#saveNewCertificateGroupRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#saveNewGroupSetRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#saveNewSetCourseRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#getCatalogForSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#getCatalogForGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#getCatalogForTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#getCatalogForMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#getCatalogForCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionAddTrackMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionRetrieveMajorFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionSaveNewMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionUpdateMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionRetrieveMinorFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionSaveNewMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="e#26461#30750#0#PHP" expanded="false" />
+                <element signature="n#actionUpdateMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="n#actionRemoveGroupMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+                <element signature="e#39571#43937#0#PHP" expanded="false" />
+                <element signature="e#52995#57205#0#PHP" expanded="false" />
+                <element signature="e#65832#68591#0#PHP" expanded="false" />
+                <element signature="e#89293#89771#0#PHP" expanded="false" />
+                <marker date="1417841585209" expanded="true" signature="23731:23807" placeholder="DELETE FROM ..." />
+                <marker date="1417841585209" expanded="true" signature="23731:23834" placeholder="DELETE FROM ..." />
+                <marker date="1417841585209" expanded="true" signature="36183:36286" placeholder="DELETE FROM ..." />
+                <marker date="1417841585209" expanded="true" signature="49664:49785" placeholder="DELETE FROM ..." />
+                <marker date="1417841585209" expanded="true" signature="57837:57913" placeholder="DELETE FROM ..." />
+                <marker date="1417841585209" expanded="true" signature="57837:57940" placeholder="DELETE FROM ..." />
+                <marker date="1417841585209" expanded="true" signature="73893:73963" placeholder="DELETE FROM ..." />
+                <marker date="1417841585209" expanded="true" signature="73893:73990" placeholder="DELETE FROM ..." />
+                <marker date="1417841585209" expanded="true" signature="81269:81342" placeholder="DELETE FROM ..." />
+                <marker date="1417841585209" expanded="true" signature="81269:81369" placeholder="DELETE FROM ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="11254">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+              <folding>
+                <marker date="1417748322284" expanded="true" signature="605:615" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="2251:2261" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="5888:5898" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="9615:9625" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="13261:13271" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="16293:16303" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="18879:18889" placeholder="..." />
+                <marker date="1417748322284" expanded="true" signature="20136:20174" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2261" max-vertical-offset="6851">
+              <caret line="217" column="70" selection-start-line="217" selection-start-column="70" selection-end-line="217" selection-end-column="70" />
+              <folding>
+                <element signature="e#206#276#0#PHP" expanded="false" />
+                <element signature="n#getMajors#0;n#!!top" expanded="false" />
+                <element signature="n#getMinors#0;n#!!top" expanded="false" />
+                <element signature="n#getCertificates#0;n#!!top" expanded="false" />
+                <element signature="n#getTracks#0;n#!!top" expanded="false" />
+                <element signature="n#getGroups#0;n#!!top" expanded="false" />
+                <element signature="n#getSets#0;n#!!top" expanded="false" />
+                <element signature="n#getCourses#0;n#!!top" expanded="false" />
+                <marker date="1417739734478" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
+                <marker date="1417739734478" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
+                <marker date="1417739734478" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
+                <marker date="1417739734478" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
+                <marker date="1417739734478" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
+                <marker date="1417739734478" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
+                <marker date="1417739734478" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
+                <marker date="1417739734478" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createProspectiveCSS.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="3111">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createProspectiveJs.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.079905994" vertical-offset="714" max-vertical-offset="48195">
+              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+              <folding>
+                <marker date="1418075436636" expanded="false" signature="10359:10368" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="17393:17402" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="27649:27658" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="31582:31591" placeholder="..." />
+                <marker date="1418075436636" expanded="true" signature="45752:45761" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="50053:50062" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="68656:68665" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="83247:83256" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="87423:87432" placeholder="..." />
+                <marker date="1418075436636" expanded="false" signature="97130:97139" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/css/prospective.js" />
+        <option value="$PROJECT_DIR$/css/prospective" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/courseProspectiveForm.php" />
+        <option value="$PROJECT_DIR$/protected/views/set/_links.php" />
+        <option value="$PROJECT_DIR$/doc/api/js/prospective.js" />
+        <option value="$PROJECT_DIR$/protected/components/concreteClasses/Course.php" />
+        <option value="$PROJECT_DIR$/protected/components/concreteClasses/Group.php" />
+        <option value="$PROJECT_DIR$/css/prospective.css" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddRemoveTrackMajor.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveTrackMajor.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/removeGroupMinor.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddGroupMinor.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveGroupTrack.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveSetGroup.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/RemoveCourseSet.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddCourseSet.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddGroupTrack.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddTrackMajor.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/AddSetGroup.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/RetrieveCourseFields.php" />
+        <option value="$PROJECT_DIR$/protected/modules/user/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/protected/models/CurrCourse.php" />
+        <option value="$PROJECT_DIR$/framework/yiilite.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/CourseController.php" />
+        <option value="$PROJECT_DIR$/protected/models/Catalog.php" />
+        <option value="$PROJECT_DIR$/protected/models/HisSet.php" />
+        <option value="localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create" />
+        <option value="$PROJECT_DIR$/protected/models/HisGroup.php" />
+        <option value="$PROJECT_DIR$/protected/models/CurrMinor.php" />
+        <option value="$PROJECT_DIR$/protected/models/CurrCertificate.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/acceptReject.php" />
+        <option value="$PROJECT_DIR$/protected/modules/user/controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/menu.php" />
+        <option value="$PROJECT_DIR$/javascript/createProspective.js" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspective.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server deployment_server="e531322c-b95e-48d1-941a-505c493717c1" host="localhost" name="localhost" port="8003" validation_dir="C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prospective" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curriculumdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RunManager" selected="PHP Web Application.CMS">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="localhost" start_url="/Catalog-Management-System-Ver2/curriculum">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="e531322c-b95e-48d1-941a-505c493717c1" server_name="curriculum">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/index.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CMS" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="localhost" start_url="/Catalog-Management-System-Ver2/curriculumdb">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpWebAppDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpWebAppDebugRunner" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.index.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Web Application.CMS" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f48b43b-32ca-4b34-939d-66d1dee5acf1" name="Default" comment="" />
+      <created>1413337531174</created>
+      <option name="number" value="Default" />
+      <updated>1413337531174</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.6703911" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.60045403" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11448349" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2513843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21344717" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.6703911" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2513843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21344717" sideWeight="0.60045403" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.60045403" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22204472" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/menu.php</url>
+          <line>5</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/framework/yiilite.php</url>
+          <line>7046</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/framework/yiilite.php</url>
+          <line>7045</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php</url>
+          <line>145</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php</url>
+          <line>2183</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php</url>
+          <line>541</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="73" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="11254">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <marker date="1417748322284" expanded="true" signature="605:615" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="2251:2261" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="5888:5898" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="9615:9625" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="13261:13271" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="16293:16303" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="18879:18889" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="20136:20174" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1058" max-vertical-offset="6732">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#206#276#0#PHP" expanded="false" />
+            <element signature="n#getMajors#0;n#!!top" expanded="false" />
+            <element signature="n#getMinors#0;n#!!top" expanded="false" />
+            <element signature="n#getCertificates#0;n#!!top" expanded="false" />
+            <element signature="n#getTracks#0;n#!!top" expanded="false" />
+            <element signature="n#getGroups#0;n#!!top" expanded="false" />
+            <element signature="n#getSets#0;n#!!top" expanded="false" />
+            <element signature="n#getCourses#0;n#!!top" expanded="false" />
+            <marker date="1417739734478" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
+            <marker date="1417739734478" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
+            <marker date="1417739734478" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
+            <marker date="1417739734478" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
+            <marker date="1417739734478" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
+            <marker date="1417739734478" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
+            <marker date="1417739734478" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
+            <marker date="1417739734478" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12053" max-vertical-offset="48110">
+          <caret line="709" column="25" selection-start-line="709" selection-start-column="25" selection-end-line="709" selection-end-column="25" />
+          <folding>
+            <marker date="1418075436636" expanded="false" signature="10359:10368" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="17393:17402" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="27649:27658" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="31582:31591" placeholder="..." />
+            <marker date="1418075436636" expanded="true" signature="45752:45761" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="50053:50062" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="68656:68665" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="83247:83256" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="87423:87432" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="97130:97139" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/HisMajor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="255" max-vertical-offset="1938">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/CurrCertificate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="1615">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/manage/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.059929494" vertical-offset="51" max-vertical-offset="1530">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/manage/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/manage/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ManageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-34.115383" vertical-offset="507" max-vertical-offset="4352">
+          <caret line="82" column="45" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/ActivationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="25.961538" vertical-offset="675" max-vertical-offset="1513">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/views/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.461538" vertical-offset="492" max-vertical-offset="1751">
+          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.192307" vertical-offset="203" max-vertical-offset="2890">
+          <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/views/admin/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/views/admin/_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements/_setContent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0164511" vertical-offset="1716" max-vertical-offset="2567">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/models/UserChangePassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/components/UserIdentity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13983549" vertical-offset="0" max-vertical-offset="1037">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/models/UserLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39952996" vertical-offset="510" max-vertical-offset="1411">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/UserModule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5863689" vertical-offset="3815" max-vertical-offset="4692">
+          <caret line="152" column="12" selection-start-line="152" selection-start-column="12" selection-end-line="152" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements/_groupContent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1581">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\SiteController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\SiteController</OriginalElement>
+          <nodes>
+            <node x="" y="">\MajorController</node>
+            <node x="" y="">\CController</node>
+            <node x="" y="">\CBaseController</node>
+            <node x="" y="">\Controller</node>
+            <node x="" y="">\CComponent</node>
+            <node x="" y="">\SiteController</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="56.0" y="209.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/ManageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1802">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\HisDgu">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\HisDgu</OriginalElement>
+          <nodes>
+            <node x="1441.7778638770499" y="82.88802789616432">\CurrMajor</node>
+            <node x="1244.1286323130569" y="361.3227431228206">\CurrTrack</node>
+            <node x="1964.584786258556" y="446.1025442335012">\HisTrack</node>
+            <node x="1392.2462869688752" y="358.6454862456412">\CurrMajorType</node>
+            <node x="1576.7747643032417" y="357.7530672865814">\CurrMinor</node>
+            <node x="1867.078393387576" y="156.06638253906755">\CurrRequisite</node>
+            <node x="1456.669378793749" y="437.17835464290323">\CurrMinorGroup</node>
+            <node x="1790.2397003745318" y="403.26643419863103">\HisMajor</node>
+            <node x="2128.6974041069357" y="405.9436910758104">\CurrSet</node>
+            <node x="1926.6678290068448" y="403.26643419863103">\HisDgu</node>
+            <node x="2055.004132765079" y="158.743639416247">\Catalog</node>
+            <node x="1724.5" y="156.0">\CActiveRecord</node>
+            <node x="1850.75" y="0.0">\CComponent</node>
+            <node x="1392.0666408368845" y="163.20573421154594">\HisGroup</node>
+            <node x="1593.75" y="0.0">\IteratorAggregate</node>
+            <node x="2214.8027896164276" y="156.06638253906758">\HisCourse</node>
+            <node x="1617.0902750871755" y="434.50109776572384">\HisCertificate</node>
+            <node x="2023.780446855224" y="359.537905204701">\CurrCertificateGroup</node>
+            <node x="1516.1682810280251" y="399.69675836239185">\CurrGroupBySet</node>
+            <node x="1732.0" y="364.0">\FlowCourse</node>
+            <node x="1736.75" y="0.0">\ArrayAccess</node>
+            <node x="2150.9811442593314" y="452.34947694691976">\CurrSetByCourse</node>
+            <node x="1499.723750484308" y="118.58478625855616">\CurrCertificate</node>
+            <node x="1833.4794007490639" y="438.9631925610228">\FlowSet</node>
+            <node x="1677.0830427482888" y="401.48159628051144">\CurrGroup</node>
+            <node x="1256.7322743122818" y="90.91979852770248">\CurrMajorByTrack</node>
+            <node x="2007.6791941108097" y="71.28658142838694">\HisMinor</node>
+            <node x="1876.3963580007746" y="356.8606483275217">\CurrDgu</node>
+            <node x="1288.0138189332301" y="438.070773601963">\HisCoursePrefix</node>
+            <node x="1915.1636316673128" y="113.23027250419736">\CurrTrackByGroup</node>
+            <node x="1350.1899780446856" y="392.5574066899135">\HisSet</node>
+            <node x="1332.0009040423604" y="128.40139480821387">\FlowGroup</node>
+            <node x="2149.9204442722466" y="73.96383830556636">\CurrCourse</node>
+            <node x="2090.253261009945" y="115.01511042231695">\HisRequisite</node>
+            <node x="1742.5" y="78.0">\CModel</node>
+            <node x="1567.0876921090012" y="156.06638253906758">\CurrCoursePrefix</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="\FlowGroup" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1374.5009040423604" y="243.1075810409402" />
+              <point x="1739.7419354838707" y="244.0" />
+              <point x="-37.25806451612925" y="14.0" />
+            </edge>
+            <edge source="\CurrDgu" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1912.5039390417155" y="324.0" />
+              <point x="1787.1612903225805" y="324.0" />
+              <point x="10.161290322580498" y="14.0" />
+            </edge>
+            <edge source="\HisMajor" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1827.7397003745318" y="344.0" />
+              <point x="1780.3870967741937" y="344.0" />
+              <point x="3.387096774193651" y="14.0" />
+            </edge>
+            <edge source="\CurrTrack" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1282.8437943949373" y="261.3227431228206" />
+              <point x="1746.516129032258" y="264.0" />
+              <point x="-30.48387096774195" y="14.0" />
+            </edge>
+            <edge source="\CurrMajor" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1484.5627017951695" y="224.0" />
+              <point x="1732.967741935484" y="224.0" />
+              <point x="-44.0322580645161" y="14.0" />
+            </edge>
+            <edge source="\HisCoursePrefix" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1338.5517241379312" y="270.4303241637608" />
+              <point x="1749.9032258064517" y="274.0" />
+              <point x="-27.0967741935483" y="14.0" />
+            </edge>
+            <edge source="\CurrTrackByGroup" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1977.056050626372" y="212.2151620818804" />
+              <point x="1824.4193548387093" y="214.0" />
+              <point x="47.419354838709296" y="14.0" />
+            </edge>
+            <edge source="\HisCourse" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="2258.480046493607" y="264.0" />
+              <point x="1807.4838709677424" y="264.0" />
+              <point x="30.483870967742405" y="14.0" />
+            </edge>
+            <edge source="\CurrCertificateGroup" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="2091.6728658142843" y="293.1075810409402" />
+              <point x="1797.322580645161" y="294.0" />
+              <point x="20.322580645160997" y="14.0" />
+            </edge>
+            <edge source="\HisTrack" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="2001.5847862585565" y="304.8924189590598" />
+              <point x="1793.9354838709678" y="304.0" />
+              <point x="16.9354838709678" y="14.0" />
+            </edge>
+            <edge source="\CModel" target="\CComponent">
+              <point x="23.0" y="-14.0" />
+              <point x="1800.0" y="53.0" />
+              <point x="1898.75" y="53.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\CurrMinor" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1616.3823453441819" y="324.0" />
+              <point x="1766.8387096774195" y="324.0" />
+              <point x="-10.161290322580498" y="14.0" />
+            </edge>
+            <edge source="\HisMinor" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="2043.78677515175" y="222.2151620818804" />
+              <point x="1821.032258064516" y="224.0" />
+              <point x="44.0322580645161" y="14.0" />
+            </edge>
+            <edge source="\HisDgu" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1957.4905721296661" y="314.8924189590598" />
+              <point x="1790.5483870967741" y="314.0" />
+              <point x="13.54838709677415" y="14.0" />
+            </edge>
+            <edge source="\HisSet" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1377.7278832493867" y="279.537905204701" />
+              <point x="1753.2903225806454" y="284.0" />
+              <point x="-23.709677419354648" y="14.0" />
+            </edge>
+            <edge source="\CActiveRecord" target="\CModel">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\CurrSet" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="2161.5201472297563" y="286.6772568771794" />
+              <point x="1800.709677419355" y="284.0" />
+              <point x="23.709677419355103" y="14.0" />
+            </edge>
+            <edge source="\HisCertificate" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1665.1978561281157" y="333.1075810409402" />
+              <point x="1770.2258064516127" y="334.0" />
+              <point x="-6.774193548387302" y="14.0" />
+            </edge>
+            <edge source="\CurrRequisite" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1917.4708123466357" y="202.2151620818804" />
+              <point x="1827.8064516129034" y="204.0" />
+              <point x="50.8064516129034" y="14.0" />
+            </edge>
+            <edge source="\CModel" target="\IteratorAggregate">
+              <point x="-23.0" y="-14.0" />
+              <point x="1754.0" y="53.0" />
+              <point x="1655.25" y="53.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\CurrMajorByTrack" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1319.4095311894612" y="253.1075810409402" />
+              <point x="1743.1290322580644" y="254.0" />
+              <point x="-33.8709677419356" y="14.0" />
+            </edge>
+            <edge source="\CurrCoursePrefix" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1628.2649489861806" y="203.1075810409402" />
+              <point x="1726.1935483870966" y="204.0" />
+              <point x="-50.8064516129034" y="14.0" />
+            </edge>
+            <edge source="\FlowCourse" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\CurrCertificate" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1551.3313315252483" y="213.1075810409402" />
+              <point x="1729.5806451612902" y="214.0" />
+              <point x="-47.41935483870975" y="14.0" />
+            </edge>
+            <edge source="\CurrGroupBySet" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1569.4910241508458" y="313.1075810409402" />
+              <point x="1763.4516129032259" y="314.0" />
+              <point x="-13.54838709677415" y="14.0" />
+            </edge>
+            <edge source="\Catalog" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="2092.288970683198" y="230.43032416376082" />
+              <point x="1817.645161290323" y="234.0" />
+              <point x="40.6451612903229" y="14.0" />
+            </edge>
+            <edge source="\FlowSet" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1868.586981790004" y="334.0" />
+              <point x="1783.7741935483873" y="334.0" />
+              <point x="6.774193548387302" y="14.0" />
+            </edge>
+            <edge source="\CurrSetByCourse" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="2205.0190494640324" y="274.8924189590598" />
+              <point x="1804.0967741935483" y="274.0" />
+              <point x="27.0967741935483" y="14.0" />
+            </edge>
+            <edge source="\CurrCourse" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="2197.0977011494256" y="257.5696758362392" />
+              <point x="1810.8709677419356" y="254.0" />
+              <point x="33.8709677419356" y="14.0" />
+            </edge>
+            <edge source="\CurrGroup" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1719.0830427482888" y="343.1075810409402" />
+              <point x="1773.6129032258063" y="344.0" />
+              <point x="-3.387096774193651" y="14.0" />
+            </edge>
+            <edge source="\CurrMinorGroup" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1504.5300271212707" y="301.3227431228206" />
+              <point x="1760.0645161290322" y="304.0" />
+              <point x="-16.9354838709678" y="14.0" />
+            </edge>
+            <edge source="\CModel" target="\ArrayAccess">
+              <point x="0.0" y="-14.0" />
+              <point x="1777.0" y="53.0" />
+              <point x="1783.75" y="53.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\CurrMajorType" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1441.6766111326358" y="292.2151620818804" />
+              <point x="1756.6774193548385" y="294.0" />
+              <point x="-20.32258064516145" y="14.0" />
+            </edge>
+            <edge source="\HisRequisite" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="2138.0380989280643" y="240.43032416376082" />
+              <point x="1814.2580645161288" y="244.0" />
+              <point x="37.2580645161288" y="14.0" />
+            </edge>
+            <edge source="\HisGroup" target="\CActiveRecord">
+              <point x="0.0" y="-14.0" />
+              <point x="1430.5666408368845" y="234.0" />
+              <point x="1736.3548387096776" y="234.0" />
+              <point x="-40.64516129032245" y="14.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.1205499276411" x="1546.0" y="146.0" />
+          <SelectedNodes>
+            <node>\HisCourse</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\DguController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\DguController</OriginalElement>
+          <nodes>
+            <node x="466.0" y="238.0">\MajorController</node>
+            <node x="655.0" y="342.0">\ManageController</node>
+            <node x="365.00000000000006" y="342.0">\TrackController</node>
+            <node x="595.0" y="156.0">\CController</node>
+            <node x="583.5" y="78.0">\CBaseController</node>
+            <node x="347.00000000000006" y="243.0">\DguController</node>
+            <node x="711.0" y="238.0">\SiteController</node>
+            <node x="411.0" y="198.0">\SetController</node>
+            <node x="759.0" y="204.0">\FlowCourseController</node>
+            <node x="854.0" y="240.0">\CourseController</node>
+            <node x="794.0" y="342.0">\GroupController</node>
+            <node x="598.5" y="234.0">\Controller</node>
+            <node x="492.00000000000006" y="342.0">\CoursePrefixController</node>
+            <node x="591.0" y="0.0">\CComponent</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="\ManageController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="714.5" y="322.0" />
+              <point x="643.05" y="322.0" />
+              <point x="4.0499999999999545" y="14.0" />
+            </edge>
+            <edge source="\CBaseController" target="\CComponent">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\SiteController" target="\CController">
+              <point x="0.0" y="-14.0" />
+              <point x="730.0" y="209.0" />
+              <point x="697.0" y="209.0" />
+              <point x="22.0" y="14.0" />
+            </edge>
+            <edge source="\CController" target="\CBaseController">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\MajorController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="520.0" y="284.0" />
+              <point x="602.55" y="282.0" />
+              <point x="-36.450000000000045" y="14.0" />
+            </edge>
+            <edge source="\CourseController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="903.5" y="303.0" />
+              <point x="659.25" y="302.0" />
+              <point x="20.25" y="14.0" />
+            </edge>
+            <edge source="\TrackController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="418.50000000000006" y="312.0" />
+              <point x="626.8500000000001" y="312.0" />
+              <point x="-12.149999999999977" y="14.0" />
+            </edge>
+            <edge source="\CoursePrefixController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="563.5" y="322.0" />
+              <point x="634.95" y="322.0" />
+              <point x="-4.0499999999999545" y="14.0" />
+            </edge>
+            <edge source="\DguController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="396.00000000000006" y="304.0" />
+              <point x="618.75" y="302.0" />
+              <point x="-20.25" y="14.0" />
+            </edge>
+            <edge source="\FlowCourseController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="828.5" y="292.0" />
+              <point x="667.3500000000001" y="292.0" />
+              <point x="28.350000000000023" y="14.0" />
+            </edge>
+            <edge source="\GroupController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="849.0" y="312.0" />
+              <point x="651.1500000000001" y="312.0" />
+              <point x="12.149999999999977" y="14.0" />
+            </edge>
+            <edge source="\Controller" target="\CController">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\SetController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="459.5" y="290.0" />
+              <point x="610.6500000000001" y="292.0" />
+              <point x="-28.350000000000023" y="14.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="204.0" y="75.0" />
+          <SelectedNodes>
+            <node>\DguController</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/CurrMinor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75910693" vertical-offset="0" max-vertical-offset="1615">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/HisMinor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="4556">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/HisSet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="289" max-vertical-offset="1870">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/set/_links.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1972">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/flowchartdrag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/createProspective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="42412" max-vertical-offset="47906">
+          <caret line="2519" column="8" selection-start-line="2519" selection-start-column="8" selection-end-line="2519" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\CatalogModule">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\CatalogModule</OriginalElement>
+          <nodes>
+            <node x="0.0" y="234.0">\CatalogModule</node>
+            <node x="15.0" y="78.0">\CModule</node>
+            <node x="4.5" y="0.0">\CComponent</node>
+            <node x="4.0" y="156.0">\CWebModule</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="\CWebModule" target="\CModule">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\CatalogModule" target="\CWebModule">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\CModule" target="\CComponent">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-428.0" y="-54.0" />
+          <SelectedNodes>
+            <node>\CatalogModule</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\HelperController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\HelperController</OriginalElement>
+          <nodes>
+            <node x="289.0" y="312.0">\ManageController</node>
+            <node x="132.0" y="312.0">\ProspectiveController</node>
+            <node x="156.5" y="156.0">\CController</node>
+            <node x="145.0" y="78.0">\CBaseController</node>
+            <node x="160.0" y="234.0">\Controller</node>
+            <node x="0.0" y="312.0">\HelperController</node>
+            <node x="152.5" y="0.0">\CComponent</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="\ManageController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="348.5" y="287.0" />
+              <point x="227.5" y="287.0" />
+              <point x="27.0" y="14.0" />
+            </edge>
+            <edge source="\CBaseController" target="\CComponent">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\ProspectiveController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\CController" target="\CBaseController">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+            <edge source="\HelperController" target="\Controller">
+              <point x="0.0" y="-14.0" />
+              <point x="56.0" y="287.0" />
+              <point x="173.5" y="287.0" />
+              <point x="-27.0" y="14.0" />
+            </edge>
+            <edge source="\Controller" target="\CController">
+              <point x="0.0" y="-14.0" />
+              <point x="0.0" y="14.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-276.0" y="-15.0" />
+          <SelectedNodes>
+            <node>\HelperController</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\UserModule">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\UserModule</OriginalElement>
+          <nodes>
+            <node x="" y="">\CModule</node>
+            <node x="" y="">\UserModule</node>
+            <node x="" y="">\CComponent</node>
+            <node x="" y="">\CWebModule</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="49.0" y="551.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constants</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\Dgu">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\Dgu</OriginalElement>
+          <nodes>
+            <node x="" y="">\Set</node>
+            <node x="" y="">\Track</node>
+            <node x="" y="">\CoursePrefix</node>
+            <node x="" y="">\Major</node>
+            <node x="" y="">\Group</node>
+            <node x="" y="">\VersionedEntity</node>
+            <node x="" y="">\Course</node>
+            <node x="" y="">\Dgu</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="286.0" y="58.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\Controller">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\Controller</OriginalElement>
+          <nodes>
+            <node x="" y="">\CController</node>
+            <node x="" y="">\VersionedEntity</node>
+            <node x="" y="">\CBaseController</node>
+            <node x="" y="">\Controller</node>
+            <node x="" y="">\CourseFlowInfo</node>
+            <node x="" y="">\degreeInfo</node>
+            <node x="" y="">\UserIdentity</node>
+            <node x="" y="">\CComponent</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="191.0" y="248.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constants</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\ProspectiveController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\ProspectiveController</OriginalElement>
+          <nodes>
+            <node x="198.0" y="2596.0">\ProspectiveController</node>
+            <node x="0.0" y="958.0">\CController</node>
+            <node x="493.0" y="599.0">\CBaseController</node>
+            <node x="560.0" y="2337.0">\Controller</node>
+            <node x="399.0" y="0.0">\CComponent</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="\CBaseController" target="\CComponent">
+              <point x="0.0" y="-154.5" />
+              <point x="0.0" y="274.5" />
+            </edge>
+            <edge source="\ProspectiveController" target="\Controller">
+              <point x="0.0" y="-454.0" />
+              <point x="0.0" y="104.5" />
+            </edge>
+            <edge source="\CController" target="\CBaseController">
+              <point x="0.0" y="-664.5" />
+              <point x="0.0" y="154.5" />
+            </edge>
+            <edge source="\Controller" target="\CController">
+              <point x="0.0" y="-104.5" />
+              <point x="0.0" y="664.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-393.0" y="3125.0" />
+          <SelectedNodes>
+            <node>\ProspectiveController</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17978849" vertical-offset="0" max-vertical-offset="851">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/acceptReject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20883055" vertical-offset="97" max-vertical-offset="1190">
+          <caret line="16" column="92" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="11254">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <marker date="1417748322284" expanded="true" signature="605:615" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="2251:2261" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="5888:5898" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="9615:9625" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="13261:13271" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="16293:16303" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="18879:18889" placeholder="..." />
+            <marker date="1417748322284" expanded="true" signature="20136:20174" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2261" max-vertical-offset="6851">
+          <caret line="217" column="70" selection-start-line="217" selection-start-column="70" selection-end-line="217" selection-end-column="70" />
+          <folding>
+            <element signature="e#206#276#0#PHP" expanded="false" />
+            <element signature="n#getMajors#0;n#!!top" expanded="false" />
+            <element signature="n#getMinors#0;n#!!top" expanded="false" />
+            <element signature="n#getCertificates#0;n#!!top" expanded="false" />
+            <element signature="n#getTracks#0;n#!!top" expanded="false" />
+            <element signature="n#getGroups#0;n#!!top" expanded="false" />
+            <element signature="n#getSets#0;n#!!top" expanded="false" />
+            <element signature="n#getCourses#0;n#!!top" expanded="false" />
+            <marker date="1417739734478" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
+            <marker date="1417739734478" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
+            <marker date="1417739734478" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
+            <marker date="1417739734478" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
+            <marker date="1417739734478" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
+            <marker date="1417739734478" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
+            <marker date="1417739734478" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
+            <marker date="1417739734478" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="3111">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3076925" vertical-offset="1715" max-vertical-offset="21590">
+          <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
+          <folding>
+            <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionGetLastCatalogID#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionInsertNewCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionProposeProspectiveCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionLoadProspectiveCatalogInfo#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionProposeCatalogFromView#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAcceptCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="e#4569#4732#0#PHP" expanded="false" />
+            <element signature="n#actionRejectCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#updateGroupSetTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#updateSetByCourseTable#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#saveNewTrackGroupRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#saveNewMinorGroupRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#saveNewCertificateGroupRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#saveNewGroupSetRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#saveNewSetCourseRelation#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#getCatalogForSet#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#getCatalogForGroup#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#getCatalogForTrack#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#getCatalogForMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#getCatalogForCertificate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAddTrackMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRetrieveMajorFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionSaveNewMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionUpdateMajor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRetrieveMinorFields#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionSaveNewMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="e#26461#30750#0#PHP" expanded="false" />
+            <element signature="n#actionUpdateMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRemoveGroupMinor#0;n#ProspectiveController#0;n#!!top" expanded="false" />
+            <element signature="e#39571#43937#0#PHP" expanded="false" />
+            <element signature="e#52995#57205#0#PHP" expanded="false" />
+            <element signature="e#65832#68591#0#PHP" expanded="false" />
+            <element signature="e#89293#89771#0#PHP" expanded="false" />
+            <marker date="1417841585209" expanded="true" signature="23731:23807" placeholder="DELETE FROM ..." />
+            <marker date="1417841585209" expanded="true" signature="23731:23834" placeholder="DELETE FROM ..." />
+            <marker date="1417841585209" expanded="true" signature="36183:36286" placeholder="DELETE FROM ..." />
+            <marker date="1417841585209" expanded="true" signature="49664:49785" placeholder="DELETE FROM ..." />
+            <marker date="1417841585209" expanded="true" signature="57837:57913" placeholder="DELETE FROM ..." />
+            <marker date="1417841585209" expanded="true" signature="57837:57940" placeholder="DELETE FROM ..." />
+            <marker date="1417841585209" expanded="true" signature="73893:73963" placeholder="DELETE FROM ..." />
+            <marker date="1417841585209" expanded="true" signature="73893:73990" placeholder="DELETE FROM ..." />
+            <marker date="1417841585209" expanded="true" signature="81269:81342" placeholder="DELETE FROM ..." />
+            <marker date="1417841585209" expanded="true" signature="81269:81369" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.079905994" vertical-offset="714" max-vertical-offset="48195">
+          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+          <folding>
+            <marker date="1418075436636" expanded="false" signature="10359:10368" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="17393:17402" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="27649:27658" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="31582:31591" placeholder="..." />
+            <marker date="1418075436636" expanded="true" signature="45752:45761" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="50053:50062" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="68656:68665" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="83247:83256" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="87423:87432" placeholder="..." />
+            <marker date="1418075436636" expanded="false" signature="97130:97139" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

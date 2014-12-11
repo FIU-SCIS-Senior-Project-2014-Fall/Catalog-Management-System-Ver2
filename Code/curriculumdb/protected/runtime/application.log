@@ -1,0 +1,1152 @@
+2014/12/03 21:03:29 [error] [php] Undefined offset: 1 (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php:427)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): TrackController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): TrackController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): TrackController->render()
+#8 unknown(0): TrackController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): TrackController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): TrackController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): TrackController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): TrackController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (427)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (48)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/03 21:07:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "flowTrack".' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('flowTrack')
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('flowTrack')
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('group/flowTrack')
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/group/flowTrack
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+---
+2014/12/03 21:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "flowTrack".' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(271): CController->missingAction('flowTrack')
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('flowTrack')
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('group/flowTrack')
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/group/flowTrack
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+---
+2014/12/03 21:13:39 [error] [php] Undefined variable: setindex (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php:425)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): TrackController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): TrackController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): TrackController->render()
+#8 unknown(0): TrackController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): TrackController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): TrackController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): TrackController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): TrackController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (425)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (48)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/03 21:14:41 [error] [php] Undefined variable: setindex (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php:426)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): TrackController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): TrackController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): TrackController->render()
+#8 unknown(0): TrackController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): TrackController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): TrackController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): TrackController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): TrackController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (426)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (48)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/03 21:15:24 [error] [php] Undefined variable: setindex (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php:425)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): TrackController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): TrackController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): TrackController->render()
+#8 unknown(0): TrackController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): TrackController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): TrackController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): TrackController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): TrackController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (425)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (48)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/03 21:21:01 [error] [php] Undefined variable: setindex (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php:424)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): TrackController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): TrackController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): TrackController->render()
+#8 unknown(0): TrackController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): TrackController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): TrackController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): TrackController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): TrackController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (424)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (48)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/03 21:21:59 [error] [php] Undefined variable: setindex (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php:423)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): TrackController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): TrackController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): TrackController->render()
+#8 unknown(0): TrackController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): TrackController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): TrackController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): TrackController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): TrackController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (423)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (48)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/03 21:27:55 [error] [php] Undefined offset: 0 (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php:344)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): GroupController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): GroupController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\view.php(55): GroupController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): GroupController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): GroupController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): GroupController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\GroupController.php(86): GroupController->render()
+#8 unknown(0): GroupController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): GroupController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): GroupController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): GroupController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): GroupController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/group/3
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (344)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\_links.php (47)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\view.php (55)
+2014/12/03 21:38:57 [error] [php] Undefined variable: numGroups (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php:344)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): GroupController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): GroupController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\view.php(55): GroupController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): GroupController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): GroupController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): GroupController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\GroupController.php(86): GroupController->render()
+#8 unknown(0): GroupController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): GroupController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): GroupController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): GroupController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): GroupController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/group/3
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (344)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\_links.php (47)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\view.php (55)
+2014/12/03 21:39:09 [error] [php] Undefined variable: numGroup (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php:344)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): GroupController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): GroupController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\view.php(55): GroupController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): GroupController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): GroupController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): GroupController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\GroupController.php(86): GroupController->render()
+#8 unknown(0): GroupController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): GroupController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): GroupController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): GroupController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): GroupController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/group/3
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (344)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\_links.php (47)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\view.php (55)
+2014/12/04 06:18:14 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'group_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_group` `t` WHERE group_id=:group_id LIMIT 1.
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (960)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (640)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/04 06:18:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'group_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_group` `t` WHERE group_id=:group_id LIMIT 1' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(960): CActiveRecord->find('group_id=:group...', Array)
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(640): ProspectiveController->updateGroupSetTable('4', '4')
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionAddGroupMinor()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('AddGroupMinor')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/AddGroupMinor?minor=New%20Minor%20JA1&group=SDD%20Prerequisite&catalogId=4
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/12/04 06:22:24 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'group_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_group` `t` WHERE group_id=:group_id LIMIT 1.
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (960)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (640)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/04 06:22:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'group_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_group` `t` WHERE group_id=:group_id LIMIT 1' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(960): CActiveRecord->find('group_id=:group...', Array)
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(640): ProspectiveController->updateGroupSetTable('4', '4')
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionAddGroupMinor()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('AddGroupMinor')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/AddGroupMinor?minor=New%20Minor%20JA1&group=SDD%20Prerequisite&catalogId=4
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+<<<<<<< HEAD
+2014/11/23 23:32:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/manage
+---
+2014/11/23 23:33:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/site/index
+---
+2014/11/23 23:33:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+---
+2014/11/23 23:33:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/11/23 23:34:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/11/23 23:35:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user
+---
+2014/11/23 23:35:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user
+---
+2014/11/23 23:42:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/
+---
+2014/11/23 23:42:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+---
+2014/11/23 23:43:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+---
+2014/11/23 23:43:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+---
+2014/11/23 23:43:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+---
+2014/11/23 23:43:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/site/contact
+---
+2014/11/23 23:43:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/profile
+---
+2014/11/23 23:43:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user
+---
+2014/11/23 23:45:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/
+---
+2014/11/24 14:36:37 [error] [php] Undefined variable: prefixName (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(1319): ProspectiveController->render()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionView()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/View/checkProspectiveCat/4
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php (427)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1319)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/11/24 14:37:07 [error] [php] Undefined variable: coursePrefixIdred (C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php:429)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): ProspectiveController->renderFile()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): ProspectiveController->renderPartial()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(1319): ProspectiveController->render()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionView()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/View/checkProspectiveCat/4
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\views\prospective\view.php (429)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1319)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+=======
+>>>>>>> 9050ccc66437924298984a4cd79fee3618d99b4b
+2014/12/05 04:17:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(624): CApplication->getDb()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Catalog))
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\models\Catalog.php(48): CActiveRecord::model('Catalog')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\index.php(71): Catalog::model()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(60): CController->render('index', Array)
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#19 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#20 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
+---
+2014/12/05 04:18:57 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'set_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_set` `t` WHERE set_id=:set_id AND course_id=:course_id AND catalog_id=:catalog_id LIMIT 1.
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1640)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1614)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/05 04:18:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'set_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_set` `t` WHERE set_id=:set_id AND course_id=:course_id AND catalog_id=:catalog_id LIMIT 1' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(1640): CActiveRecord->find('set_id=:set_id ...', Array)
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(1614): ProspectiveController->saveNewSetCourseRelation('Introduction to...', '32', '4')
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionSaveNewSet()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('SaveNewSet')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/SaveNewSet?name=Set%20JA%202&novals=3&maxcredits=9&description=Description%20for%20JA%202%20set&mincredits=&catalogID=4&element0=Introduction%20to%20Computer%20Programming&element1=Introduction%20to%20Computing&element2=Introduction%20to%20Microcomputers
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/12/05 06:02:53 [error] [php] Object of class CurrGroup could not be converted to string (C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:275)
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\schema\CDbCommandBuilder.php(101): CDbCommandBuilder->bindValues()
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1290): CDbCommandBuilder->createFindCommand()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1396): CurrGroup->query()
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(262): CurrGroup->find()
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(1235): ProspectiveController->saveNewTrackGroupRelation()
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionSaveNewTrack()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): ProspectiveController->runAction()
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): ProspectiveController->runActionWithFilters()
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): ProspectiveController->run()
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/SaveNewTrack?name=New%20Track%201%20JA2&novals=3&description=descriotion%20for%20track%201%20JA2&mincredits=30&catalogID=5&element0=CS%20Prerequisites&element1=CS%20Core%20Courses&element2=CS%20Elective%20
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (262)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (1235)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/05 06:32:59 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'track_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_minor_group` `t` WHERE track_id=:track_id AND group_id=:group_id AND catalog_id=:catalog_id LIMIT 1.
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (286)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (711)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/05 06:32:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'track_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_minor_group` `t` WHERE track_id=:track_id AND group_id=:group_id AND catalog_id=:catalog_id LIMIT 1' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(286): CActiveRecord->find('track_id=:track...', Array)
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(711): ProspectiveController->saveNewMinorGroupRelation('CS Prerequisite...', '7', '5')
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionSaveNewMinor()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('SaveNewMinor')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/SaveNewMinor?name=new%20minor%201%20JA2&novals=1&description=description&mincredits=3&catalogID=5&element0=CS%20Prerequisites
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/12/05 06:33:07 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'track_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_minor_group` `t` WHERE track_id=:track_id AND group_id=:group_id AND catalog_id=:catalog_id LIMIT 1.
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (286)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php (711)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php (13)
+2014/12/05 06:33:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'track_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `curr_minor_group` `t` WHERE track_id=:track_id AND group_id=:group_id AND catalog_id=:catalog_id LIMIT 1' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1396): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(286): CActiveRecord->find('track_id=:track...', Array)
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\modules\catalog\controllers\ProspectiveController.php(711): ProspectiveController->saveNewMinorGroupRelation('CS Prerequisite...', '7', '5')
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): ProspectiveController->actionSaveNewMinor()
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('SaveNewMinor')
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('catalog/prospec...')
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/SaveNewMinor?name=new%20minor%201%20JA2&novals=1&description=description&mincredits=3&catalogID=5&element0=CS%20Prerequisites
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective/create
+---
+2014/12/07 21:15:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/catalog/prospective
+---
+2014/12/07 21:15:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/user/admin
+---
+2014/12/08 22:05:02 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.catalogid" is not defined.' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements.php(23): CComponent->__get('catalogid')
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('majorRequiremen...', Array, true)
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(54): CController->render('majorRequiremen...', Array)
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php
+---
+2014/12/08 22:10:25 [error] [php] Undefined variable: catid (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php:27)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): TrackController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): TrackController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): TrackController->render()
+#8 unknown(0): TrackController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): TrackController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): TrackController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): TrackController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): TrackController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (27)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (103)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/08 22:11:02 [error] [php] Undefined variable: catid (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php:103)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): TrackController->renderPartial()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): TrackController->renderInternal()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): TrackController->renderFile()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): TrackController->renderPartial()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): TrackController->render()
+#7 unknown(0): TrackController->actionView()
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): TrackController->runAction()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): TrackController->filterAccessControl()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): TrackController->runActionWithFilters()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): TrackController->run()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (103)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php (56)
+2014/12/08 22:14:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.track_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.track_id=:id AND t.catalog_id=:catalogId.
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (152)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (72)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/08 22:14:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.track_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.track_id=:id AND t.catalog_id=:catalogId' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php(152): CActiveRecord->findAll('t.track_id=:id ...', Array)
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php(72): CourseFlowInfo->getTrackInfo('1')
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): CController->renderPartial('_links', Array)
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): CController->render('view', Array)
+#14 [internal function]: TrackController->actionView('1')
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TrackController), Array)
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TrackController), Object(ReflectionMethod), Array)
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('view')
+#26 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('track/view')
+#27 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php
+---
+2014/12/08 22:15:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.catalog_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.trackid=:id AND t.catalog_id=:catalogId.
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (152)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (72)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/08 22:15:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.catalog_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.trackid=:id AND t.catalog_id=:catalogId' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php(152): CActiveRecord->findAll('t.trackid=:id A...', Array)
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php(72): CourseFlowInfo->getTrackInfo('1')
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): CController->renderPartial('_links', Array)
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): CController->render('view', Array)
+#14 [internal function]: TrackController->actionView('1')
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TrackController), Array)
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TrackController), Object(ReflectionMethod), Array)
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('view')
+#26 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('track/view')
+#27 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php
+---
+2014/12/08 22:15:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.track_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.track_id=:id AND t.catalog_id=:catalogId.
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (152)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (72)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/08 22:15:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.track_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.track_id=:id AND t.catalog_id=:catalogId' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php(152): CActiveRecord->findAll('t.track_id=:id ...', Array)
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php(72): CourseFlowInfo->getTrackInfo('1')
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): CController->renderPartial('_links', Array)
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): CController->render('view', Array)
+#14 [internal function]: TrackController->actionView('1')
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TrackController), Array)
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TrackController), Object(ReflectionMethod), Array)
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('view')
+#26 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('track/view')
+#27 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php
+---
+2014/12/08 22:17:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.track_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.track_id=:id AND t.catalog_id=:catalogid.
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (152)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (72)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/08 22:17:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.track_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.track_id=:id AND t.catalog_id=:catalogid' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php(152): CActiveRecord->findAll('t.track_id=:id ...', Array)
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php(72): CourseFlowInfo->getTrackInfo('1')
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): CController->renderPartial('_links', Array)
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): CController->render('view', Array)
+#14 [internal function]: TrackController->actionView('1')
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TrackController), Array)
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TrackController), Object(ReflectionMethod), Array)
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('view')
+#26 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('track/view')
+#27 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php
+---
+2014/12/08 22:18:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.catalog_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.trackid=:id AND t.catalog_id=:catalogid.
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (152)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (72)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/08 22:18:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.catalog_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.trackid=:id AND t.catalog_id=:catalogid' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php(152): CActiveRecord->findAll('t.trackid=:id A...', Array)
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php(72): CourseFlowInfo->getTrackInfo('1')
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): CController->renderPartial('_links', Array)
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): CController->render('view', Array)
+#14 [internal function]: TrackController->actionView('1')
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TrackController), Array)
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TrackController), Object(ReflectionMethod), Array)
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('view')
+#26 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('track/view')
+#27 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php
+---
+2014/12/08 22:18:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.catalog_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.trackid=:id AND t.catalog_id=:catalogid.
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (152)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php (72)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php (49)
+2014/12/08 22:18:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.catalog_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `flow_group` `t` WHERE t.trackid=:id AND t.catalog_id=:catalogid' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php(152): CActiveRecord->findAll('t.trackid=:id A...', Array)
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\_links.php(72): CourseFlowInfo->getTrackInfo('1')
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\track\view.php(49): CController->renderPartial('_links', Array)
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\Users\\Chris\\...')
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\Users\\Chris\\...', Array, true)
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\Users\\Chris\\...', Array, true)
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\TrackController.php(56): CController->render('view', Array)
+#14 [internal function]: TrackController->actionView('1')
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TrackController), Array)
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TrackController), Object(ReflectionMethod), Array)
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('view')
+#26 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('track/view')
+#27 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/track/1
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php
+---
+2014/12/08 22:25:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] An established connection was aborted by the software in your host machine.
+' in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(624): CApplication->getDb()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Catalog))
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\models\Catalog.php(48): CActiveRecord::model('Catalog')
+#8 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(43): Catalog::model()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('index')
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/index')
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/site/index
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/index.php/site/index
+---
+2014/12/08 22:28:39 [error] [php] Undefined variable: gid (C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php:91)
+Stack trace:
+#0 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): GroupController->renderInternal()
+#1 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): GroupController->renderFile()
+#2 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\view.php(55): GroupController->renderPartial()
+#3 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): GroupController->renderInternal()
+#5 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(870): GroupController->renderFile()
+#6 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(783): GroupController->renderPartial()
+#7 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\GroupController.php(86): GroupController->render()
+#8 unknown(0): GroupController->actionView()
+#9 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#10 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(134): GroupController->runAction()
+#13 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CInlineFilter.php(59): GroupController->filterAccessControl()
+#16 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CController.php(266): GroupController->runActionWithFilters()
+#19 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): GroupController->run()
+#20 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#21 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CWebApplication->run()
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/index.php/group/3
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\components\CourseFlowInfo.php (91)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\_links.php (72)
+in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\view.php (55)

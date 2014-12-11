@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="language" content="en" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/api.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<title>degreeInfo</title>
+</head>
+
+<body>
+<div id="apiPage">
+
+<div id="apiHeader">
+My FIU Curriculum Class Reference. <a href="http://www.yiiframework.com">Yii Framework</a>
+</div><!-- end of header -->
+
+<div id="content">
+<h1>degreeInfo</h1>
+<div id="nav">
+<a href="index.html">All Packages</a>
+| <a href="#methods">Methods</a>
+</div>
+
+<table class="summaryTable docClass">
+<colgroup>
+	<col class="col-name" />
+	<col class="col-value" />
+</colgroup>
+<tr>
+  <th>Package</th>
+  <td><a href="index.html#application">application</a></td>
+</tr>
+<tr>
+  <th>Inheritance</th>
+  <td>class degreeInfo</td>
+</tr>
+<tr>
+  <th>Source Code</th>
+  <td></td>
+</tr>
+</table>
+
+<div id="classDescription">
+Helper class for major and track.
+<br/><br/>
+DegreeInfo is a class that represents a track, along with the 
+corresponding major and catalog.</div>
+
+<a name="properties"></a>
+
+<a name="methods"></a>
+
+<div class="summary docMethod">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summaryTable">
+<colgroup>
+	<col class="col-method" />
+	<col class="col-description" />
+	<col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+<tr id="DegreeInfo">
+  <td><a href="degreeInfo.html#DegreeInfo-detail">DegreeInfo()</a></td>
+  <td>Create a DegreeInfo object</td>
+  <td>degreeInfo</td>
+</tr>
+<tr id="getGroups">
+  <td><a href="degreeInfo.html#getGroups-detail">getGroups()</a></td>
+  <td></td>
+  <td>degreeInfo</td>
+</tr>
+<tr id="getMajor">
+  <td><a href="degreeInfo.html#getMajor-detail">getMajor()</a></td>
+  <td></td>
+  <td>degreeInfo</td>
+</tr>
+<tr id="getTerm">
+  <td><a href="degreeInfo.html#getTerm-detail">getTerm()</a></td>
+  <td></td>
+  <td>degreeInfo</td>
+</tr>
+<tr id="getTrack">
+  <td><a href="degreeInfo.html#getTrack-detail">getTrack()</a></td>
+  <td></td>
+  <td>degreeInfo</td>
+</tr>
+</table>
+</div>
+
+<a name="events"></a>
+
+<h2>Method Details</h2>
+
+<div class="detailHeader" id="DegreeInfo-detail">
+DegreeInfo()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>DegreeInfo</b>(int $majorId, int $trackId, int $termId)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$majorId</td>
+  <td class="paramTypeCol">int</td>
+  <td class="paramDescCol">The id for the major in the CurrMajor model.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">$trackId</td>
+  <td class="paramTypeCol">int</td>
+  <td class="paramDescCol">The id for the track in the CurrTrack model.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">$termId</td>
+  <td class="paramTypeCol">int</td>
+  <td class="paramDescCol">The id for the catalog that has the track.</td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b>  (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">DegreeInfo</span><span style="color: #007700">(</span><span style="color: #0000BB">$majorId</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$trackId</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$termId</span><span style="color: #007700">){<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">major&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">CurrMajor</span><span style="color: #007700">::</span><span style="color: #0000BB">model</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">findByPk</span><span style="color: #007700">(</span><span style="color: #0000BB">$majorId</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">track&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">CurrTrack</span><span style="color: #007700">::</span><span style="color: #0000BB">model</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">findByPk</span><span style="color: #007700">(</span><span style="color: #0000BB">$trackId</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">trackId&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$trackId</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">term</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$termId</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />}</span>
+</span>
+</code></div>
+</div>
+
+<p>Create a DegreeInfo object
+<br/><br/>
+DegreeInfo is a class that represents a track, along with the 
+corresponding major and catalog.</p>
+
+
+<div class="detailHeader" id="getGroups-detail">
+getGroups()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>getGroups</b>()</div>
+</td></tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b>  (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getGroups</span><span style="color: #007700">(){<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">CurrTrackByGroup</span><span style="color: #007700">::</span><span style="color: #0000BB">model</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">with</span><span style="color: #007700">(</span><span style="color: #DD0000">'group'</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">findAll</span><span style="color: #007700">(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'track_id=:trackId'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'trackId'</span><span style="color: #007700">=&gt;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">trackId</span><span style="color: #007700">));<br />}</span>
+</span>
+</code></div>
+</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="getMajor-detail">
+getMajor()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>getMajor</b>()</div>
+</td></tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b>  (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getMajor</span><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">major</span><span style="color: #007700">;<br />}</span>
+</span>
+</code></div>
+</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="getTerm-detail">
+getTerm()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>getTerm</b>()</div>
+</td></tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b>  (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getTerm</span><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">term</span><span style="color: #007700">;<br />}</span>
+</span>
+</code></div>
+</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="getTrack-detail">
+getTrack()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>getTrack</b>()</div>
+</td></tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b>  (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getTrack</span><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">track</span><span style="color: #007700">;<br />}</span>
+</span>
+</code></div>
+</div>
+
+<p></p>
+
+
+</div><!-- end of content -->
+
+<div id="apiFooter">
+Copyright &copy; 2008-2011 by <a href="http://www.yiisoft.com">Yii Software LLC</a><br/>
+All Rights Reserved.<br/>
+</div><!-- end of footer -->
+
+<script type="text/javascript">
+/*<![CDATA[*/
+$("a.toggle").toggle(function(){
+	$(this).text($(this).text().replace(/Hide/,'Show'));
+	$(this).parents(".summary").find(".inherited").hide();
+},function(){
+	$(this).text($(this).text().replace(/Show/,'Hide'));
+	$(this).parents(".summary").find(".inherited").show();
+});
+$(".sourceCode a.show").toggle(function(){
+	$(this).text($(this).text().replace(/show/,'hide'));
+	$(this).parents(".sourceCode").find("div.code").show();
+},function(){
+	$(this).text($(this).text().replace(/hide/,'show'));
+	$(this).parents(".sourceCode").find("div.code").hide();
+});
+$("a.sourceLink").click(function(){
+	$(this).attr('target','_blank');
+});
+/*]]>*/
+</script>
+
+</div><!-- end of page -->
+</body>
+</html>

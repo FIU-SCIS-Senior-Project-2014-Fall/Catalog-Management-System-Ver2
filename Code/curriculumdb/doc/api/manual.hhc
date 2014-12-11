@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta name="GENERATOR" content="yiidoc http://www.yiiframework.com">
+</head>
+<body>
+<object type="text/site properties">
+<param name="Window Styles" value="0x800025">
+<param name="FrameName" value="right">
+<param name="ImageType" value="Folder">
+<param name="comment" value="title:Online Help">
+<param name="comment" value="base:index.html">
+</object>
+
+<ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="All Packages">
+		<param name="Local" value="index.html">
+		</object>
+	<li><object type="text/sitemap">
+		<param name="Name" value="application">
+		</object>
+	<ul>
+			<li><object type="text/sitemap">
+			<param name="Name" value="Catalog">
+			<param name="Local" value="Catalog.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="ContactForm">
+			<param name="Local" value="ContactForm.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="Controller">
+			<param name="Local" value="Controller.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="Course">
+			<param name="Local" value="Course.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CourseController">
+			<param name="Local" value="CourseController.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CoursePrefix">
+			<param name="Local" value="CoursePrefix.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CoursePrefixController">
+			<param name="Local" value="CoursePrefixController.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrCourse">
+			<param name="Local" value="CurrCourse.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrCoursePrefix">
+			<param name="Local" value="CurrCoursePrefix.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrDgu">
+			<param name="Local" value="CurrDgu.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrGroup">
+			<param name="Local" value="CurrGroup.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrGroupBySet">
+			<param name="Local" value="CurrGroupBySet.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrMajor">
+			<param name="Local" value="CurrMajor.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrMajorByTrack">
+			<param name="Local" value="CurrMajorByTrack.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrMajorType">
+			<param name="Local" value="CurrMajorType.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrRequisite">
+			<param name="Local" value="CurrRequisite.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrSet">
+			<param name="Local" value="CurrSet.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrSetByCourse">
+			<param name="Local" value="CurrSetByCourse.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrTrack">
+			<param name="Local" value="CurrTrack.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="CurrTrackByGroup">
+			<param name="Local" value="CurrTrackByGroup.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="Dgu">
+			<param name="Local" value="Dgu.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="DguController">
+			<param name="Local" value="DguController.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="EditorSelectionForm">
+			<param name="Local" value="EditorSelectionForm.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="Group">
+			<param name="Local" value="Group.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="GroupController">
+			<param name="Local" value="GroupController.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="HisCourse">
+			<param name="Local" value="HisCourse.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="HisCoursePrefix">
+			<param name="Local" value="HisCoursePrefix.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="HisDgu">
+			<param name="Local" value="HisDgu.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="HisGroup">
+			<param name="Local" value="HisGroup.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="HisMajor">
+			<param name="Local" value="HisMajor.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="HisSet">
+			<param name="Local" value="HisSet.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="HisTrack">
+			<param name="Local" value="HisTrack.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="LoginForm">
+			<param name="Local" value="LoginForm.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="Major">
+			<param name="Local" value="Major.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="MajorController">
+			<param name="Local" value="MajorController.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="MajorSelectionForm">
+			<param name="Local" value="MajorSelectionForm.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="Set">
+			<param name="Local" value="Set.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="SetController">
+			<param name="Local" value="SetController.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="SiteController">
+			<param name="Local" value="SiteController.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="Track">
+			<param name="Local" value="Track.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="TrackController">
+			<param name="Local" value="TrackController.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="UserIdentity">
+			<param name="Local" value="UserIdentity.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="VersionedEntity">
+			<param name="Local" value="VersionedEntity.html">
+			</object>
+			<li><object type="text/sitemap">
+			<param name="Name" value="degreeInfo">
+			<param name="Local" value="degreeInfo.html">
+			</object>
+		</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="controllers">
+		</object>
+	<ul>
+			<li><object type="text/sitemap">
+			<param name="Name" value="ManageController">
+			<param name="Local" value="ManageController.html">
+			</object>
+		</ul>
+	<li><object type="text/sitemap">
+		<param name="Name" value="system.build">
+		</object>
+	<ul>
+			<li><object type="text/sitemap">
+			<param name="Name" value="DocsCommand">
+			<param name="Local" value="DocsCommand.html">
+			</object>
+		</ul>
+</ul>
+</body>
+</html>

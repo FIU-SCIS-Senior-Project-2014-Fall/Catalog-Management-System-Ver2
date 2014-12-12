@@ -1170,3 +1170,71 @@ in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protecte
 in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\_links.php (72)
 in C:\Users\Chris\Documents\Catalog-Management-System-Ver2\curriculumdb\protected\views\group\view.php (55)
 >>>>>>> 8c4a60a57cccefc56fb9f871c1c1fc8800035db5
+2014/12/12 03:18:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'catalog_id' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`set_id` AS `t0_c1`, `t`.`course_id` AS `t0_c2`, `t`.`catalog_id` AS `t0_c3`, `course`.`id` AS `t1_c0`, `course`.`name` AS `t1_c1`, `course`.`catalog_id` AS `t1_c2` FROM `curr_set_course` `t`  LEFT OUTER JOIN `curr_course` `course` ON (`t`.`course_id`=`course`.`id`)  WHERE (set_id=:setId AND catalog_id=:catalog_id).
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements\_groupContent.php (15)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements.php (40)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php (54)
+2014/12/12 03:18:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'catalog_id' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`set_id` AS `t0_c1`, `t`.`course_id` AS `t0_c2`, `t`.`catalog_id` AS `t0_c3`, `course`.`id` AS `t1_c0`, `course`.`name` AS `t1_c1`, `course`.`catalog_id` AS `t1_c2` FROM `curr_set_course` `t`  LEFT OUTER JOIN `curr_course` `course` ON (`t`.`course_id`=`course`.`id`)  WHERE (set_id=:setId AND catalog_id=:catalog_id)' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveFinder.php(784): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1296): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements\_groupContent.php(15): CActiveRecord->findAll('set_id=:setId A...', Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements.php(40): CController->renderPartial('majorRequiremen...', Array)
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('majorRequiremen...', Array, true)
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(54): CController->render('majorRequiremen...', Array)
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#17 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#21 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#22 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/
+---
+2014/12/12 03:22:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'a.set_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`set_id` AS `t0_c1`, `t`.`course_id` AS `t0_c2`, `t`.`catalog_id` AS `t0_c3`, `course`.`id` AS `t1_c0`, `course`.`name` AS `t1_c1`, `course`.`catalog_id` AS `t1_c2` FROM `curr_set_course` `t`  LEFT OUTER JOIN `curr_course` `course` ON (`t`.`course_id`=`course`.`id`)  WHERE (a.set_id=:setId AND a.catalog_id=:catalog_id).
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements\_groupContent.php (15)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements.php (40)
+in C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php (54)
+2014/12/12 03:22:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'a.set_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`set_id` AS `t0_c1`, `t`.`course_id` AS `t0_c2`, `t`.`catalog_id` AS `t0_c3`, `course`.`id` AS `t1_c0`, `course`.`name` AS `t1_c1`, `course`.`catalog_id` AS `t1_c2` FROM `curr_set_course` `t`  LEFT OUTER JOIN `curr_course` `course` ON (`t`.`course_id`=`course`.`id`)  WHERE (a.set_id=:setId AND a.catalog_id=:catalog_id)' in C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveFinder.php(784): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1296): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements\_groupContent.php(15): CActiveRecord->findAll('a.set_id=:setId...', Array)
+#7 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\views\site\majorRequirements.php(40): CController->renderPartial('majorRequiremen...', Array)
+#11 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(127): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(870): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(783): CController->renderPartial('majorRequiremen...', Array, true)
+#15 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\protected\controllers\SiteController.php(54): CController->render('majorRequiremen...', Array)
+#16 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#17 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(283): CController->run('')
+#21 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#22 C:\xampp\htdocs\Catalog-Management-System-Ver2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Catalog-Management-System-Ver2\curriculumdb\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Catalog-Management-System-Ver2/curriculumdb/
+HTTP_REFERER=http://localhost:8003/Catalog-Management-System-Ver2/curriculumdb/
+---

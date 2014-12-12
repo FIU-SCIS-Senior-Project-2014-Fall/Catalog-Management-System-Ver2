@@ -37,7 +37,7 @@
                     $sets = CurrGroupBySet::model()->with('set')->findAll('t.group_id=:groupId AND t.catalog_id=:catalog', 
                             array(':groupId'=>$singleGroupId, ':catalog'=>$this->catalogId));
                     $sets=CHtml::listData($sets,'set_id','set.name');
-                    echo $this->renderPartial('majorRequirements/_groupContent', array('sets'=>$sets)); 
+                    echo $this->renderPartial('majorRequirements/_groupContent', array('sets'=>$sets, 'catalogmr'=>$this->catalogId));
                 ?>
              </div>
         </div>

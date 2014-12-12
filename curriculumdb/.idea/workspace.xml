@@ -33,12 +33,11 @@
       <file leaf-file-name="ProspectiveController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-71.26923" vertical-offset="0" max-vertical-offset="21590">
+            <state vertical-scroll-proportion="-87.61539" vertical-offset="51" max-vertical-offset="22066">
               <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
               <folding>
                 <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionGetLastCatalogID#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-                <element signature="n#actionInsertNewCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionProposeProspectiveCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionLoadProspectiveCatalogInfo#0;n#ProspectiveController#0;n#!!top" expanded="false" />
                 <element signature="n#actionProposeCatalogFromView#0;n#ProspectiveController#0;n#!!top" expanded="false" />
@@ -85,36 +84,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="majorRequirements.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.423077" vertical-offset="0" max-vertical-offset="935">
-              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_groupContent.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements/_groupContent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27967098" vertical-offset="0" max-vertical-offset="851">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_setContent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements/_setContent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="459">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -150,7 +119,7 @@
       <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-146.5" vertical-offset="152" max-vertical-offset="7055">
+            <state vertical-scroll-proportion="-115.11539" vertical-offset="968" max-vertical-offset="7055">
               <caret line="319" column="18" selection-start-line="319" selection-start-column="18" selection-end-line="319" selection-end-column="18" />
               <folding>
                 <element signature="e#206#276#0#PHP" expanded="false" />
@@ -184,22 +153,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createProspectiveJs.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="createProspectiveJs.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923" vertical-offset="306" max-vertical-offset="48195">
-              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.6491647" vertical-offset="0" max-vertical-offset="48195">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
               <folding>
-                <marker date="1418075436636" expanded="false" signature="10359:10368" placeholder="..." />
-                <marker date="1418075436636" expanded="false" signature="17393:17402" placeholder="..." />
-                <marker date="1418075436636" expanded="false" signature="27649:27658" placeholder="..." />
-                <marker date="1418075436636" expanded="false" signature="31582:31591" placeholder="..." />
-                <marker date="1418075436636" expanded="true" signature="45752:45761" placeholder="..." />
-                <marker date="1418075436636" expanded="false" signature="50053:50062" placeholder="..." />
-                <marker date="1418075436636" expanded="false" signature="68656:68665" placeholder="..." />
-                <marker date="1418075436636" expanded="false" signature="83247:83256" placeholder="..." />
-                <marker date="1418075436636" expanded="false" signature="87423:87432" placeholder="..." />
-                <marker date="1418075436636" expanded="false" signature="97130:97139" placeholder="..." />
+                <marker date="1418359445071" expanded="false" signature="10361:10370" placeholder="..." />
+                <marker date="1418359445071" expanded="false" signature="17395:17404" placeholder="..." />
+                <marker date="1418359445071" expanded="false" signature="27651:27660" placeholder="..." />
+                <marker date="1418359445071" expanded="false" signature="31584:31593" placeholder="..." />
+                <marker date="1418359445071" expanded="true" signature="45754:45763" placeholder="..." />
+                <marker date="1418359445071" expanded="false" signature="50055:50064" placeholder="..." />
+                <marker date="1418359445071" expanded="false" signature="68658:68667" placeholder="..." />
+                <marker date="1418359445071" expanded="false" signature="83249:83258" placeholder="..." />
+                <marker date="1418359445071" expanded="false" signature="87425:87434" placeholder="..." />
+                <marker date="1418359445071" expanded="false" signature="97132:97141" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -253,13 +222,13 @@
         <option value="$PROJECT_DIR$/javascript/createProspective.js" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspective.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php" />
-        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/viewCSS.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/view.php" />
         <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php" />
         <option value="$PROJECT_DIR$/protected/views/site/majorRequirements.php" />
         <option value="$PROJECT_DIR$/protected/views/site/majorRequirements/_groupContent.php" />
+        <option value="$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php" />
       </list>
     </option>
   </component>
@@ -271,7 +240,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1932" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -636,7 +606,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -646,7 +616,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.60045403" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2710779" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27050054" sideWeight="0.60045403" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2513843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21344717" sideWeight="0.60045403" order="2" side_tool="false" content_ui="tabs" />
@@ -768,16 +738,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="12053" max-vertical-offset="48110">
           <caret line="709" column="25" selection-start-line="709" selection-start-column="25" selection-end-line="709" selection-end-column="25" />
           <folding>
-            <marker date="1418075436636" expanded="false" signature="10359:10368" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="17393:17402" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="27649:27658" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="31582:31591" placeholder="..." />
-            <marker date="1418075436636" expanded="true" signature="45752:45761" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="50053:50062" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="68656:68665" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="83247:83256" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="87423:87432" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="97130:97139" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="10361:10370" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="17395:17404" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="27651:27660" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="31584:31593" placeholder="..." />
+            <marker date="1418359445071" expanded="true" signature="45754:45763" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="50055:50064" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="68658:68667" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="83249:83258" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="87425:87434" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="97132:97141" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1639,31 +1609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-146.5" vertical-offset="152" max-vertical-offset="7055">
-          <caret line="319" column="18" selection-start-line="319" selection-start-column="18" selection-end-line="319" selection-end-column="18" />
-          <folding>
-            <element signature="e#206#276#0#PHP" expanded="false" />
-            <element signature="n#getMajors#0;n#!!top" expanded="false" />
-            <element signature="n#getMinors#0;n#!!top" expanded="false" />
-            <element signature="n#getCertificates#0;n#!!top" expanded="false" />
-            <element signature="n#getTracks#0;n#!!top" expanded="false" />
-            <element signature="n#getGroups#0;n#!!top" expanded="false" />
-            <element signature="n#getSets#0;n#!!top" expanded="false" />
-            <element signature="n#getCourses#0;n#!!top" expanded="false" />
-            <marker date="1418262905671" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
-            <marker date="1418262905671" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
-            <marker date="1418262905671" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
-            <marker date="1418262905671" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
-            <marker date="1418262905671" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
-            <marker date="1418262905671" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
-            <marker date="1418262905671" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
-            <marker date="1418262905671" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveCSS.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="3196">
@@ -1672,33 +1617,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements/_setContent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923" vertical-offset="306" max-vertical-offset="48195">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-          <folding>
-            <marker date="1418075436636" expanded="false" signature="10359:10368" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="17393:17402" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="27649:27658" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="31582:31591" placeholder="..." />
-            <marker date="1418075436636" expanded="true" signature="45752:45761" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="50053:50062" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="68656:68665" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="83247:83256" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="87423:87432" placeholder="..." />
-            <marker date="1418075436636" expanded="false" signature="97130:97139" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="851">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.423077" vertical-offset="0" max-vertical-offset="935">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements/_groupContent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="578">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/catalog/controllers/ProspectiveController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-71.26923" vertical-offset="0" max-vertical-offset="21590">
+        <state vertical-scroll-proportion="-87.61539" vertical-offset="51" max-vertical-offset="22066">
           <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
           <folding>
             <element signature="n#actionCreate#0;n#ProspectiveController#0;n#!!top" expanded="false" />
             <element signature="n#actionGetLastCatalogID#0;n#ProspectiveController#0;n#!!top" expanded="false" />
-            <element signature="n#actionInsertNewCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
             <element signature="n#actionProposeProspectiveCatalog#0;n#ProspectiveController#0;n#!!top" expanded="false" />
             <element signature="n#actionLoadProspectiveCatalogInfo#0;n#ProspectiveController#0;n#!!top" expanded="false" />
             <element signature="n#actionProposeCatalogFromView#0;n#ProspectiveController#0;n#!!top" expanded="false" />
@@ -1744,27 +1693,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements/_setContent.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="851">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-115.11539" vertical-offset="968" max-vertical-offset="7055">
+          <caret line="319" column="18" selection-start-line="319" selection-start-column="18" selection-end-line="319" selection-end-column="18" />
+          <folding>
+            <element signature="e#206#276#0#PHP" expanded="false" />
+            <element signature="n#getMajors#0;n#!!top" expanded="false" />
+            <element signature="n#getMinors#0;n#!!top" expanded="false" />
+            <element signature="n#getCertificates#0;n#!!top" expanded="false" />
+            <element signature="n#getTracks#0;n#!!top" expanded="false" />
+            <element signature="n#getGroups#0;n#!!top" expanded="false" />
+            <element signature="n#getSets#0;n#!!top" expanded="false" />
+            <element signature="n#getCourses#0;n#!!top" expanded="false" />
+            <marker date="1418262905671" expanded="true" signature="311:336" placeholder="select name ..curr_dgu..." />
+            <marker date="1418262905671" expanded="true" signature="478:505" placeholder="select name ..curr_major..." />
+            <marker date="1418262905671" expanded="true" signature="828:855" placeholder="select name ..curr_minor..." />
+            <marker date="1418262905671" expanded="true" signature="1201:1234" placeholder="select name ..curr_certificate..." />
+            <marker date="1418262905671" expanded="true" signature="1563:1590" placeholder="select name ..curr_track..." />
+            <marker date="1418262905671" expanded="true" signature="1926:1953" placeholder="select name ..curr_group..." />
+            <marker date="1418262905671" expanded="true" signature="2281:2306" placeholder="select name ..curr_set..." />
+            <marker date="1418262905671" expanded="true" signature="2644:2672" placeholder="select name ..curr_course..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/catalog/views/prospective/createProspectiveJs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.423077" vertical-offset="0" max-vertical-offset="935">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/majorRequirements/_groupContent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27967098" vertical-offset="0" max-vertical-offset="851">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
+        <state vertical-scroll-proportion="0.6491647" vertical-offset="0" max-vertical-offset="48195">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding>
+            <marker date="1418359445071" expanded="false" signature="10361:10370" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="17395:17404" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="27651:27660" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="31584:31593" placeholder="..." />
+            <marker date="1418359445071" expanded="true" signature="45754:45763" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="50055:50064" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="68658:68667" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="83249:83258" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="87425:87434" placeholder="..." />
+            <marker date="1418359445071" expanded="false" signature="97132:97141" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

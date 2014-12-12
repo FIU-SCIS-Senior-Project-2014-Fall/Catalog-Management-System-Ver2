@@ -30,7 +30,7 @@ $(document).ready(function() {
                 //data returned from php
             },
             error: function(data){
-                alert('catalog was not created');
+                //alert('catalog was not created');
             }
         });
 

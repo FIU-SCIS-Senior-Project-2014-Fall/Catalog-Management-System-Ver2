@@ -116,20 +116,20 @@
 
     #GroupForm{
         width:400px;
-        height:350px;
+        height:400px;
         left: 50%;
         top: 50%;
         margin-left:-200px;
-        margin-top:-175px;
+        margin-top:-200px;
     }
 
     #SetForm{
-        width:400px;
-        height: 350px;
+        width:450px;
+        height: 400px;
         left: 50%;
         top: 50%;
-        margin-left:-200px;
-        margin-top:-175px;
+        margin-left:-225px;
+        margin-top:-200px;
     }
 
     #CourseForm{

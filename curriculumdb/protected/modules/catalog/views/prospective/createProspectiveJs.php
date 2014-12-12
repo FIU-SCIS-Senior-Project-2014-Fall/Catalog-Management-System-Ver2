@@ -823,12 +823,12 @@ $(document).ready(function() {
                         '<textarea id="eminor-description-'+no_eminors+'" placeholder="Minor Description" required/></textarea></br>'+
                         '<label>Min Credits: <span>*</span></label>'+
                         '<input type="text" id="eminor-mincredits-'+no_eminors+'" placeholder="Min credits" required/></br>'+
-                        '<h4>Select Track</h4>'+
+                        '<h4>Select Group</h4>'+
                         '<select id="group-selected-in-minor-'+no_eminors+'">'+
                             GroupList +
                             '</select>'+
-                        '<button class="add-group-to-minor" id="add-group-to-minor" name="add-group-to-minor-'+ (no_eminors) + '">Add this track</button>'+
-                        '<button class="remove-group-from-minor" id="remove-group-from-minor" name="remove-group-from-minor-'+ (no_eminors) + '">Remove this track</button>'+
+                        '<button class="add-group-to-minor" id="add-group-to-minor" name="add-group-to-minor-'+ (no_eminors) + '">Add this group</button>'+
+                        '<button class="remove-group-from-minor" id="remove-group-from-minor" name="remove-group-from-minor-'+ (no_eminors) + '">Remove this group</button>'+
                         '</div>'+
                     '<button class="prospective-save-btn" id="save-eminor-form" inputId="save-eminor-form-'+no_eminors+'">Save</button>'+
                     '<button class="prospective-close-btn" id="close-eminor-form">Close</button>'+
@@ -1227,12 +1227,12 @@ $(document).ready(function() {
                         '<textarea id="ecertificate-description-'+no_ecertificates+'" placeholder="Certificate Description" required/></textarea></br>'+
                         '<label>Min Credits: <span>*</span></label>'+
                         '<input type="text" id="ecertificate-mincredits-'+no_ecertificates+'" placeholder="Min credits" required/></br>'+
-                        '<h4>Select Track</h4>'+
+                        '<h4>Select Group</h4>'+
                         '<select id="group-selected-in-certificate-'+no_ecertificates+'">'+
                             GroupList +
                             '</select>'+
-                        '<button class="add-group-to-certificate" id="add-group-to-certificate" name="add-group-to-certificate-'+ (no_ecertificates) + '">Add this track</button>'+
-                        '<button class="remove-group-from-certificate" id="remove-group-from-certificate" name="remove-group-from-certificate-'+ (no_ecertificates) + '">Remove this track</button>'+
+                        '<button class="add-group-to-certificate" id="add-group-to-certificate" name="add-group-to-certificate-'+ (no_ecertificates) + '">Add this group</button>'+
+                        '<button class="remove-group-from-certificate" id="remove-group-from-certificate" name="remove-group-from-certificate-'+ (no_ecertificates) + '">Remove this group</button>'+
                         '</div>'+
                     '<button class="prospective-save-btn" id="save-ecertificate-form" inputId="save-etrack-form-'+no_ecertificates+'">Save</button>'+
                     '<button class="prospective-close-btn" id="close-ecertificate-form">Close</button>'+
@@ -1296,8 +1296,9 @@ $(document).ready(function() {
 
         /*closes current track edit form*/
         var close_etrack_form = function(){
-            $("#eTrackDiv-"+no_ecertificates).on("click", "#close-etrack-form", function(e){
+            $("#eTrackDiv-"+no_etracks).on("click", "#close-etrack-form", function(e){
                 $(this).parent('form').parent('div').css("display", "none");
+                return false;
             });
             return false;
         }
@@ -1306,6 +1307,7 @@ $(document).ready(function() {
         var close_track_form = function(){
             $("#TrackDiv-"+no_tracks).on("click", "#close-track-form", function(e){
                 $(this).parent('form').parent('div').css("display", "none");
+                return false;
             });
             return false;
         }
@@ -2064,12 +2066,12 @@ $(document).ready(function() {
                         '<input type="text" id="egroup-mincredits-'+no_egroups+'" placeholder="Min credits" required/></br>'+
                         '<label>Max Credits: <span>*</span></label>'+
                         '<input type="text" id="egroup-maxcredits-'+no_egroups+'" placeholder="Max credits" required/></br>'+
-                        '<h4>Select Group</h4>'+
+                        '<h4>Select Set</h4>'+
                         '<select id="set-selected-in-group-'+no_egroups+'">'+
                             SetList +
                             '</select>'+
-                        '<button class="add-set-to-group" id="add-set-to-group" name="add-set-to-group-'+ (no_egroups) + '">Add this group</button>'+
-                        '<button class="remove-set-from-group" id="remove-set-from-group" name="remove-set-from-group-'+ (no_egroups) + '">Remove this group</button>'+
+                        '<button class="add-set-to-group" id="add-set-to-group" name="add-set-to-group-'+ (no_egroups) + '">Add this set</button>'+
+                        '<button class="remove-set-from-group" id="remove-set-from-group" name="remove-set-from-group-'+ (no_egroups) + '">Remove this set</button>'+
                         '</div>'+
                     '<button class="prospective-save-btn" id="save-egroup-form" inputId="save-egroup-form-'+no_egroups+'">Save</button>'+
                     '<button class="prospective-close-btn" id="close-egroup-form">Close</button>'+
@@ -2126,7 +2128,7 @@ $(document).ready(function() {
 
         /*closes set form*/
         var close_eset_form = function(){
-            $("#eSetDiv-"+no_sets).on("click", "#close-eset-form", function(e){
+            $("#eSetDiv-"+no_esets).on("click", "#close-eset-form", function(e){
                 $(this).parent('form').parent('div').css("display", "none");
             });
             return false;
@@ -2484,8 +2486,8 @@ $(document).ready(function() {
                         '<select id="course-selected-in-set-'+no_esets+'">'+
                             CourseList +
                             '</select>'+
-                        '<button class="add-course-to-set" id="add-course-to-set" name="add-course-to-set-'+ (no_esets) + '">Add this group</button>'+
-                        '<button class="remove-course-from-set" id="remove-course-from-set" name="remove-course-from-set-'+ (no_esets) + '">Remove this group</button>'+
+                        '<button class="add-course-to-set" id="add-course-to-set" name="add-course-to-set-'+ (no_esets) + '">Add this course</button>'+
+                        '<button class="remove-course-from-set" id="remove-course-from-set" name="remove-course-from-set-'+ (no_esets) + '">Remove this course</button>'+
                         '</div>'+
                     '<button class="prospective-save-btn" id="save-eset-form" inputId="save-eset-form-'+no_esets+'">Save</button>'+
                     '<button class="prospective-close-btn" id="close-eset-form">Close</button>'+
